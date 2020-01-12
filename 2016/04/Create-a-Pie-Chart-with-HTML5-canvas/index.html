@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Create a Pie Chart with HTML5 canvas"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Create a Pie Chart with HTML5 canvas - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Create a Pie Chart with HTML5 canvas</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">25 April 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-html5"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/HTML5/">#HTML5</a> <a class="fw3 ph1 dib" href="/tags/Chart/">#Chart</a> <a class="fw3 ph1 dib" href="/tags/Canvas/">#Canvas</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>This article will show you how to build a Pie Chart using the HTML5 canvas</p>
+<a id="more"></a>
+<h3 id="Final-Result"><a href="#Final-Result" class="headerlink" title="Final Result"></a>Final Result</h3><p></p><p data-height="425" data-theme-id="dark" data-slug-hash="yOxBdm" data-default-tab="js,result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/yOxBdm/" target="_blank" rel="external">Pie Chart Canvas HTML5</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="Project-Description"><a href="#Project-Description" class="headerlink" title="Project Description"></a>Project Description</h2><p>This mini project / tutorial will give you an introduction on how to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" target="_blank" rel="external">draw shapes</a> in the canvas.</p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>In our HTML file, we will simply insert a <code>&lt;canvas&gt;</code> element and specify a width and height.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"600"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="Draw-a-pie-slice"><a href="#Draw-a-pie-slice" class="headerlink" title="Draw a pie slice"></a>Draw a pie slice</h2><p>Let’s start by drawing a single Pie slice.</p>
+<h3 id="Canvas-initialization"><a href="#Canvas-initialization" class="headerlink" title="Canvas initialization"></a>Canvas initialization</h3><p>Let’s create a <code>draw()</code> function that will be executed on a <code>window.onload</code>. We can then retrieve our canvas by it’s <code>id</code> and create our context. The context objet is what will be used to draw our lines.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</div><div class="line">  <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">"2d"</span>);</div><div class="line">  </div><div class="line">  <span class="comment">// code goes here</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.onload = draw;</div></pre></td></tr></table></figure>
+<h3 id="Draw-a-Pie-Slice"><a href="#Draw-a-Pie-Slice" class="headerlink" title="Draw a Pie Slice"></a>Draw a Pie Slice</h3><p>To draw a Pie slice, we will:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/moveTo" target="_blank" rel="external">Move to</a> the (200, 200) coordinates</li>
+<li>Start <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/arc" target="_blank" rel="external">drawing an Arc</a> with 120 radius and the center at (200, 200) and an angle of 0.3 PI</li>
+<li>Continue <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineTo" target="_blank" rel="external">tracing a line</a> all the way back to the center</li>
+</ul>
+<p>Here is the code</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</div><div class="line">  <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">"2d"</span>);</div><div class="line">  </div><div class="line">  <span class="comment">// Our angle</span></div><div class="line">  <span class="keyword">var</span> angle = <span class="built_in">Math</span>.PI * <span class="number">0.3</span>;</div><div class="line">  </div><div class="line">  <span class="comment">// Start a new path</span></div><div class="line">  ctx.beginPath();</div><div class="line">  </div><div class="line">  <span class="comment">// Go to center of the Chart</span></div><div class="line">  ctx.moveTo(<span class="number">200</span>, <span class="number">200</span>);</div><div class="line">  </div><div class="line">  <span class="comment">// Draw an Arc</span></div><div class="line">  <span class="comment">// arc(centerX, centerY, radius, angleStart, angleEnd)</span></div><div class="line">  ctx.arc(<span class="number">200</span>, <span class="number">200</span>, <span class="number">120</span>, <span class="number">0</span>, angle);</div><div class="line">  </div><div class="line">  <span class="comment">// Draw a line to close the pie slice</span></div><div class="line">  ctx.lineTo(<span class="number">200</span>, <span class="number">200</span>);</div><div class="line">  </div><div class="line">  <span class="comment">// Print the path</span></div><div class="line">  ctx.stroke();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>You might have realised that the initial line is drawn automatically: when we start drawing the arc, the path will automatically be linked from the initial position.</p>
+<p>Here is what we have so far:</p>
+<p><img src="/img/html5-canvas-slice.png" alt=""></p>
+<h2 id="Draw-the-entire-Pie"><a href="#Draw-the-entire-Pie" class="headerlink" title="Draw the entire Pie"></a>Draw the entire Pie</h2><p>We will start with an array of angles which sum equals 2 PI and draw the all the slices.</p>
+<p>We will also add a list of colours and for each slice, pick one and <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fill" target="_blank" rel="external">fill the slice</a> with that color.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</div><div class="line">  <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">"2d"</span>);</div><div class="line">  </div><div class="line">  <span class="comment">// Colors</span></div><div class="line">  <span class="keyword">var</span> colors = [<span class="string">'#4CAF50'</span>, <span class="string">'#00BCD4'</span>, <span class="string">'#E91E63'</span>, <span class="string">'#FFC107'</span>, <span class="string">'#9E9E9E'</span>, <span class="string">'#CDDC39'</span>];</div><div class="line">  </div><div class="line">  <span class="comment">// List of Angles</span></div><div class="line">  <span class="keyword">var</span> angles = [<span class="built_in">Math</span>.PI * <span class="number">0.3</span>, <span class="built_in">Math</span>.PI * <span class="number">0.7</span>, <span class="built_in">Math</span>.PI * <span class="number">0.2</span>, <span class="built_in">Math</span>.PI * <span class="number">0.4</span>, <span class="built_in">Math</span>.PI * <span class="number">0.4</span>];</div><div class="line">  </div><div class="line">  <span class="comment">// Temporary variables, to store each arc angles</span></div><div class="line">  <span class="keyword">var</span> beginAngle = <span class="number">0</span>;</div><div class="line">  <span class="keyword">var</span> endAngle = <span class="number">0</span>;</div><div class="line">  </div><div class="line">  <span class="comment">// Iterate through the angles</span></div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; angles.length; i = i + <span class="number">1</span>) &#123;</div><div class="line">    <span class="comment">// Begin where we left off</span></div><div class="line">    beginAngle = endAngle;</div><div class="line">    <span class="comment">// End Angle</span></div><div class="line">    endAngle = endAngle + angles[i];</div><div class="line">    </div><div class="line">    ctx.beginPath();</div><div class="line">    <span class="comment">// Fill color</span></div><div class="line">    ctx.fillStyle = colors[i % colors.length];</div><div class="line">    </div><div class="line">    <span class="comment">// Same code as before</span></div><div class="line">    ctx.moveTo(<span class="number">200</span>, <span class="number">200</span>);</div><div class="line">    ctx.arc(<span class="number">200</span>, <span class="number">200</span>, <span class="number">120</span>, beginAngle, endAngle);</div><div class="line">    ctx.lineTo(<span class="number">200</span>, <span class="number">200</span>);</div><div class="line">    ctx.stroke();</div><div class="line">    </div><div class="line">    <span class="comment">// Fill</span></div><div class="line">    ctx.fill();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.onload = draw;</div></pre></td></tr></table></figure>
+<p>And this is where we are at:</p>
+<p><img src="/img/html5-canvas-pie-chart1.png" alt=""></p>
+<h2 id="Separate-the-slices"><a href="#Separate-the-slices" class="headerlink" title="Separate the slices"></a>Separate the slices</h2><p>The last step consists of creating space in between the pie slices.</p>
+<p>For each slice, the center has to be offset by <code>(cos(mediumAngle) * offset, sin(mediumAngle) * offset)</code> where:</p>
+<ul>
+<li><code>mediumAngle</code> is the angle formed by the origin and the slice bisector</li>
+<li><code>offset</code> is the base offset</li>
+</ul>
+<p>All that is left to do is to implement that change:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>);</div><div class="line">  <span class="keyword">var</span> ctx = canvas.getContext(<span class="string">"2d"</span>);</div><div class="line">  </div><div class="line">  <span class="keyword">var</span> colors = [<span class="string">'#4CAF50'</span>, <span class="string">'#00BCD4'</span>, <span class="string">'#E91E63'</span>, <span class="string">'#FFC107'</span>, <span class="string">'#9E9E9E'</span>, <span class="string">'#CDDC39'</span>, <span class="string">'#18FFFF'</span>, <span class="string">'#F44336'</span>, <span class="string">'#FFF59D'</span>, <span class="string">'#6D4C41'</span>];</div><div class="line">  <span class="keyword">var</span> angles = [<span class="built_in">Math</span>.PI * <span class="number">0.3</span>, <span class="built_in">Math</span>.PI * <span class="number">0.7</span>, <span class="built_in">Math</span>.PI * <span class="number">0.2</span>, <span class="built_in">Math</span>.PI * <span class="number">0.4</span>, <span class="built_in">Math</span>.PI * <span class="number">0.4</span>];</div><div class="line">  </div><div class="line">  <span class="comment">// Base offset distance of 10</span></div><div class="line">  <span class="keyword">var</span> offset = <span class="number">10</span>;</div><div class="line">  <span class="keyword">var</span> beginAngle = <span class="number">0</span>;</div><div class="line">  <span class="keyword">var</span> endAngle = <span class="number">0</span>;</div><div class="line">  </div><div class="line">  <span class="comment">// Used to calculate the X and Y offset</span></div><div class="line">  <span class="keyword">var</span> offsetX, offsetY, medianAngle;</div><div class="line">  </div><div class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; angles.length; i = i + <span class="number">1</span>) &#123;</div><div class="line">    beginAngle = endAngle;</div><div class="line">    endAngle = endAngle + angles[i];</div><div class="line">    </div><div class="line">    <span class="comment">// The medium angle is the average of two consecutive angles</span></div><div class="line">    medianAngle = (endAngle + beginAngle) / <span class="number">2</span>;</div><div class="line">    </div><div class="line">    <span class="comment">// X and Y calculations</span></div><div class="line">    offsetX = <span class="built_in">Math</span>.cos(medianAngle) * offset;</div><div class="line">    offsetY = <span class="built_in">Math</span>.sin(medianAngle) * offset;</div><div class="line">    </div><div class="line">    ctx.beginPath();</div><div class="line">    ctx.fillStyle = colors[i % colors.length];</div><div class="line">    </div><div class="line">    <span class="comment">// Adding the offsetX and offsetY to the center of the arc</span></div><div class="line">    ctx.moveTo(<span class="number">200</span> + offsetX, <span class="number">200</span> + offsetY);</div><div class="line">    ctx.arc(<span class="number">200</span> + offsetX, <span class="number">200</span> + offsetY, <span class="number">120</span>, beginAngle, endAngle);</div><div class="line">    ctx.lineTo(<span class="number">200</span> + offsetX, <span class="number">200</span> + offsetY);</div><div class="line">    ctx.stroke();</div><div class="line">    ctx.fill();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.onload = draw;</div></pre></td></tr></table></figure>
+<p>And this is the final result:</p>
+<p></p><p data-height="425" data-theme-id="dark" data-slug-hash="yOxBdm" data-default-tab="js,result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/yOxBdm/" target="_blank" rel="external">Pie Chart Canvas HTML5</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>Hope you have enjoyed this. Leave your questions in the comments below.</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/HTML5/">#HTML5</a> <a class="fw3 ph1 dib" href="/tags/Chart/">#Chart</a> <a class="fw3 ph1 dib" href="/tags/Canvas/">#Canvas</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

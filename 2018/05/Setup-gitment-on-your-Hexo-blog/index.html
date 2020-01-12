@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Setup gitment on your Hexo blog"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Setup gitment on your Hexo blog - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Setup gitment on your Hexo blog</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">27 May 2018</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-code_badge"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Hexo/">#Hexo</a> <a class="fw3 ph1 dib" href="/tags/Node/">#Node</a> <a class="fw3 ph1 dib" href="/tags/gitment/">#gitment</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>After 2 years running disqus on my blog, I have decided to switch over to <a href="https://github.com/imsun/gitment" target="_blank" rel="external">gitment</a>. The spam and slowness of Disqus is what drove me away from it. Plus no more ads for users.</p>
+<p>Gitment is a small JS library that leverages on Github issues to store comments for each post: </p>
+<ul>
+<li>Each post will have a matching Github issue (<a href="https://github.com/klugjo/klugjo.github.io/issues" target="_blank" rel="external">example for this blog</a>). </li>
+<li>Users will have to be logged in to github to post. </li>
+<li>Comments are saved as github comments on each issue/post</li>
+<li>Gitment takes care of displaying a form that allows users to see/post comments</li>
+</ul>
+<p>Let’s get started.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>You can use the hosted libraries:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>or build them yourself </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git clone git@github<span class="selector-class">.com</span>:imsun/gitment<span class="selector-class">.git</span></div><div class="line">cd gitment</div><div class="line">npm install</div><div class="line">npm build</div></pre></td></tr></table></figure>
+<p>Once you are sure that <code>gitment.browser.js</code> and <code>default.css</code> are present on your site, let’s move on to the setup.</p>
+<h2 id="Setup-Github"><a href="#Setup-Github" class="headerlink" title="Setup Github"></a>Setup Github</h2><p>First of all we are going to need an OAuth application.</p>
+<ul>
+<li><a href="https://github.com/settings/applications/new" target="_blank" rel="external">Click here</a> to register an OAuth application.</li>
+<li>Save the client ID and client secret somewhere.</li>
+<li>For the callback URL, use the same domain as your blog (I am using <a href="http://www.codeblocq.com/">http://www.codeblocq.com/</a>).</li>
+</ul>
+<h2 id="Integrate-Gitment-in-Hexo"><a href="#Integrate-Gitment-in-Hexo" class="headerlink" title="Integrate Gitment in Hexo"></a>Integrate Gitment in Hexo</h2><p>Let’s add a new configuration object to store our client Id and Secret. In your theme’s <code>_config.yml</code>, add:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Comments.</span></div><div class="line"><span class="attr">comments:</span></div><div class="line"><span class="attr">  gitment:</span> </div><div class="line"><span class="attr">    clientId:</span> <span class="number">1808</span>dbefdea3c185dd3b</div><div class="line"><span class="attr">    clientSecret:</span> <span class="number">557</span>be2aa0aa72bdffe0f22c683b7516166b0be28</div></pre></td></tr></table></figure>
+<p>We now need a <code>&lt;div&gt;</code> container to tell gitment where to display the comments:</p>
+<p>This is how I did it: (note the <code>id=&quot;gitment-comments&quot;</code>)</p>
+<figure class="highlight erb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="ruby"> <span class="keyword">if</span>(page.comments &amp;&amp; theme.comments &amp;&amp; theme.comments.gitment)&#123; </span><span class="xml"><span class="tag">%&gt;</span></span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitment-comments"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>    </div><div class="line"><span class="tag">&lt;<span class="name">%</span></span><span class="ruby"> &#125; </span><span class="xml"><span class="tag">%&gt;</span></span></div></pre></td></tr></table></figure>
+<p>and we are now ready to initialize the gitment library:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line"><span class="keyword">const</span> gitment = <span class="keyword">new</span> Gitment(&#123;</div><div class="line">    <span class="attr">id</span>: <span class="string">'&lt;%= page.title.replace(/[^\w\s]/gi, '</span><span class="string">').substring(0, 49) %&gt;'</span>,</div><div class="line">    <span class="attr">owner</span>: <span class="string">'your-github-id'</span>,</div><div class="line">    <span class="attr">repo</span>: <span class="string">'your-repo-name'</span>,</div><div class="line">    <span class="attr">oauth</span>: &#123;</div><div class="line">        <span class="attr">client_id</span>: <span class="string">'&lt;%= theme.comments.gitment.clientId %&gt;'</span>,</div><div class="line">        <span class="attr">client_secret</span>: <span class="string">'&lt;%= theme.comments.gitment.clientSecret %&gt;'</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gitment.render(<span class="built_in">document</span>.getElementById(<span class="string">'gitment-comments'</span>));</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Important"><a href="#Important" class="headerlink" title="Important:"></a>Important:</h3><ul>
+<li>the <code>id</code> should be a unique identifier for each post. Gitment will use it as the matching github issue name + will create one label with that id as well. Special character are not allowed and the max length is 50 chars. Make sure your use the regexp above to avoid issues down the line.</li>
+<li>this script needs to be executed <strong>AFTER</strong> the <code>&lt;div id=&quot;gitment-comments&quot;&gt;&lt;/div&gt;</code> has rendered, so make sure you place that script tag at the end of the <code>&lt;body&gt;</code> or at least after the <code>div</code>.</li>
+<li>Use your github hanlde as <code>owner</code></li>
+<li>Create a repo that will be used to store the issues. Since my blog is hosted on github pages, I am using that repository.</li>
+</ul>
+<h2 id="Initialize-the-comments-for-each-page"><a href="#Initialize-the-comments-for-each-page" class="headerlink" title="Initialize the comments for each page"></a>Initialize the comments for each page</h2><p>At this point, deploy your blog and visit each page while logged in on github.</p>
+<p>Click the <code>Initialize comments</code> link on each page to open a comment thread (aka create a github issue) for that particular post.</p>
+<p>Results below ;) </p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Hexo/">#Hexo</a> <a class="fw3 ph1 dib" href="/tags/Node/">#Node</a> <a class="fw3 ph1 dib" href="/tags/gitment/">#gitment</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

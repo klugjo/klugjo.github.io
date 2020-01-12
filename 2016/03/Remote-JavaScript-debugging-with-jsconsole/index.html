@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Remote JavaScript debugging with JSConsole"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Remote JavaScript debugging with JSConsole - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Remote JavaScript debugging with JSConsole</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">22 March 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-bug_report"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Tools/">#Tools</a> <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Debugging/">#Debugging</a> <a class="fw3 ph1 dib" href="/tags/JSConsole/">#JSConsole</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p><a href="http://jsconsole.com/" target="_blank" rel="external">JSConsole</a> is one of the easiest way to get your JavaScript logs when your app is executing on a remote platform (Mobile, SmartTV or any web browser based device really). It is free to use and open source.</p>
+<a id="more"></a>
+<h2 id="Why-use-JSConsole"><a href="#Why-use-JSConsole" class="headerlink" title="Why use JSConsole"></a>Why use JSConsole</h2><h3 id="JSConsole-is-really-useful-when"><a href="#JSConsole-is-really-useful-when" class="headerlink" title="JSConsole is really useful when:"></a>JSConsole is really useful when:</h3><ul>
+<li>You don’t need a complete remote dev tools but just the <code>console.log()</code> outputs</li>
+<li>You need a nicely presented console. The font is resizable which makes it really useful when doing a live coding presentation for example.</li>
+<li>You need to quickly remote debug something. You can use <a href="http://jsconsole.com/" target="_blank" rel="external">http://jsconsole.com/</a> directly and you don’t have to setup a local server.</li>
+<li>You want to see real time log for an app that is being used the other side of the world. You don’t have to be in the same network, which makes it very easy to use with your QA team or client, thousands of kilometers away.</li>
+</ul>
+<h3 id="JSConsole-is-not-the-right-choice-when"><a href="#JSConsole-is-not-the-right-choice-when" class="headerlink" title="JSConsole is not the right choice when:"></a>JSConsole is not the right choice when:</h3><ul>
+<li>You want to understand the DOM structure of the app and test some CSS changes.</li>
+<li>You want to observe network calls being made</li>
+<li>You want to debug JavaScript execution</li>
+</ul>
+<p>(Note: if you are looking for full featured web debugging, checkout <a href="/2016/03/Remote-Web-Debugging-with-weinre/">weinre</a>)</p>
+<h2 id="How-to-get-started"><a href="#How-to-get-started" class="headerlink" title="How to get started"></a>How to get started</h2><p>Here is a straight to the point, step by step guide, on how to get started.</p>
+<h3 id="Step-1-Get-the-JSConsole-lt-script-gt-tag"><a href="#Step-1-Get-the-JSConsole-lt-script-gt-tag" class="headerlink" title="Step 1: Get the JSConsole &lt;script&gt; tag:"></a>Step 1: Get the JSConsole <code>&lt;script&gt;</code> tag:</h3><p>Go to <a href="http://jsconsole.com/" target="_blank" rel="external">http://jsconsole.com/</a>.<br>Type <code>:listen</code> in the textbox.<br>Press Enter.</p>
+<p>This will print out a <code>&lt;script&gt;</code> tag, something like</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://jsconsole.com/js/remote.js?dc69ca75-55bf-405c-aad8-cbd10262bb17"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Step-2-Insert-the-script-in-your-code"><a href="#Step-2-Insert-the-script-in-your-code" class="headerlink" title="Step 2: Insert the script in your code"></a>Step 2: Insert the script in your code</h3><p>In the <code>&lt;head&gt;</code> of your code, add the JSConsole script tag.</p>
+<p>Reload or launch your app on the device under test (or simply in your browser).</p>
+<p>The logs will start showing on the <a href="http://jsconsole.com/" target="_blank" rel="external">http://jsconsole.com/</a> virtual console</p>
+<h3 id="Step-3-Optional-Save-the-URL-for-future-use"><a href="#Step-3-Optional-Save-the-URL-for-future-use" class="headerlink" title="Step 3 (Optional): Save the URL for future use"></a>Step 3 (Optional): Save the URL for future use</h3><p>In the JSConsole, type <code>:listen [Your GUID]</code>. In my example, that would be:</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:listen dc69ca75<span class="string">-55</span>bf<span class="string">-405</span>c-aad8-cbd10262bb17</div></pre></td></tr></table></figure>
+<p>See how the URL of the page has changed ? Mine is:</p>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://jsconsole.com/?<span class="symbol">%3</span>Alisten<span class="symbol">%20</span>dc<span class="number">69</span>ca<span class="number">75</span><span class="number">-55</span>bf<span class="number">-405</span><span class="keyword">c</span>-aad<span class="number">8</span>-cbd<span class="number">10262</span>bb<span class="number">17</span></div></pre></td></tr></table></figure>
+<p>This URL will automatically launch JSConsole and start listening to your app’s logs.</p>
+<ul>
+<li>Share this URL with your colleagues or friends so that they can see the log as well.</li>
+<li>Save it for future use (for example tomorrow, when you want to continue development/debugging).</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Give it a try and see by yourself, JSConsole is really good at what it does. There are so many scenarios where it can be useful.</p>
+<p>Check out the <a href="https://github.com/remy/jsconsole" target="_blank" rel="external">Github Repo</a> for more info.</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Tools/">#Tools</a> <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Debugging/">#Debugging</a> <a class="fw3 ph1 dib" href="/tags/JSConsole/">#JSConsole</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

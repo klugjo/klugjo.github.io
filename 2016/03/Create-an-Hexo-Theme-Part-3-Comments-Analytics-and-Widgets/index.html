@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Create an Hexo Theme - Part 3: Comments, Analytics and Widgets"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Create an Hexo Theme - Part 3: Comments, Analytics and Widgets - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Create an Hexo Theme - Part 3: Comments, Analytics and Widgets</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">11 March 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-web"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Disqus/">#Disqus</a> <a class="fw3 ph1 dib" href="/tags/Hexo/">#Hexo</a> <a class="fw3 ph1 dib" href="/tags/Analytics/">#Analytics</a> <a class="fw3 ph1 dib" href="/tags/Bootstrap/">#Bootstrap</a> <a class="fw3 ph1 dib" href="/tags/Theme/">#Theme</a> <a class="fw3 ph1 dib" href="/tags/Template/">#Template</a> <a class="fw3 ph1 dib" href="/tags/EJS/">#EJS</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>In this multi part tutorial, you will learn how to create an <a href="https://hexo.io/docs/themes.html" target="_blank" rel="external">Hexo Theme</a> from scratch. </p>
+<p>In <a href="/2016/03/Create-an-Hexo-Theme-Part-1-Index/">Part 1</a> and <a href="/2016/03/Create-an-Hexo-Theme-Part-2-Other-Pages/">Part 2</a>, we have created all the pages of the blog. In this last section, we are going to add <a href="https://disqus.com/" target="_blank" rel="external">Disqus comments</a> to our posts, implement <a href="https://www.google.com.sg/analytics/" target="_blank" rel="external">Google Analytics</a> and complete the sidebar’s widgets.</p>
+<a id="more"></a>
+<h2 id="Links-to-other-sections"><a href="#Links-to-other-sections" class="headerlink" title="Links to other sections"></a>Links to other sections</h2><ul>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-1-Index/">Part 1: Setting up the project and creating the blog’s main index page</a></li>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-2-Other-Pages/">Part 2: Finishing up the remaining pages</a></li>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-3-Comments-Analytics-and-Widgets/">Part 3: Wrapping up with Disqus comments, Google Analytics and the widgets</a></li>
+</ul>
+<h2 id="Disqus-Comments"><a href="#Disqus-Comments" class="headerlink" title="Disqus Comments"></a>Disqus Comments</h2><p>I have already written a blog post on <a href="/2015/12/Add-Disqus-comments-in-Hexo/">how to implement Disqus comments in Hexo</a>. Please refer to it if you need more information but here is how to do it:</p>
+<p>The first step is to get a Disqus UID to test the comments, you can get it from your Disqus account here:</p>
+<p><img src="/img/add-disqus-comments-hexo-unique-name.jpg" alt="Disqus Unique Identifier"></p>
+<p>Then there are three things that need to be implemented, the theme config for disqus, the comments placeholder and the Disqus script. Let’s get going.</p>
+<h3 id="Theme-config"><a href="#Theme-config" class="headerlink" title="Theme config"></a>Theme config</h3><p>We want the Disqus UID to be configurable, let’s add an entry to the theme’s <code>_config.yml</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Disqus Comments Shortname</div><div class="line">disqus_shortname: klugjoTest</div></pre></td></tr></table></figure>
+<h3 id="Comments-placeholder"><a href="#Comments-placeholder" class="headerlink" title="Comments placeholder"></a>Comments placeholder</h3><p>We are going to add comments to our <code>page</code> and <code>post</code> details pages. As always, let’s create a new partial view <code>layout/_partial/comments.ejs</code> and insert it at the end of our <code>layout/_partial/article-full.ejs</code>.</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/comments.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-post"</span>&gt;</span></div><div class="line"></div><div class="line">   [...]</div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Comments --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">comments</span>') %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Disqus is exepecting a <code>div#disqus_thread</code> element, here is the official code from the documentation</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"disqus_thread"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Let’s integrate this into our comments partial:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/comments.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">page.comments</span> &amp;&amp; <span class="attr">theme.disqus_shortname</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-post-comments"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>Comments:<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"disqus_thread"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">noscript</span>&gt;</span>Please enable JavaScript to view the <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"//disqus.com/?ref_noscript"</span>&gt;</span>comments powered by Disqus.<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">noscript</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<p>First we are checking that comments are ON and that our disqus UID has been set. Then we are placing the Disqus markup code inside a container.</p>
+<p>Here is the CSS code I have used for that container:</p>
+<figure class="highlight css"><figcaption><span>source/css/blog.css</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.blog-post-comments</span> &#123;</div><div class="line">    <span class="attribute">margin-top</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Disqus-script"><a href="#Disqus-script" class="headerlink" title="Disqus script"></a>Disqus script</h3><p>Before we can test, we need to add the Disqus script which contains all the magic. Place it with all the other scripts at the end of <code>layout/_partial/after-footer.ejs</code></p>
+<figure class="highlight html"><figcaption><span>layout/_partial/after-footer.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Disqus Comments --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.disqus_shortname</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">        <span class="keyword">var</span> disqus_shortname = <span class="string">'&lt;%= theme.disqus_shortname %&gt;'</span>;</div><div class="line"></div><div class="line">        (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">            <span class="keyword">var</span> dsq = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">            dsq.type = <span class="string">'text/javascript'</span>;</div><div class="line">            dsq.async = <span class="literal">true</span>;</div><div class="line">            dsq.src = <span class="string">'//'</span> + disqus_shortname + <span class="string">'.disqus.com/&lt;% if (page.comments)&#123; %&gt;embed.js&lt;% &#125; else &#123; %&gt;count.js&lt;% &#125; %&gt;'</span>;</div><div class="line">            (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(dsq);</div><div class="line">        &#125;());</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<p>The script is taken from the <a href="https://help.disqus.com/customer/portal/articles/472097-universal-embed-code" target="_blank" rel="external">docs</a> and the Disqus UID was parameterized.</p>
+<p>Go ahead and test that everything is working as expected.</p>
+<h2 id="Google-Analytics"><a href="#Google-Analytics" class="headerlink" title="Google Analytics"></a>Google Analytics</h2><p>Google Analytics implementation follows the same principle as Disqus so I will move through it quickly. </p>
+<p>I have another <a href="/2015/12/Add-Google-Analytics-to-your-hexo-blog/">blog post on that subject</a>.</p>
+<h3 id="Setup-the-tracking-ID-in-the-theme’s-config"><a href="#Setup-the-tracking-ID-in-the-theme’s-config" class="headerlink" title="Setup the tracking ID in the theme’s config"></a>Setup the tracking ID in the theme’s config</h3><p>Get your google analytics tracking ID from your account and add a new entry to the config.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Google Analytics Tracking ID</div><div class="line">google_analytics: UA-83746351-2</div></pre></td></tr></table></figure>
+<h3 id="Create-a-new-partial"><a href="#Create-a-new-partial" class="headerlink" title="Create a new partial"></a>Create a new partial</h3><p>Create a new partial view <code>layout/_partial/google-analytic.ejs</code></p>
+<figure class="highlight html"><figcaption><span>layout/_partial/google-analytic.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.google_analytics</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">        (<span class="function"><span class="keyword">function</span>(<span class="params">i,s,o,g,r,a,m</span>)</span>&#123;i[<span class="string">'GoogleAnalyticsObject'</span>]=r;i[r]=i[r]||<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                    (i[r].q=i[r].q||[]).push(<span class="built_in">arguments</span>)&#125;,i[r].l=<span class="number">1</span>*<span class="keyword">new</span> <span class="built_in">Date</span>();a=s.createElement(o),</div><div class="line">                m=s.getElementsByTagName(o)[<span class="number">0</span>];a.async=<span class="number">1</span>;a.src=g;m.parentNode.insertBefore(a,m)</div><div class="line">        &#125;)(<span class="built_in">window</span>,<span class="built_in">document</span>,<span class="string">'script'</span>,<span class="string">'//www.google-analytics.com/analytics.js'</span>,<span class="string">'ga'</span>);</div><div class="line"></div><div class="line">        ga(<span class="string">'create'</span>, <span class="string">'&lt;%= theme.google_analytics %&gt;'</span>, <span class="string">'auto'</span>);</div><div class="line">        ga(<span class="string">'send'</span>, <span class="string">'pageview'</span>);</div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<p>This is a simple copy paste of <a href="https://support.google.com/analytics/answer/1008080?hl=en" target="_blank" rel="external">Google Analytics Tracking code</a> with a parameterized ID.</p>
+<h3 id="Integrate-the-partial"><a href="#Integrate-the-partial" class="headerlink" title="Integrate the partial"></a>Integrate the partial</h3><p>We want our tracking code on all pages, and there is not best place to put it on a page. Let’s add it at the end of our <code>&lt;head&gt;&lt;/head&gt;</code>:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/head.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></div><div class="line"></div><div class="line">    [...]</div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Google Analytics --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">google-analytics</span>') %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>And we are done !</p>
+<h2 id="Widgets"><a href="#Widgets" class="headerlink" title="Widgets"></a>Widgets</h2><p>At the moment our widgets are just a bunch of hardcoded, static HTML inside <code>sidebar.ejs</code>. Let’s fix that.</p>
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>Let’s start with the configuration. </p>
+<p>We are going to create two widgets, one <strong>About</strong> widget and one <strong>Tags</strong> widget. I want the JavaScript object version of the config to look like</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">widgets</span>: &#123;</div><div class="line">        <span class="attr">about</span>: <span class="string">"Here goes the about text"</span>,</div><div class="line">        <span class="attr">tags</span>: <span class="literal">true</span> <span class="comment">// Or any additional configuration the widget needs</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This is how it translates to <strong>YML</strong> inside our theme’s configuration file:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Widgets List</div><div class="line">widgets:</div><div class="line">  about: This blog is based off the official bootstrap blog template. Checkout the corresponding tutorial at &lt;a href=&quot;http://www.codeblocq.com&quot;&gt;http://www.codeblocq.com&lt;/a</div><div class="line">  tags: true</div></pre></td></tr></table></figure>
+<h3 id="Sidebar-Code"><a href="#Sidebar-Code" class="headerlink" title="Sidebar Code"></a>Sidebar Code</h3><p>Our sidebar which is the placeholder of all our widgets, will need to iterate through all the widgets in the configuration and render them appropriately:</p>
+<p>This what the sidebar EJS template now looks like:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/sidebar.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span>(<span class="attr">var</span> <span class="attr">widget</span> <span class="attr">in</span> <span class="attr">theme.widgets</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">widget</span>/' + <span class="attr">widget</span>) %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125;; %&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="First-Widget-About"><a href="#First-Widget-About" class="headerlink" title="First Widget: About"></a>First Widget: About</h3><p>Let’s build our first widget inside a new partial called <code>layout/_partial/widget/about.ejs</code>. </p>
+<p>The code is copy pasted from the original bootstrap template and the text now comes from the configuration.</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/widget/about.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">theme.widgets.about</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar-module sidebar-module-inset"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h4</span>&gt;</span>About<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">theme.widgets.about</span> %&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Second-Widget-Tags"><a href="#Second-Widget-Tags" class="headerlink" title="Second Widget: Tags"></a>Second Widget: Tags</h3><p>Let’s do something slighty more advanced for this widget. Display a paragraph with all the tags used in the blog, separated by whitespaces and with a font size proportional to the number of times the tag is used.</p>
+<p>Here is the code in <code>layout/_partial/widget/tags.ejs</code></p>
+<figure class="highlight html"><figcaption><span>layout/_partial/widget/tags.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.widgets.tags</span> &amp;&amp; <span class="attr">site.tags.length</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar-module"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">h4</span>&gt;</span>Tags<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> <span class="attr">site.tags.sort</span>('<span class="attr">name</span>')<span class="attr">.each</span>(<span class="attr">function</span>(<span class="attr">item</span>)&#123; %&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span> <span class="attr">style</span>=<span class="string">"font-size: &lt;%- Math.min(item.posts.length * 2 + 13, 30) %&gt;px"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">item.name</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> &#125;); %&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>site.tags</code> gives us access to all the tags</li>
+<li><code>site.tags.sort(&#39;name&#39;)</code> sorts all the tags by alphabetical order</li>
+<li><code>item.path</code> correspond to the relative URL to the archive page for that tag</li>
+<li><code>item.posts.length</code> gives you the number of time a tag is used</li>
+<li><code>item.name</code> is the Tag label</li>
+</ul>
+<p>I chose <strong>13 + (tag occurence * 2)</strong> in pixels (capped at 30px) for the <code>font-size</code> but feel free to use what you want. </p>
+<h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><p>That’s the end of this tutorial, I hope you have learnt something interesting from it.</p>
+<p>Here are a few things you can do if you want to develop it further:</p>
+<ul>
+<li>Finish the implementation of the head by parameterizing the <code>&lt;title&gt;</code> and all the <a href="http://ogp.me/" target="_blank" rel="external">Open Graph</a> properties.</li>
+<li>Add more widgets, for example a <a href="https://github.com/hexojs/hexo-theme-light/blob/master/layout/_widget/search.ejs" target="_blank" rel="external">search widget</a> or a <a href="https://github.com/hexojs/hexo-theme-light/blob/master/layout/_widget/recent_posts.ejs" target="_blank" rel="external">recent posts widget</a>.</li>
+<li>Run <a href="https://github.com/hexojs/hexo-theme-unit-test" target="_blank" rel="external">Hexo Theme Unit Tests</a> to make sure that everything is in order.</li>
+<li>Publish your theme on the <a href="https://hexo.io/themes/" target="_blank" rel="external">hexo website’s theme gallery</a>.</li>
+<li>Check out my other <a href="/tags/Hexo/">Hexo tutorials</a> to improve your blog.</li>
+<li>Check out <a href="https://github.com/cgmartin/hexo-theme-bootstrap-blog" target="_blank" rel="external">hexo-theme-bootstrap-blog</a> which is an implementation of the same bootstrap template.</li>
+<li>Implement your own theme from scratch.</li>
+</ul>
+<p>Thanks for reading ! Really appreciate your comments, corrections, suggestions in the comments.</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Disqus/">#Disqus</a> <a class="fw3 ph1 dib" href="/tags/Hexo/">#Hexo</a> <a class="fw3 ph1 dib" href="/tags/Analytics/">#Analytics</a> <a class="fw3 ph1 dib" href="/tags/Bootstrap/">#Bootstrap</a> <a class="fw3 ph1 dib" href="/tags/Theme/">#Theme</a> <a class="fw3 ph1 dib" href="/tags/Template/">#Template</a> <a class="fw3 ph1 dib" href="/tags/EJS/">#EJS</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

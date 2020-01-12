@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Build your First Electron App"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Build your First Electron App - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Build your First Electron App</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">09 June 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-clock"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Node/">#Node</a> <a class="fw3 ph1 dib" href="/tags/Electron/">#Electron</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>Getting started tutorial for <a href="http://electron.atom.io/" target="_blank" rel="external">Electron</a>. In this tutorial you will learn how to:<br><a id="more"></a></p>
+<ul>
+<li>Install Electron</li>
+<li>Configure the app window</li>
+<li>Pass arguments from the command line to the UI</li>
+<li>Use Node libraries in an electron app</li>
+</ul>
+<p>You should have some basic understanding of Node and ES6 in order to understand this tutorial.</p>
+<p>If you want to dive straight into the code, the github repo is <a href="https://github.com/klugjo/electron-timer-app" target="_blank" rel="external">here</a>.</p>
+<h2 id="The-App"><a href="#The-App" class="headerlink" title="The App"></a>The App</h2><p>We are going to build a simple timer app that looks like this:</p>
+<p><img src="/img/electron-timer-app.png" alt=""></p>
+<h2 id="Get-Coding"><a href="#Get-Coding" class="headerlink" title="Get Coding"></a>Get Coding</h2><h3 id="Install-Electron"><a href="#Install-Electron" class="headerlink" title="Install Electron"></a>Install Electron</h3><p>Install <a href="https://github.com/electron-userland/electron-prebuilt" target="_blank" rel="external">electron-prebuilt</a> globally:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> -g electron-<span class="keyword">prebuilt</span></div></pre></td></tr></table></figure>
+<h3 id="Project-Structure"><a href="#Project-Structure" class="headerlink" title="Project Structure"></a>Project Structure</h3><p>Create the following structure and files:</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">electron-timer-app/</div><div class="line">├── package<span class="selector-class">.json</span></div><div class="line">├── main<span class="selector-class">.js</span></div><div class="line">└── app/</div><div class="line">    ├── index<span class="selector-class">.html</span></div><div class="line">    ├── style<span class="selector-class">.css</span></div><div class="line">    └── index.js</div></pre></td></tr></table></figure>
+<h3 id="Package-json"><a href="#Package-json" class="headerlink" title="Package.json"></a>Package.json</h3><p>The package.json content will be:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>    : <span class="string">"electron-timer-app"</span>,</div><div class="line">  <span class="attr">"version"</span> : <span class="string">"0.1.0"</span>,</div><div class="line">  <span class="attr">"main"</span>    : <span class="string">"main.js"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>main.js</code> is the entry point of the app and will be picked up by electron when running the app.</p>
+<h3 id="App-UI"><a href="#App-UI" class="headerlink" title="App UI"></a>App UI</h3><p>I am going to skip the explanations regarding the HTML and CSS as it’s pretty trivial.</p>
+<p>Put the following code in your <code>index.html</code> file:</p>
+<figure class="highlight html"><figcaption><span>/app/index.html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"style.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"timerDiv"</span> <span class="attr">class</span>=<span class="string">"timer"</span>&gt;</span>12:35<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"index.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>And use the following css code in <code>style.css</code>:</p>
+<figure class="highlight css"><figcaption><span>/app/style.css</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">import</span> url(https://fonts.googleapis.com/css?family=Orbitron:<span class="number">700</span>);</div><div class="line"></div><div class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">font-family</span>: <span class="string">'Orbitron'</span>, sans-serif;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#113A47</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.timer</span> &#123;</div><div class="line">    <span class="attribute">position</span>: fixed;</div><div class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-50%, -50%);</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">75px</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#D7ECFF</span>;</div><div class="line">    <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">2px</span> <span class="number">#fff</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="number">#fff</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">#fff</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#228DFF</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">25px</span> <span class="number">#228DFF</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">#228DFF</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">40px</span> <span class="number">#228DFF</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">50px</span> <span class="number">#228DFF</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Open the <code>index.html</code> in your browser to check that its working.</p>
+<h3 id="Electron-Startup-App"><a href="#Electron-Startup-App" class="headerlink" title="Electron Startup App"></a>Electron Startup App</h3><p>The <code>main.js</code> file is the entry point of the app. It will contain all the code needed to start the app. It will contain:</p>
+<ul>
+<li>Window creation and management</li>
+<li>Parsing of command line arguments</li>
+<li>Communicate information to the UI</li>
+</ul>
+<p><strong>Here is the boilerplate code needed to get started</strong>. Taken from the <a href="https://github.com/electron/electron/blob/master/docs/tutorial/quick-start.md#write-your-first-electron-app" target="_blank" rel="external">official electron documentation</a>:</p>
+<figure class="highlight javascript"><figcaption><span>/main.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> electron = <span class="built_in">require</span>(<span class="string">'electron'</span>);</div><div class="line"><span class="comment">// Module to control application life.</span></div><div class="line"><span class="keyword">const</span> &#123;app&#125; = electron;</div><div class="line"><span class="comment">// Module to create native browser window.</span></div><div class="line"><span class="keyword">const</span> &#123;BrowserWindow&#125; = electron;</div><div class="line"></div><div class="line"><span class="comment">// Keep a global reference of the window object, if you don't, the window will</span></div><div class="line"><span class="comment">// be closed automatically when the JavaScript object is garbage collected.</span></div><div class="line"><span class="keyword">let</span> win;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createWindow</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// Create the browser window.</span></div><div class="line">  win = <span class="keyword">new</span> BrowserWindow(&#123;<span class="attr">width</span>: <span class="number">800</span>, <span class="attr">height</span>: <span class="number">600</span>&#125;);</div><div class="line"></div><div class="line">  <span class="comment">// and load the index.html of the app.</span></div><div class="line">  win.loadURL(<span class="string">`file://<span class="subst">$&#123;__dirname&#125;</span>/index.html`</span>);</div><div class="line"></div><div class="line">  <span class="comment">// Open the DevTools.</span></div><div class="line">  win.webContents.openDevTools();</div><div class="line"></div><div class="line">  <span class="comment">// Emitted when the window is closed.</span></div><div class="line">  win.on(<span class="string">'closed'</span>, () =&gt; &#123;</div><div class="line">    <span class="comment">// Dereference the window object, usually you would store windows</span></div><div class="line">    <span class="comment">// in an array if your app supports multi windows, this is the time</span></div><div class="line">    <span class="comment">// when you should delete the corresponding element.</span></div><div class="line">    win = <span class="literal">null</span>;</div><div class="line">  &#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// This method will be called when Electron has finished</span></div><div class="line"><span class="comment">// initialization and is ready to create browser windows.</span></div><div class="line"><span class="comment">// Some APIs can only be used after this event occurs.</span></div><div class="line">app.on(<span class="string">'ready'</span>, createWindow);</div><div class="line"></div><div class="line"><span class="comment">// Quit when all windows are closed.</span></div><div class="line">app.on(<span class="string">'window-all-closed'</span>, () =&gt; &#123;</div><div class="line">  <span class="comment">// On OS X it is common for applications and their menu bar</span></div><div class="line">  <span class="comment">// to stay active until the user quits explicitly with Cmd + Q</span></div><div class="line">  <span class="keyword">if</span> (process.platform !== <span class="string">'darwin'</span>) &#123;</div><div class="line">    app.quit();</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.on(<span class="string">'activate'</span>, () =&gt; &#123;</div><div class="line">  <span class="comment">// On OS X it's common to re-create a window in the app when the</span></div><div class="line">  <span class="comment">// dock icon is clicked and there are no other windows open.</span></div><div class="line">  <span class="keyword">if</span> (win === <span class="literal">null</span>) &#123;</div><div class="line">    createWindow();</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>We are only going to change a few things for now: </p>
+<p><strong>App Path:</strong></p>
+<p>Because our <code>index.html</code> is in an <code>app</code> folder, we will have to modify <em>line 16</em></p>
+<figure class="highlight javascript"><figcaption><span>/main.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">win.loadURL(<span class="string">`file://<span class="subst">$&#123;__dirname&#125;</span>/app/index.html`</span>);</div></pre></td></tr></table></figure>
+<p><strong>Disable Dev Tools:</strong></p>
+<p>Comment out <em>line 19</em></p>
+<figure class="highlight javascript"><figcaption><span>/main.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//win.webContents.openDevTools();</span></div></pre></td></tr></table></figure>
+<p><strong>Window size and Appearance:</strong></p>
+<p>Replace <em>line 13</em> with the following</p>
+<figure class="highlight javascript"><figcaption><span>/main.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">win = <span class="keyword">new</span> BrowserWindow(&#123;</div><div class="line">        <span class="attr">width</span>: <span class="number">500</span>,</div><div class="line">        <span class="attr">height</span>: <span class="number">300</span>,</div><div class="line">        <span class="attr">frame</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">resizable</span>: <span class="literal">false</span></div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<p>With this piece of code, we are making our app window frameless, smaller and non resizable. Check out the full list of properties <a href="https://github.com/electron/electron/blob/master/docs/api/browser-window.md" target="_blank" rel="external">here</a>. It is amazing what you can do.</p>
+<h3 id="Start-the-App"><a href="#Start-the-App" class="headerlink" title="Start the App"></a>Start the App</h3><p>That’s it we are ready to test the app.</p>
+<p>In your project root, launch it by typing:</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>electron .</div></pre></td></tr></table></figure>
+<p>A window opens with the timer.</p>
+<h3 id="Timer-UI-Logic"><a href="#Timer-UI-Logic" class="headerlink" title="Timer UI Logic"></a>Timer UI Logic</h3><p>In this part of the tutorial we are going to handle the timer logic (countdown animation).</p>
+<p>Because we are in a Node Electron App, we can write our ‘front end’ code using Node JS conventions. Which means that in our <code>/app/index.js</code> it is possible to use ES6 and require Node modules without the need to package our scripts later on.</p>
+<p>The timer will be a simple program that removes one second to the initial time every second and prints out the result. </p>
+<p>We will use Moment.js for the timer logic. Install it with:</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -<span class="keyword">save</span> <span class="built_in">moment</span></div></pre></td></tr></table></figure>
+<p>And in our <code>/app/index.js</code> file</p>
+<figure class="highlight javascript"><figcaption><span>/app/index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Require moment.js</span></div><div class="line"><span class="keyword">const</span> moment = <span class="built_in">require</span>(<span class="string">'moment'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Helper function, to format the time</span></div><div class="line"><span class="keyword">const</span> secondsToTime = <span class="function">(<span class="params">s</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">let</span> momentTime = moment.duration(s, <span class="string">'seconds'</span>);</div><div class="line">    <span class="keyword">let</span> sec = momentTime.seconds() &lt; <span class="number">10</span> ? (<span class="string">'0'</span> + momentTime.seconds()) : momentTime.seconds();</div><div class="line">    <span class="keyword">let</span> min = momentTime.minutes() &lt; <span class="number">10</span> ? (<span class="string">'0'</span> + momentTime.minutes()) : momentTime.minutes();</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;min&#125;</span>:<span class="subst">$&#123;sec&#125;</span>`</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// Initial time, hardcoded</span></div><div class="line"><span class="keyword">let</span> currentTime = <span class="number">255</span>;</div><div class="line"></div><div class="line"><span class="comment">// Print out the time</span></div><div class="line">timerDiv.innerHTML = secondsToTime(currentTime);</div><div class="line"></div><div class="line"><span class="comment">// Execute every second</span></div><div class="line"><span class="keyword">let</span> timer = setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line"></div><div class="line">    <span class="comment">// Remove one second</span></div><div class="line">    currentTime = currentTime - <span class="number">1</span>;</div><div class="line"></div><div class="line">    <span class="comment">// Print out the time</span></div><div class="line">    timerDiv.innerHTML = secondsToTime(currentTime);</div><div class="line"></div><div class="line">    <span class="comment">// When reaching 0. Stop.</span></div><div class="line">    <span class="keyword">if</span>(currentTime &lt;= <span class="number">0</span>) &#123;</div><div class="line">        clearInterval(timer);</div><div class="line">    &#125;</div><div class="line">&#125;, <span class="number">1000</span>); <span class="comment">// 1 second</span></div></pre></td></tr></table></figure>
+<p>Run the app with <code>electron .</code> and look at the countdown animation.</p>
+<h3 id="Passing-the-initial-Value-in-the-command-line"><a href="#Passing-the-initial-Value-in-the-command-line" class="headerlink" title="Passing the initial Value in the command line"></a>Passing the initial Value in the command line</h3><p>What would be great now is to pass the initial seconds when launching the app, i.e <code>electron . 255</code> for a 255 seconds timer.</p>
+<p>Let’s go and create that.</p>
+<p><strong>Get the time value in main.js</strong></p>
+<p>We need to <a href="/2015/08/Capture-Command-Line-Arguments-in-Node/">capture the time argument in the node app</a>. This is done with the following code:</p>
+<figure class="highlight javascript"><figcaption><span>main.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Capture command line argument</span></div><div class="line"><span class="keyword">let</span> argsCmd = process.argv.slice(<span class="number">2</span>);</div><div class="line"><span class="keyword">let</span> timerTime = <span class="built_in">parseInt</span>(argsCmd[<span class="number">0</span>]);</div></pre></td></tr></table></figure>
+<p><strong>Send the value to the UI</strong></p>
+<p>The value is sent to the UI using the <a href="https://github.com/electron/electron/blob/master/docs/api/web-contents.md" target="_blank" rel="external">webContents</a> property of the BrowserWindow Object.</p>
+<p>When the HTML and JS app have finished loading, we want to send the value to the UI:</p>
+<p>This is done with the following code:</p>
+<figure class="highlight javascript"><figcaption><span>main.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// When UI has finish loading</span></div><div class="line">win.webContents.on(<span class="string">'did-finish-load'</span>, () =&gt; &#123;</div><div class="line">    <span class="comment">// Send the timer value</span></div><div class="line">    win.webContents.send(<span class="string">'timer-change'</span>, timerTime);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>Check out the full <code>main.js</code> code <a href="https://github.com/klugjo/electron-timer-app/blob/master/main.js" target="_blank" rel="external">here</a>.</p>
+<p><strong>Retrieve the value in the app’s <code>index.js</code></strong></p>
+<p>To retrieve the value, we need to use <a href="https://github.com/electron/electron/blob/master/docs/api/ipc-renderer.md" target="_blank" rel="external">ipc-renderer</a>.<br>This module is a simple Event Emitter that can send and listen to events (also known as channels in the doc). Use the <a href="https://github.com/electron/electron/blob/master/docs/api/ipc-renderer.md#ipcrendereronchannel-listener" target="_blank" rel="external">on()</a> method to listen to the <code>&#39;timer-change&#39;</code> event sent by the <code>win.webContents</code> above.</p>
+<figure class="highlight javascript"><figcaption><span>/app/index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Require moment.js</span></div><div class="line"><span class="keyword">const</span> moment = <span class="built_in">require</span>(<span class="string">'moment'</span>);</div><div class="line"><span class="comment">// Require ipcRender</span></div><div class="line"><span class="keyword">const</span> &#123;ipcRenderer&#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>);</div><div class="line"></div><div class="line"><span class="comment">// [...]</span></div><div class="line"></div><div class="line"><span class="comment">// Listen to the 'timer-change' event</span></div><div class="line">ipcRenderer.on(<span class="string">'timer-change'</span>, (event, t) =&gt; &#123;</div><div class="line">    <span class="comment">// Initialize time with value send with event</span></div><div class="line">    <span class="keyword">let</span> currentTime = t;</div><div class="line"></div><div class="line">    <span class="comment">// Display and timer logic</span></div><div class="line">    <span class="comment">// [...]</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>You can see the full <code>index.js</code> <a href="https://github.com/klugjo/electron-timer-app/blob/master/app/index.js" target="_blank" rel="external">here</a>.</p>
+<p>That is it ! Start your app with for example</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>electron . <span class="number">74</span></div></pre></td></tr></table></figure>
+<p>and observe the result.</p>
+<p>I hope you have learnt something useful from this tutorial, it goes a bit beyond the basics by looking at how to use node libs in the client code and at how to communicate between the core and the UI.</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Node/">#Node</a> <a class="fw3 ph1 dib" href="/tags/Electron/">#Electron</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

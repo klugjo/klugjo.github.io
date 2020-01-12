@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Pimp up iTerm with Zsh and prezto on Mac OS X"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Pimp up iTerm with Zsh and prezto on Mac OS X - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Pimp up iTerm with Zsh and prezto on Mac OS X</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">12 September 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-terminal"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Tools/">#Tools</a> <a class="fw3 ph1 dib" href="/tags/zsh/">#zsh</a> <a class="fw3 ph1 dib" href="/tags/Prezto/">#Prezto</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>Follow this simple steps to setup zsh and prezto on Mac OS X (El Capitan) and your command line will look like:<br><br><br><img src="/img/prezto-powerline-mac-os-x.png" alt=""><br><a id="more"></a></p>
+<h2 id="Install-Zsh"><a href="#Install-Zsh" class="headerlink" title="Install Zsh"></a>Install Zsh</h2><h3 id="Install-Zsh-and-Zsh-Completions"><a href="#Install-Zsh-and-Zsh-Completions" class="headerlink" title="Install Zsh and Zsh Completions"></a>Install <a href="">Zsh</a> and <a href="https://github.com/zsh-users/zsh-completions" target="_blank" rel="external">Zsh Completions</a></h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>zsh zsh-completions</div></pre></td></tr></table></figure>
+<p>Then try to run <code>zsh</code>:</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>zsh</div></pre></td></tr></table></figure>
+<p>When zsh opens for the first time, choose option <code>0</code>.</p>
+<h3 id="OPTIONAL"><a href="#OPTIONAL" class="headerlink" title="OPTIONAL:"></a><em>OPTIONAL:</em></h3><p>At this stage I ran into some errors similar to <code>dyld: Library not loaded: /usr/local/lib/libgdbm.4.dylib</code>.</p>
+<p>Follow these steps to fix:</p>
+<ul>
+<li>First change the ownership of <code>/usr/local</code></li>
+</ul>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>cd /usr/local</div><div class="line"><span class="variable">$ </span>sudo chown -R &lt;uid&gt;<span class="symbol">:&lt;gid&gt;</span> *</div></pre></td></tr></table></figure>
+<p>Retrieve the values of <code>&lt;uid&gt;</code> and <code>&lt;gid&gt;</code> by running <code>id</code> in your terminal.</p>
+<ul>
+<li>Reinstall gdbm and pcre</li>
+</ul>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>gdbm</div><div class="line">$ <span class="keyword">brew </span>reinstall pcre</div></pre></td></tr></table></figure>
+<p>And you should be ready to go</p>
+<h2 id="Install-Prezto"><a href="#Install-Prezto" class="headerlink" title="Install Prezto"></a>Install <a href="https://github.com/sorin-ionescu/prezto" target="_blank" rel="external">Prezto</a></h2><h3 id="Before-install"><a href="#Before-install" class="headerlink" title="Before install"></a>Before install</h3><p>Check that you don’t already have a <code>.zshrc</code> file. If you do, delete it (if empty) or rename it, as this would fail the installation.</p>
+<h3 id="Install-with"><a href="#Install-with" class="headerlink" title="Install with"></a>Install with</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">clone</span> <span class="title">--recursive</span> https://github.com/sorin-ionescu/prezto.git <span class="string">"$&#123;ZDOTDIR:-$HOME&#125;/.zprezto"</span></div></pre></td></tr></table></figure>
+<h3 id="Create-a-zsh-config-with-the-files-from-prezto"><a href="#Create-a-zsh-config-with-the-files-from-prezto" class="headerlink" title="Create a zsh config with the files from prezto"></a>Create a zsh config with the files from prezto</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">setopt</span> EXTENDED_GLOB</div><div class="line"><span class="keyword">for</span> rcfile <span class="keyword">in</span> <span class="string">"<span class="variable">$&#123;ZDOTDIR:-$HOME&#125;</span>"</span>/.zprezto/runcoms/^README.md(.N); <span class="keyword">do</span></div><div class="line">  ln <span class="_">-s</span> <span class="string">"<span class="variable">$rcfile</span>"</span> <span class="string">"<span class="variable">$&#123;ZDOTDIR:-$HOME&#125;</span>/.<span class="variable">$&#123;rcfile:t&#125;</span>"</span></div><div class="line"><span class="keyword">done</span></div></pre></td></tr></table></figure>
+<h3 id="Make-Zsh-the-default-shell"><a href="#Make-Zsh-the-default-shell" class="headerlink" title="Make Zsh the default shell"></a>Make Zsh the default shell</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ chsh <span class="_">-s</span> $(<span class="built_in">which</span> zsh)</div></pre></td></tr></table></figure>
+<p>If you are using iTerm, go to</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Preferences &gt; Profiles &gt; <span class="keyword">General</span> &gt; Command</div></pre></td></tr></table></figure>
+<p>and put <code>/bin/zsh --login</code> as the <code>Command</code> (instead of <code>Login Shell</code>)</p>
+<h2 id="Improve-the-default-theme"><a href="#Improve-the-default-theme" class="headerlink" title="Improve the default theme"></a>Improve the default theme</h2><h3 id="Install-the-Menlo-Font"><a href="#Install-the-Menlo-Font" class="headerlink" title="Install the Menlo Font"></a>Install the Menlo Font</h3><p>Download the <a href="https://gist.github.com/qrush/1595572/raw/6c453ddc959b93895ffbf4fd904e2ba60256c904/Menlo-Powerline.otf" target="_blank" rel="external">Menlo font</a></p>
+<p>Double click the font file to install it.</p>
+<p>Set it as the default font in iTerm by going to </p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Preferences &gt; Profiles &gt; <span class="keyword">Text</span> &gt; Change <span class="keyword">Font</span></div></pre></td></tr></table></figure>
+<p>Use 14pt for the font size.</p>
+<h3 id="Set-the-theme-to-Solarized-Dark"><a href="#Set-the-theme-to-Solarized-Dark" class="headerlink" title="Set the theme to Solarized Dark"></a>Set the theme to Solarized Dark</h3><p>In iTerm, go to <code>Preferences &gt; Profiles &gt; Color</code> and in the Color Presets Dropdown, choose <code>Solarized Dark</code>.</p>
+<h3 id="Change-the-prezto-theme-to-powerline"><a href="#Change-the-prezto-theme-to-powerline" class="headerlink" title="Change the prezto theme to powerline"></a>Change the prezto theme to powerline</h3><p>First go to your zsh command line, type <code>prompt powerline</code> and doublecheck that everything displays properly. This command is to preview the theme.</p>
+<p>Then set the powerline theme as default in <code>.zpreztorc</code>:</p>
+<p>Look for the line that looks like <code>zstyle &#39;:prezto:module:prompt&#39; theme</code> and replace the current theme with <code>powerline</code></p>
+<p>You should end up with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">zstyle</span> <span class="string">':prezto:module:prompt'</span> theme <span class="string">'powerline'</span></div></pre></td></tr></table></figure>
+<p>Now, try restarting iTerm and doublecheck that powerline is the default theme</p>
+<h3 id="Word-jump"><a href="#Word-jump" class="headerlink" title="Word jump"></a>Word jump</h3><p>Let’s finish with one more tweak, word jump with <code>alt + →</code> and <code>alt + ←</code> like in a normal editor.</p>
+<p>In iTerm, go to <code>Preferences &gt; Profiles &gt; Keys</code> and Add the following</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">⌥ →</div><div class="line">Send Escape Sequence</div><div class="line">f</div></pre></td></tr></table></figure>
+<p>and </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">⌥ ←</div><div class="line">Send Escape Sequence</div><div class="line">b</div></pre></td></tr></table></figure>
+<h3 id="Word-Delete"><a href="#Word-Delete" class="headerlink" title="Word Delete"></a>Word Delete</h3><p>Do the same thing to allow the deletion of a word on <code>alt + backspace</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">⌥⌫</div><div class="line">Send Hex Code</div><div class="line">0x17</div></pre></td></tr></table></figure>
+<p>That’s it, you are good to go. Let me know if you enjoy it and if you have awesome tweaks I should add to this list.</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Tools/">#Tools</a> <a class="fw3 ph1 dib" href="/tags/zsh/">#zsh</a> <a class="fw3 ph1 dib" href="/tags/Prezto/">#Prezto</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

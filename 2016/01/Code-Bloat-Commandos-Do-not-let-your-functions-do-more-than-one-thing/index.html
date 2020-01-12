@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Code Bloat Commandos - Do not let your functions do more than one thing"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Code Bloat Commandos - Do not let your functions do more than one thing - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Code Bloat Commandos - Do not let your functions do more than one thing</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">11 January 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-cubes"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Software-Practices/">#Software Practices</a> <a class="fw3 ph1 dib" href="/tags/Single-Responsibility-Principle/">#Single Responsibility Principle</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p><strong>Code Bloat Commandos</strong> looks at why software code deteriorates over time; and how to fight back.</p>
+<p>In this episode, we will look at how a nice and clean method grows into a dumping ground function. We will see when it happens, how to spot it and how to fix it.</p>
+<a id="more"></a>
+<blockquote><p>FUNCTIONS SHOULD DO ONE THING. THEY SHOULD DO IT WELL. THEY SHOULD DO IT ONLY.</p>
+<footer><strong>Uncle Bob</strong><cite><a href="https://books.google.com.sg/books/about/Clean_Code.html?id=dwSfGQAACAAJ" target="_blank" rel="external">Clean Code</a></cite></footer></blockquote>
+<h2 id="The-humble-beginnings"><a href="#The-humble-beginnings" class="headerlink" title="The humble beginnings"></a>The humble beginnings</h2><h3 id="Project-specification"><a href="#Project-specification" class="headerlink" title="Project specification:"></a>Project specification:</h3><ul>
+<li>We have a live video player and an event function called <code>onProgress</code> that is executed every second.</li>
+<li>We can use that function to monitor playback progress and hook up various actions.</li>
+<li>Our job is to implement a function that will track video engagement by sending an analytics ping every 30 seconds.</li>
+</ul>
+<h3 id="This-is-our-code-JavaScript"><a href="#This-is-our-code-JavaScript" class="headerlink" title="This is our code (JavaScript):"></a>This is our code (JavaScript):</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Main entry point. This function will be called every second by the player</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">onProgress</span>(<span class="params">currentTime</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="comment">// [...] Do UI stuff here like update progress bar and set Time</span></div><div class="line">    </div><div class="line">    <span class="comment">// Our function</span></div><div class="line">    _sendVideoEngagementAnalytics(currentTime);</div><div class="line">    </div><div class="line">    <span class="comment">// [...] Do more things here like update the icons in the footer</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">_sendVideoEngagementAnalytics</span>(<span class="params">currentTime</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(currentTime - __analyticsState.fromPosition) &gt; <span class="number">30</span>) &#123;</div><div class="line">    </div><div class="line">        <span class="keyword">var</span> analyticsData = &#123;</div><div class="line">            <span class="attr">event</span>: <span class="string">"VIDEO_PROGRESS"</span></div><div class="line">        &#125;;</div><div class="line">        </div><div class="line">        analyticsManager.send(analyticsData);   </div><div class="line">        </div><div class="line">        __analyticsState.fromPosition = currentTime;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This is our first version of the <code>_sendVideoEngagementAnalytics</code> function. It is still reasonably simple and compact. It checks if more than 30 seconds have elapsed. If it did, it sends an analytics ping using an analytics manager object.</p>
+<h2 id="A-few-weeks-later"><a href="#A-few-weeks-later" class="headerlink" title="A few weeks later"></a>A few weeks later</h2><p>Our first version of the app is working and a few weeks later we need to also check if the current content playing is an Advertisement; and if that is the case send an Advertisement Start and End pings.<br>We can check if the current content playing is an Ad by calling <code>isAdPlaying(currentTime)</code>.</p>
+<p>Easy enough, let’s get coding.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Main entry point. This function will be called every second by the player</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">onProgress</span>(<span class="params">currentTime</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="comment">// [...] Do UI stuff here like update progress bar and set Time</span></div><div class="line">    </div><div class="line">    _sendVideoEngagementAnalytics(currentTime);</div><div class="line">    </div><div class="line">    <span class="comment">// Do more things here like update the footer controls</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">_sendVideoEngagementAnalytics</span>(<span class="params">currentTime</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> analyticsData,</div><div class="line">        adPlaying = isAdPlaying(currentTime);</div><div class="line">    </div><div class="line">    <span class="comment">// Checks if more that 30 seconds have passed</span></div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(currentTime - __analyticsState.fromPosition) &gt; <span class="number">30</span>) &#123;</div><div class="line">    </div><div class="line">        analyticsData = &#123;</div><div class="line">            <span class="attr">event</span>: <span class="string">"VIDEO_PROGRESS"</span></div><div class="line">        &#125;;</div><div class="line">        </div><div class="line">        analyticsManager.send(analyticsData);   </div><div class="line">        </div><div class="line">        __analyticsState.fromPosition = currentTime;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="comment">// Checks if an Ad just started playing</span></div><div class="line">    <span class="keyword">if</span>(__analyticsState.adPlaying !== adPlaying) &#123;</div><div class="line">        </div><div class="line">        analyticsData = &#123;</div><div class="line">            <span class="attr">event</span>: adPlaying ? <span class="string">"AD_BEGIN"</span> : <span class="string">"AD_COMPLETE"</span></div><div class="line">        &#125;;</div><div class="line">        </div><div class="line">        analyticsManager.send(analyticsData);   </div><div class="line">        </div><div class="line">        __analyticsState.adPlaying = adPlaying;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Done. <code>git commit -m &quot;Added Ad tracking analytics to player&quot;</code>. Jump on Skype and ask who is ready for lunch.</p>
+<p>This is (almost) what happened to me today.</p>
+<h2 id="The-bloat"><a href="#The-bloat" class="headerlink" title="The bloat"></a>The bloat</h2><h3 id="The-code-is-not-that-bad-we-have"><a href="#The-code-is-not-that-bad-we-have" class="headerlink" title="The code is not that bad, we have:"></a>The code is not that bad, we have:</h3><ul>
+<li>refactored <code>analyticsData</code> out of the initial if block because of <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/var#var_hoisting" target="_blank" rel="external">variable hoisting and scoping in JavaScript</a>.</li>
+<li>created a local variable <code>adPlaying</code> to avoid multiple calls to <code>isAdPlaying(currentTime)</code>.</li>
+</ul>
+<p><br></p>
+<h3 id="These-are-great-but-we-have-committed-an-even-bigger-mistake-here"><a href="#These-are-great-but-we-have-committed-an-even-bigger-mistake-here" class="headerlink" title="These are great, but we have committed an even bigger mistake here:"></a>These are great, but we have committed an even bigger mistake here:</h3><p><strong>The <code>_sendVideoEngagementAnalytics</code> is now doing 2 things</strong>; which is pretty bad in and of itself but also has the following scary consequences:</p>
+<ul>
+<li><strong>The name <code>_sendVideoEngagementAnalytics</code> is now incorrect</strong> (we are not only monitoring video engagement but ad playback as well). Someone reading <code>_sendVideoEngagementAnalytics(currentTime);</code> in the calling function might not suspect that it also sends Ad related analytics.</li>
+<li><strong>The function is getting longer.</strong> And we are setting the stage for it to become even longer by starting off a series of if blocks that check playback position related stuff.</li>
+<li>We suddenly feel like <strong>we need comments in our code to explain what it does</strong> and ‘structure’ the two parts of our function. Burp.</li>
+</ul>
+<h2 id="Pain-Relief"><a href="#Pain-Relief" class="headerlink" title="Pain Relief"></a>Pain Relief</h2><h3 id="Recognising-the-problem"><a href="#Recognising-the-problem" class="headerlink" title="Recognising the problem"></a>Recognising the problem</h3><ul>
+<li><p>It clicked for me when I realised <strong>the function’s name didn’t correspond to what the function actually does.</strong></p>
+</li>
+<li><p>Another hint could have been the fact that the function now has <strong>two sections of code that handles different business requirements.</strong></p>
+</li>
+<li><p>A function that is <strong>30 lines long and needs comments for ‘if conditions’</strong> that are pretty readable is not a good sign either.</p>
+</li>
+<li><p>But really, simply observing that the function I have modified suddenly <strong>does not respect the <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_blank" rel="external">Single Responsibility Principle</a></strong> should have been enough.</p>
+</li>
+</ul>
+<h3 id="Administering-the-cure"><a href="#Administering-the-cure" class="headerlink" title="Administering the cure"></a>Administering the cure</h3><p>At this point, the solution is pretty clear. Separating the ravioli.</p>
+<p>Let’s go ahead and split our function into two functions:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">onProgress</span>(<span class="params">currentTime</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="comment">// [...] Do UI stuff here like update progress bar and set Time</span></div><div class="line">    </div><div class="line">    _sendVideoEngagementAnalytics(currentTime);</div><div class="line">    _sendAdContentAnalytics(currentTime);</div><div class="line">    </div><div class="line">    <span class="comment">// Do more things here like update the footer controls</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">_sendVideoEngagementAnalytics</span>(<span class="params">currentTime</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> analyticsData;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(currentTime - __analyticsState.fromPosition) &gt; <span class="number">30</span>) &#123;</div><div class="line">    </div><div class="line">        analyticsData = &#123;</div><div class="line">            <span class="attr">event</span>: <span class="string">"VIDEO_PROGRESS"</span></div><div class="line">        &#125;;</div><div class="line">        </div><div class="line">        analyticsManager.send(analyticsData);   </div><div class="line">        </div><div class="line">        __analyticsState.fromPosition = currentTime;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">_sendAdContentAnalytics</span>(<span class="params">currentTime</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> analyticsData,</div><div class="line">        adPlaying = isAdPlaying(currentTime);</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(__analyticsState.adPlaying !== adPlaying) &#123;</div><div class="line">        </div><div class="line">        analyticsData = &#123;</div><div class="line">            <span class="attr">event</span>: adPlaying ? <span class="string">"AD_BEGIN"</span> : <span class="string">"AD_COMPLETE"</span></div><div class="line">        &#125;;</div><div class="line">        </div><div class="line">        analyticsManager.send(analyticsData);   </div><div class="line">        </div><div class="line">        __analyticsState.adPlaying = adPlaying;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Following-up-after-treatment"><a href="#Following-up-after-treatment" class="headerlink" title="Following up after treatment"></a>Following up after treatment</h3><ul>
+<li>When reading<figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">_sendVideoEngagementAnalytics(<span class="name">currentTime</span>)<span class="comment">;</span></div><div class="line">_sendAdContentAnalytics(<span class="name">currentTime</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>we know exactly what is going on. No extra ‘hidden’ functionality.</p>
+<ul>
+<li><p>No more ugly comments</p>
+</li>
+<li><p>Shorter functions</p>
+</li>
+<li><p>If someone wants to add more analytics logic, they won’t be tempted to add to that function and worsen the problem. They will do the right thing right away by adding a new function.<br><br></p>
+</li>
+</ul>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Software-Practices/">#Software Practices</a> <a class="fw3 ph1 dib" href="/tags/Single-Responsibility-Principle/">#Single Responsibility Principle</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

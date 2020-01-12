@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="CodeBlocQ"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="website" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Software Development Blog.</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">Write Code. Make Magic. By Jonathan Klughertz.</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-cloud"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            
+                <a href="/2020/01/A-Star-Pathfinding-React-Demo/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2020-01-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Algorithm/'; return false;">#Algorithm</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">A-Star Pathfinding React Demo<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-react-original"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2019-11-10</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/KlugSaver/'; return false;">#KlugSaver</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React-Native/'; return false;">#React Native</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/iOS/'; return false;">#iOS</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/TypeScript/'; return false;">#TypeScript</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">My Free and Open Source Expense Tracker App is on the App Store<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-react-original"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2018-06-23</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Startups/'; return false;">#Startups</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Business/'; return false;">#Business</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/General/'; return false;">#General</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">How to start a tech company as a non technical individual<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-free_breakfast"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2018-05-27</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/gitment/'; return false;">#gitment</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Setup gitment on your Hexo blog<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2017-11-08</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Business/'; return false;">#Business</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Books/'; return false;">#Books</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Self-Help/'; return false;">#Self-Help</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Notes on Anything You Want by Derek Sivers<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-book3"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2017/10/Quicksort-JavaScript-Implementation/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2017-10-24</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/leet/'; return false;">#leet</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Sorting/'; return false;">#Sorting</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Quicksort JavaScript Implementation<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2017/08/How-to-receive-messages-from-web-sockets-using-redux-saga/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2017-08-02</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/redux/'; return false;">#redux</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/saga/'; return false;">#saga</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/websockets/'; return false;">#websockets</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">How to receive messages from web sockets using redux-saga<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2017/03/Save-All-by-Default-in-VSCode/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2017-03-27</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/VSCode/'; return false;">#VSCode</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Save All by Default in VSCode<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-visualstudio"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2017/02/Configure-Jest-Test-Location/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2017-02-25</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Jest/'; return false;">#Jest</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Unit-Tests/'; return false;">#Unit Tests</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Configure Jest Test Location<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-react-original"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2017/02/Notes-on-Turning-Pro-by-Steven-Pressfield/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2017-02-23</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Books/'; return false;">#Books</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Procrastination/'; return false;">#Procrastination</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Productivity/'; return false;">#Productivity</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Notes on Turning Pro by Steven Pressfield<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-book3"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/10/Notes-on-Ego-is-the-enemy-by-Ryan-Holiday/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-10-30</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Books/'; return false;">#Books</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Self-Help/'; return false;">#Self-Help</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Ego/'; return false;">#Ego</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Notes on Ego is the enemy by Ryan Holiday<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-book3"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/10/Setup-Jest-to-use-an-external-configuration-file/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-10-26</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Jest/'; return false;">#Jest</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Unit-Tests/'; return false;">#Unit Tests</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Setup Jest to use an external configuration file<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/10/8-VSCode-Configuration-Options-you-need-to-know-about/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-10-16</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/VSCode/'; return false;">#VSCode</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">8 VSCode Configuration Options you need to know about<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-visualstudio"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/10/Github-Avatar-not-showing-on-list-of-commits/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-10-10</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Github/'; return false;">#Github</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Github Avatar not showing on list of commits<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/09/Setup-the-latest-React-in-JSBin/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-09-19</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JSBin/'; return false;">#JSBin</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Setup the latest React in JSBin<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-react-original"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/09/Set-Menu-Items-in-Electron/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-09-13</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Electron/'; return false;">#Electron</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Set Menu Items in Electron<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-atom"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/09/Pimp-up-iTerm-with-Zsh-and-prezto-on-Mac-OS-X/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-09-12</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/zsh/'; return false;">#zsh</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Prezto/'; return false;">#Prezto</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Pimp up iTerm with Zsh and prezto on Mac OS X<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-terminal"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/09/Create-patch-from-commit-with-git/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-09-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Patch/'; return false;">#Patch</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Create patch from commit with git<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/09/The-mysterious-4px-gap-in-between-images/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-09-06</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML5/'; return false;">#HTML5</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS3/'; return false;">#CSS3</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">The mysterious 4px gap in between images<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-html5"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/09/Undo-last-commit-in-git/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-09-04</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Undo last commit in git<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/08/Turn-an-image-to-Black-and-White-on-hover-with-CSS/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-08-16</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS/'; return false;">#CSS</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Image/'; return false;">#Image</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Turn an image to Black and White on hover with CSS<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-html5"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/08/Change-the-code-font-size-in-Webstorm/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-08-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/WebStorm/'; return false;">#WebStorm</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Change the code font size in Webstorm<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/08/ES6-Object-Destructuring-Examples/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-08-10</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Destructuring/'; return false;">#Destructuring</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">ES6 Object Destructuring Examples<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/08/Bring-colors-and-life-to-your-console-outputs-in-Node/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-08-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Console/'; return false;">#Console</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Bring colors and life to your console outputs in Node<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/07/Add-Disqus-Comment-Count-to-your-Static-Blog-Index-Page/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-07-07</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Disqus/'; return false;">#Disqus</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Blog/'; return false;">#Blog</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Add Disqus Comment Count to your Static Blog Index Page<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-file-o"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/07/New-Hexo-Theme-Alpha-Dust/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-07-07</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Theme/'; return false;">#Theme</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">New Hexo Theme Alpha Dust<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-web"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Default-Function-Parameters-in-JavaScript-ES6/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-23</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Default Function Parameters in JavaScript ES6<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Share-your-configuration-with-Webstorm-and-editorconfig/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-22</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/WebStorm/'; return false;">#WebStorm</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Share your configuration with Webstorm and .editorconfig<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Duplicate-Function-Parameters-in-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-20</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Weird/'; return false;">#Weird</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Use-Strict/'; return false;">#Use Strict</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Duplicate Function Parameters in JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Boostrap-4-Stylus-Media-Queries/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-17</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Stylus/'; return false;">#Stylus</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS/'; return false;">#CSS</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bootstrap/'; return false;">#Bootstrap</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Boostrap 4 Stylus Media Queries<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-stylus"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/DES-encryption-in-Node-and-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-15</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Cryptography/'; return false;">#Cryptography</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/DES/'; return false;">#DES</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">DES encryption in Node and JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-unlocked2"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Differentiate-background-and-foreground-div-clicks/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-13</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/div/'; return false;">#div</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML/'; return false;">#HTML</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/jQuery/'; return false;">#jQuery</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Differentiate background and foreground div clicks<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-jquery"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Same-height-columns-with-flexbox/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML5/'; return false;">#HTML5</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS3/'; return false;">#CSS3</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Web/'; return false;">#Web</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Layout/'; return false;">#Layout</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Same height columns with Flexbox<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-html5"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Build-your-First-Electron-App/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Electron/'; return false;">#Electron</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Build your First Electron App<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-clock"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Speed-up-Web-Development-with-Live-Edit-in-Webstorm/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-07</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/WebStorm/'; return false;">#WebStorm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML5/'; return false;">#HTML5</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS3/'; return false;">#CSS3</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Web/'; return false;">#Web</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Live-Edit/'; return false;">#Live Edit</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Speed up Web Development with Live Edit in Webstorm<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/06/Create-a-loading-animation-with-SVG-and-CSS3/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-06-01</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML5/'; return false;">#HTML5</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/SVG/'; return false;">#SVG</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Animation/'; return false;">#Animation</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS3/'; return false;">#CSS3</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/SCSS/'; return false;">#SCSS</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Create a loading animation with SVG and CSS3<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-html5"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Understand-the-SVG-viewBox/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-31</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML5/'; return false;">#HTML5</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/SVG/'; return false;">#SVG</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/viewBox/'; return false;">#viewBox</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Understand the SVG viewBox<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-html5"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Two-Ways-of-Creating-an-Animation-Loop-in-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-30</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS/'; return false;">#CSS</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Animation/'; return false;">#Animation</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Two Ways of Creating an Animation Loop in JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Performance-Comparison-ES6-Template-Literals-vs-HandleBars-in-Node/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-27</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Templating/'; return false;">#Templating</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Handlebars/'; return false;">#Handlebars</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Performance Comparison: ES6 Template Literals vs HandleBars in Node<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Blur-Image-on-Hover-with-CSS/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-25</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS/'; return false;">#CSS</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hover/'; return false;">#Hover</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Blur/'; return false;">#Blur</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Blur Image on Hover with CSS<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-html5"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Expose-your-local-website-to-the-world-with-ngrok/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-24</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ngrok/'; return false;">#ngrok</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/localhost/'; return false;">#localhost</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/http/'; return false;">#http</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Expose your local website to the world with ngrok<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-terminal"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Automatically-extract-interesting-quotes-from-a-text-with-Node-JS/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-20</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Quotes/'; return false;">#Quotes</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Automatically extract interesting quotes from a text with Node JS<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Get-the-Current-Wifi-Password-with-Node/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-18</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Wifi/'; return false;">#Wifi</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Password/'; return false;">#Password</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Get the Current Wifi Password with Node<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/PDF-Generation-with-Node-JS/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-17</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/PDF/'; return false;">#PDF</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/PDFKit/'; return false;">#PDFKit</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">PDF Generation with Node JS<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/SHA-256-in-Node/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-14</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Cryptography/'; return false;">#Cryptography</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/SHA256/'; return false;">#SHA256</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">SHA-256 in Node<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-unlocked2"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Factory-Pattern-in-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-12</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Design-Pattern/'; return false;">#Design Pattern</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Factory/'; return false;">#Factory</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Factory Pattern in JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-cubes"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Craft-meaningful-git-commits/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Software-Practices/'; return false;">#Software Practices</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ACID/'; return false;">#ACID</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Craft meaningful git commits<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Convert-a-putty-ppk-key-to-a-pem-file-on-OSX/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/EC2/'; return false;">#EC2</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ppk/'; return false;">#ppk</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/pem/'; return false;">#pem</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Convert a putty .ppk key to an Amazon .pem file on OSX<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-terminal"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/ES6-ES2015-Stack-Implementation/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-04</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Algorithm/'; return false;">#Algorithm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Data-Structure/'; return false;">#Data Structure</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Stack/'; return false;">#Stack</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">ES6/ES2015 Stack Implementation<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/Get-the-last-element-of-an-Array-in-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-03</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Get the last element of an Array in JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/05/ES6-ES2015-LinkedList-Implementation/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-05-01</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Algorithm/'; return false;">#Algorithm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Data-Structure/'; return false;">#Data Structure</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">ES6/ES2015 LinkedList Implementation<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Big-O-Notation-for-algorithms/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-26</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Algorithm/'; return false;">#Algorithm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Performance/'; return false;">#Performance</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Big-O/'; return false;">#Big-O</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Big O Notation for algorithms<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Create-a-Pie-Chart-with-HTML5-canvas/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-25</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML5/'; return false;">#HTML5</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Chart/'; return false;">#Chart</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Canvas/'; return false;">#Canvas</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Create a Pie Chart with HTML5 canvas<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-html5"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Create-links-automatically-in-your-hexo-posts/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-23</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Autolinker/'; return false;">#Autolinker</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/PlugIn/'; return false;">#PlugIn</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Create links automatically in your hexo posts<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-web"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Add-a-build-passing-badge-to-your-github-repository/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-21</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Github/'; return false;">#Github</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Travis/'; return false;">#Travis</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Markdown/'; return false;">#Markdown</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Add a build passing badge to your github repository<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-github_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Setup-Travis-CI-with-your-node-project/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-19</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Github/'; return false;">#Github</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Travis/'; return false;">#Travis</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Build/'; return false;">#Build</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CI/'; return false;">#CI</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Setup Travis CI with your node project<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-github_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Pull-requests-on-github-101/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-15</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Github/'; return false;">#Github</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Open-Source/'; return false;">#Open Source</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Pull requests on github 101<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-github_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Zelda-s-theme-in-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/MIDI/'; return false;">#MIDI</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Zelda/'; return false;">#Zelda</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Zelda's theme in JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-volume_up"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Convert-a-base64-string-to-a-file-in-Node/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/base64/'; return false;">#base64</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Convert a base64 string to a file in Node<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Parse-a-webpage-with-Node/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-10</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/jQuery/'; return false;">#jQuery</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Parsing/'; return false;">#Parsing</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Parse a webpage with Node using jQuery<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Set-Timezone-in-hexo/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-05</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/MomentJS/'; return false;">#MomentJS</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Set Timezone in Hexo<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/Get-the-OS-X-command-line-to-read-files-for-you/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-04</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/OS-X/'; return false;">#OS X</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Just-For-Fun/'; return false;">#Just For Fun</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Get the OS X command line to read files for you<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-apple2"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/04/New-Hexo-Theme-Phantom/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-04-01</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Theme/'; return false;">#Theme</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">New Hexo Theme Phantom<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-web"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Setup-ESLint-in-Atom/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-30</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ESLint/'; return false;">#ESLint</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Atom/'; return false;">#Atom</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Setup ESLint in Atom<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-atom"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/New-Hexo-Theme-Magnetic/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-29</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Theme/'; return false;">#Theme</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">New Hexo Theme: Magnetic<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-web"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Remote-Web-debugging-with-Vorlon-js/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-23</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Debugging/'; return false;">#Debugging</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Vorlon/'; return false;">#Vorlon</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Remote Web debugging with Vorlon.js<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-bug_report"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Remote-Web-Debugging-with-weinre/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-22</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Debugging/'; return false;">#Debugging</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Weinre/'; return false;">#Weinre</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Remote Web Debugging with weinre<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-bug_report"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Remote-JavaScript-debugging-with-jsconsole/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-22</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Debugging/'; return false;">#Debugging</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JSConsole/'; return false;">#JSConsole</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Remote JavaScript debugging with JSConsole<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-bug_report"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Setup-ESLint-in-WebStorm/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-20</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Tools/'; return false;">#Tools</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/WebStorm/'; return false;">#WebStorm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/OS-X/'; return false;">#OS X</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ESLint/'; return false;">#ESLint</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Setup ESLint in WebStorm<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Pure-and-Impure-Functions/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-15</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Software-Practices/'; return false;">#Software Practices</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Pure and Impure Functions<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-cubes"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/New-Hexo-Theme-Clean-Blog/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-15</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Theme/'; return false;">#Theme</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">New Hexo Theme - Clean Blog<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-web"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Create-an-Hexo-Theme-Part-3-Comments-Analytics-and-Widgets/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Disqus/'; return false;">#Disqus</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Analytics/'; return false;">#Analytics</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bootstrap/'; return false;">#Bootstrap</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Theme/'; return false;">#Theme</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Template/'; return false;">#Template</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/EJS/'; return false;">#EJS</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Create an Hexo Theme - Part 3: Comments, Analytics and Widgets<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-web"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Create-an-Hexo-Theme-Part-2-Other-Pages/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bootstrap/'; return false;">#Bootstrap</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Theme/'; return false;">#Theme</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Template/'; return false;">#Template</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/EJS/'; return false;">#EJS</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Create an Hexo Theme - Part 2: Other Pages<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-web"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Create-an-Hexo-Theme-Part-1-Index/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-08</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bootstrap/'; return false;">#Bootstrap</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Theme/'; return false;">#Theme</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Template/'; return false;">#Template</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/EJS/'; return false;">#EJS</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Create an Hexo Theme - Part 1: Index<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-web"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Setup-Gulp-to-compile-ES6-ES2015-code/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-07</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Babel/'; return false;">#Babel</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Gulp/'; return false;">#Gulp</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Setup Gulp to compile ES6 ES2015 code<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-gulp"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/03/Unit-Test-React-Components/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-03-02</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Babel/'; return false;">#Babel</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/TDD/'; return false;">#TDD</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Webpack/'; return false;">#Webpack</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Unit Test React Components<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-react-original"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Best-git-log-aliases/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-29</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Log/'; return false;">#Log</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Alias/'; return false;">#Alias</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Best git log aliases<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Copy-an-Array-into-itself-in-JavaScript-ES6-2015/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-24</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Copy an Array into itself in JavaScript ES6/2015<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Basic-git-log-commands/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-23</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Basic git log commands<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/How-to-use-a-custom-domain-with-your-github-pages-site/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-22</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Github/'; return false;">#Github</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Custom-Domain/'; return false;">#Custom Domain</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/DNS-Provider/'; return false;">#DNS Provider</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">How to use a custom domain with your github pages site<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-github_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Babel-and-Node-Module-Loader/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-20</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Babel/'; return false;">#Babel</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Babel and Node Module Loader<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/How-to-setup-Babel6-for-NodeJs/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-16</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Babel/'; return false;">#Babel</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">How to setup Babel6 for NodeJs<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Further-minify-your-CSS-with-CSSO/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-15</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS/'; return false;">#CSS</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Build/'; return false;">#Build</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CssMin/'; return false;">#CssMin</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSSO/'; return false;">#CSSO</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Further minify your CSS with CSSO<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-css3"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Stash-your-changes-before-switching-branch/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-10</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Stash your changes before switching branch with Git<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/git-add/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Git add<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Notes-on-Never-Eat-Alone-by-Keith-Ferrazzi/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Books/'; return false;">#Books</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Networking/'; return false;">#Networking</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/General-Business/'; return false;">#General Business</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Notes on Never Eat Alone by Keith Ferrazzi<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-book3"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Node-auto-completion-in-WebStorm-on-OSX/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-03</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/WebStorm/'; return false;">#WebStorm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/OS-X/'; return false;">#OS X</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Node Auto Completion in WebStorm on OSX<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Debug-hexo-blog-generation-in-webstorm/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-02</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/WebStorm/'; return false;">#WebStorm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Debugging/'; return false;">#Debugging</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Debug hexo blog generation in webstorm<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-bug_report"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/02/Display-an-animated-counter-on-your-webpage/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-02-01</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS/'; return false;">#CSS</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML/'; return false;">#HTML</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Display an animated counter on your webpage<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Search-through-history-in-OSX-terminal/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-29</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/OSX/'; return false;">#OSX</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Search through history in OSX terminal<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-terminal"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Create-a-Bash-Shell-script-to-download-a-site-s-favicon-with-HTTPie/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-26</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Favicon/'; return false;">#Favicon</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTTPie/'; return false;">#HTTPie</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Create a Bash Shell script to download a site's favicon with HTTPie<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-terminal"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/HTTPie-a-good-replacement-for-cURL/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-25</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTTPie/'; return false;">#HTTPie</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/REST/'; return false;">#REST</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/cURL/'; return false;">#cURL</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">HTTPie, a good replacement for cURL<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-terminal"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Notes-on-Zero-to-One-by-Peter-Thiel/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-22</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Startups/'; return false;">#Startups</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Books/'; return false;">#Books</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Notes on Zero to One by Peter Thiel<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-book3"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-20</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Git/'; return false;">#Git</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/gitignore/'; return false;">#gitignore</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Untrack files already added to git repository based on .gitignore<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-git"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Use-Q-to-create-a-promise-from-a-value/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-18</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Promise/'; return false;">#Promise</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Use Q to create a promise from a value<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Add-a-sitemap-to-your-hexo-blog/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-18</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Sitemap/'; return false;">#Sitemap</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Add a sitemap to your hexo blog<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/OSX-Use-Spotlight-with-the-Command-Line/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-14</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/OS-X/'; return false;">#OS X</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">OSX: Use Spotlight with the Command Line<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-apple2"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/The-let-keyword-in-ES6-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-12</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES2015/'; return false;">#ES2015</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/ES6/'; return false;">#ES6</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">The let keyword in ES6 JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Code-Bloat-Commandos-Do-not-let-your-functions-do-more-than-one-thing/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Software-Practices/'; return false;">#Software Practices</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Single-Responsibility-Principle/'; return false;">#Single Responsibility Principle</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Code Bloat Commandos - Do not let your functions do more than one thing<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-cubes"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Method-context-in-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-06</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Method context in JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Wildcards-in-bash/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-05</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/OS-X/'; return false;">#OS X</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Wildcards in Bash<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-terminal"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/open-the-current-terminal-directory-in-Finder-OS-X/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-04</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/OS-X/'; return false;">#OS X</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Open the current terminal directory in Finder (OS X)<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-apple2"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2016/01/Sorting-files-using-the-ls-command/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2016-01-04</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Bash/'; return false;">#Bash</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Sorting files using the ls command<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-terminal"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Code-snippets-in-Webstorm/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-31</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/WebStorm/'; return false;">#WebStorm</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Code snippets in Webstorm<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Loops-and-callbacks-in-React/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-29</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Loops and callbacks in React<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-react-original"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Easy-dynamic-classes-with-React/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-28</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Easy dynamic classes with React<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-react-original"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Passing-arguments-to-the-underlying-command-in-npm-scripts/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-24</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/npm/'; return false;">#npm</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Passing arguments to the underlying command in npm scripts<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-npm"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Build-your-first-React-application/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-22</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/React/'; return false;">#React</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Build your first React application<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Bundle-jade-templates-with-browserify-transform/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-18</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Browserify/'; return false;">#Browserify</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Jade/'; return false;">#Jade</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Bundle jade templates with browserify transform<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Hexo-deploy-your-blog-to-github-pages-in-one-command/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-17</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Github/'; return false;">#Github</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Hexo deploy your blog to github pages in one command<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-github_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Read-only-properties-in-JavaScript/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-14</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/OOP/'; return false;">#OOP</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Read-Only properties in JavaScript<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-javascript_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Requiring-external-libraries-with-Browserify/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-11</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Browserify/'; return false;">#Browserify</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Requiring external libraries with Browserify<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Build-and-package-your-client-side-code-using-npm/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/JavaScript/'; return false;">#JavaScript</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/npm/'; return false;">#npm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Stylus/'; return false;">#Stylus</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Build/'; return false;">#Build</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Browserify/'; return false;">#Browserify</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Jade/'; return false;">#Jade</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Build and package your client side code using npm<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-npm"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Run-scripts-with-npm/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-09</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/npm/'; return false;">#npm</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Run scripts with npm<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-npm"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Add-Google-Analytics-to-your-hexo-blog/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-06</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Analytics/'; return false;">#Analytics</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Add Google Analytics to your hexo blog<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-google_analytics"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Add-Disqus-comments-in-Hexo/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-05</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Disqus/'; return false;">#Disqus</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Add Disqus comments in Hexo<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-comment2"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/12/Add-an-RSS-feed-to-your-hexo-blog/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-12-01</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Hexo/'; return false;">#Hexo</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/RSS/'; return false;">#RSS</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/npm/'; return false;">#npm</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Add an RSS feed to your hexo blog<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-rss-square"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/11/Your-first-10-minutes-with-Browserify/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-11-27</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Browserify/'; return false;">#Browserify</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Your first 10 minutes with Browserify<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/11/Refresh-webpages-automatically-during-development-using-Gulp/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-11-25</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Build/'; return false;">#Build</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Gulp/'; return false;">#Gulp</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/LiveReload/'; return false;">#LiveReload</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Refresh webpages automatically during development using Gulp<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-gulp"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/11/Getting-started-with-Gulp-and-static-websites/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-11-24</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Build/'; return false;">#Build</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Gulp/'; return false;">#Gulp</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Getting started with Gulp and static websites<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-gulp"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/08/Capture-Command-Line-Arguments-in-Node/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-08-16</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Capture command line arguments in node<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-nodejs_small"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/08/Debug-Mocha-Unit-Tests-in-Webstorm/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-08-03</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Node/'; return false;">#Node</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/WebStorm/'; return false;">#WebStorm</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/Mocha/'; return false;">#Mocha</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/TDD/'; return false;">#TDD</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Debug Mocha Unit Tests in Webstorm<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-code_badge"></span>
+        </div>
+    </div>
+</a>
+            
+                <a href="/2015/07/round-images-in-css/" class="content-link">
+    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv4">
+        <div class="dtc v-mid w-90 black-70">
+            <div>
+                
+                    <span class="f5 fw3 lh-copy pr4">2015-07-27</span> 
+                
+                
+                <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/HTML5/'; return false;">#HTML5</span> <span class="fake-link fw3 ph1 dib" onclick="location.href = '/tags/CSS3/'; return false;">#CSS3</span>
+                
+            </div>
+            <span class="f3 fw3 lh-copy content-title">Round Images in CSS<span>
+        </div>
+        <div class="dtc v-mid w-10 f1 black-50 tr">
+            <span class="devicons-html5"></span>
+        </div>
+    </div>
+</a>
+            
+        </div>
+    </div>
+    
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

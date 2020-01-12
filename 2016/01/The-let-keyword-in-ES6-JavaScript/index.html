@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="The let keyword in ES6 JavaScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>The let keyword in ES6 JavaScript - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">The let keyword in ES6 JavaScript</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">12 January 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-javascript_badge"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/ES2015/">#ES2015</a> <a class="fw3 ph1 dib" href="/tags/ES6/">#ES6</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>The <code>let</code> keyword in JavaScript is like the old <code>var</code> keyword in JavaScript except that it respects block scope. Before ES6, JavaScript only had function scope. Although there is nothing fundamentally wrong with function scope, it confuses a lot of people coming from C based languages which have block scope.</p>
+<a id="more"></a> 
+<h2 id="1-Block-scope-vs-Function-scope"><a href="#1-Block-scope-vs-Function-scope" class="headerlink" title="1) Block scope vs Function scope"></a>1) Block scope vs Function scope</h2><p>Scope refers to some portion of the code where a variable exists. Outside of that scope the variable will be not be accessible or will be another variable with the same name.</p>
+<h3 id="a-Function-scope"><a href="#a-Function-scope" class="headerlink" title="a) Function scope"></a>a) Function scope</h3><p>Function scope means that any variable defined anywhere inside a function, will be accessible anywhere in that function and will not exist outside of it.</p>
+<h3 id="b-Block-scope"><a href="#b-Block-scope" class="headerlink" title="b) Block scope"></a>b) Block scope</h3><p>Block scope means that any variable defined anywhere inside any block (for example <code>if</code> and <code>for</code> blocks), will be accessible anywhere inside that block and will not exist outside of it.</p>
+<h2 id="2-JavaScript-var-and-let"><a href="#2-JavaScript-var-and-let" class="headerlink" title="2) JavaScript var and let"></a>2) JavaScript <code>var</code> and <code>let</code></h2><p>In JavaScript, the <code>var</code> keyword is function scoped. The <code>let</code> keyword is block scoped.</p>
+<h3 id="a-Example"><a href="#a-Example" class="headerlink" title="a) Example"></a>a) Example</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> a = <span class="string">'function-a'</span>;</div><div class="line">    <span class="keyword">var</span> b = <span class="string">'function-b'</span>;</div><div class="line">    </div><div class="line">    <span class="built_in">console</span>.log(a); <span class="comment">// 'function-a'</span></div><div class="line">    <span class="built_in">console</span>.log(b); <span class="comment">// 'function-b'</span></div><div class="line">    <span class="built_in">console</span>.log(c); <span class="comment">// ReferenceError Exception: c is not defined</span></div><div class="line">    <span class="built_in">console</span>.log(d === <span class="literal">undefined</span>); <span class="comment">// true</span></div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(a !== b) &#123;</div><div class="line">    </div><div class="line">        <span class="keyword">let</span> a = <span class="string">'block-a'</span>; <span class="comment">// Sets the value of a but only in the if block</span></div><div class="line">        <span class="keyword">var</span> b = <span class="string">'block-b'</span>; <span class="comment">// Sets the value of b in the entire main() function</span></div><div class="line">        <span class="keyword">let</span> c = <span class="string">'block-c'</span>; <span class="comment">// Defined only in the if block</span></div><div class="line">        <span class="keyword">var</span> d = <span class="string">'block-d'</span>; <span class="comment">// Defined in the entire main() function</span></div><div class="line">        </div><div class="line">        <span class="built_in">console</span>.log(a); <span class="comment">// 'block-a'</span></div><div class="line">        <span class="built_in">console</span>.log(b); <span class="comment">// 'block-b'</span></div><div class="line">        <span class="built_in">console</span>.log(c); <span class="comment">// 'block-c'</span></div><div class="line">        <span class="built_in">console</span>.log(d); <span class="comment">// 'block-d'</span></div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="built_in">console</span>.log(a); <span class="comment">// 'function-a'</span></div><div class="line">    <span class="built_in">console</span>.log(b); <span class="comment">// 'block-b'</span></div><div class="line">    <span class="built_in">console</span>.log(c); <span class="comment">// ReferenceError Exception: c is not defined</span></div><div class="line">    <span class="built_in">console</span>.log(d); <span class="comment">// 'block-d'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="b-Notes"><a href="#b-Notes" class="headerlink" title="b) Notes"></a>b) Notes</h3><ul>
+<li>Variables defined with <code>var</code> inside an <code>if</code> block will exist inside the entire function they are defined in – ignoring the <code>if</code> block. </li>
+<li>Variables defined with <code>var</code> will exist and have a value of undefined in the section of the code before the initialisation. Check out variable <code>d</code> in the example. The variable is created at the beginning of the function, this is called <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/var" target="_blank" rel="external">variable hoisting</a>.</li>
+<li>Variables defined with <code>let</code> will only exist within the block they are defined in. Trying to access the variable outside of the block will throw an Error. This is the case for <code>c</code> in the example.</li>
+<li>Use <code>let</code> to override the value of a function scoped variable inside a block only. Example: <code>a</code>.</li>
+</ul>
+<h2 id="3-When-to-use-let"><a href="#3-When-to-use-let" class="headerlink" title="3) When to use let"></a>3) When to use <code>let</code></h2><h3 id="a-In-for-loops"><a href="#a-In-for-loops" class="headerlink" title="a) In for loops"></a>a) In <code>for</code> loops</h3><p>Do</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i; i &lt; n; i = i + <span class="number">1</span>) &#123;</div><div class="line">    [...]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>instead of</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i; <span class="comment">// Will be function scoped and can cause interferences</span></div><div class="line"><span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i = i + <span class="number">1</span>) &#123;</div><div class="line">    [...]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="b-In-closures-that-need-to-retain-creation-time-values"><a href="#b-In-closures-that-need-to-retain-creation-time-values" class="headerlink" title="b) In closures that need to retain creation time values"></a>b) In closures that need to retain creation time values</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; <span class="number">4</span>; i = i + <span class="number">1</span>) &#123;</div><div class="line">    </div><div class="line">    <span class="keyword">let</span> j = i;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(i); <span class="comment">// Will always print out 4</span></div><div class="line">        <span class="built_in">console</span>.log(j); <span class="comment">// Will print out 1, 2 and 3 as expected</span></div><div class="line">    &#125;, <span class="number">500</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Useful to create multiple instances of a variable inside a block.</p>
+<h3 id="c-For-temporary-variables-inside-blocks"><a href="#c-For-temporary-variables-inside-blocks" class="headerlink" title="c) For temporary variables inside blocks"></a>c) For temporary variables inside blocks</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</div><div class="line"><span class="keyword">while</span>(i &lt; <span class="number">75</span>) &#123;</div><div class="line">  <span class="keyword">let</span> random = <span class="built_in">Math</span>.random();</div><div class="line">  i = random * <span class="number">100</span>;</div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-let-caveats-and-warnings"><a href="#4-let-caveats-and-warnings" class="headerlink" title="4) let caveats and warnings"></a>4) <code>let</code> caveats and warnings</h2><h3 id="a-No-access-to-the-variable-before-declaration"><a href="#a-No-access-to-the-variable-before-declaration" class="headerlink" title="a) No access to the variable before declaration"></a>a) No access to the variable before declaration</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="built_in">console</span>.log(foo); <span class="comment">// Will throw an error</span></div><div class="line">    <span class="built_in">console</span>.log(bar); <span class="comment">// Prints nothing as bar is undefined but will not throw an error</span></div><div class="line">    </div><div class="line">    <span class="keyword">let</span> foo = <span class="string">'foo'</span>;</div><div class="line">    <span class="keyword">var</span> bar = <span class="string">'bar'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>At first glance, the <code>let</code> keyword does behave the same as <code>var</code> when used in a function block. But if you try to access the variable before declaration you will get an error instead of an <code>undefined</code> variable as you would with <code>var</code>.</p>
+<h3 id="b-Double-declarations-are-forbidden"><a href="#b-Double-declarations-are-forbidden" class="headerlink" title="b) Double declarations are forbidden"></a>b) Double declarations are forbidden</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(condition) &#123;</div><div class="line">    <span class="keyword">let</span> amount = <span class="number">0</span>;</div><div class="line">    <span class="keyword">let</span> amount = <span class="number">1</span>; <span class="comment">// will throw an Error</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="c-Be-careful-when-you-feel-like-replacing-a-var-with-let"><a href="#c-Be-careful-when-you-feel-like-replacing-a-var-with-let" class="headerlink" title="c) Be careful when you feel like replacing a var with let"></a>c) Be careful when you feel like replacing a <code>var</code> with <code>let</code></h3><p>Be careful when you feel like changing <code>var</code> with <code>let</code>. Usually that happens when a function should be split into several parts.</p>
+<p>If your initial function looks like</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">process</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> result = <span class="string">'foo'</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(dayOfTheWeek = <span class="string">'Monday'</span>) &#123;</div><div class="line">        callback(result);</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>then suddenly looks like</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">process</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(dayOfTheWeek = <span class="string">'Monday'</span>) &#123;</div><div class="line">        <span class="keyword">let</span> result = <span class="string">'foo'</span>;</div><div class="line">        callback(result);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(isRaining) &#123;</div><div class="line">        <span class="keyword">let</span> result = <span class="string">'bar'</span>;</div><div class="line">        callback(result);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>You should seriously consider rewriting your function as two functions:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">process1</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> result = <span class="string">'foo'</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">if</span>(dayOfTheWeek = <span class="string">'Monday'</span>) &#123;</div><div class="line">        callback(result);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">process2</span>(<span class="params">callback</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> result = <span class="string">'bar'</span>;</div><div class="line"></div><div class="line">    <span class="keyword">if</span>(isRaining) &#123;</div><div class="line">        callback(result);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Read more about why <a href="/2016/01/Code-Bloat-Commandos-Do-not-let-your-functions-do-more-than-one-thing/" target="_blank">functions should only do one thing<a></a></a></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/ES2015/">#ES2015</a> <a class="fw3 ph1 dib" href="/tags/ES6/">#ES6</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

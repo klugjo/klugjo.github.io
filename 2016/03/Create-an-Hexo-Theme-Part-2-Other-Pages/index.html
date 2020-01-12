@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Create an Hexo Theme - Part 2: Other Pages"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Create an Hexo Theme - Part 2: Other Pages - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Create an Hexo Theme - Part 2: Other Pages</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">09 March 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-web"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Hexo/">#Hexo</a> <a class="fw3 ph1 dib" href="/tags/Bootstrap/">#Bootstrap</a> <a class="fw3 ph1 dib" href="/tags/Theme/">#Theme</a> <a class="fw3 ph1 dib" href="/tags/Template/">#Template</a> <a class="fw3 ph1 dib" href="/tags/EJS/">#EJS</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>In this multi part tutorial, you will learn how to create an <a href="https://hexo.io/docs/themes.html" target="_blank" rel="external">Hexo Theme</a> from scratch. </p>
+<p>In <a href="/2016/03/Create-an-Hexo-Theme-Part-1-Index/">Part 1</a>, we have setup the project and the Home Page. In this section, we are going to build on what we have learnt to finish up all the remaining pages.</p>
+<a id="more"></a>
+<h2 id="Links-to-other-sections"><a href="#Links-to-other-sections" class="headerlink" title="Links to other sections"></a>Links to other sections</h2><ul>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-1-Index/">Part 1: Setting up the project and creating the blog’s main index page</a></li>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-2-Other-Pages/">Part 2: Finishing up the remaining pages</a></li>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-3-Comments-Analytics-and-Widgets/">Part 3: Wrapping up with Disqus comments, Google Analytics and the widgets</a></li>
+</ul>
+<h2 id="The-Post-Detail-page"><a href="#The-Post-Detail-page" class="headerlink" title="The Post Detail page"></a>The Post Detail page</h2><p>Let’s continue where we left off in part 1 and create the post detail page.</p>
+<p>As we have seen, to render the detail page, Hexo will look for a <code>post.ejs</code> file in our <code>/layout/</code> folder.</p>
+<p>Here is my post.ejs:</p>
+<figure class="highlight html"><figcaption><span>layout/post.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">article-full</span>', &#123;<span class="attr">item:</span> <span class="attr">page</span>&#125;) %&gt;</span></div></pre></td></tr></table></figure>
+<p>To keep the code organised, the actual code is deferred to a <code>_partial/article-full.ejs</code> that we are going to create now:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/article-full.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-post"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Title --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"blog-post-title"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%-</span> <span class="attr">item.title</span> || <span class="attr">item.link</span>%&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Date and Author --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"blog-post-meta"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%=</span> <span class="attr">item.date.format</span>(<span class="attr">config.date_format</span>) %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">item.author</span>) &#123; %&gt;</span></div><div class="line">            by <span class="tag">&lt;<span class="name">%-</span> <span class="attr">item.author</span> %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Content --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">item.content</span> %&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Tags and Categories links --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">article-tags</span>', &#123;<span class="attr">item:</span> <span class="attr">item</span>&#125;) %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">article-categories</span>', &#123;<span class="attr">item:</span> <span class="attr">item</span>&#125;) %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>This template is almost the same as <code>_partial/article-excerpt.ejs</code>, except that:</p>
+<ul>
+<li>We are displaying the full content with <code>&lt;%- item.content %&gt;</code> and not the excerpt.</li>
+<li>There are two additional partial views at the bottom, one for tags and one for categories. We will jump into these right now.</li>
+</ul>
+<h3 id="Post-Tags"><a href="#Post-Tags" class="headerlink" title="Post Tags"></a>Post Tags</h3><p>Let’s create the partial that will render the list of tags for a post: <code>layout/_partial/article-tags.ejs</code>. </p>
+<p>What we want is a list of #tags with links to the corresponding ‘tag page’ which will display all the posts with that tag. </p>
+<figure class="highlight"><figcaption><span>layout/_partial/article-tags.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;% if (item.tags &amp;&amp; item.tags.length)&#123; %&gt;</div><div class="line">&lt;%</div><div class="line">    var tags = [];</div><div class="line">    item.tags.forEach(function(tag)&#123;</div><div class="line">        tags.push('&lt;a href="' + config.root + tag.path + '"&gt;#' + tag.name + '&lt;/a&gt;');</div><div class="line">    &#125;);</div><div class="line">%&gt;</div><div class="line">&lt;div class="blog-tags-container"&gt;</div><div class="line">    &lt;span class="glyphicon glyphicon-tags"&gt;&lt;/span&gt;</div><div class="line">    &lt;%- tags.join(' ') %&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
+<p>Nothing complicated, we are enumerating through all the tags in <code>post.tags</code> and displaying them one after the other. I have added a hashtag before each tag and an icon before the list for good measure.</p>
+<h3 id="Post-Categories"><a href="#Post-Categories" class="headerlink" title="Post Categories"></a>Post Categories</h3><p>The <code>layout/_partial/article-categories.ejs</code> partial is very similar:</p>
+<figure class="highlight"><figcaption><span>layout/_partial/article-categories.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;% if (item.categories &amp;&amp; item.categories.length)&#123; %&gt;</div><div class="line">&lt;%</div><div class="line">    var categories = [];</div><div class="line">    item.categories.forEach(function(category)&#123;</div><div class="line">        categories.push('&lt;a href="' + config.root + category.path + '"&gt;' + category.name + '&lt;/a&gt;');</div><div class="line">    &#125;);</div><div class="line">%&gt;</div><div class="line">&lt;div class="blog-categories-container"&gt;</div><div class="line">    &lt;span class="glyphicon glyphicon-folder-open"&gt;&lt;/span&gt;</div><div class="line">    &lt;%- categories.join(' / ') %&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;% &#125; %&gt;</div></pre></td></tr></table></figure>
+<p>No explanation required.</p>
+<h3 id="Post-CSS"><a href="#Post-CSS" class="headerlink" title="Post CSS"></a>Post CSS</h3><p>As you may have noticed, there are 2 new CSS classes used for tags and categories styling. Here is the code for it, added to <code>blog.css</code>:</p>
+<figure class="highlight css"><figcaption><span>source/css/blog.css</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.blog-tags-container</span>, <span class="selector-class">.blog-categories-container</span> &#123;</div><div class="line">    <span class="attribute">margin-top</span>: <span class="number">30px</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.blog-tags-container</span> <span class="selector-tag">span</span><span class="selector-class">.glyphicon</span>, <span class="selector-class">.blog-categories-container</span> <span class="selector-tag">span</span><span class="selector-class">.glyphicon</span> &#123;</div><div class="line">    <span class="attribute">margin-right</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="The-detail-page-for-page-type-content"><a href="#The-detail-page-for-page-type-content" class="headerlink" title="The detail page for page type content"></a>The detail page for page type content</h2><p>This is an easy one. The ‘page type’ pages will be the same as ‘post type’ pages. Feel free to customise it as an exercise, but here is mine:</p>
+<figure class="highlight html"><figcaption><span>layout/page.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">article-full</span>', &#123;<span class="attr">item:</span> <span class="attr">page</span>&#125;) %&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="The-Archive-page"><a href="#The-Archive-page" class="headerlink" title="The Archive page"></a>The Archive page</h2><p>The archive page will display a list of posts in a more condensed way than the index page. The base will be the same as the index though:</p>
+<figure class="highlight html"><figcaption><span>layout/archive.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span>(<span class="attr">item</span>)&#123; %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">article-archive</span>', &#123;<span class="attr">item:</span> <span class="attr">item</span>&#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125;); %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">pagination</span>') %&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="The-article-archive-partial-view"><a href="#The-article-archive-partial-view" class="headerlink" title="The article-archive partial view"></a>The article-archive partial view</h3><p>As always, the actual work is in the partial view. I used <code>article-excerpt</code> as the base and stripped it down to just the title, date and author:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/article-archive.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-post"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Title --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"blog-post-title-archive"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%-</span> <span class="attr">item.title</span> || <span class="attr">item.link</span>%&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Date and Author --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"blog-post-meta"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%=</span> <span class="attr">item.date.format</span>(<span class="attr">config.date_format</span>) %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">item.author</span>) &#123; %&gt;</span></div><div class="line">            by <span class="tag">&lt;<span class="name">%-</span> <span class="attr">item.author</span> %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Careful eyes will have noticed the new CSS class that I have created for archive titles (they were too big for my liking):</p>
+<figure class="highlight css"><figcaption><span>source/css/blog.css</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.blog-post-title-archive</span> &#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: <span class="number">5px</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">25px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Tags-and-Categories-Pages"><a href="#Tags-and-Categories-Pages" class="headerlink" title="Tags and Categories Pages"></a>Tags and Categories Pages</h2><p>The last two pages we need to work are for the list of posts that correspond to a tag and a category. Now if you remember well:</p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Fallback</th>
+<th>Page Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>archive</code></td>
+<td><code>index</code></td>
+<td>This is the archive page. It will display a list of all the posts in our blog with just titles and links to the detail page.</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td><code>archive</code></td>
+<td>This is the category page. Similar to the archive page but filtered for one category.</td>
+</tr>
+<tr>
+<td><code>tag</code></td>
+<td><code>archive</code></td>
+<td>This is the tag page. Similar to the archive page page but filtered for one tag.</td>
+</tr>
+</tbody>
+</table>
+<p>The fallback page for our <code>tag.ejs</code> and <code>category.ejs</code> is <code>archive.ejs</code>. Because I don’t see any major difference in between these 3 pages, we are just going to use the fallback to <code>archive.ejs</code>. Less code to write, less duplicate code, easier to maintain.</p>
+<p>But in order to differentiate our 3 pages, we are going to add a title to the archive page:</p>
+<figure class="highlight html"><figcaption><span>layout/archive.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span></span></div><div class="line">    <span class="attr">var</span> <span class="attr">title</span> = <span class="string">''</span>;</div><div class="line">    <span class="attr">if</span> (<span class="attr">page.category</span>) <span class="attr">title</span> = <span class="string">page.category;</span></div><div class="line">    <span class="attr">if</span> (<span class="attr">page.tag</span>) <span class="attr">title</span> = <span class="string">page.tag;</span></div><div class="line">    <span class="attr">if</span> (<span class="attr">page.archive</span>)&#123;</div><div class="line">        <span class="attr">if</span> (<span class="attr">page.year</span>) <span class="attr">title</span> = <span class="string">page.year</span> + (<span class="attr">page.month</span> ? '/' + <span class="attr">page.month</span> <span class="attr">:</span> '');</div><div class="line">        <span class="attr">else</span> <span class="attr">title</span> = <span class="string">"Archives"</span>;</div><div class="line">    &#125;</div><div class="line">%&gt;</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">title</span>) &#123; %&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"blog-archive-title"</span>&gt;</span><span class="tag">&lt;<span class="name">%-</span> <span class="attr">title</span> %&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span>(<span class="attr">item</span>)&#123; %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">article-archive</span>', &#123;<span class="attr">item:</span> <span class="attr">item</span>&#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125;); %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">pagination</span>') %&gt;</span></div></pre></td></tr></table></figure>
+<p>Now we have a nice title that describes what our archive page is for.</p>
+<p>And here is the CSS that goes with it:</p>
+<figure class="highlight css"><figcaption><span>source/css/blog.css</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.blog-archive-title</span> &#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This section of the tutorial was pretty straightforward, simply building up on concepts defined in <a href="/2016/03/Create-an-Hexo-Theme-Part-1-Index/">Part 1</a>. I encourage to play around with the theme and hack it to your tastes.</p>
+<p>In <a href="/2016/03/Create-an-Hexo-Theme-Part-3-Comments-Analytics-and-Widgets/">Part 3</a>, we will add a comment section, analytics, widgets and polishing things up. See you there !</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Hexo/">#Hexo</a> <a class="fw3 ph1 dib" href="/tags/Bootstrap/">#Bootstrap</a> <a class="fw3 ph1 dib" href="/tags/Theme/">#Theme</a> <a class="fw3 ph1 dib" href="/tags/Template/">#Template</a> <a class="fw3 ph1 dib" href="/tags/EJS/">#EJS</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

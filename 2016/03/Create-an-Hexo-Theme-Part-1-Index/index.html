@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Create an Hexo Theme - Part 1: Index"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Create an Hexo Theme - Part 1: Index - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Create an Hexo Theme - Part 1: Index</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">08 March 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-web"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Hexo/">#Hexo</a> <a class="fw3 ph1 dib" href="/tags/Bootstrap/">#Bootstrap</a> <a class="fw3 ph1 dib" href="/tags/Theme/">#Theme</a> <a class="fw3 ph1 dib" href="/tags/Template/">#Template</a> <a class="fw3 ph1 dib" href="/tags/EJS/">#EJS</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>In this multi part tutorial, you will learn how to create an <a href="https://hexo.io/docs/themes.html" target="_blank" rel="external">Hexo Theme</a> from scratch. I really love Hexo and use it everyday; unfortunately, as of today, the documentation for theme creation is pretty slim. Here is my attempt at fixing that.</p>
+<a id="more"></a>
+<h2 id="Links-to-other-sections"><a href="#Links-to-other-sections" class="headerlink" title="Links to other sections"></a>Links to other sections</h2><ul>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-1-Index/">Part 1: Setting up the project and creating the blog’s main index page</a></li>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-2-Other-Pages/">Part 2: Finishing up the remaining pages</a></li>
+<li><a href="/2016/03/Create-an-Hexo-Theme-Part-3-Comments-Analytics-and-Widgets/">Part 3: Wrapping up with Disqus comments, Google Analytics and the widgets</a></li>
+</ul>
+<h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><ul>
+<li>The very basics of blogging with hexo. If you are completely new, <a href="https://hexo.io/docs/index.html" target="_blank" rel="external">check the getting started guide on hexo.io</a>.</li>
+<li>Some knowledge of Bootstrap</li>
+<li>Some knowledge of a JavaScript templating engine (we will use EJS)</li>
+</ul>
+<h2 id="Project-Description"><a href="#Project-Description" class="headerlink" title="Project Description"></a>Project Description</h2><p>This project is all about creating a theme for Hexo and understanding in details how the Hexo engine </p>
+<p>Since I don’t want to lose too much time on the HTML and CSS parts we are going to recreate the following theme in Hexo: <a href="http://getbootstrap.com/examples/blog/" target="_blank" rel="external">http://getbootstrap.com/examples/blog/</a>. It is one of the standard <a href="http://getbootstrap.com/getting-started/#examples-custom" target="_blank" rel="external">Getting Started Template Examples</a> in the Boostrap documentation.</p>
+<p>We are going to reuse the CSS and copy paste the HTML, piece by piece, until we have achieved what we want.</p>
+<p>If you get lost or are only interested in the code, <a href="https://github.com/klugjo/bootstrap-blog-hexo" target="_blank" rel="external">it is on github</a>.</p>
+<h2 id="Project-setup"><a href="#Project-setup" class="headerlink" title="Project setup"></a>Project setup</h2><h3 id="Create-a-new-hexo-blog"><a href="#Create-a-new-hexo-blog" class="headerlink" title="Create a new hexo blog"></a>Create a new hexo blog</h3><p>Let’s get started with a brand new hexo installation.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Create a new folder</span></div><div class="line">mkdir hexo-theme-creation </div><div class="line"><span class="built_in">cd</span> hexo-theme-creation</div><div class="line"></div><div class="line"><span class="comment"># Initialise Hexo</span></div><div class="line">hexo init</div></pre></td></tr></table></figure>
+<h3 id="Create-the-theme-folder"><a href="#Create-the-theme-folder" class="headerlink" title="Create the theme folder"></a>Create the theme folder</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Enter the theme folder</span></div><div class="line"><span class="built_in">cd</span> themes</div><div class="line"></div><div class="line"><span class="comment"># bootstrap-blog-hexo is also going to be the name of our theme</span></div><div class="line">mkdir bootstrap-blog-hexo</div></pre></td></tr></table></figure>
+<p><strong>Note:</strong> If you want to save the theme to git (as you should), initialise git inside <code>/themes/bootstrap-blog-hexo/</code>. </p>
+<h3 id="Folder-structure"><a href="#Folder-structure" class="headerlink" title="Folder structure"></a>Folder structure</h3><p>Here are the files and folders we will need to get started:</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">|-- <span class="keyword">layout</span> <span class="comment">// .ejs templates </span></div><div class="line">|-- <span class="keyword">source</span> <span class="comment">// source files (CSS, scripts)</span></div><div class="line">|-- _config.yml</div></pre></td></tr></table></figure>
+<p>Create these 2 folders and the <code>_config.yml</code> file.</p>
+<ul>
+<li><code>/layout/</code> will <a href="https://hexo.io/docs/themes.html#layout" target="_blank" rel="external">contain all our EJS templates</a></li>
+<li><code>/source/</code> will <a href="https://hexo.io/docs/themes.html#source" target="_blank" rel="external">contain our assets</a> (CSS files, external scripts and libraries)</li>
+<li><code>_config.yml</code> contains our <a href="https://hexo.io/docs/themes.html#config-yml" target="_blank" rel="external">theme configuration</a>. Leave it empty for now.</li>
+</ul>
+<h3 id="Copy-the-bootstrap-blog-assets-over"><a href="#Copy-the-bootstrap-blog-assets-over" class="headerlink" title="Copy the bootstrap blog assets over"></a>Copy the bootstrap blog assets over</h3><p>In our source folder, copy all the assets we need from the <a href="http://getbootstrap.com/examples/blog/" target="_blank" rel="external">bootstrap blog template</a>. View source from your browser and copy everything over or <a href="https://s3.amazonaws.com/klugjo.github.io/source-hex-blog-creation.zip" target="_blank" rel="external">download this package</a> and extract it in your source folder.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">|-- layout </div><div class="line">|-- source </div><div class="line">    |-- bootstrap <span class="comment">// Copy the boostrap library files here </span></div><div class="line">    |-- css <span class="comment">// Copy the blog's css file here</span></div><div class="line">    |-- favicon</div><div class="line">        |-- favicon.ico <span class="comment">// Your choice of favicon</span></div><div class="line">    |-- js <span class="comment">// Copy the blog's js file here</span></div><div class="line">|-- _config.yml</div></pre></td></tr></table></figure>
+<h2 id="Basics-of-Hexo"><a href="#Basics-of-Hexo" class="headerlink" title="Basics of Hexo"></a>Basics of Hexo</h2><p>Before we write our first template file, let’s look at the basic of Hexo blog generation.</p>
+<h3 id="Page-types"><a href="#Page-types" class="headerlink" title="Page types"></a>Page types</h3><p>Corresponds to the <a href="https://hexo.io/docs/templates.html" target="_blank" rel="external">6 types of pages</a> we can define in our theme, every singe HTML page generated in the public folder belongs to one of these templates:</p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Fallback</th>
+<th>Page Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index</code></td>
+<td>None</td>
+<td>This the home page of the blog, the main entry point. In our case it will display a list of blog excerpts.</td>
+</tr>
+<tr>
+<td><code>post</code></td>
+<td><code>index</code></td>
+<td>This is the detail page for posts. Here we will display only one post in full, with a comment section.</td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td><code>index</code></td>
+<td>This is the detail page for pages. Same as post but for ‘page type’ posts. </td>
+</tr>
+<tr>
+<td><code>archive</code></td>
+<td><code>index</code></td>
+<td>This is the archive page. It will display a list of all the posts in our blog with just titles and links to the detail page.</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td><code>archive</code></td>
+<td>This is the category page. Similar to the archive page but filtered for one category.</td>
+</tr>
+<tr>
+<td><code>tag</code></td>
+<td><code>archive</code></td>
+<td>This is the tag page. Similar to the archive page page but filtered for one tag.</td>
+</tr>
+</tbody>
+</table>
+<p>In this part of the tutorial we will build the <code>index</code>.</p>
+<p>During the generation is Hexo will look for files named <code>index.ejs</code>, <code>post.ejs</code>, <code>page.ejs</code> and so on. These templates are then rendered to create the static HTML pages.</p>
+<h3 id="Common-Layout"><a href="#Common-Layout" class="headerlink" title="Common Layout"></a>Common Layout</h3><p>Hexo supports the use of a <a href="https://hexo.io/docs/templates.html#Layouts" target="_blank" rel="external">common layout file</a> that will be used by all the templates above.</p>
+<p>This file has to be named <code>layout.ejs</code>. It acts as a wrapper around the content rendered by the different page type templates above.</p>
+<p>In our theme, the <code>layout</code> will contain: the <code>&lt;html&gt;</code> and <code>&lt;head&gt;</code> tags, the header and menu as well as the footer and the sidebar. Basically all the elements that are common to all pages.</p>
+<p>The different page templates will only be responsible for creating the actual content, that will be placed inside our main container.</p>
+<h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><p>Inside all our templates, we have access to some <a href="https://hexo.io/docs/variables.html" target="_blank" rel="external">variables that are injected by the hexo engine</a>. Here are some of them:</p>
+<h4 id="Site"><a href="#Site" class="headerlink" title="- Site"></a>- Site</h4><p><code>site</code> contains site wide information. For example, with <code>site.posts</code> we can access all the posts in the blog. Useful if we want to display statistics in a widget for example. </p>
+<h4 id="Page"><a href="#Page" class="headerlink" title="- Page"></a>- Page</h4><p><code>page</code> is the main variable and contains a lot of information related to the current page, including all the post titles, dates, content and so on.</p>
+<p>The properties of that object depend on which page template (index, post, archives) we are on. The full list <a href="https://hexo.io/docs/variables.html" target="_blank" rel="external">is available here</a>; but let’s look at them as we go.</p>
+<h4 id="Config"><a href="#Config" class="headerlink" title="- Config"></a>- Config</h4><p><code>config</code> is a JavaScript object representation of the main <code>_config.yml</code> of the blog.</p>
+<h4 id="Theme"><a href="#Theme" class="headerlink" title="- Theme"></a>- Theme</h4><p><code>theme</code> is a JavaScript object representation of the theme’s <code>_config.yml</code>.</p>
+<h2 id="Theme’s-layout-creation"><a href="#Theme’s-layout-creation" class="headerlink" title="Theme’s layout creation"></a>Theme’s layout creation</h2><p>We will start by creating the <code>/layout/layout.ejs</code> file discussed above.</p>
+<h3 id="The-head-section"><a href="#The-head-section" class="headerlink" title="The head section"></a>The head section</h3><p>Let’s start by creating a layout.ejs file and inserting the <code>&lt;html&gt;&lt;/html&gt;</code> </p>
+<figure class="highlight html"><figcaption><span>layout/layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Head tag --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">head</span>') %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Here we are extracting all the <code>&lt;head&gt;</code> code into a <a href="https://hexo.io/docs/templates.html#Partials" target="_blank" rel="external">partial view</a>. Partial views promote separation of concern and reusability in our code. </p>
+<p>The syntax is <code>partial(&#39;path&#39; [, arguments])</code></p>
+<p>After creating that <code>layout/_partial/head.ejs</code> file, we are going to copy the head code from the bootstrap source code:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/head.ejs </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></div><div class="line">    </div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">""</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">""</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">href</span>=<span class="string">"favicon/favicon.ico"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Blog Template for Bootstrap<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Bootstrap core CSS --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">css</span>('<span class="attr">bootstrap</span>/<span class="attr">css</span>/<span class="attr">bootstrap.min.css</span>') %&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- IE10 viewport hack for Surface/desktop Windows 8 bug --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">css</span>('<span class="attr">css</span>/<span class="attr">ie10-viewport-bug-workaround.css</span>') %&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Custom styles for this template --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">css</span>('<span class="attr">css</span>/<span class="attr">blog.css</span>') %&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;</span></div><div class="line">    <span class="comment">&lt;!--[if lt IE 9]&gt;</span></div><div class="line">        &lt;script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;</div><div class="line">        &lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"&gt;&lt;/script&gt;</div><div class="line">    &lt;![endif]--&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Pretty straightforward. All we have done is use <a href="https://hexo.io/docs/helpers.html#css" target="_blank" rel="external">a CSS helper</a> to insert our style sheets.</p>
+<p>The files in our <code>source</code> folder will be copied at the root of our generated site, so <code>source/</code> should not be included in the paths.</p>
+<p>We will make the <code>&lt;title&gt;</code> and meta tags dynamic down the line but let’s leave it like so for now.</p>
+<h3 id="The-after-footer-section"><a href="#The-after-footer-section" class="headerlink" title="The after footer section"></a>The after footer section</h3><p>The after footer section will be included just before the end of our <code>&lt;body&gt;</code> section. In that partial view, we will include all our scripts.</p>
+<p>Let’s modify the layout:</p>
+<figure class="highlight html"><figcaption><span>layout/layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Head tag --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">head</span>') %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- After footer scripts --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">after-footer</span>') %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>And create the content of the new <code>layout/_partial/after-footer.ejs</code> partial:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/after-footer.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">js</span>('<span class="attr">bootstrap</span>/<span class="attr">js</span>/<span class="attr">bootstrap.min.js</span>') %&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- IE10 viewport hack for Surface/desktop Windows 8 bug --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">js</span>('<span class="attr">js</span>/<span class="attr">ie10-viewport-bug-workaround.js</span>') %&gt;</span></div></pre></td></tr></table></figure>
+<p>Notice the use of <a href="https://hexo.io/docs/helpers.html#js" target="_blank" rel="external">a JS helper function</a> for our local js files.</p>
+<h3 id="Top-Menu"><a href="#Top-Menu" class="headerlink" title="Top Menu"></a>Top Menu</h3><p>In a similar fashion, let’s create the top menu just after the opening <code>&lt;body&gt;</code> tag.</p>
+<figure class="highlight html"><figcaption><span>layout/layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">// [...]</div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- Menu --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">menu</span>') %&gt;</span></div><div class="line">    </div><div class="line">// [...]</div></pre></td></tr></table></figure>
+<p><code>layout/_partial/menu.ejs</code> partial content:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/menu.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-masthead"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"blog-nav"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">var</span> <span class="attr">i</span> <span class="attr">in</span> <span class="attr">theme.menu</span>)&#123; %&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"blog-nav-item"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.menu[i]) %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">i</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Note the use of the <code>theme</code> global variable. <code>theme</code> is the JS equivalent to the theme’s <code>_config.yml</code>.</p>
+<p>Here we are making the menu configurable in the theme’s configuration.</p>
+<p>For this to work we will then need to add the config in <code>_config.yml</code>:</p>
+<figure class="highlight bash"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Header</span></div><div class="line">menu:</div><div class="line">  Home: /</div><div class="line">  Archives: /archives</div></pre></td></tr></table></figure>
+<p>In <code>menu.ejs</code> we enumerate through all the menu items in the config and create the corresponding links.</p>
+<h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><p>The header will be placed just below the menu and contain the blog title and subtitle:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/header.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-header"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"blog-title"</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"lead blog-description"</span>&gt;</span><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">config.subtitle</span>)&#123; %&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.subtitle</span> %&gt;</span><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>In here, we make use of the <code>config</code> variable which corresponds to the main <code>_config.yml</code> of the blog. It should have a title and subtitle properties configured.</p>
+<p>When inserting the header in the layout, beware of the <code>&lt;div class=&quot;container&quot;&gt;&lt;/div&gt;</code> wrapper:</p>
+<figure class="highlight html"><figcaption><span>layout/layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Head tag --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">head</span>') %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- Menu --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">menu</span>') %&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- Blog Header: title and subtitle --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">header</span>') %&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    </div><div class="line">// [...]</div></pre></td></tr></table></figure>
+<h3 id="Footer"><a href="#Footer" class="headerlink" title="Footer"></a>Footer</h3><p>The footer is all static for now, here is the content of the partial view:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/footer.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">footer</span> <span class="attr">class</span>=<span class="string">"blog-footer"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Blog template built for <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://getbootstrap.com"</span>&gt;</span>Bootstrap<span class="tag">&lt;/<span class="name">a</span>&gt;</span> by <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://twitter.com/mdo"</span>&gt;</span>@mdo<span class="tag">&lt;/<span class="name">a</span>&gt;</span>.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Adapted to Hexo by <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.codeblocq.com/"</span>&gt;</span>klugjo<span class="tag">&lt;/<span class="name">a</span>&gt;</span>.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Back to top<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Main-content-and-sidebar"><a href="#Main-content-and-sidebar" class="headerlink" title="Main content and sidebar"></a>Main content and sidebar</h3><p>At this point, we are ready to wrap things up and add the main content as well as the sidebar.</p>
+<p>Here is the final <code>layout.ejs</code>:</p>
+<figure class="highlight html"><figcaption><span>layout/layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- Head tag --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">head</span>') %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- Menu --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">menu</span>') %&gt;</span></div><div class="line"></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- Blog Header: title and subtitle --&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">header</span>') %&gt;</span></div><div class="line"></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line"></div><div class="line">            <span class="comment">&lt;!-- Main Content --&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm-8 blog-main"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">%-</span> <span class="attr">body</span> %&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">            <span class="comment">&lt;!-- Sidebar --&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-sm-3 col-sm-offset-1 blog-sidebar"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">sidebar</span>') %&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Footer --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">footer</span>') %&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- After footer scripts --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">after-footer</span>') %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>The <code>body</code> variable corresponds to the content rendered from the different page type templates (cf above).</p>
+<p>For the sidebar partial, we are simply going to hardcode the bootstrap template code for now:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/sidebar.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar-module sidebar-module-inset"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>About<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Etiam porta <span class="tag">&lt;<span class="name">em</span>&gt;</span>sem malesuada magna<span class="tag">&lt;/<span class="name">em</span>&gt;</span> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar-module"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>Archives<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"list-unstyled"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>March 2014<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>February 2014<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>January 2014<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>December 2013<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>November 2013<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar-module"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h4</span>&gt;</span>Elsewhere<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"list-unstyled"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>GitHub<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Twitter<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>Facebook<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="The-index-file"><a href="#The-index-file" class="headerlink" title="The index file"></a>The index file</h2><p>Now that our layout is in place, we are ready to create the first page type template: index.ejs.</p>
+<p>Here is a trivial first version:</p>
+<figure class="highlight html"><figcaption><span>layout/index.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Useless ? Well, this allows us to test out theme in browser:</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Verify that everything is alright</div><div class="line">hexo <span class="keyword">generate</span></div><div class="line"></div><div class="line"># Start hexo server</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>And open your browser at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Tada !</p>
+<p><strong>Note: Don’t forget to update the theme in your blog’s config:</strong></p>
+<figure class="highlight bash"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: http://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: http://hexo.io/themes/</span></div><div class="line">theme: bootstrap-blog-hexo</div></pre></td></tr></table></figure>
+<h3 id="Enumerate-through-blog-posts"><a href="#Enumerate-through-blog-posts" class="headerlink" title="Enumerate through blog posts"></a>Enumerate through blog posts</h3><p>On the home page we want to display post excerpts.</p>
+<p>First of all, let’s enumerate through the posts in our index.ejs:</p>
+<figure class="highlight html"><figcaption><span>layout.index.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span>(<span class="attr">item</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">article-excerpt</span>', &#123;<span class="attr">item:</span> <span class="attr">item</span>&#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125;); %&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>Get a list of posts for that page with <code>page.posts</code></li>
+<li>Pass an argument in a partial by using <code>&lt;%- partial(&#39;name&#39;, args) %&gt;</code></li>
+</ul>
+<h3 id="Article-layout"><a href="#Article-layout" class="headerlink" title="Article layout"></a>Article layout</h3><p>Let’s create the <code>article-excerpt.ejs</code> partial and adapt the code to our theme. Here is what I came up with:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/article-excerpt.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"blog-post"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Title --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">"blog-post-title"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%-</span> <span class="attr">item.title</span> %&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Date and Author --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"blog-post-meta"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%=</span> <span class="attr">item.date.format</span>(<span class="attr">config.date_format</span>) %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">item.author</span>) &#123; %&gt;</span></div><div class="line">            by <span class="tag">&lt;<span class="name">%-</span> <span class="attr">item.author</span> %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Content --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">item.excerpt</span> || <span class="attr">item.content</span> %&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- Only display the Read More link if we are displaying an excerpt --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">item.excerpt</span>) &#123; %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">%=</span> <span class="attr">theme.excerpt_link</span> %&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="Link-to-the-full-post"><a href="#Link-to-the-full-post" class="headerlink" title="- Link to the full post:"></a>- Link to the full post:</h3><p>The link to the full post is created by concatenating <code>config.root</code> (config option which really shoud be equal to <code>/</code>) and <code>item.path</code> which is the relative path or link to the full post.</p>
+<h3 id="Post-author"><a href="#Post-author" class="headerlink" title="- Post author"></a>- Post author</h3><p>By default, Hexo does not have any author property in it’s post variable. But we can add whatever variable we want to the <a href="https://hexo.io/docs/front-matter.html" target="_blank" rel="external">front matter</a>. </p>
+<p>If you want an author name to be displayed for a post, the front matter for your post should look something like</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> Hello World</div><div class="line"><span class="attr">author:</span> Klughertz Jonathan</div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure>
+<h3 id="Item-excerpt-vs-Item-content"><a href="#Item-excerpt-vs-Item-content" class="headerlink" title="- Item excerpt vs. Item content"></a>- Item excerpt vs. Item content</h3><p>When writing a post with Hexo, you can use a <code>&lt;!-- more --&gt;</code> tag to delimit the excerpt from the content. In our case, we are displaying the excerpt since this is a list of posts.</p>
+<p>The user then has the possibility to click on a post’s title or on the read more link to view the entire post.</p>
+<h3 id="Read-More-text"><a href="#Read-More-text" class="headerlink" title="- Read More text"></a>- Read More text</h3><p>I have added a new property to my theme’s config, do not forget to add it to yours:</p>
+<figure class="highlight bash"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Read More text</span></div><div class="line">excerpt_link: Read More</div></pre></td></tr></table></figure>
+<p>Hopefully the rest of the code is easy enough to understand. At this point, I suggest you write a few additional posts than the default Hello World and play around with the results.</p>
+<h2 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h2><p>The last thing we are going to tackle in this section is the pagination for the home page</p>
+<p>Let’s start by including yet another partial to our <code>index.ejs</code>:</p>
+<figure class="highlight html"><figcaption><span>layout/index.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">page.posts.each</span>(<span class="attr">function</span>(<span class="attr">item</span>)&#123; %&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">article-excerpt</span>', &#123;<span class="attr">item:</span> <span class="attr">item</span>&#125;) %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125;); %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">pagination</span>') %&gt;</span></div></pre></td></tr></table></figure>
+<p>And finish by writing our pagination partial view, <code>layout/_partial/pagination.ejs</code>:</p>
+<figure class="highlight html"><figcaption><span>layout/_partial/pagination.ejs</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"pager"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">page.prev</span>)&#123; %&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- page.prev_link %&gt;"</span>&gt;</span>Previous<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">page.next</span>)&#123; %&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- config.root %&gt;&lt;%- page.next_link %&gt;"</span>&gt;</span>Next<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>page.prev</code>: Previous page number. 0 if the current page is the first.</li>
+<li><code>page.next</code>: Next page number. 0 if the current page is the last.</li>
+<li><code>page.next_link</code> and <code>page.prev_link</code> are self explanatory.</li>
+</ul>
+<p>You can adjust the post per page in the main config (<code>per_page</code> property) if you don’t have enough posts to see the pagination in action.</p>
+<p>That’s it for today, in the <a href="/2016/03/Create-an-Hexo-Theme-Part-2-Other-Pages/">next section of this tutorial</a>, we will finish all the remaining pages of the blog.</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Hexo/">#Hexo</a> <a class="fw3 ph1 dib" href="/tags/Bootstrap/">#Bootstrap</a> <a class="fw3 ph1 dib" href="/tags/Theme/">#Theme</a> <a class="fw3 ph1 dib" href="/tags/Template/">#Template</a> <a class="fw3 ph1 dib" href="/tags/EJS/">#EJS</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

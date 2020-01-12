@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Zelda&#39;s theme in JavaScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Zelda&#39;s theme in JavaScript - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+     <script src="http://www.midijs.net/lib/midi.js"></script> 
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Zelda's theme in JavaScript</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">11 April 2016</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-volume_up"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/MIDI/">#MIDI</a> <a class="fw3 ph1 dib" href="/tags/Zelda/">#Zelda</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p>Let’s celebrate Zelda’s 30th anniversary by generating a MIDI file of the <a href="https://www.flutetunes.com/tunes/the-legend-of-zelda-theme.pdf" target="_blank" rel="external">game’s main theme</a>.</p>
+<a id="more"></a>
+<p><a style="font-weight: bold;" href="#" onclick="console.log(this.p);if(!this.p){MIDIjs.play('/audio/zelda.mid');this.p=true;this.innerHTML='STOP DEMO';}else{MIDIjs.stop();this.p=false;this.innerHTML='PLAY DEMO';}">PLAY DEMO</a></p>
+<p>To generate MIDI files, we are going to use the <a href="https://github.com/grimmdude/MidiWriterJS" target="_blank" rel="external">MidiWriterJS</a>.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> midi-writer-js</div></pre></td></tr></table></figure>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>Here is how to get started with the library:</p>
+<p>A MIDI file is a collection of tracks which are collections of notes.</p>
+<h3 id="Create-a-track"><a href="#Create-a-track" class="headerlink" title="Create a track"></a>Create a track</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> MidiWriter = <span class="built_in">require</span>(<span class="string">'midi-writer-js'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Create Track</span></div><div class="line"><span class="keyword">var</span> track = <span class="keyword">new</span> MidiWriter.Track();</div><div class="line"></div><div class="line"><span class="comment">// Assign an instrument to a track</span></div><div class="line">track.addEvent(<span class="keyword">new</span> MidiWriter.ProgramChangeEvent(&#123;<span class="attr">instrument</span> : <span class="number">1</span>&#125;));</div></pre></td></tr></table></figure>
+<h3 id="Add-a-note-to-a-track"><a href="#Add-a-note-to-a-track" class="headerlink" title="Add a note to a track"></a>Add a note to a track</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">track.addEvent(<span class="keyword">new</span> MidiWriter.NoteEvent(&#123;<span class="attr">pitch</span>: [<span class="string">'Bb4'</span>], <span class="attr">duration</span>: <span class="string">'2'</span>, <span class="attr">velocity</span>:<span class="number">100</span>&#125;));</div></pre></td></tr></table></figure>
+<h4 id="pitch"><a href="#pitch" class="headerlink" title="pitch"></a>pitch</h4><p><code>pitch</code> represents the notes you want to add. </p>
+<p>Examples would be: <code>&#39;Bb4&#39;</code>, <code>&#39;F4&#39;</code>, <code>&#39;A#2&#39;</code></p>
+<p>The letter is the note, you can alter it with <code>b</code> or <code>#</code> and the letter corresponds to the octave (I would say that 4 corresponds to your treble clef pitch)</p>
+<h4 id="duration"><a href="#duration" class="headerlink" title="duration"></a>duration</h4><p><code>duration</code> represents the duration of each note</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">duration</th>
+<th style="text-align:center">American Name</th>
+<th style="text-align:center">English Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">whole</td>
+<td style="text-align:center">semibreve</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">half</td>
+<td style="text-align:center">minim</td>
+</tr>
+<tr>
+<td style="text-align:center">d2</td>
+<td style="text-align:center">dotted half</td>
+<td style="text-align:center">dotted minim</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">quarter</td>
+<td style="text-align:center">crotchet</td>
+</tr>
+<tr>
+<td style="text-align:center">d4</td>
+<td style="text-align:center">dotted quarter</td>
+<td style="text-align:center">dotted crotchet</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">eighth</td>
+<td style="text-align:center">quaver</td>
+</tr>
+<tr>
+<td style="text-align:center">d8</td>
+<td style="text-align:center">dotted eighth</td>
+<td style="text-align:center">dotted quaver</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">sixteenth</td>
+<td style="text-align:center">semiquaver</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Velocity"><a href="#Velocity" class="headerlink" title="Velocity"></a>Velocity</h4><p><code>velocity</code> represents the volume at which that note will play.</p>
+<h3 id="Generate-the-Midi-JavaScript-Object"><a href="#Generate-the-Midi-JavaScript-Object" class="headerlink" title="Generate the Midi JavaScript Object"></a>Generate the Midi JavaScript Object</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Generate MIDI</span></div><div class="line"><span class="keyword">var</span> write = <span class="keyword">new</span> MidiWriter.Writer([track]);</div></pre></td></tr></table></figure>
+<p>The argument must be an Array of tracks. It is of course possible to add several tracks if you want to have several instruments playing at the same time.</p>
+<h3 id="Generate-the-MIDI-file"><a href="#Generate-the-MIDI-file" class="headerlink" title="Generate the MIDI file"></a>Generate the MIDI file</h3><p>I have chosen to go the base64 string route. Here is the code:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Generate a base64 representation of the MIDI file</span></div><div class="line"><span class="keyword">var</span> base64String = write.base64();</div><div class="line"></div><div class="line"><span class="comment">// Strip off the header</span></div><div class="line"><span class="keyword">var</span> data = base64String.split(<span class="string">"base64,"</span>).pop();</div><div class="line"></div><div class="line"><span class="comment">// Write the file</span></div><div class="line">fs.writeFileSync(<span class="string">"zelda.mid"</span>, data, &#123;<span class="attr">encoding</span>: <span class="string">'base64'</span>&#125;);</div></pre></td></tr></table></figure>
+<p><a href="2016/04/Convert-a-base64-string-to-a-file-in-Node/">Click here</a> if you want to read more on how to strip off the base64 string header.</p>
+<h2 id="Zelda"><a href="#Zelda" class="headerlink" title="Zelda"></a>Zelda</h2><p>You can check the git repo <a href="https://github.com/klugjo/zelda-theme-javascript-midi/blob/master/index.js" target="_blank" rel="external">here</a> to see the full sequence of notes.</p>
+<p>PS: I have submitted my code to the creator of the official library and he has now merged it and added it to <a href="https://github.com/grimmdude/MidiWriterJS/tree/master/examples" target="_blank" rel="external">the examples</a> :D</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/MIDI/">#MIDI</a> <a class="fw3 ph1 dib" href="/tags/Zelda/">#Zelda</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
+        </p>
+    
+        <p>
+            <a href="/2018/05/Setup-gitment-on-your-Hexo-blog/">Setup gitment on your Hexo blog</a>
+        </p>
+    
+        <p>
+            <a href="/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/">Notes on Anything You Want by Derek Sivers</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>
