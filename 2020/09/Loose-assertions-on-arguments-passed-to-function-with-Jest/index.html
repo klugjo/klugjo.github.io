@@ -21,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Notes on Turning Pro by Steven Pressfield"/>
+        <meta property="og:title" content="Loose assertions on arguments passed to function with Jest"/>
     
 
     <!--Open Graph Description-->
@@ -47,7 +47,7 @@
 
     <!-- Title -->
     
-    <title>Notes on Turning Pro by Steven Pressfield - CodeBlocQ</title>
+    <title>Loose assertions on arguments passed to function with Jest - CodeBlocQ</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -137,14 +137,14 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Notes on Turning Pro by Steven Pressfield</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">23 February 2017</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Loose assertions on arguments passed to function with Jest</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">22 September 2020</p>
         </div>
     </div>
 
     <!-- Icon -->
     <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <span class="header-icon devicons-book3"></span>
+        <span class="header-icon devicons-javascript_badge"></span>
     </div>
 </div>
 
@@ -158,35 +158,42 @@
                     
                         <div class="tags-container-vertical">
                             <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/tags/Books/">#Books</a> <a class="fw3 ph1 dib" href="/tags/Procrastination/">#Procrastination</a> <a class="fw3 ph1 dib" href="/tags/Productivity/">#Productivity</a>
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Jest/">#Jest</a> <a class="fw3 ph1 dib" href="/tags/Unit-Tests/">#Unit Tests</a>
                             </div>
                         </div>
                     
 
                     <!-- Main Post Content -->
-                    <h2 id="First-impressions"><a href="#First-impressions" class="headerlink" title="First impressions"></a>First impressions</h2><p>A while ago I read The <a href="https://amzn.to/2rLlh5o" target="_blank" rel="external">War of Art</a> which seems to be Pressfield’s most famous book. It is highly recommended by <a href="https://simpleprogrammer.com/" target="_blank" rel="external">John Sonmez</a>.<br><a id="more"></a></p>
-<p>I thought the book was great although not life changing. It explains how to beat <em>Resistance</em>, this force that prevents us from accomplishing our goals. <a href="https://amzn.to/2HTQsFF" target="_blank" rel="external">Turning Pro</a> is a follow up on the War of Art and I am happy to say that I found it a lot clearer and motivational. This book details how amateur and pro behaviours differ in all sorts of situations and how both deal with life changing decisions. </p>
-<p>It is a quick and easy read but the book packs a huge punch. Worth it.</p>
-<blockquote>
-<p>The Amateur tweets. The Pro works.</p>
-</blockquote>
-<h2 id="Notes-and-Takeaways"><a href="#Notes-and-Takeaways" class="headerlink" title="Notes and Takeaways"></a>Notes and Takeaways</h2><h3 id="Don’t-be-a-shadow-of-yourself"><a href="#Don’t-be-a-shadow-of-yourself" class="headerlink" title="Don’t be a shadow of yourself"></a>Don’t be a shadow of yourself</h3><p>Simple yet powerful concept. We all have this image of our perfect self associated with a set of goals we need to achieve in order to reach that ideal.</p>
-<p>One way we end up not following that path is by behaving like <em>addicts</em>: we get high in order to fool ourselves in believing that we are amazing or in order to numb the pain.</p>
-<blockquote>
-<p>The addict seeks to escape the pain of being human in one of two ways–by transcending it or by anesthetizing it.</p>
-</blockquote>
-<p>Addiction (sex, money, getting in trouble, living in the future/past, ..) is simply a distraction and a materialization of <em>Resistance</em>.</p>
-<h3 id="We-are-all-scared"><a href="#We-are-all-scared" class="headerlink" title="We are all scared"></a>We are all scared</h3><p>Pressfield then explains how overcoming addiction is in fact overcoming the fear of becoming who we really are. </p>
-<p>It is indeed simpler to be a lesser version of ourselves. That way we can give ourselves (and others) the excuse of simply not being ourselves.</p>
-<p>It is typical for amateurs to let others define who they are. The key is to stop being afraid of being judged for who we really are.</p>
-<h3 id="There-are-many-ways-remedies-to-Amateurism"><a href="#There-are-many-ways-remedies-to-Amateurism" class="headerlink" title="There are many ways remedies to Amateurism"></a>There are many ways remedies to Amateurism</h3><p>Work everyday, focus on the long term and not the quick wins, be patient, make the complex simple, never show off, never be scared of asking for help … </p>
-<p>Many more in the book ;)</p>
+                    <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Consider the following function and passing test</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">bar, arg</span>) </span>&#123;</div><div class="line">  bar(<span class="built_in">Math</span>.random(), arg);</div><div class="line">&#125;</div><div class="line"></div><div class="line">test(<span class="string">"bar is called"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalled();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><code>foo</code> is a function that calls <code>bar</code> with a random first argument and <code>arg</code> which is just passed through.</p>
+<p>The test passes as expected, but what if we wanted to check that the second argument is equal to <code>arg</code>.</p>
+<p><code>expect(...).toHaveBeenCalledWith(...args)</code> requires the test to provide the exact list of arguments passed to our <code>jest.fn</code> spy during the call.</p>
+<p><br></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Use the <strong>asymetric matcher</strong> <a href="https://jestjs.io/docs/en/expect.html#expectanything" target="_blank" rel="external">expect.anything()</a> to ignore the first argument passed to <code>foo</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">test(<span class="string">"Match any argument"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalledWith(expect.anything(), <span class="string">"fake-argument"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="Better-Solution"><a href="#Better-Solution" class="headerlink" title="Better Solution"></a>Better Solution</h3><p>Use <a href="https://jestjs.io/docs/en/expect.html#expectanyconstructor" target="_blank" rel="external">expect.any(constructor)</a> to check that the first argument is a number</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">test(<span class="string">"Match any number"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalledWith(expect.any(<span class="built_in">Number</span>), <span class="string">"fake-argument"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="Other-asymetric-matchers"><a href="#Other-asymetric-matchers" class="headerlink" title="Other asymetric matchers"></a>Other asymetric matchers</h3><p>Jest also provides the following useful asymetric matchers:</p>
+<p><a href="https://jestjs.io/docs/en/expect.html#expectobjectcontainingobject" target="_blank" rel="external">expect.objectContaining(object)</a> to check only certain properties of an object</p>
+<p><a href="https://jestjs.io/docs/en/expect.html#expectarraycontainingarray" target="_blank" rel="external">expect.arrayContaining(array)</a> to check only certain elements of an array</p>
+<p><a href="https://jestjs.io/docs/en/expect.html#expectstringcontainingstring" target="_blank" rel="external">expect.stringContaining(string)</a> to check part of a string</p>
+<p><br></p>
+<h3 id="Going-further-with-jest-extended"><a href="#Going-further-with-jest-extended" class="headerlink" title="Going further with jest-extended"></a>Going further with jest-extended</h3><p>If you need to be even more specific in your assertions, it might be worth checking out <a href="https://github.com/jest-community/jest-extended" target="_blank" rel="external">jest-extended</a></p>
+<p>You will find useful additions to the base jest assertion API like:</p>
+<p><a href="https://github.com/jest-community/jest-extended#tobewithinstart-end" target="_blank" rel="external">myNumber.toBeWithin(0, 10)</a></p>
+<p><a href="https://github.com/jest-community/jest-extended#tocontainkeyskeys" target="_blank" rel="external">myObject.toContainKeys([keys])</a></p>
+<p><a href="https://github.com/jest-community/jest-extended#tostartwithprefix" target="_blank" rel="external">myText.toStartWith(prefix)</a></p>
+<p>and many more ..</p>
+<p><br><br>Happy testing :)</p>
 
                     
                     <!-- Tags Bottom -->
                     
                         <div class="tags-container-bottom mt5">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Books/">#Books</a> <a class="fw3 ph1 dib" href="/tags/Procrastination/">#Procrastination</a> <a class="fw3 ph1 dib" href="/tags/Productivity/">#Productivity</a>
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Jest/">#Jest</a> <a class="fw3 ph1 dib" href="/tags/Unit-Tests/">#Unit Tests</a>
                         </div>
                     
 

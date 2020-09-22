@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.codeblocq.com/"/>
-  <updated>2020-01-12T12:39:37.497Z</updated>
+  <updated>2020-09-22T16:22:16.713Z</updated>
   <id>http://www.codeblocq.com/</id>
   
   <author>
@@ -16,10 +16,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Loose assertions on arguments passed to function with Jest</title>
+    <link href="http://www.codeblocq.com/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/"/>
+    <id>http://www.codeblocq.com/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/</id>
+    <published>2020-09-22T15:43:11.000Z</published>
+    <updated>2020-09-22T16:22:16.713Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Consider the following function and passing test</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">bar, arg</span>) </span>&#123;</div><div class="line">  bar(<span class="built_in">Math</span>.random(), arg);</div><div class="line">&#125;</div><div class="line"></div><div class="line">test(<span class="string">"bar is called"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalled();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><code>foo</code> is a function that calls <code>bar</code> with a random first argument and <code>arg</code> which is just passed through.</p>
+<p>The test passes as expected, but what if we wanted to check that the second argument is equal to <code>arg</code>.</p>
+<p><code>expect(...).toHaveBeenCalledWith(...args)</code> requires the test to provide the exact list of arguments passed to our <code>jest.fn</code> spy during the call.</p>
+<p><br></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Use the <strong>asymetric matcher</strong> <a href="https://jestjs.io/docs/en/expect.html#expectanything" target="_blank" rel="external">expect.anything()</a> to ignore the first argument passed to <code>foo</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">test(<span class="string">"Match any argument"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalledWith(expect.anything(), <span class="string">"fake-argument"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="Better-Solution"><a href="#Better-Solution" class="headerlink" title="Better Solution"></a>Better Solution</h3><p>Use <a href="https://jestjs.io/docs/en/expect.html#expectanyconstructor" target="_blank" rel="external">expect.any(constructor)</a> to check that the first argument is a number</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">test(<span class="string">"Match any number"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalledWith(expect.any(<span class="built_in">Number</span>), <span class="string">"fake-argument"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="Other-asymetric-matchers"><a href="#Other-asymetric-matchers" class="headerlink" title="Other asymetric matchers"></a>Other asymetric matchers</h3><p>Jest also provides the following useful asymetric matchers:</p>
+<p><a href="https://jestjs.io/docs/en/expect.html#expectobjectcontainingobject" target="_blank" rel="external">expect.objectContaining(object)</a> to check only certain properties of an object</p>
+<p><a href="https://jestjs.io/docs/en/expect.html#expectarraycontainingarray" target="_blank" rel="external">expect.arrayContaining(array)</a> to check only certain elements of an array</p>
+<p><a href="https://jestjs.io/docs/en/expect.html#expectstringcontainingstring" target="_blank" rel="external">expect.stringContaining(string)</a> to check part of a string</p>
+<p><br></p>
+<h3 id="Going-further-with-jest-extended"><a href="#Going-further-with-jest-extended" class="headerlink" title="Going further with jest-extended"></a>Going further with jest-extended</h3><p>If you need to be even more specific in your assertions, it might be worth checking out <a href="https://github.com/jest-community/jest-extended" target="_blank" rel="external">jest-extended</a></p>
+<p>You will find useful additions to the base jest assertion API like:</p>
+<p><a href="https://github.com/jest-community/jest-extended#tobewithinstart-end" target="_blank" rel="external">myNumber.toBeWithin(0, 10)</a></p>
+<p><a href="https://github.com/jest-community/jest-extended#tocontainkeyskeys" target="_blank" rel="external">myObject.toContainKeys([keys])</a></p>
+<p><a href="https://github.com/jest-community/jest-extended#tostartwithprefix" target="_blank" rel="external">myText.toStartWith(prefix)</a></p>
+<p>and many more ..</p>
+<p><br><br>Happy testing :)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; class=&quot;headerlink&quot; title=&quot;Problem&quot;&gt;&lt;/a&gt;Problem&lt;/h3&gt;&lt;p&gt;Consider the following function and passing test&lt;/
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://www.codeblocq.com/tags/JavaScript/"/>
+    
+      <category term="Jest" scheme="http://www.codeblocq.com/tags/Jest/"/>
+    
+      <category term="Unit Tests" scheme="http://www.codeblocq.com/tags/Unit-Tests/"/>
+    
+  </entry>
+  
+  <entry>
     <title>A-Star Pathfinding React Demo</title>
     <link href="http://www.codeblocq.com/2020/01/A-Star-Pathfinding-React-Demo/"/>
     <id>http://www.codeblocq.com/2020/01/A-Star-Pathfinding-React-Demo/</id>
-    <published>2020-01-11T16:14:07.000Z</published>
+    <published>2020-01-11T17:14:07.000Z</published>
     <updated>2020-01-12T12:39:37.497Z</updated>
     
     <content type="html"><![CDATA[<p>Check out the <a href="http://a-star-pathfinding.codeblocq.com/" target="_blank" rel="external">demo here</a>.</p>
@@ -68,7 +116,7 @@
     <title>My Free and Open Source Expense Tracker App is on the App Store</title>
     <link href="http://www.codeblocq.com/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/"/>
     <id>http://www.codeblocq.com/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/</id>
-    <published>2019-11-10T09:16:49.000Z</published>
+    <published>2019-11-10T10:16:49.000Z</published>
     <updated>2019-11-10T02:45:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>I have spent a good chunk of the beginning of this year developing my first React Native app.</p>
@@ -117,7 +165,7 @@
     <title>How to start a tech company as a non technical individual</title>
     <link href="http://www.codeblocq.com/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/"/>
     <id>http://www.codeblocq.com/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/</id>
-    <published>2018-06-23T08:20:33.000Z</published>
+    <published>2018-06-23T09:20:33.000Z</published>
     <updated>2018-06-23T02:57:10.000Z</updated>
     
     <content type="html"><![CDATA[<p>As a software engineer, I have had countless coffees and meetings with non technical “co founders” that want to build an app, website or platform of some sort. Their budgets go from a few hundreds to more than 50K USD for some. They almost always have great ideas and execution plans, except when it comes to the tech.</p>
@@ -192,7 +240,7 @@
     <title>Setup gitment on your Hexo blog</title>
     <link href="http://www.codeblocq.com/2018/05/Setup-gitment-on-your-Hexo-blog/"/>
     <id>http://www.codeblocq.com/2018/05/Setup-gitment-on-your-Hexo-blog/</id>
-    <published>2018-05-27T08:33:31.000Z</published>
+    <published>2018-05-27T09:33:31.000Z</published>
     <updated>2018-05-28T12:36:20.000Z</updated>
     
     <content type="html"><![CDATA[<p>After 2 years running disqus on my blog, I have decided to switch over to <a href="https://github.com/imsun/gitment" target="_blank" rel="external">gitment</a>. The spam and slowness of Disqus is what drove me away from it. Plus no more ads for users.</p>
@@ -252,7 +300,7 @@
     <title>Notes on Anything You Want by Derek Sivers</title>
     <link href="http://www.codeblocq.com/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/"/>
     <id>http://www.codeblocq.com/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/</id>
-    <published>2017-11-08T07:17:51.000Z</published>
+    <published>2017-11-08T08:17:51.000Z</published>
     <updated>2018-05-06T08:49:32.000Z</updated>
     
     <content type="html"><![CDATA[<p>Big fan of Derek Sivers as I have already mentionned, I really enjoyed this short and super easy to digest <a href="https://amzn.to/2FO2Vom" target="_blank" rel="external">book</a>.<br>It is the kind of book that you open to see what it looks like and 2 hours later (1 hours if you are not as slow as I am) you realise that you have finished it.</p>
@@ -290,7 +338,7 @@
     <title>Quicksort JavaScript Implementation</title>
     <link href="http://www.codeblocq.com/2017/10/Quicksort-JavaScript-Implementation/"/>
     <id>http://www.codeblocq.com/2017/10/Quicksort-JavaScript-Implementation/</id>
-    <published>2017-10-24T20:11:32.000Z</published>
+    <published>2017-10-24T21:11:32.000Z</published>
     <updated>2017-10-24T14:18:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>Here is my ES6 implementation of the QuickSort Algorithm.</p>
@@ -318,7 +366,7 @@
     <title>How to receive messages from web sockets using redux-saga</title>
     <link href="http://www.codeblocq.com/2017/08/How-to-receive-messages-from-web-sockets-using-redux-saga/"/>
     <id>http://www.codeblocq.com/2017/08/How-to-receive-messages-from-web-sockets-using-redux-saga/</id>
-    <published>2017-08-02T19:17:33.000Z</published>
+    <published>2017-08-02T20:17:33.000Z</published>
     <updated>2017-08-08T13:21:16.000Z</updated>
     
     <content type="html"><![CDATA[<p>I have just had to implement this and found it hard to come across a simple working solution out there.</p>
@@ -360,7 +408,7 @@
     <title>Save All by Default in VSCode</title>
     <link href="http://www.codeblocq.com/2017/03/Save-All-by-Default-in-VSCode/"/>
     <id>http://www.codeblocq.com/2017/03/Save-All-by-Default-in-VSCode/</id>
-    <published>2017-03-27T20:09:10.000Z</published>
+    <published>2017-03-27T21:09:10.000Z</published>
     <updated>2017-03-27T14:14:14.000Z</updated>
     
     <content type="html"><![CDATA[<p>By Default VSCode only saves the current file when hitting Ctrl+S. Over time, I got used to Ctrl+S saving all the modified files in the project. Here is how to setup the same behavior in VSCode.</p>
@@ -389,7 +437,7 @@
     <title>Configure Jest Test Location</title>
     <link href="http://www.codeblocq.com/2017/02/Configure-Jest-Test-Location/"/>
     <id>http://www.codeblocq.com/2017/02/Configure-Jest-Test-Location/</id>
-    <published>2017-02-25T22:44:03.000Z</published>
+    <published>2017-02-25T23:44:03.000Z</published>
     <updated>2017-03-02T13:20:03.000Z</updated>
     
     <content type="html"><![CDATA[<p>Quick article to help look at the right place when configuring your tests in Jest.</p>
@@ -417,47 +465,6 @@
       <category term="Jest" scheme="http://www.codeblocq.com/tags/Jest/"/>
     
       <category term="Unit Tests" scheme="http://www.codeblocq.com/tags/Unit-Tests/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Notes on Turning Pro by Steven Pressfield</title>
-    <link href="http://www.codeblocq.com/2017/02/Notes-on-Turning-Pro-by-Steven-Pressfield/"/>
-    <id>http://www.codeblocq.com/2017/02/Notes-on-Turning-Pro-by-Steven-Pressfield/</id>
-    <published>2017-02-23T21:20:36.000Z</published>
-    <updated>2018-05-16T23:52:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="First-impressions"><a href="#First-impressions" class="headerlink" title="First impressions"></a>First impressions</h2><p>A while ago I read The <a href="https://amzn.to/2rLlh5o" target="_blank" rel="external">War of Art</a> which seems to be Pressfield’s most famous book. It is highly recommended by <a href="https://simpleprogrammer.com/" target="_blank" rel="external">John Sonmez</a>.<br><a id="more"></a></p>
-<p>I thought the book was great although not life changing. It explains how to beat <em>Resistance</em>, this force that prevents us from accomplishing our goals. <a href="https://amzn.to/2HTQsFF" target="_blank" rel="external">Turning Pro</a> is a follow up on the War of Art and I am happy to say that I found it a lot clearer and motivational. This book details how amateur and pro behaviours differ in all sorts of situations and how both deal with life changing decisions. </p>
-<p>It is a quick and easy read but the book packs a huge punch. Worth it.</p>
-<blockquote>
-<p>The Amateur tweets. The Pro works.</p>
-</blockquote>
-<h2 id="Notes-and-Takeaways"><a href="#Notes-and-Takeaways" class="headerlink" title="Notes and Takeaways"></a>Notes and Takeaways</h2><h3 id="Don’t-be-a-shadow-of-yourself"><a href="#Don’t-be-a-shadow-of-yourself" class="headerlink" title="Don’t be a shadow of yourself"></a>Don’t be a shadow of yourself</h3><p>Simple yet powerful concept. We all have this image of our perfect self associated with a set of goals we need to achieve in order to reach that ideal.</p>
-<p>One way we end up not following that path is by behaving like <em>addicts</em>: we get high in order to fool ourselves in believing that we are amazing or in order to numb the pain.</p>
-<blockquote>
-<p>The addict seeks to escape the pain of being human in one of two ways–by transcending it or by anesthetizing it.</p>
-</blockquote>
-<p>Addiction (sex, money, getting in trouble, living in the future/past, ..) is simply a distraction and a materialization of <em>Resistance</em>.</p>
-<h3 id="We-are-all-scared"><a href="#We-are-all-scared" class="headerlink" title="We are all scared"></a>We are all scared</h3><p>Pressfield then explains how overcoming addiction is in fact overcoming the fear of becoming who we really are. </p>
-<p>It is indeed simpler to be a lesser version of ourselves. That way we can give ourselves (and others) the excuse of simply not being ourselves.</p>
-<p>It is typical for amateurs to let others define who they are. The key is to stop being afraid of being judged for who we really are.</p>
-<h3 id="There-are-many-ways-remedies-to-Amateurism"><a href="#There-are-many-ways-remedies-to-Amateurism" class="headerlink" title="There are many ways remedies to Amateurism"></a>There are many ways remedies to Amateurism</h3><p>Work everyday, focus on the long term and not the quick wins, be patient, make the complex simple, never show off, never be scared of asking for help … </p>
-<p>Many more in the book ;)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;First-impressions&quot;&gt;&lt;a href=&quot;#First-impressions&quot; class=&quot;headerlink&quot; title=&quot;First impressions&quot;&gt;&lt;/a&gt;First impressions&lt;/h2&gt;&lt;p&gt;A while ago I read The &lt;a href=&quot;https://amzn.to/2rLlh5o&quot;&gt;War of Art&lt;/a&gt; which seems to be Pressfield’s most famous book. It is highly recommended by &lt;a href=&quot;https://simpleprogrammer.com/&quot;&gt;John Sonmez&lt;/a&gt;.&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Books" scheme="http://www.codeblocq.com/tags/Books/"/>
-    
-      <category term="Procrastination" scheme="http://www.codeblocq.com/tags/Procrastination/"/>
-    
-      <category term="Productivity" scheme="http://www.codeblocq.com/tags/Productivity/"/>
     
   </entry>
   
