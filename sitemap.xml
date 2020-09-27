@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.codeblocq.com/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/</loc>
+    
+    <lastmod>2020-09-27T06:50:03.018Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.codeblocq.com/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/</loc>
     
     <lastmod>2020-09-22T16:22:16.713Z</lastmod>

@@ -162,6 +162,40 @@
   </entry>
   
   <entry>
+    <title>Pass artifacts around in between stages in gitlab CI</title>
+    <link href="http://www.codeblocq.com/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/"/>
+    <id>http://www.codeblocq.com/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/</id>
+    <published>2019-03-24T12:54:51.000Z</published>
+    <updated>2020-09-27T06:50:03.018Z</updated>
+    
+    <content type="html"><![CDATA[<p>Use the <a href="https://docs.gitlab.com/ee/ci/yaml/#artifacts" target="_blank" rel="external">artifacts</a> property to pass build artifacts from one build stage down to <strong>all the following stages</strong>.</p>
+<figure class="highlight yaml"><figcaption><span>.gitlab-cy.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="attr">stages:</span></div><div class="line"><span class="bullet">  -</span> stage_1</div><div class="line"><span class="bullet">  -</span> stage_2</div><div class="line"></div><div class="line"><span class="attr">one:</span></div><div class="line"><span class="attr">  stage:</span> stage_1</div><div class="line"><span class="attr">  script:</span></div><div class="line"><span class="bullet">    -</span> echo <span class="string">"File 1"</span> &gt;&gt; ./file1.txt</div><div class="line"><span class="bullet">    -</span> echo <span class="string">"File 2"</span> &gt;&gt; ./file2.txt</div><div class="line"><span class="bullet">    -</span> mkdir dir1</div><div class="line"><span class="bullet">    -</span> echo <span class="string">"dir1 File"</span> &gt;&gt; ./dir1/file.txt</div><div class="line"><span class="bullet">    -</span> mkdir dir2</div><div class="line"><span class="bullet">    -</span> echo <span class="string">"dir2 File"</span> &gt;&gt; ./dir2/file.txt</div><div class="line"><span class="attr">  artifacts:</span></div><div class="line"><span class="attr">    paths:</span></div><div class="line"><span class="bullet">    -</span> file1.txt</div><div class="line"><span class="bullet">    -</span> dir1/</div><div class="line"></div><div class="line"><span class="attr">two:</span></div><div class="line"><span class="attr">  stage:</span> stage_2</div><div class="line"><span class="attr">  script:</span></div><div class="line"><span class="bullet">    -</span> ls</div><div class="line"><span class="bullet">    -</span> ls dir1</div><div class="line"><span class="bullet">    -</span> cat file1.txt</div><div class="line"><span class="bullet">    -</span> cat dir1/file.txt</div></pre></td></tr></table></figure>
+<p>In the <code>.gitlab-ci.yml</code> above we are defining a build with 2 stages.</p>
+<p>In <code>stage_1</code> we are creating 4 files:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── dir1</div><div class="line">│   └── file.txt</div><div class="line">├── dir2</div><div class="line">│   └── file.txt</div><div class="line">├── file1.txt</div><div class="line">└── file2.txt</div></pre></td></tr></table></figure>
+<p>In <code>stage_2</code>, the following files files (created in <code>stage_1</code>) are available:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── dir1</div><div class="line">│   └── file.txt</div><div class="line">├── file1.txt</div></pre></td></tr></table></figure>
+<p>The magic happens in the <code>artifacts</code> section of <code>stage_1</code>:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">artifacts:</span></div><div class="line"><span class="attr">  paths:</span></div><div class="line"><span class="bullet">  -</span> file1.txt</div><div class="line"><span class="bullet">  -</span> dir1/</div></pre></td></tr></table></figure>
+<p>which means pass <code>file1.txt</code> and the <code>dir1</code> folder (+ it’s content) to <strong>all the following stages</strong>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Use the &lt;a href=&quot;https://docs.gitlab.com/ee/ci/yaml/#artifacts&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;artifacts&lt;/a&gt; property to pass build artif
+    
+    </summary>
+    
+    
+      <category term="Build" scheme="http://www.codeblocq.com/tags/Build/"/>
+    
+      <category term="Gitlab" scheme="http://www.codeblocq.com/tags/Gitlab/"/>
+    
+      <category term="CI" scheme="http://www.codeblocq.com/tags/CI/"/>
+    
+  </entry>
+  
+  <entry>
     <title>How to start a tech company as a non technical individual</title>
     <link href="http://www.codeblocq.com/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/"/>
     <id>http://www.codeblocq.com/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/</id>
@@ -430,41 +464,6 @@
       <category term="VSCode" scheme="http://www.codeblocq.com/tags/VSCode/"/>
     
       <category term="Tools" scheme="http://www.codeblocq.com/tags/Tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Configure Jest Test Location</title>
-    <link href="http://www.codeblocq.com/2017/02/Configure-Jest-Test-Location/"/>
-    <id>http://www.codeblocq.com/2017/02/Configure-Jest-Test-Location/</id>
-    <published>2017-02-25T23:44:03.000Z</published>
-    <updated>2017-03-02T13:20:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Quick article to help look at the right place when configuring your tests in Jest.</p>
-<h2 id="Default-test-files-location"><a href="#Default-test-files-location" class="headerlink" title="Default test files location"></a>Default test files location</h2><p>The first time I read through the configuration I thought that the paths to my tests were configured using <a href="https://facebook.github.io/jest/docs/configuration.html#testpathdirs-array-string" target="_blank" rel="external">testPathDirs
-</a>. It turns out that this property is only used to restraint the places Jest will look for tests to sub modules.</p>
-<p>The important thing to note is that by default:</p>
-<p><strong>Jest will look for <code>’js</code> and <code>.jsx</code> files inside of <code>__tests__</code> folders.</strong></p>
-<h2 id="Use-a-custom-location"><a href="#Use-a-custom-location" class="headerlink" title="Use a custom location"></a>Use a custom location</h2><p>This is the <em>default</em> that needs to change. To do so, use <a href="https://facebook.github.io/jest/docs/configuration.html#testregex-string" target="_blank" rel="external">testRegex</a>.</p>
-<p>For example, if you want to store all your test files inside a <code>./tests</code> folder, the only jest configuration option you are going to need is:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">“jest”: &#123;</div><div class="line">  <span class="string">"testRegex"</span>: <span class="string">"tests/.*\\.(js|jsx)$"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Quick article to help look at the right place when configuring your tests in Jest.&lt;/p&gt;
-&lt;h2 id=&quot;Default-test-files-location&quot;&gt;&lt;a href=&quot;#Def
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="http://www.codeblocq.com/tags/JavaScript/"/>
-    
-      <category term="React" scheme="http://www.codeblocq.com/tags/React/"/>
-    
-      <category term="Jest" scheme="http://www.codeblocq.com/tags/Jest/"/>
-    
-      <category term="Unit Tests" scheme="http://www.codeblocq.com/tags/Unit-Tests/"/>
     
   </entry>
   
