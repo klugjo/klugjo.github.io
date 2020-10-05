@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,20 +169,26 @@
                     <!-- Main Post Content -->
                     <p>This article discusses the preferred way to retrieve the last element of an Array in JavaScript.</p>
 <a id="more"></a>
-<p><strong>Tip 7</strong> in this <a href="https://blog.jscrambler.com/12-extremely-useful-hacks-for-javascript/" target="_blank" rel="external">Useful JavaScript Hacks Article</a> proposes the following method to get the last item in an array.</p>
-<figure class="highlight javascript"><figcaption><span>syntax1.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</div><div class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-1</span>)[<span class="number">0</span>]); <span class="comment">// 6</span></div></pre></td></tr></table></figure>
+
+<p><strong>Tip 7</strong> in this <a target="_blank" rel="noopener" href="https://blog.jscrambler.com/12-extremely-useful-hacks-for-javascript/">Useful JavaScript Hacks Article</a> proposes the following method to get the last item in an array.</p>
+<figure class="highlight javascript"><figcaption><span>syntax1.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-1</span>)[<span class="number">0</span>]); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+
 <p>It is a very neat and readable alternative to the often seen:</p>
-<figure class="highlight javascript"><figcaption><span>syntax2.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</div><div class="line"><span class="keyword">var</span> val = array[array.length - <span class="number">1</span>]; <span class="comment">// 6</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>syntax2.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> val = array[array.length - <span class="number">1</span>]; <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h2><p>I created the following quick performance test in Node (v5.6.0) to see how this syntax (<code>syntax1.js</code>) compares to the more traditional one (<code>syntax2.js</code>):</p>
-<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.time(<span class="string">'array slice'</span>);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i = i + <span class="number">1</span>) &#123;</div><div class="line">  <span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</div><div class="line">  <span class="keyword">var</span> val = array.slice(<span class="number">-1</span>)[<span class="number">0</span>];</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'array slice'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.time(<span class="string">'array index'</span>);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i = i + <span class="number">1</span>) &#123;</div><div class="line">  <span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</div><div class="line">  <span class="keyword">var</span> val = array[array.length - <span class="number">1</span>];</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'array index'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">&#x27;array slice&#x27;</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i = i + <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">  <span class="keyword">var</span> val = array.slice(<span class="number">-1</span>)[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">&#x27;array slice&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">&#x27;array index&#x27;</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i = i + <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">  <span class="keyword">var</span> val = array[array.length - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">&#x27;array index&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
 <p>Here are the results:</p>
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ node index.js</div><div class="line">&gt;<span class="built_in"> array </span>slice: 92.430ms</div><div class="line">&gt;<span class="built_in"> array </span>index: 4.820ms</div></pre></td></tr></table></figure>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node index.js</span><br><span class="line">&gt;<span class="built_in"> array </span>slice: 92.430ms</span><br><span class="line">&gt;<span class="built_in"> array </span>index: 4.820ms</span><br></pre></td></tr></table></figure>
+
 <p>Slicing the array is 20 times more taxing than accessing the last item directly.</p>
 <h2 id="Simplicity"><a href="#Simplicity" class="headerlink" title="Simplicity"></a>Simplicity</h2><p>The syntax1 is a lot simpler to write and read and I will certainly start using it when performance is not a concern:</p>
 <h3 id="Empty-array"><a href="#Empty-array" class="headerlink" title="Empty array"></a>Empty array</h3><p>It works well when the array is empty:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [];</div><div class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-1</span>)); <span class="comment">// return []</span></div><div class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-1</span>)[<span class="number">0</span>]); <span class="comment">// returns undefined</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [];</span><br><span class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-1</span>)); <span class="comment">// return []</span></span><br><span class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-1</span>)[<span class="number">0</span>]); <span class="comment">// returns undefined</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Get-the-last-few-elements-in-the-array"><a href="#Get-the-last-few-elements-in-the-array" class="headerlink" title="Get the last few elements in the array"></a>Get the last few elements in the array</h3><p>You can use the same technique to slice the array starting from the end of it. Pretty cool.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</div><div class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-1</span>)); <span class="comment">// [6]</span></div><div class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-2</span>)); <span class="comment">// [5,6]</span></div><div class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-3</span>)); <span class="comment">// [4,5,6]</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-1</span>)); <span class="comment">// [6]</span></span><br><span class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-2</span>)); <span class="comment">// [5,6]</span></span><br><span class="line"><span class="built_in">console</span>.log(array.slice(<span class="number">-3</span>)); <span class="comment">// [4,5,6]</span></span><br></pre></td></tr></table></figure>
 
                     
                     <!-- Tags Bottom -->
@@ -219,6 +228,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -232,10 +245,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -271,7 +280,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

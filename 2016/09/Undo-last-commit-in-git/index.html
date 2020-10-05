@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,21 +167,26 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Three ways to undo the last commit in git.<br><a id="more"></a></p>
+                    <p>Three ways to undo the last commit in git.</p>
+<a id="more"></a>
+
 <h3 id="Undo-last-commit-and-destroy-all-changes"><a href="#Undo-last-commit-and-destroy-all-changes" class="headerlink" title="Undo last commit and destroy all changes"></a>Undo last commit and destroy all changes</h3><p>Use this in case you wish to rewind your <code>HEAD</code> to the previous commit and revert all the changes done in the last commit:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">reset</span> <span class="comment">--hard HEAD~1</span></div></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">reset</span> <span class="comment">--hard HEAD~1</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>If you do a <code>git status</code> after that, your branch will be clean and you changes gone. (CAUTION !)</li>
 <li>You can rewind more than one commit. For example, you can go back 5 commits by using <code>HEAD~5</code></li>
 </ul>
 <h3 id="Undo-last-commit-but-keep-the-files-unchanged"><a href="#Undo-last-commit-but-keep-the-files-unchanged" class="headerlink" title="Undo last commit but keep the files unchanged"></a>Undo last commit but keep the files unchanged</h3><p>Use this if you want to rewind your <code>HEAD</code> to the previous commit but keep your changes, as in the files will be still contain your changes. This is what you will probably want to use in most cases.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">reset</span> <span class="keyword">HEAD</span>~<span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">reset</span> <span class="keyword">HEAD</span>~<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>If you do a <code>git status</code> after that, you will see the list of all your changes <strong>unstaged.</strong></li>
 <li>You will have to readd your changes with <code>git add</code>. Then commit again.</li>
 </ul>
 <h3 id="Undo-the-last-commit-keep-the-files-unchanged-and-staged-changes"><a href="#Undo-the-last-commit-keep-the-files-unchanged-and-staged-changes" class="headerlink" title="Undo the last commit, keep the files unchanged and staged changes"></a>Undo the last commit, keep the files unchanged and staged changes</h3><p>Use this if on top of keeping the files unchanged you also want to keep your commit status.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">reset</span> <span class="comment">--soft HEAD~1</span></div></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">reset</span> <span class="comment">--soft HEAD~1</span></span><br></pre></td></tr></table></figure>
+
 <p>If you do a <code>git status</code> after, you will that your changes are already staged and ready to be committed.</p>
 
                     
@@ -219,6 +227,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -232,10 +244,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -271,7 +279,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

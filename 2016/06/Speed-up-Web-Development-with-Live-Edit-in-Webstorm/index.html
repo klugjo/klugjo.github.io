@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,16 +167,19 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Easy steps to setting up <a href="https://www.jetbrains.com/help/webstorm/2016.1/live-edit.html" target="_blank" rel="external">Live Edit</a> (Hot Reload) in Webstorm and making your web development experience much smoother.<br><a id="more"></a></p>
+                    <p>Easy steps to setting up <a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/webstorm/2016.1/live-edit.html">Live Edit</a> (Hot Reload) in Webstorm and making your web development experience much smoother.</p>
+<a id="more"></a>
+
 <h2 id="1-Create-a-new-project"><a href="#1-Create-a-new-project" class="headerlink" title="1. Create a new project"></a>1. Create a new project</h2><p>Create a new project in Webstorm and add an <code>index.html</code> file we will use for our tests.</p>
 <p>Insert some HTML code</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello From Webstorm<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Live Reload Goodness<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello From Webstorm<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Live Reload Goodness<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>and launch the page in your browser with the Chrome button on the top right of the html editing area in Webstorm.</p>
 <h2 id="2-Live-Edit-Setup"><a href="#2-Live-Edit-Setup" class="headerlink" title="2. Live Edit Setup"></a>2. Live Edit Setup</h2><p>Good start ! Now let’s setup <strong>Live Edit</strong> in Webstorm so that anytime a change is made in Webstorm, the changes are automatically picked up by the browser.</p>
 <h3 id="a-Create-a-debug-configuration"><a href="#a-Create-a-debug-configuration" class="headerlink" title="a. Create a debug configuration"></a>a. Create a debug configuration</h3><p>In the top right, click Edit Configurations to add a new configuration:</p>
-<p><img src="/img/Webstorm-edit-configurations.png" alt=""></p>
+<p><img src="/img/Webstorm-edit-configurations.png"></p>
 <p>In the next screen:</p>
-<p><img src="/img/webstorm-add-live-edit-config.png" alt=""></p>
+<p><img src="/img/webstorm-add-live-edit-config.png"></p>
 <ul>
 <li>Click the <code>+</code> button to add a new Config and choose ‘JavaScript Debug’ <strong>[1]</strong></li>
 <li>Choose a name for your configuration, for examples <em>Live Edit</em> <strong>[2]</strong></li>
@@ -183,12 +189,12 @@
 </ul>
 <h3 id="b-Launch-the-debug-session"><a href="#b-Launch-the-debug-session" class="headerlink" title="b. Launch the debug session"></a>b. Launch the debug session</h3><p>Click on little Bug icon next to your configuration on the top right, next to your configuration name.</p>
 <p>If this your first time using Live Edit, Webstorm will ask you to install a Chrome Plugin</p>
-<p><img src="/img/install-live-edit-plugin-chrome.png" alt=""></p>
+<p><img src="/img/install-live-edit-plugin-chrome.png"></p>
 <p>Click the link a proceed to install that plugin in Chrome.</p>
 <p>Restart the debugging session from Webstorm and you are ready to go. Try to select elements in the .html file and see how any change has an immediate effect in Chrome.</p>
 <h3 id="c-Additional-Configuration"><a href="#c-Additional-Configuration" class="headerlink" title="c. Additional Configuration"></a>c. Additional Configuration</h3><p>At this point, everything is working great but you might find that sometimes some changes are not taken into account.</p>
 <p>Go to Webstorm Settings and the Live Edit Section and use the following values:</p>
-<p><img src="/img/webstorm-live-edit-settings.png" alt=""></p>
+<p><img src="/img/webstorm-live-edit-settings.png"></p>
 <ul>
 <li>Update: auto - 15ms</li>
 <li>Check the ‘Restart if hotswap fails’ box.</li>
@@ -233,6 +239,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -246,10 +256,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -285,7 +291,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

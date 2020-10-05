@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,8 +167,8 @@
                     
 
                     <!-- Main Post Content -->
-                    <p><a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a> is an awesome tool built directly inside of Node.js. You can use it to configure and run common scripts like running your unit tests or starting your webserver.</p>
-<p>npm has 4 default <a href="https://docs.npmjs.com/misc/scripts" target="_blank" rel="external">npm-scripts commands</a>:</p>
+                    <p><a target="_blank" rel="noopener" href="https://www.npmjs.com/">npm</a> is an awesome tool built directly inside of Node.js. You can use it to configure and run common scripts like running your unit tests or starting your webserver.</p>
+<p>npm has 4 default <a target="_blank" rel="noopener" href="https://docs.npmjs.com/misc/scripts">npm-scripts commands</a>:</p>
 <ul>
 <li>test</li>
 <li>start</li>
@@ -176,12 +179,15 @@
 <a id="more"></a> 
 <h2 id="1-Getting-started"><a href="#1-Getting-started" class="headerlink" title="1) Getting started:"></a>1) Getting started:</h2><p>Let’s start with an empty project folder, cd into it and run <code>npm init</code>. Pick a name for your project and use the defaults for the remaining fields.</p>
 <p>Your <code>package.json</code> should look something like:</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"npm-scripts"</span>,</div><div class="line">  <span class="attr">"version"</span>: <span class="string">"1.0.0"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="attr">"scripts"</span>: &#123;</div><div class="line">    <span class="attr">"test"</span>: <span class="string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"author"</span>: <span class="string">"Klughertz Jonathan (http://klugjo.github.io/)"</span>,</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"ISC"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;npm-scripts&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;index.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;author&quot;</span>: <span class="string">&quot;Klughertz Jonathan (http://klugjo.github.io/)&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h2 id="2-npm-test"><a href="#2-npm-test" class="headerlink" title="2) npm test:"></a>2) npm test:</h2><p>The default <code>package.json</code> comes with a <code>scripts</code> object and a <code>test</code> command:</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"test"</span>: <span class="string">"echo \"</span><span class="keyword">Error</span>: <span class="keyword">no</span> <span class="keyword">test</span> specified\<span class="string">" &amp;&amp; exit 1"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
-<p>Our <a href="https://docs.npmjs.com/cli/test" target="_blank" rel="external">npm-test</a> command is already good to go.</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;</span><span class="keyword">Error</span>: <span class="keyword">no</span> <span class="keyword">test</span> specified\<span class="string">&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Our <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/test">npm-test</a> command is already good to go.</p>
 <p>To run an npm script:</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">run</span><span class="bash">-script &lt;<span class="built_in">command</span>&gt; [-- &lt;args&gt;...]</span></div><div class="line"></div><div class="line">alias: npm <span class="keyword">run</span><span class="bash"></span></div></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="built_in">run</span>-<span class="keyword">script</span> &lt;command&gt; [<span class="comment">-- &lt;args&gt;...]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span>: npm <span class="built_in">run</span></span><br></pre></td></tr></table></figure>
+
 <p>Back to your terminal, type <code>npm run-script test</code> or <code>npm run test</code> to run the test command.</p>
 <p>At the moment it will return an error so remove the <code>exit 1</code> portion of the script to make it work:</p>
 <p><code>&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot;&quot;</code></p>
@@ -195,19 +201,22 @@
 <li><code>npm t</code></li>
 </ul>
 <p>In a real world project, you would use that command to run your unit test script command. By setting the test command to <code>mocha test</code> for example.</p>
-<h2 id="3-npm-start-and-stop"><a href="#3-npm-start-and-stop" class="headerlink" title="3) npm start and stop:"></a>3) npm start and stop:</h2><p>The <a href="https://docs.npmjs.com/cli/start" target="_blank" rel="external">npm-start</a> and <a href="https://docs.npmjs.com/cli/stop" target="_blank" rel="external">npm-stop</a> commands work the same way as the npm-test command. They are typically used to start and stop the application.</p>
+<h2 id="3-npm-start-and-stop"><a href="#3-npm-start-and-stop" class="headerlink" title="3) npm start and stop:"></a>3) npm start and stop:</h2><p>The <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/start">npm-start</a> and <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/stop">npm-stop</a> commands work the same way as the npm-test command. They are typically used to start and stop the application.</p>
 <p>Edit your package.json to include the start and stop commands:</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"test"</span>: <span class="string">"echo \"</span><span class="keyword">Error</span>: <span class="keyword">no</span> <span class="keyword">test</span> specified\<span class="string">""</span>,</div><div class="line">    <span class="string">"start"</span>: <span class="string">"echo \"</span><span class="keyword">Error</span>: <span class="keyword">no</span> start command specified\<span class="string">""</span>,</div><div class="line">    <span class="string">"stop"</span>: <span class="string">"echo \"</span><span class="keyword">Error</span>: <span class="keyword">no</span> stop command specified\<span class="string">""</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;</span><span class="keyword">Error</span>: <span class="keyword">no</span> <span class="keyword">test</span> specified\<span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;start&quot;</span>: <span class="string">&quot;echo \&quot;</span><span class="keyword">Error</span>: <span class="keyword">no</span> start command specified\<span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;stop&quot;</span>: <span class="string">&quot;echo \&quot;</span><span class="keyword">Error</span>: <span class="keyword">no</span> stop command specified\<span class="string">&quot;&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
 <p>As before, you can use <code>npm run start</code> or the shorter versions:</p>
 <ul>
 <li><code>npm start</code></li>
 <li><code>npm stop</code></li>
 </ul>
-<h2 id="4-npm-restart"><a href="#4-npm-restart" class="headerlink" title="4) npm restart:"></a>4) npm restart:</h2><p>If no <code>restart command is specified</code>, <strong>the <a href="https://docs.npmjs.com/cli/restart" target="_blank" rel="external">npm-restart</a> runs a package’s “stop” and “start” consecutively.</strong></p>
+<h2 id="4-npm-restart"><a href="#4-npm-restart" class="headerlink" title="4) npm restart:"></a>4) npm restart:</h2><p>If no <code>restart command is specified</code>, <strong>the <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/restart">npm-restart</a> runs a package’s “stop” and “start” consecutively.</strong></p>
 <p>At the moment if you run <code>npm restart</code>, you will get:</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm scripts jonathan$ npm restart</div><div class="line"></div><div class="line"><span class="keyword">Error: </span>no stop command specified</div><div class="line"></div><div class="line"><span class="keyword">Error: </span>no start command specified</div></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm scripts jonathan$ npm restart</span><br><span class="line"></span><br><span class="line"><span class="keyword">Error: </span>no stop command specified</span><br><span class="line"></span><br><span class="line"><span class="keyword">Error: </span>no start command specified</span><br></pre></td></tr></table></figure>
+
 <p>If you add the following <code>restart</code> command in your package: <code>&quot;restart&quot;: &quot;echo \&quot;Error: no restart command specified\&quot;&quot;</code> and run <code>npm restart</code>, you will get:</p>
-<figure class="highlight subunit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm scripts jonathan$ npm restart</div><div class="line"></div><div class="line"><span class="keyword">Error: </span>no restart command specified</div></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm scripts jonathan$ npm restart</span><br><span class="line"></span><br><span class="line"><span class="keyword">Error: </span>no restart command specified</span><br></pre></td></tr></table></figure>
+
 <h2 id="5-Custom-scripts"><a href="#5-Custom-scripts" class="headerlink" title="5) Custom scripts"></a>5) Custom scripts</h2><p>On top of these defaults, you can of course add your own commands.</p>
 <p>For example, add <code>&quot;custom&quot;: &quot;echo \&quot;Running custom command\&quot;&quot;</code> to your package.</p>
 <p>And run it using <code>npm run custom</code>.</p>
@@ -252,6 +261,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -265,10 +278,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -304,7 +313,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

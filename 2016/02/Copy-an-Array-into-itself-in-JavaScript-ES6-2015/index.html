@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,15 +167,20 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Part of the additions to ES6 is an array method called <code>copyWithin</code>:<br><a id="more"></a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.copyWithin(target, start[, end = <span class="keyword">this</span>.length])</div></pre></td></tr></table></figure>
+                    <p>Part of the additions to ES6 is an array method called <code>copyWithin</code>:</p>
+<a id="more"></a>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.copyWithin(target, start[, end = <span class="built_in">this</span>.length])</span><br></pre></td></tr></table></figure>
+
 <p>The function takes a section of the array and copies it to another place within the array.</p>
 <ul>
 <li><code>target</code>: index where to copy the elements</li>
 <li><code>start</code>: beginning of section to copy</li>
 <li><code>end</code>: end of section to copy. Optional, if not specified the section will go to the end of the array</li>
 </ul>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>m<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>].copyWithin(<span class="number">4</span>, <span class="number">1</span>, <span class="number">3</span>)</div><div class="line"><span class="comment">// Result: [0, 1, 2, 3, 1, 2]</span></div></pre></td></tr></table></figure></p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>m</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>].copyWithin(<span class="number">4</span>, <span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">// Result: [0, 1, 2, 3, 1, 2]</span></span><br></pre></td></tr></table></figure>
+
 <p>Here is a visual representation of what happens:</p>
 <p><img src="/img/array-copywithin-es6-explanation.png" alt="Array copyWithin visual explanation"></p>
 <h3 id="Remarks"><a href="#Remarks" class="headerlink" title="Remarks"></a>Remarks</h3><ul>
@@ -219,6 +227,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -232,10 +244,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -271,7 +279,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

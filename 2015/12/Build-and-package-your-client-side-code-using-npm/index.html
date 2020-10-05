@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -174,36 +177,61 @@
 </ul>
 <a id="more"></a> 
 <h2 id="1-Minimal-project-structure"><a href="#1-Minimal-project-structure" class="headerlink" title="1) Minimal project structure"></a>1) Minimal project structure</h2><p>Let’s assume our project is organized as follows:</p>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">|<span class="type">-- dist</span> // Build will <span class="keyword">end</span> up here</div><div class="line">|<span class="type">-- src</span> // <span class="keyword">All</span> source code is inside this folder</div><div class="line">    |<span class="type">-- stylus</span> </div><div class="line">        |<span class="type">-- site</span>.styl // Our main stylus file</div><div class="line">    |<span class="type">-- index</span>.jade // Our jade file</div><div class="line">    |<span class="type">-- js</span></div><div class="line">        |<span class="type">-- main</span>.js // Our main JavaScript file</div><div class="line">        |<span class="type">-- jquery</span>.js // jQuery library. Required <span class="built_in">in</span> main.js</div><div class="line">|<span class="type">-- package</span>.json // Where our build is configured !</div></pre></td></tr></table></figure>
-<h2 id="2-Compile-our-CSS-and-HTML"><a href="#2-Compile-our-CSS-and-HTML" class="headerlink" title="2) Compile our CSS and HTML"></a>2) Compile our CSS and HTML</h2><h3 id="Stylus-to-CSS"><a href="#Stylus-to-CSS" class="headerlink" title="Stylus to CSS"></a>Stylus to CSS</h3><p>We can compile our <a href="https://github.com/stylus/stylus" target="_blank" rel="external">stylus</a> with the following <a href="https://github.com/stylus/stylus/blob/dev/docs/executable.md" target="_blank" rel="external">command</a>:</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">|-- dist <span class="regexp">//</span> Build will end up here</span><br><span class="line">|-- src <span class="regexp">//</span> All source code is inside this folder</span><br><span class="line">    |-- stylus </span><br><span class="line">        |-- site.styl <span class="regexp">//</span> Our main stylus file</span><br><span class="line">    |-- index.jade <span class="regexp">//</span> Our jade file</span><br><span class="line">    |-- js</span><br><span class="line">        |-- main.js <span class="regexp">//</span> Our main JavaScript file</span><br><span class="line">        |-- jquery.js <span class="regexp">//</span> jQuery library. Required <span class="keyword">in</span> main.js</span><br><span class="line">|-- package.json <span class="regexp">//</span> Where our build is configured !</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Compile-our-CSS-and-HTML"><a href="#2-Compile-our-CSS-and-HTML" class="headerlink" title="2) Compile our CSS and HTML"></a>2) Compile our CSS and HTML</h2><h3 id="Stylus-to-CSS"><a href="#Stylus-to-CSS" class="headerlink" title="Stylus to CSS"></a>Stylus to CSS</h3><p>We can compile our <a target="_blank" rel="noopener" href="https://github.com/stylus/stylus">stylus</a> with the following <a target="_blank" rel="noopener" href="https://github.com/stylus/stylus/blob/dev/docs/executable.md">command</a>:</p>
 <p><code>stylus src/stylus/site.styl --out dist/</code></p>
 <p>Let’s set this up in the package.json: <a href="/2015/12/Run-scripts-with-npm/">Read this post</a> if you want to know the basics of setting up scripts in npm.</p>
-<h3 id="Jade-to-HTML"><a href="#Jade-to-HTML" class="headerlink" title="Jade to HTML"></a>Jade to HTML</h3><p>In a similar fashion, we can compile our <a href="http://jade-lang.com/" target="_blank" rel="external">Jade templates</a> to HTML using the following <a href="http://jade-lang.com/command-line/" target="_blank" rel="external">command</a>:</p>
+<h3 id="Jade-to-HTML"><a href="#Jade-to-HTML" class="headerlink" title="Jade to HTML"></a>Jade to HTML</h3><p>In a similar fashion, we can compile our <a target="_blank" rel="noopener" href="http://jade-lang.com/">Jade templates</a> to HTML using the following <a target="_blank" rel="noopener" href="http://jade-lang.com/command-line/">command</a>:</p>
 <p><code>jade src --out dist/</code></p>
 <h3 id="Add-the-npm-tasks"><a href="#Add-the-npm-tasks" class="headerlink" title="Add the npm tasks"></a>Add the npm tasks</h3><p>In our package.json, we can now create the tow following scripts:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"package:stylus"</span>: <span class="string">"stylus src/stylus/site.styl --out dist/"</span>,</div><div class="line">    <span class="string">"package:jade"</span>: <span class="string">"jade src --out dist/"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;package:stylus&quot;</span>: <span class="string">&quot;stylus src/stylus/site.styl --out dist/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;package:jade&quot;</span>: <span class="string">&quot;jade src --out dist/&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
 <h2 id="3-Bundle-and-minify-the-JavaScript"><a href="#3-Bundle-and-minify-the-JavaScript" class="headerlink" title="3) Bundle and minify the JavaScript"></a>3) Bundle and minify the JavaScript</h2><h3 id="Bundle-with-browserify"><a href="#Bundle-with-browserify" class="headerlink" title="Bundle with browserify"></a>Bundle with browserify</h3><p>(Here is an <a href="/2015/11/Your-first-10-minutes-with-Browserify/">introduction to browserify</a> if needed)</p>
 <p>The command to bundle our JS into one file is <code>browserify ./src/js/main.js -o ./dist/bundle.js</code></p>
-<h3 id="Minify-with-uglify"><a href="#Minify-with-uglify" class="headerlink" title="Minify with uglify"></a>Minify with uglify</h3><p>I am using <a href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="external">uglifyJS2</a> for this task.</p>
+<h3 id="Minify-with-uglify"><a href="#Minify-with-uglify" class="headerlink" title="Minify with uglify"></a>Minify with uglify</h3><p>I am using <a target="_blank" rel="noopener" href="https://github.com/mishoo/UglifyJS2">uglifyJS2</a> for this task.</p>
 <p>The task to minify the bundle.js file is <code>uglifyjs -- compress ./dist/bundle.js -o ./dist/bundle.min.js</code></p>
 <h3 id="Piping-the-two"><a href="#Piping-the-two" class="headerlink" title="Piping the two"></a>Piping the two</h3><p>Now what we want is to <strong>pipe the output of the browserify task into the uglify task</strong> so that we can combine both into one npm task</p>
-<p>To do this, we are going to use a <a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-4.html" target="_blank" rel="external">unix pipe</a> <code>|</code> and connect the STDOUT of the first task with the STDIN of the second.</p>
+<p>To do this, we are going to use a <a target="_blank" rel="noopener" href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-4.html">unix pipe</a> <code>|</code> and connect the STDOUT of the first task with the STDIN of the second.</p>
 <p><code>browserify ./src/js/main.js | uglifyjs --compress &gt; ./dist/bundle.min.js</code></p>
 <p>Let’s set it up as a npm task:</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    ...</div><div class="line">    <span class="string">"package:js"</span>: <span class="string">"browserify ./src/js/main.js | uglifyjs --compress &gt; ./dist/bundle.min.js"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">...</span></span><br><span class="line">    <span class="string">&quot;package:js&quot;</span>: <span class="string">&quot;browserify ./src/js/main.js | uglifyjs --compress &gt; ./dist/bundle.min.js&quot;</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
 <h2 id="4-Putting-everything-together"><a href="#4-Putting-everything-together" class="headerlink" title="4) Putting everything together"></a>4) Putting everything together</h2><p>Now let’s combine all our tasks in one npm <code>package</code> task:</p>
 <p><code>&quot;package&quot;: &quot;npm run package:stylus &amp;&amp; npm run package:jade &amp;&amp; npm run package:js&quot;</code></p>
 <p>This will run our 3 package tasks in a sequence.</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"package:stylus"</span>: <span class="string">"stylus src/stylus/site.styl --out dist/"</span>,</div><div class="line">    <span class="string">"package:jade"</span>: <span class="string">"jade src --out dist/"</span>,</div><div class="line">    <span class="string">"package:js"</span>: <span class="string">"browserify ./src/js/main.js | uglifyjs --compress &gt; ./dist/bundle.min.js"</span>,</div><div class="line">    <span class="string">"package"</span>: <span class="string">"npm run package:stylus &amp;&amp; npm run package:jade &amp;&amp; npm run package:js"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;package:stylus&quot;</span>: <span class="string">&quot;stylus src/stylus/site.styl --out dist/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;package:jade&quot;</span>: <span class="string">&quot;jade src --out dist/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;package:js&quot;</span>: <span class="string">&quot;browserify ./src/js/main.js | uglifyjs --compress &gt; ./dist/bundle.min.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;package&quot;</span>: <span class="string">&quot;npm run package:stylus &amp;&amp; npm run package:jade &amp;&amp; npm run package:js&quot;</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
 <p>Run <code>npm run package</code> to test the full build sequence.</p>
 <h2 id="5-Cleaning-up-the-output-directory"><a href="#5-Cleaning-up-the-output-directory" class="headerlink" title="5) Cleaning up the output directory"></a>5) Cleaning up the output directory</h2><p>Before running the build, we would like to clean the output directory.</p>
-<p>We will use <a href="https://github.com/isaacs/rimraf#cli" target="_blank" rel="external">rimraf’s CLI</a> like so: <code>rimraf dist/*</code>.</p>
-<p>Instead of creating another ‘package:clean’ task, we can use an <a href="http://www.marcusoft.net/2015/08/pre-and-post-hooks-for-npm-scripting.html" target="_blank" rel="external">npm script prehook</a>. By prefixing an existing task (even custom) with <em>pre</em> or <em>post</em>, it will be automatically executed before or after our main task.</p>
+<p>We will use <a target="_blank" rel="noopener" href="https://github.com/isaacs/rimraf#cli">rimraf’s CLI</a> like so: <code>rimraf dist/*</code>.</p>
+<p>Instead of creating another ‘package:clean’ task, we can use an <a target="_blank" rel="noopener" href="http://www.marcusoft.net/2015/08/pre-and-post-hooks-for-npm-scripting.html">npm script prehook</a>. By prefixing an existing task (even custom) with <em>pre</em> or <em>post</em>, it will be automatically executed before or after our main task.</p>
 <p>In our current project, if we create a task called <code>&lt;b&gt;pre&lt;/b&gt;package</code> it will be executed automatically before our <code>package</code> task. In a similar way, <code>&lt;b&gt;post&lt;/b&gt;package</code> would be executed after <code>package</code>.</p>
 <p>Our final task:</p>
 <p><code>&quot;prepackage&quot;: &quot;rimraf dist/*&quot;</code></p>
 <p>and here is the final scripts object in he package:</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"package:stylus"</span>: <span class="string">"stylus src/stylus/site.styl --out dist/"</span>,</div><div class="line">    <span class="string">"package:jade"</span>: <span class="string">"jade src --out dist/"</span>,</div><div class="line">    <span class="string">"package:js"</span>: <span class="string">"browserify ./src/js/main.js | uglifyjs --compress &gt; ./dist/bundle.min.js"</span>,</div><div class="line">    <span class="string">"package"</span>: <span class="string">"npm run package:stylus &amp;&amp; npm run package:jade &amp;&amp; npm run package:js"</span>,</div><div class="line">    <span class="string">"prepackage"</span>: <span class="string">"rimraf dist/*"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;package:stylus&quot;</span>: <span class="string">&quot;stylus src/stylus/site.styl --out dist/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;package:jade&quot;</span>: <span class="string">&quot;jade src --out dist/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;package:js&quot;</span>: <span class="string">&quot;browserify ./src/js/main.js | uglifyjs --compress &gt; ./dist/bundle.min.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;package&quot;</span>: <span class="string">&quot;npm run package:stylus &amp;&amp; npm run package:jade &amp;&amp; npm run package:js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;prepackage&quot;</span>: <span class="string">&quot;rimraf dist/*&quot;</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     
                     <!-- Tags Bottom -->
@@ -243,6 +271,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -256,10 +288,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -295,7 +323,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

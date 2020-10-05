@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -174,8 +177,7 @@
 <th>Result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>ls *.jpg</code></td>
 <td>lists all files ending with <strong>.jpg</strong></td>
 </tr>
@@ -187,8 +189,7 @@
 <td><code>ls *abc*</code></td>
 <td>lists all files containing <strong>abc</strong> (including starting with and ending with <strong>abc</strong>)</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="Match-a-single-character-with"><a href="#Match-a-single-character-with" class="headerlink" title="Match a single character with ?"></a>Match a single character with ?</h2><p>The <code>?</code> wildcard will match a single character. That single character can be anything but can not be empty.</p>
 <table>
 <thead>
@@ -197,13 +198,11 @@
 <th>Result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>ls pic?.jpg</code></td>
 <td>lists all files like <strong>pic1.jpg</strong>, <strong>picA.jpg</strong> or <strong>picz.jpg</strong>. It will <u>not match</u> <strong>pic.jpg</strong></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="Match-a-set-of-characters-with-xyz"><a href="#Match-a-set-of-characters-with-xyz" class="headerlink" title="Match a set of characters with [xyz]"></a>Match a set of characters with [xyz]</h2><p>Use <code>[ ]</code> to have one single character match a defined set of characters.<br>[123abc] means will match 1, 2, 3, a, b or c.</p>
 <table>
 <thead>
@@ -212,13 +211,11 @@
 <th>Result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>pic[123].jpg</code></td>
 <td>Will <u>only</u> match <strong>pic1.jpg</strong>, <strong>pic2.jpg</strong> and <strong>pic3.jpg</strong></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="Match-a-range-of-characters-with-a-z"><a href="#Match-a-range-of-characters-with-a-z" class="headerlink" title="Match a range of characters with [a-z]"></a>Match a range of characters with [a-z]</h2><p>Use <code>[-]</code> to have one character be within certain range.</p>
 <table>
 <thead>
@@ -227,8 +224,7 @@
 <th>Result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>[a-e]</code></td>
 <td>Will match a, b, c, d or e</td>
 </tr>
@@ -256,8 +252,7 @@
 <td><code>[0-10]</code></td>
 <td>Will match 0 or 1 (0 to 1 range or 0)</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="Invert-a-selection-with"><a href="#Invert-a-selection-with" class="headerlink" title="Invert a selection with ^"></a>Invert a selection with ^</h2><p>Use <code>^</code> to invert a selection</p>
 <table>
 <thead>
@@ -266,8 +261,7 @@
 <th>Result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>[^78]</code></td>
 <td>Will match any character (including letters) different than 7 and 8</td>
 </tr>
@@ -275,9 +269,8 @@
 <td><code>[^a-z]</code></td>
 <td>Will match any character that is not a lowercase letter</td>
 </tr>
-</tbody>
-</table>
-<h2 id="Match-several-expressions-with-abc-xyz"><a href="#Match-several-expressions-with-abc-xyz" class="headerlink" title="Match several expressions with {abc,xyz}"></a>Match several expressions with {abc,xyz}</h2><p>Use <code>{expr1,expr2}</code> to match expr1 and expr2</p>
+</tbody></table>
+<h2 id="Match-several-expressions-with-abc-xyz"><a href="#Match-several-expressions-with-abc-xyz" class="headerlink" title="Match several expressions with {abc,xyz}"></a>Match several expressions with {abc,xyz}</h2><p>Use <code>&#123;expr1,expr2&#125;</code> to match expr1 and expr2</p>
 <table>
 <thead>
 <tr>
@@ -285,13 +278,11 @@
 <th>Result</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td><code>ls {*.jpg,*.gif}</code></td>
+<tbody><tr>
+<td><code>ls &#123;*.jpg,*.gif&#125;</code></td>
 <td>Will list any file with the jpg or gif extension</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 
                     
                     <!-- Tags Bottom -->
@@ -331,6 +322,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -344,10 +339,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -383,7 +374,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

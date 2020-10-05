@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,16 +167,21 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This article is a showcase of a <a href="https://github.com/Marak/colors.js" target="_blank" rel="external">popular node library</a> to display colors in the console.<br><a id="more"></a></p>
+                    <p>This article is a showcase of a <a target="_blank" rel="noopener" href="https://github.com/Marak/colors.js">popular node library</a> to display colors in the console.</p>
+<a id="more"></a>
+
 <h2 id="The-gist"><a href="#The-gist" class="headerlink" title="The gist"></a>The gist</h2><p>Here is the code you need to get started:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="built_in">require</span>(<span class="string">'colors'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Text color</span></div><div class="line"><span class="built_in">console</span>.log(colors.red(<span class="string">'Love, exciting and new'</span>));</div><div class="line"></div><div class="line"><span class="comment">// Invert colors (including background)</span></div><div class="line"><span class="built_in">console</span>.log(colors.inverse(<span class="string">'Come aboard, we\'re expecting you'</span>));</div><div class="line"></div><div class="line"><span class="comment">// Custom style</span></div><div class="line"><span class="built_in">console</span>.log(colors.rainbow(<span class="string">'Love, life\'s sweetest reward'</span>));</div><div class="line"></div><div class="line"><span class="comment">// Background Color</span></div><div class="line"><span class="built_in">console</span>.log(colors.bgMagenta(<span class="string">'Let it flow, it floats back to you'</span>));</div><div class="line"></div><div class="line"><span class="comment">// Combine different properties</span></div><div class="line"><span class="built_in">console</span>.log(colors.bgGreen.black(<span class="string">'The Love Boat soon will be making another run'</span>));</div></pre></td></tr></table></figure>
-<p><br>Run it and you will see the following in your console:</p>
-<p><img src="/img/colors-js-example.png" alt=""></p>
-<p><br>Don’t forget to npm install the <a href="https://github.com/Marak/colors.js" target="_blank" rel="external">library</a> with:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> <span class="comment">--save colors</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="built_in">require</span>(<span class="string">&#x27;colors&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Text color</span></span><br><span class="line"><span class="built_in">console</span>.log(colors.red(<span class="string">&#x27;Love, exciting and new&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Invert colors (including background)</span></span><br><span class="line"><span class="built_in">console</span>.log(colors.inverse(<span class="string">&#x27;Come aboard, we\&#x27;re expecting you&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Custom style</span></span><br><span class="line"><span class="built_in">console</span>.log(colors.rainbow(<span class="string">&#x27;Love, life\&#x27;s sweetest reward&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Background Color</span></span><br><span class="line"><span class="built_in">console</span>.log(colors.bgMagenta(<span class="string">&#x27;Let it flow, it floats back to you&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Combine different properties</span></span><br><span class="line"><span class="built_in">console</span>.log(colors.bgGreen.black(<span class="string">&#x27;The Love Boat soon will be making another run&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<p><br />Run it and you will see the following in your console:</p>
+<p><img src="/img/colors-js-example.png"></p>
+<p><br />Don’t forget to npm install the <a target="_blank" rel="noopener" href="https://github.com/Marak/colors.js">library</a> with:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> <span class="comment">--save colors</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="String-prototype"><a href="#String-prototype" class="headerlink" title="String prototype"></a>String prototype</h2><p>The library will also add string prototypes to simplify the code, use whichever you prefer:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Text color</span></div><div class="line"><span class="built_in">console</span>.log((<span class="string">'Love, exciting and new'</span>).red);</div><div class="line"></div><div class="line"><span class="comment">// Invert colors (including background)</span></div><div class="line"><span class="built_in">console</span>.log((<span class="string">'Come aboard, we\'re expecting you'</span>).inverse);</div><div class="line"></div><div class="line"><span class="comment">// Custom style</span></div><div class="line"><span class="built_in">console</span>.log((<span class="string">'Love, life\'s sweetest reward'</span>).rainbow);</div><div class="line"></div><div class="line"><span class="comment">// Background Color</span></div><div class="line"><span class="built_in">console</span>.log((<span class="string">'Let it flow, it floats back to you'</span>).bgMagenta);</div><div class="line"></div><div class="line"><span class="comment">// Combine different properties</span></div><div class="line"><span class="built_in">console</span>.log((<span class="string">'The Love Boat soon will be making another run'</span>).bgGreen.black);</div></pre></td></tr></table></figure>
-<h2 id="Easter-Egg"><a href="#Easter-Egg" class="headerlink" title="Easter Egg"></a>Easter Egg</h2><p>The library mentions a <em>“a secret undocumented style”</em>. <a href="https://github.com/Marak/colors.js/blob/master/lib/extendStringPrototype.js#L32" target="_blank" rel="external">Here it is</a> for those too lazy to look it up.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Text color</span></span><br><span class="line"><span class="built_in">console</span>.log((<span class="string">&#x27;Love, exciting and new&#x27;</span>).red);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Invert colors (including background)</span></span><br><span class="line"><span class="built_in">console</span>.log((<span class="string">&#x27;Come aboard, we\&#x27;re expecting you&#x27;</span>).inverse);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Custom style</span></span><br><span class="line"><span class="built_in">console</span>.log((<span class="string">&#x27;Love, life\&#x27;s sweetest reward&#x27;</span>).rainbow);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Background Color</span></span><br><span class="line"><span class="built_in">console</span>.log((<span class="string">&#x27;Let it flow, it floats back to you&#x27;</span>).bgMagenta);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Combine different properties</span></span><br><span class="line"><span class="built_in">console</span>.log((<span class="string">&#x27;The Love Boat soon will be making another run&#x27;</span>).bgGreen.black);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Easter-Egg"><a href="#Easter-Egg" class="headerlink" title="Easter Egg"></a>Easter Egg</h2><p>The library mentions a <em>“a secret undocumented style”</em>. <a target="_blank" rel="noopener" href="https://github.com/Marak/colors.js/blob/master/lib/extendStringPrototype.js#L32">Here it is</a> for those too lazy to look it up.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -213,6 +221,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -226,10 +238,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -265,7 +273,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

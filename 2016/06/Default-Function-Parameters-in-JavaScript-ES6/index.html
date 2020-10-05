@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,25 +167,31 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Explanations on what you can do with ES6 default function parameters.<br><a id="more"></a></p>
+                    <p>Explanations on what you can do with ES6 default function parameters.</p>
+<a id="more"></a>
 <h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><p>The most basic way to use default parameters is to set default values:</p>
 <p>Example:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newGame</span>(<span class="params">difficulty = <span class="string">'normal'</span>, numberOfPlayers = <span class="number">1</span></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(difficulty + <span class="string">', '</span> + numberOfPlayers + <span class="string">' player'</span> + (numberOfPlayers &gt; <span class="number">1</span> ? <span class="string">'s'</span> : <span class="string">''</span>));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">newGame</span>(<span class="params">difficulty = <span class="string">&#x27;normal&#x27;</span>, numberOfPlayers = <span class="number">1</span></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(difficulty + <span class="string">&#x27;, &#x27;</span> + numberOfPlayers + <span class="string">&#x27; player&#x27;</span> + (numberOfPlayers &gt; <span class="number">1</span> ? <span class="string">&#x27;s&#x27;</span> : <span class="string">&#x27;&#x27;</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>This function will create a new 1 player game with a default difficulty of <code>&#39;normal&#39;</code>.</p>
 <p>The default value will be used each time is <code>undefined</code> (unspecified parameters are <code>undefined</code>).</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">newGame(); <span class="comment">// "normal, 1 player"</span></div><div class="line">newGame(<span class="string">'easy'</span>); <span class="comment">// "easy, 1 player"</span></div><div class="line">newGame(<span class="literal">undefined</span>, <span class="number">2</span>); <span class="comment">// "normal, 2 players"</span></div><div class="line">newGame(<span class="literal">undefined</span>, <span class="literal">undefined</span>); <span class="comment">// "normal, 1 player"</span></div><div class="line">newGame(<span class="literal">null</span>, <span class="number">0</span>); <span class="comment">// "null, 0 player"</span></div><div class="line">newGame(<span class="string">'hard'</span>, <span class="number">4</span>); <span class="comment">// "hard, 4 players"</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">newGame(); <span class="comment">// &quot;normal, 1 player&quot;</span></span><br><span class="line">newGame(<span class="string">&#x27;easy&#x27;</span>); <span class="comment">// &quot;easy, 1 player&quot;</span></span><br><span class="line">newGame(<span class="literal">undefined</span>, <span class="number">2</span>); <span class="comment">// &quot;normal, 2 players&quot;</span></span><br><span class="line">newGame(<span class="literal">undefined</span>, <span class="literal">undefined</span>); <span class="comment">// &quot;normal, 1 player&quot;</span></span><br><span class="line">newGame(<span class="literal">null</span>, <span class="number">0</span>); <span class="comment">// &quot;null, 0 player&quot;</span></span><br><span class="line">newGame(<span class="string">&#x27;hard&#x27;</span>, <span class="number">4</span>); <span class="comment">// &quot;hard, 4 players&quot;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Computed-Default-Parameters"><a href="#Computed-Default-Parameters" class="headerlink" title="Computed Default Parameters"></a>Computed Default Parameters</h2><p>Instead of using a static value, you can derive the default value from other parameters:</p>
 <h3 id="In-Line"><a href="#In-Line" class="headerlink" title="In Line"></a>In Line</h3><p>An easy way to get started is by writing the formula directly in the parameter section of the function declaration.</p>
 <p>Example:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">saveName</span>(<span class="params">name, shortName = name.substring(<span class="number">0</span>, <span class="number">3</span></span>)) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(name + <span class="string">' - '</span> + shortName);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">saveName</span>(<span class="params">name, shortName = name.substring(<span class="number">0</span>, <span class="number">3</span>)</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(name + <span class="string">&#x27; - &#x27;</span> + shortName);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>This function will use the first 3 letters of the <code>name</code> if the <code>shortName</code> parameter is not selected.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">saveName(<span class="string">'Mary'</span>); <span class="comment">// "Mary - Mar"</span></div><div class="line">saveName(<span class="string">'Henry'</span>, <span class="string">'HNR'</span>); <span class="comment">// "Henry - HNR"</span></div><div class="line">saveName(); <span class="comment">// throws "TypeError: Cannot read property 'substring' of undefined</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">saveName(<span class="string">&#x27;Mary&#x27;</span>); <span class="comment">// &quot;Mary - Mar&quot;</span></span><br><span class="line">saveName(<span class="string">&#x27;Henry&#x27;</span>, <span class="string">&#x27;HNR&#x27;</span>); <span class="comment">// &quot;Henry - HNR&quot;</span></span><br><span class="line">saveName(); <span class="comment">// throws &quot;TypeError: Cannot read property &#x27;substring&#x27; of undefined</span></span><br></pre></td></tr></table></figure>
+
 <p>As you can see in the last example, if the first parameter is not specified, the execution blows up.</p>
 <h3 id="Using-a-function"><a href="#Using-a-function" class="headerlink" title="Using a function"></a>Using a function</h3><p>It is also possible to use functions and variables that are available in the scope to compute the default value:</p>
 <p>Example:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> getShortName = <span class="function">(<span class="params">n</span>) =&gt;</span> (n || <span class="string">'AAA'</span>).substring(<span class="number">0</span>, <span class="number">3</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">saveName2</span>(<span class="params">name, shortName = getShortName(name</span>)) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(name + <span class="string">' - '</span> + shortName);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getShortName = <span class="function">(<span class="params">n</span>) =&gt;</span> (n || <span class="string">&#x27;AAA&#x27;</span>).substring(<span class="number">0</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">saveName2</span>(<span class="params">name, shortName = getShortName(name)</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(name + <span class="string">&#x27; - &#x27;</span> + shortName);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>Abstracting the parameter generation logic outside is much cleaner.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">saveName2(<span class="string">'Mary'</span>); <span class="comment">// "Mary - Mar"</span></div><div class="line">saveName2(<span class="string">'Henry'</span>, <span class="string">'HNR'</span>); <span class="comment">// "Henry - HNR"</span></div><div class="line">saveName2(); <span class="comment">// "undefined - AAA"</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">saveName2(<span class="string">&#x27;Mary&#x27;</span>); <span class="comment">// &quot;Mary - Mar&quot;</span></span><br><span class="line">saveName2(<span class="string">&#x27;Henry&#x27;</span>, <span class="string">&#x27;HNR&#x27;</span>); <span class="comment">// &quot;Henry - HNR&quot;</span></span><br><span class="line">saveName2(); <span class="comment">// &quot;undefined - AAA&quot;</span></span><br></pre></td></tr></table></figure>
 
                     
                     <!-- Tags Bottom -->
@@ -222,6 +231,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -235,10 +248,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -274,7 +283,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

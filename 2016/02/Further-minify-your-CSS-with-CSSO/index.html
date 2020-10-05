@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,60 +167,60 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Hi there, I just discovered <a href="https://github.com/css/csso" target="_blank" rel="external">CSSO – CSS Optimizer</a> and I thought I would check out how it compares to other css minification tools like <a href="https://github.com/jbleuzen/node-cssmin" target="_blank" rel="external">cssmin</a> which is based on YUI compressor.</p>
+                    <p>Hi there, I just discovered <a target="_blank" rel="noopener" href="https://github.com/css/csso">CSSO – CSS Optimizer</a> and I thought I would check out how it compares to other css minification tools like <a target="_blank" rel="noopener" href="https://github.com/jbleuzen/node-cssmin">cssmin</a> which is based on YUI compressor.</p>
 <a id="more"></a> 
 <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Its a node package, installation is as straight forward as:</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> -g csso</div></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> -g csso</span><br></pre></td></tr></table></figure>
+
 <h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>You can minify your CSS by using <code>csso.minify(yourCss)</code>.</p>
 <p>Example:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> csso = <span class="built_in">require</span>(<span class="string">'csso'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> compressed = csso.minify(<span class="string">'.test &#123; color: #000000; &#125;'</span>);</div><div class="line"><span class="built_in">console</span>.log(compressed); <span class="comment">// .test&#123;color:black&#125;</span></div></pre></td></tr></table></figure>
-<h2 id="Basic-comparison-with-cssmin"><a href="#Basic-comparison-with-cssmin" class="headerlink" title="Basic comparison with cssmin"></a>Basic comparison with cssmin</h2><p>CSSO does more than just <a href="http://yui.github.io/yuicompressor/css.html" target="_blank" rel="external">remove whitespaces and line breaks</a> which is what cssmin based on YUI compressor does. In my opinion that’s already good enough of a reason to use it. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> csso = <span class="built_in">require</span>(<span class="string">&#x27;csso&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> compressed = csso.minify(<span class="string">&#x27;.test &#123; color: #000000; &#125;&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(compressed); <span class="comment">// .test&#123;color:black&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Basic-comparison-with-cssmin"><a href="#Basic-comparison-with-cssmin" class="headerlink" title="Basic comparison with cssmin"></a>Basic comparison with cssmin</h2><p>CSSO does more than just <a target="_blank" rel="noopener" href="http://yui.github.io/yuicompressor/css.html">remove whitespaces and line breaks</a> which is what cssmin based on YUI compressor does. In my opinion that’s already good enough of a reason to use it. </p>
 <p>Let’s look at how good of a job it does.</p>
 <h3 id="For-my-quick-test-I-have-used-2-css-files"><a href="#For-my-quick-test-I-have-used-2-css-files" class="headerlink" title="For my quick test, I have used 2 css files."></a>For my quick test, I have used 2 css files.</h3><ul>
 <li>Simple CSS File: My blog’s CSS at time of writing is a pretty simple 900 lines css file.</li>
-<li>Complex CSS File: <a href="https://github.com/Dogfalo/materialize" target="_blank" rel="external">Materialize</a> main CSS which is a fairly complex 11256 lines stylesheet.</li>
+<li>Complex CSS File: <a target="_blank" rel="noopener" href="https://github.com/Dogfalo/materialize">Materialize</a> main CSS which is a fairly complex 11256 lines stylesheet.</li>
 </ul>
 <h3 id="Here-are-the-results"><a href="#Here-are-the-results" class="headerlink" title="Here are the results:"></a>Here are the results:</h3><table>
 <thead>
 <tr>
 <th>Metric</th>
-<th style="text-align:center">Simple CSS File</th>
-<th style="text-align:center">Complex CSS File</th>
+<th align="center">Simple CSS File</th>
+<th align="center">Complex CSS File</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Lines</td>
-<td style="text-align:center">842</td>
-<td style="text-align:center">11256</td>
+<td align="center">842</td>
+<td align="center">11256</td>
 </tr>
 <tr>
 <td>Length</td>
-<td style="text-align:center">19133</td>
-<td style="text-align:center">201025</td>
+<td align="center">19133</td>
+<td align="center">201025</td>
 </tr>
 <tr>
 <td>cssmin length (characters)</td>
-<td style="text-align:center">15431</td>
-<td style="text-align:center">147778</td>
+<td align="center">15431</td>
+<td align="center">147778</td>
 </tr>
 <tr>
 <td>csso length (characters)</td>
-<td style="text-align:center">15405</td>
-<td style="text-align:center">145423</td>
+<td align="center">15405</td>
+<td align="center">145423</td>
 </tr>
 <tr>
 <td>cssmin compression (%)</td>
-<td style="text-align:center">19.3%</td>
-<td style="text-align:center">26.5%</td>
+<td align="center">19.3%</td>
+<td align="center">26.5%</td>
 </tr>
 <tr>
 <td>csso compression (%)</td>
-<td style="text-align:center">19.5%</td>
-<td style="text-align:center">27.7%</td>
+<td align="center">19.5%</td>
+<td align="center">27.7%</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>CSSO does a bit better than cssmin but the difference is negligible. I certainly wouldn’t go ahead and change my current projects over to CSSO but I will give CSSO a try for my next project.</p>
 
                     
@@ -258,6 +261,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -271,10 +278,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -310,7 +313,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,15 +167,19 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Use the <a href="https://docs.gitlab.com/ee/ci/yaml/#artifacts" target="_blank" rel="external">artifacts</a> property to pass build artifacts from one build stage down to <strong>all the following stages</strong>.</p>
-<figure class="highlight yaml"><figcaption><span>.gitlab-cy.yml</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="attr">stages:</span></div><div class="line"><span class="bullet">  -</span> stage_1</div><div class="line"><span class="bullet">  -</span> stage_2</div><div class="line"></div><div class="line"><span class="attr">one:</span></div><div class="line"><span class="attr">  stage:</span> stage_1</div><div class="line"><span class="attr">  script:</span></div><div class="line"><span class="bullet">    -</span> echo <span class="string">"File 1"</span> &gt;&gt; ./file1.txt</div><div class="line"><span class="bullet">    -</span> echo <span class="string">"File 2"</span> &gt;&gt; ./file2.txt</div><div class="line"><span class="bullet">    -</span> mkdir dir1</div><div class="line"><span class="bullet">    -</span> echo <span class="string">"dir1 File"</span> &gt;&gt; ./dir1/file.txt</div><div class="line"><span class="bullet">    -</span> mkdir dir2</div><div class="line"><span class="bullet">    -</span> echo <span class="string">"dir2 File"</span> &gt;&gt; ./dir2/file.txt</div><div class="line"><span class="attr">  artifacts:</span></div><div class="line"><span class="attr">    paths:</span></div><div class="line"><span class="bullet">    -</span> file1.txt</div><div class="line"><span class="bullet">    -</span> dir1/</div><div class="line"></div><div class="line"><span class="attr">two:</span></div><div class="line"><span class="attr">  stage:</span> stage_2</div><div class="line"><span class="attr">  script:</span></div><div class="line"><span class="bullet">    -</span> ls</div><div class="line"><span class="bullet">    -</span> ls dir1</div><div class="line"><span class="bullet">    -</span> cat file1.txt</div><div class="line"><span class="bullet">    -</span> cat dir1/file.txt</div></pre></td></tr></table></figure>
+                    <p>Use the <a target="_blank" rel="noopener" href="https://docs.gitlab.com/ee/ci/yaml/#artifacts">artifacts</a> property to pass build artifacts from one build stage down to <strong>all the following stages</strong>.</p>
+<figure class="highlight yaml"><figcaption><span>.gitlab-cy.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">stages:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">stage_1</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">stage_2</span></span><br><span class="line"></span><br><span class="line"><span class="attr">one:</span></span><br><span class="line">  <span class="attr">stage:</span> <span class="string">stage_1</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">echo</span> <span class="string">&quot;File 1&quot;</span> <span class="string">&gt;&gt;</span> <span class="string">./file1.txt</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">echo</span> <span class="string">&quot;File 2&quot;</span> <span class="string">&gt;&gt;</span> <span class="string">./file2.txt</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">mkdir</span> <span class="string">dir1</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">echo</span> <span class="string">&quot;dir1 File&quot;</span> <span class="string">&gt;&gt;</span> <span class="string">./dir1/file.txt</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">mkdir</span> <span class="string">dir2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">echo</span> <span class="string">&quot;dir2 File&quot;</span> <span class="string">&gt;&gt;</span> <span class="string">./dir2/file.txt</span></span><br><span class="line">  <span class="attr">artifacts:</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">file1.txt</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dir1/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">two:</span></span><br><span class="line">  <span class="attr">stage:</span> <span class="string">stage_2</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">ls</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">ls</span> <span class="string">dir1</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">cat</span> <span class="string">file1.txt</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">cat</span> <span class="string">dir1/file.txt</span></span><br></pre></td></tr></table></figure>
+
 <p>In the <code>.gitlab-ci.yml</code> above we are defining a build with 2 stages.</p>
 <p>In <code>stage_1</code> we are creating 4 files:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── dir1</div><div class="line">│   └── file.txt</div><div class="line">├── dir2</div><div class="line">│   └── file.txt</div><div class="line">├── file1.txt</div><div class="line">└── file2.txt</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── dir1</span><br><span class="line">│   └── file.txt</span><br><span class="line">├── dir2</span><br><span class="line">│   └── file.txt</span><br><span class="line">├── file1.txt</span><br><span class="line">└── file2.txt</span><br></pre></td></tr></table></figure>
+
 <p>In <code>stage_2</code>, the following files files (created in <code>stage_1</code>) are available:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── dir1</div><div class="line">│   └── file.txt</div><div class="line">├── file1.txt</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── dir1</span><br><span class="line">│   └── file.txt</span><br><span class="line">├── file1.txt</span><br></pre></td></tr></table></figure>
+
 <p>The magic happens in the <code>artifacts</code> section of <code>stage_1</code>:</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">artifacts:</span></div><div class="line"><span class="attr">  paths:</span></div><div class="line"><span class="bullet">  -</span> file1.txt</div><div class="line"><span class="bullet">  -</span> dir1/</div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">artifacts:</span></span><br><span class="line">  <span class="attr">paths:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">file1.txt</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">dir1/</span></span><br></pre></td></tr></table></figure>
+
 <p>which means pass <code>file1.txt</code> and the <code>dir1</code> folder (+ it’s content) to <strong>all the following stages</strong>.</p>
 
                     
@@ -213,6 +220,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -226,10 +237,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -265,7 +272,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

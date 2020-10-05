@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,28 +167,34 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Learn how to create a git patch from a previous commit.<br><a id="more"></a></p>
-<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">## Create patch <span class="keyword">from</span> commit a12a06c</div><div class="line">$ git show a12a06c &gt; temp.patch</div><div class="line"></div><div class="line">## Apply patch</div><div class="line">$ git apply temp.patch</div></pre></td></tr></table></figure>
+                    <p>Learn how to create a git patch from a previous commit.</p>
+<a id="more"></a>
+
+<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## <span class="keyword">Create</span> patch <span class="keyword">from</span> <span class="keyword">commit</span> a12a06c</span><br><span class="line">$ git <span class="keyword">show</span> a12a06c &gt; <span class="keyword">temp</span>.patch</span><br><span class="line"></span><br><span class="line">## Apply patch</span><br><span class="line">$ git apply <span class="keyword">temp</span>.patch</span><br></pre></td></tr></table></figure>
+
 <h2 id="Long-story"><a href="#Long-story" class="headerlink" title="Long story"></a>Long story</h2><p>Let’s look at the following scenario:</p>
-<p>You are working on a <code>feature1</code> branch and you realise your last commit should not have been committed here. You could stash it but you are not sure where you are going to need to it again; so you decide yo create a <a href="https://git-scm.com/docs/git-format-patch" target="_blank" rel="external">patch</a> with it.</p>
+<p>You are working on a <code>feature1</code> branch and you realise your last commit should not have been committed here. You could stash it but you are not sure where you are going to need to it again; so you decide yo create a <a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-format-patch">patch</a> with it.</p>
 <h3 id="Method-1-git-reset-git-diff-gt-patch"><a href="#Method-1-git-reset-git-diff-gt-patch" class="headerlink" title="Method 1: git reset + git diff &gt; patch"></a>Method 1: git reset + git diff &gt; patch</h3><p>Since that commit was our last commit, we can rewind our history 1 step and create a patch from the current <code>diff</code>.</p>
 <ul>
 <li>Rewind one step and keep changes staged</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">reset</span> <span class="comment">--soft HEAD~1</span></div></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">reset</span> <span class="comment">--soft HEAD~1 </span></span><br></pre></td></tr></table></figure>
+
 <p>Using <code>--soft</code> will <a href="/2016/09/Undo-last-commit-in-git/">keep our changes staged</a>.</p>
 <ul>
 <li>Create the patch</li>
 </ul>
 <p>Create the patch from your stages changes by using</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">diff </span>--<span class="keyword">cached </span>&gt; patch1.patch</div></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff <span class="params">--cached</span> &gt; <span class="keyword">patch</span>1.<span class="keyword">patch</span></span><br></pre></td></tr></table></figure>
+
 <p>And you have all your changes in that patch</p>
 <h3 id="Method-2-Create-patch-from-commit-directly"><a href="#Method-2-Create-patch-from-commit-directly" class="headerlink" title="Method 2: Create patch from commit directly"></a>Method 2: Create patch from commit directly</h3><p>In some cases, you want to create a patch from a commit that is not the previous one. You also might not be interested in rewinding your git history.</p>
 <p>Here is a one liner that can help you create a patch from any commit in your history.</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git show a12a06c &gt; patch2.patch</div></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git show a12a06c &gt; <span class="keyword">patch</span>2.<span class="keyword">patch</span></span><br></pre></td></tr></table></figure>
+
 <p>where <code>a12a06c</code> is the commit you want to create a patch from.</p>
 <h3 id="Apply-the-patch"><a href="#Apply-the-patch" class="headerlink" title="Apply the patch"></a>Apply the patch</h3><p>Reminder: To apply your patch somewhere else or later on.</p>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">apply</span> patch1.patch</div></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git apply <span class="keyword">patch</span>1.<span class="keyword">patch</span></span><br></pre></td></tr></table></figure>
 
                     
                     <!-- Tags Bottom -->
@@ -225,6 +234,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -238,10 +251,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -277,7 +286,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

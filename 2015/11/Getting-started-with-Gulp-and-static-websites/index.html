@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,7 +167,7 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This quick tutorial will show you how to get started with <a href="http://gulpjs.com/" target="_blank" rel="external">Gulp</a> and how to create a build script for your static website:</p>
+                    <p>This quick tutorial will show you how to get started with <a target="_blank" rel="noopener" href="http://gulpjs.com/">Gulp</a> and how to create a build script for your static website:</p>
 <ul>
 <li>Gulp installation with NPM</li>
 <li>Project setup</li>
@@ -176,20 +179,23 @@
 <p><code>npm install -g gulp</code></p>
 <p>Then install gulp locally: <code>npm install --save-dev gulp</code></p>
 <p>At the root of your project, create a file called <code>gulpfile.js</code>. This is our gulp configuration file; in this file, we will declare all our gulp tasks.</p>
-<h2 id="2-Project-Structure"><a href="#2-Project-Structure" class="headerlink" title="2) Project Structure"></a>2) Project Structure</h2><p>Before we configure our build, we need to agree on a basic project structure. I chose to follow the conventions used by the <a href="https://html5boilerplate.com" target="_blank" rel="external">HTML5 Boilerplate</a> project.</p>
+<h2 id="2-Project-Structure"><a href="#2-Project-Structure" class="headerlink" title="2) Project Structure"></a>2) Project Structure</h2><p>Before we configure our build, we need to agree on a basic project structure. I chose to follow the conventions used by the <a target="_blank" rel="noopener" href="https://html5boilerplate.com/">HTML5 Boilerplate</a> project.</p>
 <p>We will have a <code>src</code> folder that contains all our source files and a <code>dist</code> folder that contains our final build.</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">|<span class="comment">-- dist // Build will end up here</span></div><div class="line">|<span class="comment">-- src // All source code should be inside this folder</span></div><div class="line">    |<span class="comment">-- css </span></div><div class="line">        |<span class="comment">-- main.css // Our css file(s)</span></div><div class="line">        |<span class="comment">-- ...</span></div><div class="line">    |<span class="comment">-- index.html // Our html file(s)</span></div><div class="line">    |<span class="comment">-- ...</span></div></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|<span class="comment">-- dist // Build will end up here</span></span><br><span class="line">|<span class="comment">-- src // All source code should be inside this folder</span></span><br><span class="line">    |<span class="comment">-- css </span></span><br><span class="line">        |<span class="comment">-- main.css // Our css file(s)</span></span><br><span class="line">        |<span class="comment">-- ...</span></span><br><span class="line">    |<span class="comment">-- index.html // Our html file(s)</span></span><br><span class="line">    |<span class="comment">-- ...</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h2 id="3-Gulp-initialization-and-copy-HTML-to-dist-folder"><a href="#3-Gulp-initialization-and-copy-HTML-to-dist-folder" class="headerlink" title="3) Gulp initialization and copy HTML to dist folder"></a>3) Gulp initialization and copy HTML to <code>dist</code> folder</h2><p>The only thing needed to initialize gulp is to require the gulp node module in the <code>gulpfile.js</code></p>
 <p><code>var gulp = require(&#39;gulp&#39;);</code></p>
 <p>Once this is done, let’s add our first task.</p>
 <p>To define a gulp task, use the following format:</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gulp.<span class="keyword">task</span>(<span class="symbol">'name</span> <span class="keyword">of</span> your <span class="keyword">task</span>', <span class="keyword">function</span> <span class="title"></span>() &#123; </div><div class="line">    // actions to be executed by this task </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gulp.<span class="keyword">task</span>(<span class="symbol">&#x27;name</span> <span class="keyword">of</span> your <span class="keyword">task</span>&#x27;, <span class="keyword">function</span> <span class="title"></span>() &#123; </span><br><span class="line">    // actions to be executed by this task </span><br><span class="line">&#125;); </span><br></pre></td></tr></table></figure>
+
 <p>There are many plugins available on npm compatible with the Gulp task runner, but for our first task (copy HTML files to the output directory), the <code>gulp</code> module is sufficient:</p>
-<figure class="highlight sml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gulp.src(<span class="symbol">'path</span> <span class="keyword">of</span> src files')</div><div class="line">    .pipe(gulp.dest(<span class="symbol">'path</span> to output directory'))</div></pre></td></tr></table></figure>
-<p><a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpsrcglobs-options" target="_blank" rel="external">gulp.src</a> returns a stream of <a href="https://github.com/gulpjs/vinyl-fs" target="_blank" rel="external">Vynil files</a> matching the path; then pipe them to gulp plugins or actions.</p>
-<p><a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpdestpath-options" target="_blank" rel="external">gulp.dest</a> writes all piped files to the folder passed as argument.</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">gulp</span><span class="selector-class">.src</span>(<span class="string">&#x27;path of src files&#x27;</span>)</span><br><span class="line">    <span class="selector-class">.pipe</span>(gulp.dest(<span class="string">&#x27;path to output directory&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpsrcglobs-options">gulp.src</a> returns a stream of <a target="_blank" rel="noopener" href="https://github.com/gulpjs/vinyl-fs">Vynil files</a> matching the path; then pipe them to gulp plugins or actions.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpdestpath-options">gulp.dest</a> writes all piped files to the folder passed as argument.</p>
 <p>The complete code for our task will then look like:</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'html'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">    gulp.src(<span class="string">'./src/*.html'</span>)</div><div class="line">        .pipe(gulp.dest(<span class="string">'./dist'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">&#x27;html&#x27;</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gulp.src(<span class="string">&#x27;./src/*.html&#x27;</span>)</span><br><span class="line">        .pipe(gulp.dest(<span class="string">&#x27;./dist&#x27;</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>(At this point, I suggest you refactor a bit and use a configuration object to store the strings in a reusable manner.)</p>
 <h2 id="4-Gulp’s-default-command-line-task"><a href="#4-Gulp’s-default-command-line-task" class="headerlink" title="4) Gulp’s default command line task"></a>4) Gulp’s default command line task</h2><p>What we want here is to simply type <code>gulp</code> in our command line and have all our gulp tasks executed.</p>
 <p>To do this simply add the following line to your gulpfile.js:</p>
@@ -200,13 +206,13 @@
 <p>For this, we will need to install a gulp plugin called gulp-concat</p>
 <p><code>npm install --save gulp-concat</code></p>
 <p>Let’s add that plugin to our <code>gulpfile.js</code> with the rest of our dependencies:</p>
-<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="keyword">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    <span class="keyword">concat</span> = <span class="keyword">require</span>(<span class="string">'gulp-concat'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="keyword">require</span>(<span class="string">&#x27;gulp&#x27;</span>),</span><br><span class="line">    <span class="keyword">concat</span> = <span class="keyword">require</span>(<span class="string">&#x27;gulp-concat&#x27;</span>);</span><br></pre></td></tr></table></figure>
 <p>We are now ready to declare our css task. Let’s imagine we want to combine our bootstrap css with our main css file into a file called site.css</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'css'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">   gulp.src([<span class="string">'./src/css/bootstrap.min.css'</span>, <span class="string">'./src/css/main.css'</span>])</div><div class="line">       .pipe(concat(<span class="string">'site.css'</span>))</div><div class="line">       .pipe(gulp.dest(<span class="string">'./dist/css'</span>))</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>What we do here is set our source files as an array of css files, concatenating them and saving the result in a css folder in our dist directory. It is of course possible to add more css files in the src array.<br><br>The last step before we can test our build script, consists of adding the css task to our default gulp command:</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">&#x27;css&#x27;</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span></span> &#123;</span><br><span class="line">   gulp.src([<span class="string">&#x27;./src/css/bootstrap.min.css&#x27;</span>, <span class="string">&#x27;./src/css/main.css&#x27;</span>])</span><br><span class="line">       .pipe(<span class="built_in">concat</span>(<span class="string">&#x27;site.css&#x27;</span>))</span><br><span class="line">       .pipe(gulp.dest(<span class="string">&#x27;./dist/css&#x27;</span>))</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>What we do here is set our source files as an array of css files, concatenating them and saving the result in a css folder in our dist directory. It is of course possible to add more css files in the src array.<br><br />The last step before we can test our build script, consists of adding the css task to our default gulp command:</p>
 <p>Modify the last line of your gulpfile.js to be <code>gulp.task(&#39;default&#39;, [&#39;html&#39;, &#39;css&#39;]);</code></p>
 <p>Run gulp from the command line and voila !</p>
-<p>You can check an example of a refactored gulpfile.js for this project <a href="https://gist.github.com/klugjo/f4f2ee250d32103e9e22" target="_blank" rel="external">here</a>.</p>
+<p>You can check an example of a refactored gulpfile.js for this project <a target="_blank" rel="noopener" href="https://gist.github.com/klugjo/f4f2ee250d32103e9e22">here</a>.</p>
 <p>Thanks !</p>
 
                     
@@ -247,6 +253,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -260,10 +270,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -299,7 +305,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

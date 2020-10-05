@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,32 +169,40 @@
                     <!-- Main Post Content -->
                     <p>In this quick tutorial, we will build a <a target="_blank" href="/tags/Bash/">Bash</a> command that downloads a site’s favicon using the <a target="_blank" href="/2016/01/HTTPie-a-good-replacement-for-cURL/">HTTPie library</a>.</p>
 <a id="more"></a> 
-<h2 id="1-Download-a-page’s-HTML-Content"><a href="#1-Download-a-page’s-HTML-Content" class="headerlink" title="1 - Download a page’s HTML Content"></a>1 - Download a page’s HTML Content</h2><p>For this tutorial, I will use <a href="http://www.fipradio.fr/player" target="_blank" rel="external">http://www.fipradio.fr/player</a> as our test website – as it turns out, it is also my favorite radio.</p>
+<h2 id="1-Download-a-page’s-HTML-Content"><a href="#1-Download-a-page’s-HTML-Content" class="headerlink" title="1 - Download a page’s HTML Content"></a>1 - Download a page’s HTML Content</h2><p>For this tutorial, I will use <a target="_blank" rel="noopener" href="http://www.fipradio.fr/player">http://www.fipradio.fr/player</a> as our test website – as it turns out, it is also my favorite radio.</p>
 <p>If you have never looked at HTTPie, have a quick look at my <a target="_blank" href="/2016/01/HTTPie-a-good-replacement-for-cURL/">introduction to the library</a>.</p>
 <p>Downloading the HTML is the easiest part of this tutorial, using HTTPie:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http http://www.fipradio.fr/player</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http http://www.fipradio.fr/player</span><br></pre></td></tr></table></figure>
+
 <p>The full HTML will be printed out to the console.</p>
-<h2 id="2-Extract-the-favicon’s-URL"><a href="#2-Extract-the-favicon’s-URL" class="headerlink" title="2 - Extract the favicon’s URL"></a>2 - Extract the favicon’s URL</h2><p>I am by no means an expert in bash and regexp but here is a solution that does the job. Inspired by <a href="http://www.unix.com/shell-programming-and-scripting/124833-extract-urls-html-code-using-sed.html" target="_blank" rel="external">this post</a> and <a href="http://stackoverflow.com/questions/9899760/use-sed-and-wget-to-retrieve-links-only" target="_blank" rel="external">this one</a>.</p>
+<h2 id="2-Extract-the-favicon’s-URL"><a href="#2-Extract-the-favicon’s-URL" class="headerlink" title="2 - Extract the favicon’s URL"></a>2 - Extract the favicon’s URL</h2><p>I am by no means an expert in bash and regexp but here is a solution that does the job. Inspired by <a target="_blank" rel="noopener" href="http://www.unix.com/shell-programming-and-scripting/124833-extract-urls-html-code-using-sed.html">this post</a> and <a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/9899760/use-sed-and-wget-to-retrieve-links-only">this one</a>.</p>
 <h3 id="Grep-the-favicon’s-tag"><a href="#Grep-the-favicon’s-tag" class="headerlink" title="Grep the favicon’s tag"></a>Grep the favicon’s tag</h3><p>Here is the code:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ grep -o <span class="string">'href="http[^"]*ico"'</span></div></pre></td></tr></table></figure>
-<p><code>-o</code> will retain only the matching part of the line instead of the whole line<br><code>&#39;href=&quot;http[^&quot;]*ico&quot;&#39;</code> will match strings like <em>href=”http:[..]ico”</em><br><br><br><u>Let’s pipe the HTML to the grep expression:</u></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http http://www.fipradio.fr/player | grep -o <span class="string">'href="http[^"]*ico"'</span></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">href=<span class="string">"http://www.fipradio.fr/sites/all/themes/custom/fip/favicon.ico"</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep -o <span class="string">&#x27;href=&quot;http[^&quot;]*ico&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>-o</code> will retain only the matching part of the line instead of the whole line<br><code>&#39;href=&quot;http[^&quot;]*ico&quot;&#39;</code> will match strings like <em>href=”http:[..]ico”</em><br><br /><br><u>Let’s pipe the HTML to the grep expression:</u></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http http://www.fipradio.fr/player | grep -o <span class="string">&#x27;href=&quot;http[^&quot;]*ico&quot;&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">href=<span class="string">&quot;http://www.fipradio.fr/sites/all/themes/custom/fip/favicon.ico&quot;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Sed-the-URL"><a href="#Sed-the-URL" class="headerlink" title="Sed the URL"></a>Sed the URL</h3><p>Use the following Sed function to extract the URL of the favicon:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sed <span class="string">'s/href="\(.*\)"/\1/'</span></div></pre></td></tr></table></figure>
-<p><code>s/</code> means we want to save only what we match<br><code>href=&quot;\(.*\)&quot;</code> is what we want to match<br><code>/\1/</code> refers to the characters captured by the escaped parentheses.<br><br><br><u>After piping it up:</u></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http http://www.fipradio.fr/player | grep -o <span class="string">'href="http[^"]*ico"'</span> | sed <span class="string">'s/href="\(.*\)"/\1/'</span></div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://www.fipradio.fr/sites/all/themes/custom/fip/favicon.ico</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed <span class="string">&#x27;s/href=&quot;\(.*\)&quot;/\1/&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>s/</code> means we want to save only what we match<br><code>href=&quot;\(.*\)&quot;</code> is what we want to match<br><code>/\1/</code> refers to the characters captured by the escaped parentheses.<br><br /><br><u>After piping it up:</u></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http http://www.fipradio.fr/player | grep -o <span class="string">&#x27;href=&quot;http[^&quot;]*ico&quot;&#x27;</span> | sed <span class="string">&#x27;s/href=&quot;\(.*\)&quot;/\1/&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://www.fipradio.fr/sites/all/themes/custom/fip/favicon.ico</span><br></pre></td></tr></table></figure>
+
 <h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ul>
 <li>There will be quite a few cases where this script won’t work. For example for websites served over https or when there is querystring after the .ico to avoid caching issues.</li>
 <li>I wouldn’t have been able to come up with the regex out of the blue. I used quite a few google searches before finding a solution that I liked. This tutorial is not meant to be a detailed explanation about grep, sed or regex.</li>
 </ul>
-<h2 id="3-Download-the-icons"><a href="#3-Download-the-icons" class="headerlink" title="3 - Download the icons"></a>3 - Download the icons</h2><p>To <a href="https://github.com/jkbrzt/httpie#download-mode" target="_blank" rel="external">download a file with HTTPie</a>, use:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http <span class="_">-d</span> url</div></pre></td></tr></table></figure>
+<h2 id="3-Download-the-icons"><a href="#3-Download-the-icons" class="headerlink" title="3 - Download the icons"></a>3 - Download the icons</h2><p>To <a target="_blank" rel="noopener" href="https://github.com/jkbrzt/httpie#download-mode">download a file with HTTPie</a>, use:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http -d url</span><br></pre></td></tr></table></figure>
+
 <p>We will use a while loop with read to iterate through the list of favicon URLs:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ &#123; <span class="keyword">while</span> <span class="built_in">read</span> url ; <span class="keyword">do</span> http <span class="_">-d</span> <span class="variable">$url</span> ; <span class="keyword">done</span> ; &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ &#123; <span class="keyword">while</span> <span class="built_in">read</span> url ; <span class="keyword">do</span> http -d <span class="variable">$url</span> ; <span class="keyword">done</span> ; &#125;</span><br></pre></td></tr></table></figure>
+
 <p>And here is the final command:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http http://www.fipradio.fr/player | grep -o <span class="string">'href="http[^"]*ico"'</span> | sed <span class="string">'s/href="\(.*\)"/\1/'</span> | &#123; <span class="keyword">while</span> <span class="built_in">read</span> url ; <span class="keyword">do</span> http <span class="_">-d</span> <span class="variable">$url</span> ; <span class="keyword">done</span> ; &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http http://www.fipradio.fr/player | grep -o <span class="string">&#x27;href=&quot;http[^&quot;]*ico&quot;&#x27;</span> | sed <span class="string">&#x27;s/href=&quot;\(.*\)&quot;/\1/&#x27;</span> | &#123; <span class="keyword">while</span> <span class="built_in">read</span> url ; <span class="keyword">do</span> http -d <span class="variable">$url</span> ; <span class="keyword">done</span> ; &#125;</span><br></pre></td></tr></table></figure>
+
 <p>Press enter and you will see a progress bar for the favicon.ico download.</p>
 
                     
@@ -232,6 +243,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -245,10 +260,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -284,7 +295,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,67 +167,70 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>I have just finished an Hexo Plug-in that automatically transforms URLs into links. In the background it uses the <a href="https://github.com/gregjacobs/Autolinker.js" target="_blank" rel="external">Autolinker.js</a> library.</p>
+                    <p>I have just finished an Hexo Plug-in that automatically transforms URLs into links. In the background it uses the <a target="_blank" rel="noopener" href="https://github.com/gregjacobs/Autolinker.js">Autolinker.js</a> library.</p>
 <a id="more"></a>
-<p><a href="https://github.com/klugjo/hexo-autolinker" target="_blank" rel="external">GitHub Repo</a></p>
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Visit www<span class="selector-class">.codeblocq</span><span class="selector-class">.com</span> when you have <span class="selector-tag">time</span>.</div></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-autolinker">GitHub Repo</a></p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Visit www<span class="selector-class">.codeblocq</span><span class="selector-class">.com</span> when you have <span class="selector-tag">time</span>.</span><br></pre></td></tr></table></figure>
+
 <p>becomes</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Visit &lt;<span class="selector-tag">a</span> href=<span class="string">"http://www.codeblocq.com"</span> target=<span class="string">"_blank"</span>&gt;www<span class="selector-class">.codeblocq</span><span class="selector-class">.com</span>&lt;/a&gt; when you have <span class="selector-tag">time</span>.</div></pre></td></tr></table></figure>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-autolinker <span class="comment">--save</span></div></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Visit &lt;<span class="keyword">a</span> href=<span class="string">&quot;http://www.codeblocq.com&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;www.codeblocq.com&lt;/<span class="keyword">a</span>&gt; when you have <span class="built_in">time</span>.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-autolinker <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><p>Configure the plugin in your blog’s main <code>_config.yml</code></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="attr">autolinker:</span></div><div class="line"><span class="attr">    enable:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    newWindow:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    urls:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    email:</span> <span class="literal">true</span></div><div class="line"><span class="attr">    tel:</span> <span class="literal">false</span></div><div class="line"><span class="attr">    twitter:</span> <span class="literal">false</span></div><div class="line"><span class="attr">    hashtag:</span> instagram</div><div class="line"><span class="attr">    className:</span> <span class="string">'test'</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">autolinker:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">newWindow:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">urls:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">email:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">tel:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">twitter:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">hashtag:</span> <span class="string">instagram</span></span><br><span class="line">    <span class="attr">className:</span> <span class="string">&#x27;test&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Explanations"><a href="#Explanations" class="headerlink" title="Explanations:"></a>Explanations:</h3><table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Default Value</th>
-<th style="text-align:left">Description</th>
+<th align="left">Description</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><code>enable</code></td>
 <td>true</td>
-<td style="text-align:left">Enable the plugin</td>
+<td align="left">Enable the plugin</td>
 </tr>
 <tr>
 <td><code>newWindow</code></td>
 <td>true</td>
-<td style="text-align:left">Opens links in new tabs/windows &lt;-&gt; Add target=”_blank”</td>
+<td align="left">Opens links in new tabs/windows &lt;-&gt; Add target=”_blank”</td>
 </tr>
 <tr>
 <td><code>urls</code></td>
 <td>true</td>
-<td style="text-align:left">converts urls to links</td>
+<td align="left">converts urls to links</td>
 </tr>
 <tr>
 <td><code>email</code></td>
 <td>true</td>
-<td style="text-align:left">converts email addresses to mailto links</td>
+<td align="left">converts email addresses to mailto links</td>
 </tr>
 <tr>
 <td><code>tel</code></td>
 <td>false</td>
-<td style="text-align:left">converts telephone numbers to tel links</td>
+<td align="left">converts telephone numbers to tel links</td>
 </tr>
 <tr>
 <td><code>twitter</code></td>
 <td>false</td>
-<td style="text-align:left">converts twitter handles to links</td>
+<td align="left">converts twitter handles to links</td>
 </tr>
 <tr>
 <td><code>hastag</code></td>
 <td>false</td>
-<td style="text-align:left">Use <code>twitter</code>, <code>facebook</code> or <code>instagram</code> to convert hashtags to the links</td>
+<td align="left">Use <code>twitter</code>, <code>facebook</code> or <code>instagram</code> to convert hashtags to the links</td>
 </tr>
 <tr>
 <td><code>className</code></td>
 <td>false</td>
-<td style="text-align:left">Adds a custom class to the links that were transformed</td>
+<td align="left">Adds a custom class to the links that were transformed</td>
 </tr>
-</tbody>
-</table>
-<p>Checkout <a href="https://github.com/gregjacobs/Autolinker.js" target="_blank" rel="external">Autolinker.js</a> and the <a href="http://gregjacobs.github.io/Autolinker.js/examples/live-example/" target="_blank" rel="external">Autolinker live examples</a> for more options and examples.</p>
+</tbody></table>
+<p>Checkout <a target="_blank" rel="noopener" href="https://github.com/gregjacobs/Autolinker.js">Autolinker.js</a> and the <a target="_blank" rel="noopener" href="http://gregjacobs.github.io/Autolinker.js/examples/live-example/">Autolinker live examples</a> for more options and examples.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -264,6 +270,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -277,10 +287,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -316,7 +322,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

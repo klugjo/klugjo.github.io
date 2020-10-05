@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,20 +167,26 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This article will demonstrate how to set up the latest version of React in JSBin. This is particularly useful if you want to test something out and share it quickly.<br><a id="more"></a></p>
-<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>If you are only interested in the code, go to <a href="https://jsbin.com/vixuyu/25/edit?html,css,js,output" target="_blank" rel="external">https://jsbin.com/vixuyu/25/edit?html,css,js,output</a>.</p>
+                    <p>This article will demonstrate how to set up the latest version of React in JSBin. This is particularly useful if you want to test something out and share it quickly.</p>
+<a id="more"></a>
+
+<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>If you are only interested in the code, go to <a target="_blank" rel="noopener" href="https://jsbin.com/vixuyu/25/edit?html,css,js,output">https://jsbin.com/vixuyu/25/edit?html,css,js,output</a>.</p>
 <p>(Disable your Ad Blocks).</p>
-<h2 id="A-bit-of-background"><a href="#A-bit-of-background" class="headerlink" title="A bit of background"></a>A bit of background</h2><h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><p>To make this work you are obviously going to need <a href="https://facebook.github.io/react/" target="_blank" rel="external">React</a>. You are also going to need <a href="https://github.com/facebook/react/tree/master/packages/react-dom" target="_blank" rel="external">ReactDOM</a> to render HTML.</p>
+<h2 id="A-bit-of-background"><a href="#A-bit-of-background" class="headerlink" title="A bit of background"></a>A bit of background</h2><h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><p>To make this work you are obviously going to need <a target="_blank" rel="noopener" href="https://facebook.github.io/react/">React</a>. You are also going to need <a target="_blank" rel="noopener" href="https://github.com/facebook/react/tree/master/packages/react-dom">ReactDOM</a> to render HTML.</p>
 <p>Get these 2 scripts from</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://npmcdn.com/react@latest/dist/react-with-addons.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://npmcdn.com/react-dom@latest/dist/react-dom.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>I got these URLs from <a href="https://jsfiddle.net/reactjs/69z2wepo/" target="_blank" rel="external">https://jsfiddle.net/reactjs/69z2wepo/</a> which seems to be the official React Fiddle.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://npmcdn.com/react@latest/dist/react-with-addons.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://npmcdn.com/react-dom@latest/dist/react-dom.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>    </span><br></pre></td></tr></table></figure>
+
+<p>I got these URLs from <a target="_blank" rel="noopener" href="https://jsfiddle.net/reactjs/69z2wepo/">https://jsfiddle.net/reactjs/69z2wepo/</a> which seems to be the official React Fiddle.</p>
 <h3 id="Babel"><a href="#Babel" class="headerlink" title="Babel"></a>Babel</h3><p>This is where it get trickier. To be able to write JSX/ES6 directly in JSBin, you need to be able to transpile the code with Babel directly in the browser.</p>
-<p>Unfortunately, <a href="https://babeljs.io/docs/usage/browser/" target="_blank" rel="external">babel-browser</a> has been discontinued. Well guess what; just use <a href="https://github.com/Daniel15/babel-standalone" target="_blank" rel="external">babel-standalone</a> instead. It is a non official build of Babel for use in non-Node environments, mainly browsers.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.15.0/babel.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>Unfortunately, <a target="_blank" rel="noopener" href="https://babeljs.io/docs/usage/browser/">babel-browser</a> has been discontinued. Well guess what; just use <a target="_blank" rel="noopener" href="https://github.com/Daniel15/babel-standalone">babel-standalone</a> instead. It is a non official build of Babel for use in non-Node environments, mainly browsers.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.15.0/babel.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="JSX-and-ES6"><a href="#JSX-and-ES6" class="headerlink" title="JSX and ES6"></a>JSX and ES6</h3><p>That is it, you are ready to start writting your React app.</p>
 <p>In JSBin, change the type of the JS tab from <code>JavaScript</code> to <code>ES6 / Babel</code> and you are ready to go.</p>
-<figure class="highlight html"><figcaption><span>index.html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- This element's contents will be replaced with your component. --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Hello = React.createClass(&#123;</div><div class="line">  <span class="attr">render</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">Hello</span> <span class="attr">name</span>=<span class="string">"World"</span> /&gt;</span>,</span></div><div class="line">  document.getElementById('app')</div><div class="line">);</div></pre></td></tr></table></figure>
+<figure class="highlight html"><figcaption><span>index.html</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- This element&#x27;s contents will be replaced with your component. --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Hello = React.createClass(&#123;</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello &#123;this.props.name&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;Hello name=<span class="string">&quot;World&quot;</span> /&gt;,</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">&#x27;app&#x27;</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
 <p>Hope that helps !</p>
 
                     
@@ -218,6 +227,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -231,10 +244,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -270,7 +279,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

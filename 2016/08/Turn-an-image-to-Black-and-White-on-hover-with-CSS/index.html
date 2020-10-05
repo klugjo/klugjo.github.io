@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,21 +167,20 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Here is a CSS code snippet to help you transition an image to Black and White on mouse hover.<br><a id="more"></a></p>
-<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p></p><p data-height="265" data-theme-id="0" data-slug-hash="PzLkEr" data-default-tab="css,result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/PzLkEr/" target="_blank" rel="external">PzLkEr</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+                    <p>Here is a CSS code snippet to help you transition an image to Black and White on mouse hover.</p>
+<a id="more"></a>
+
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p data-height="265" data-theme-id="0" data-slug-hash="PzLkEr" data-default-tab="css,result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/PzLkEr/">PzLkEr</a> by Jonathan klughertz (<a target="_blank" rel="noopener" href="http://codepen.io/klugjo">@klugjo</a>) on <a target="_blank" rel="noopener" href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>Here is the full code</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">img</span> &#123;</div><div class="line">  <span class="attribute">transition</span>: filter .<span class="number">5s</span> ease-in-out;</div><div class="line">  <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(0%); <span class="comment">/* Ch 23+, Saf 6.0+, BB 10.0+ */</span></div><div class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(0%); <span class="comment">/* FF 35+ */</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">img</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(100%); <span class="comment">/* Ch 23+, Saf 6.0+, BB 10.0+ */</span></div><div class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(100%); <span class="comment">/* FF 35+ */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><br></p>
-<ul>
-<li>The Black and White effect is achieved with the <code>grayscale</code> value for the <a href="https://developer.mozilla.org/en/docs/Web/CSS/filter" target="_blank" rel="external">filter</a> property. <code>grayscale(100%)</code> corresponds to Black and White and <code>grayscale(0%)</code> corresponds to full colors.<br>The <code>-webkit-filter</code> prefix is <a href="http://shouldiprefix.com/#filters" target="_blank" rel="external">necessary for that property</a>.</li>
-</ul>
-<p><br></p>
-<ul>
-<li>The smooth animation is achieved with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" target="_blank" rel="external">transition</a> property.</li>
-</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">transition</span>: filter .<span class="number">5s</span> ease-in-out;</span><br><span class="line">  <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(<span class="number">0%</span>); <span class="comment">/* Ch 23+, Saf 6.0+, BB 10.0+ */</span></span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">0%</span>); <span class="comment">/* FF 35+ */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); <span class="comment">/* Ch 23+, Saf 6.0+, BB 10.0+ */</span></span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); <span class="comment">/* FF 35+ */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<br />
+- The Black and White effect is achieved with the `grayscale` value for the [filter](https://developer.mozilla.org/en/docs/Web/CSS/filter) property. `grayscale(100%)` corresponds to Black and White and `grayscale(0%)` corresponds to full colors.
+The `-webkit-filter` prefix is [necessary for that property](http://shouldiprefix.com/#filters).
 
+<br />
+- The smooth animation is achieved with the [transition](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) property.
                     
                     <!-- Tags Bottom -->
                     
@@ -217,6 +219,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -230,10 +236,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -269,7 +271,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,16 +167,22 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This article will show you how to get started with ES6 modules in node with Babel.<br><a id="more"></a><br>If you need to setup your environment, check out <a href="/2016/02/How-to-setup-Babel6-for-NodeJs/">this article</a>.</p>
+                    <p>This article will show you how to get started with ES6 modules in node with Babel.</p>
+<a id="more"></a> 
+<p>If you need to setup your environment, check out <a href="/2016/02/How-to-setup-Babel6-for-NodeJs/">this article</a>.</p>
 <h2 id="Exports"><a href="#Exports" class="headerlink" title="Exports"></a>Exports</h2><p>In your library, export functions and classes this way:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ----------</span></div><div class="line"><span class="comment">// module1.js</span></div><div class="line"><span class="comment">// ----------</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">const</span> life = <span class="string">"42"</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> x + y;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">     <span class="keyword">return</span> x * y;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(color) &#123;</div><div class="line">        <span class="keyword">this</span>.color = color;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    getCarColor() &#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.color;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ----------</span></span><br><span class="line"><span class="comment">// module1.js</span></span><br><span class="line"><span class="comment">// ----------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> life = <span class="string">&quot;42&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> x * y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">constructor</span>(color) &#123;</span><br><span class="line">        <span class="built_in">this</span>.color = color;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    getCarColor() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.color;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="Imports"><a href="#Imports" class="headerlink" title="Imports"></a>Imports</h2><h3 id="Import-specific"><a href="#Import-specific" class="headerlink" title="Import specific"></a>Import specific</h3><p>You can specify which value you wish to import using the following syntax:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;life, add <span class="keyword">as</span> addition&#125; <span class="keyword">from</span> <span class="string">'./module1'</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(life); <span class="comment">// 42</span></div><div class="line"><span class="built_in">console</span>.log(addition(<span class="number">1</span>,<span class="number">1</span>)); <span class="comment">// 2</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;life, add <span class="keyword">as</span> addition&#125; <span class="keyword">from</span> <span class="string">&#x27;./module1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(life); <span class="comment">// 42</span></span><br><span class="line"><span class="built_in">console</span>.log(addition(<span class="number">1</span>,<span class="number">1</span>)); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
 <p>Note how you can use <code>as</code> to change the name of some of the values.</p>
-<h3 id="Import-all"><a href="#Import-all" class="headerlink" title="Import all"></a>Import all</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> module1 <span class="keyword">from</span> <span class="string">'./module1'</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> car = <span class="keyword">new</span> module1.Car(<span class="string">"blue"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(car.getCarColor()); <span class="comment">// blue</span></div></pre></td></tr></table></figure>
+<h3 id="Import-all"><a href="#Import-all" class="headerlink" title="Import all"></a>Import all</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> module1 <span class="keyword">from</span> <span class="string">&#x27;./module1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> car = <span class="keyword">new</span> module1.Car(<span class="string">&quot;blue&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(car.getCarColor()); <span class="comment">// blue</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Default-export"><a href="#Default-export" class="headerlink" title="Default export"></a>Default export</h2><p>If your module only has one value to export, use <code>default</code> when exporting that value.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// Export - myModule.js</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</div><div class="line"></div><div class="line"><span class="comment">// Import</span></div><div class="line"><span class="keyword">import</span> myFunc <span class="keyword">from</span> <span class="string">'./myModule'</span>;</div><div class="line">myFunc();</div></pre></td></tr></table></figure>
-<p>This information should be enough for you to get started with ES6/ES2015 modules. If you need to know more, I would recommend <a href="http://exploringjs.com/es6/ch_modules.html" target="_blank" rel="external">this article</a>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// Export - myModule.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Import</span></span><br><span class="line"><span class="keyword">import</span> myFunc <span class="keyword">from</span> <span class="string">&#x27;./myModule&#x27;</span>;</span><br><span class="line">myFunc();</span><br></pre></td></tr></table></figure>
+
+<p>This information should be enough for you to get started with ES6/ES2015 modules. If you need to know more, I would recommend <a target="_blank" rel="noopener" href="http://exploringjs.com/es6/ch_modules.html">this article</a>.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -213,6 +222,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -226,10 +239,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -265,7 +274,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

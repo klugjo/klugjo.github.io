@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,13 +169,14 @@
                     <!-- Main Post Content -->
                     <p>This article goes through the process of setting up a custom domain for a github pages website.</p>
 <a id="more"></a>
-<h2 id="Pre-requisites"><a href="#Pre-requisites" class="headerlink" title="Pre requisites"></a>Pre requisites</h2><p>This article assumes that you already have a github pages website up and running. Mine is <a href="https://github.com/klugjo/klugjo.github.io" target="_blank" rel="external">klugjo.github.io</a>.</p>
+
+<h2 id="Pre-requisites"><a href="#Pre-requisites" class="headerlink" title="Pre requisites"></a>Pre requisites</h2><p>This article assumes that you already have a github pages website up and running. Mine is <a target="_blank" rel="noopener" href="https://github.com/klugjo/klugjo.github.io">klugjo.github.io</a>.</p>
 <h2 id="Create-the-github-CNAME-file"><a href="#Create-the-github-CNAME-file" class="headerlink" title="Create the github CNAME file"></a>Create the github CNAME file</h2><p>In order to use a custom domain, you need to let Github know about it with the help of a CNAME file:</p>
 <ul>
 <li>Create a file names <code>CNAME</code> at the root of your website. The file name has to be all Caps.</li>
-<li>Inside that file, input your custom domain name <u>without</u> <code>http(s)://</code>.<br><a href="https://github.com/klugjo/klugjo.github.io/blob/master/CNAME" target="_blank" rel="external">My CNAME file</a> contains: </li>
+<li>Inside that file, input your custom domain name <u>without</u> <code>http(s)://</code>.<br><a target="_blank" rel="noopener" href="https://github.com/klugjo/klugjo.github.io/blob/master/CNAME">My CNAME file</a> contains: </li>
 </ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">www<span class="selector-class">.codeblocq</span><span class="selector-class">.com</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">www</span><span class="selector-class">.codeblocq</span><span class="selector-class">.com</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>Commit and push your changes</li>
 </ul>
@@ -180,11 +184,11 @@
 <h2 id="Setup-the-DNS-provider"><a href="#Setup-the-DNS-provider" class="headerlink" title="Setup the DNS provider"></a>Setup the DNS provider</h2><p>You can contact your DNS provider for help on how to configure an A record but this is how I configured mine:</p>
 <p><img src="/img/github-pages-custom-domain.png" alt="DNS provider configuration github pages custom domain"></p>
 <p>The <code>CNAME</code> record for www is set to <strong>klugjo.github.io</strong>. The role of a CNAME record is to map a name to another name. Useful when the IP address of the host is not know or not stable.</p>
-<p>The URL record is set to <a href="http://www.codeblocq.com">http://www.codeblocq.com</a> in order to redirect all traffic to the www site.</p>
+<p>The URL record is set to <a href="http://www.codeblocq.com/">http://www.codeblocq.com</a> in order to redirect all traffic to the www site.</p>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ul>
-<li>You can only setup one custom domain in the CNAME file on github. <a href="https://help.github.com/articles/about-supported-custom-domains/" target="_blank" rel="external">See what are the supported custom domains</a>.</li>
-<li>Read <a href="https://help.github.com/articles/setting-up-an-apex-domain/" target="_blank" rel="external">this article</a> if you need to configure an A record with your DNS provider.</li>
-<li>If you still can’t get it right, check out <a href="https://help.github.com/articles/troubleshooting-custom-domains/" target="_blank" rel="external">this troubleshooting guide</a>.</li>
+<li>You can only setup one custom domain in the CNAME file on github. <a target="_blank" rel="noopener" href="https://help.github.com/articles/about-supported-custom-domains/">See what are the supported custom domains</a>.</li>
+<li>Read <a target="_blank" rel="noopener" href="https://help.github.com/articles/setting-up-an-apex-domain/">this article</a> if you need to configure an A record with your DNS provider.</li>
+<li>If you still can’t get it right, check out <a target="_blank" rel="noopener" href="https://help.github.com/articles/troubleshooting-custom-domains/">this troubleshooting guide</a>.</li>
 </ul>
 
                     
@@ -225,6 +229,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -238,10 +246,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -277,7 +281,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

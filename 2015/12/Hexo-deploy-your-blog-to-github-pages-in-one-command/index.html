@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,26 +168,30 @@
 
                     <!-- Main Post Content -->
                     <p>Hexo allows you to deploy your blog to github pages or any other git repository pretty much out of the box.</p>
-<p>Your hexo can be hosted for free on <a href="https://pages.github.com/" target="_blank" rel="external">github pages</a> but this tutorial would also work for any other git hosting site.</p>
+<p>Your hexo can be hosted for free on <a target="_blank" rel="noopener" href="https://pages.github.com/">github pages</a> but this tutorial would also work for any other git hosting site.</p>
 <a id="more"></a> 
-<h2 id="Hexo-deployer-git"><a href="#Hexo-deployer-git" class="headerlink" title="Hexo-deployer-git"></a>Hexo-deployer-git</h2><p>There is a <a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">plugin developed by the hexo team</a> that will help do just that, deploy to git in one command.</p>
+<h2 id="Hexo-deployer-git"><a href="#Hexo-deployer-git" class="headerlink" title="Hexo-deployer-git"></a>Hexo-deployer-git</h2><p>There is a <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git">plugin developed by the hexo team</a> that will help do just that, deploy to git in one command.</p>
 <h3 id="1-Installation"><a href="#1-Installation" class="headerlink" title="1) Installation"></a>1) Installation</h3><p>While at the root of your hexo project:</p>
 <p><code>npm install hexo-deployer-git --save</code></p>
 <h3 id="2-Configuration"><a href="#2-Configuration" class="headerlink" title="2) Configuration"></a>2) Configuration</h3><p>Open your <code>_config.yml</code> and edit the Deployment section:</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/your-blog-url.github.io</span></div></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/your-blog-url.github.io</span></span><br></pre></td></tr></table></figure>
+
 <p>Use your blog github repo URL in the repo property</p>
 <h3 id="3-Deploy"><a href="#3-Deploy" class="headerlink" title="3) Deploy !"></a>3) Deploy !</h3><p>Run <code>hexo deploy</code> and your blog is online. Easy, wasn’t it ?</p>
 <h2 id="Remarks"><a href="#Remarks" class="headerlink" title="Remarks"></a>Remarks</h2><h3 id="You-need-to-generate-your-site-first"><a href="#You-need-to-generate-your-site-first" class="headerlink" title="You need to generate your site first"></a>You need to generate your site first</h3><p><code>hexo deploy</code> will not generate your pages, you need to launch <code>hexo generate</code> first.</p>
 <p>If you want an easy way to do both at the same time, you could <a href="/2015/12/Run-scripts-with-npm/" target="_blank">create an npm script</a> to do this:</p>
 <p>In your package.json add</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"deploy"</span>: <span class="string">"hexo generate &amp;&amp; hexo deploy"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;deploy&quot;</span>: <span class="string">&quot;hexo generate &amp;&amp; hexo deploy&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
 <p>then run <code>npm run deploy</code> to first generate and then deploy your blog.</p>
 <h3 id="You-can-add-several-repos-if-you-want-to-push-your-blog-to-several-places"><a href="#You-can-add-several-repos-if-you-want-to-push-your-blog-to-several-places" class="headerlink" title="You can add several repos if you want to push your blog to several places"></a>You can add several repos if you want to push your blog to several places</h3><p>Just duplicated the <code>repo:</code> line:</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/your-blog-url.github.io</span></div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/your-second-blog-url.github.io</span></div></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/your-blog-url.github.io</span></span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/your-second-blog-url.github.io</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="You-can-personalize-the-git-commit-message"><a href="#You-can-personalize-the-git-commit-message" class="headerlink" title="You can personalize the git commit message"></a>You can personalize the git commit message</h3><p>By default the message will be: Site updated: &lbrace;&lbrace; now(“YYYY-MM-DD HH:mm:ss”) &lbrace;&lbrace;</p>
 <p>You can add a message property if you want to use your own:</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/your-blog-url.github.io</span></div><div class="line">  <span class="attribute">message</span>: New post added</div></pre></td></tr></table></figure>
-<p>You can use <a href="http://paularmstrong.github.io/swig/" target="_blank" rel="external">SWIG</a> templates in the message although I am not sure how that would help. The <code>now</code> method in the default message is a custom swig helper as you can see in the <a href="https://github.com/hexojs/hexo-deployer-git/blob/master/lib/deployer.js#L10-L14" target="_blank" rel="external">source</a>.</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/your-blog-url.github.io</span></span><br><span class="line">  <span class="attribute">message</span>: New post added </span><br></pre></td></tr></table></figure>
+
+<p>You can use <a target="_blank" rel="noopener" href="http://paularmstrong.github.io/swig/">SWIG</a> templates in the message although I am not sure how that would help. The <code>now</code> method in the default message is a custom swig helper as you can see in the <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git/blob/master/lib/deployer.js#L10-L14">source</a>.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -224,6 +231,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -237,10 +248,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -276,7 +283,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

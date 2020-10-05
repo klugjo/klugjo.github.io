@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,9 +167,10 @@
                     
 
                     <!-- Main Post Content -->
-                    <p><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html" target="_blank" rel="external">Weinre</a> is a great remote web debugging tool. It allows to you to quickly setup a ‘chrome dev tools’-like interface for any of your app. It comes in really handy when debugging an app on a device that does not have advanced debugging tools, think mobile, smart TVs, wearables and so on ..</p>
+                    <p><a target="_blank" rel="noopener" href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html">Weinre</a> is a great remote web debugging tool. It allows to you to quickly setup a ‘chrome dev tools’-like interface for any of your app. It comes in really handy when debugging an app on a device that does not have advanced debugging tools, think mobile, smart TVs, wearables and so on ..</p>
 <p>Weinre is free, open source and runs on Node.</p>
  <a id="more"></a>
+
 <h2 id="Why-use-weinre"><a href="#Why-use-weinre" class="headerlink" title="Why use weinre"></a>Why use weinre</h2><h3 id="Weinre-is-really-useful-when"><a href="#Weinre-is-really-useful-when" class="headerlink" title="Weinre is really useful when:"></a>Weinre is really useful when:</h3><ul>
 <li>You need to have access to the DOM on a remote device and do some CSS tweaks</li>
 <li>You want to access the JS log output</li>
@@ -179,26 +183,29 @@
 </ul>
 <h2 id="How-to-get-started"><a href="#How-to-get-started" class="headerlink" title="How to get started"></a>How to get started</h2><p>Here is a straight to the point guide on how to get started.</p>
 <h3 id="Step-1-Install-weinre"><a href="#Step-1-Install-weinre" class="headerlink" title="Step 1: Install weinre"></a>Step 1: Install weinre</h3><p>Easy with npm</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm -g <span class="keyword">install</span> weinre</div></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -g <span class="keyword">install</span> weinre</span><br></pre></td></tr></table></figure>
+
 <h3 id="Step-2-Start-the-weinre-server"><a href="#Step-2-Start-the-weinre-server" class="headerlink" title="Step 2: Start the weinre server"></a>Step 2: Start the weinre server</h3><p>The weinre server will inject some JavaScript in your app through a script to allow the debugging to happen.</p>
 <p>Technically, using <code>weinre</code> is enough to start the server but here are 2 useful options that you might as well pick up straight away:</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ weinre --boundHost <span class="number">192.168</span><span class="number">.123</span><span class="number">.1</span> --httpPort <span class="number">8888</span></div></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ weinre --boundHost <span class="number">192.168</span><span class="number">.123</span><span class="number">.1</span> --httpPort <span class="number">8888</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><code>--boundHost</code> defaults to localhost -&gt; <strong>use your own IP instead</strong>. Localhost won’t mean [your machine] anymore when you are on your remote device.</li>
 <li><code>--httpPort</code> defaults to 8080 which is also commonly used so save yourself some issues down the line and change it to something else.</li>
 </ul>
 <h3 id="Step-3-Insert-the-script-in-your-app"><a href="#Step-3-Insert-the-script-in-your-app" class="headerlink" title="Step 3: Insert the script in your app"></a>Step 3: Insert the script in your app</h3><p>In the <code>&lt;head&gt;</code> of your code, add the weinre script tag:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://192.168.123.1:8888/target/target-script-min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://192.168.123.1:8888/target/target-script-min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>(Replace the IP with your machine’s IP and the port with whatever port you are using)</p>
 <p>Reload or launch your app on the device under test (or simply in your browser).</p>
 <h3 id="Step-4-Start-debugging"><a href="#Step-4-Start-debugging" class="headerlink" title="Step 4: Start debugging"></a>Step 4: Start debugging</h3><ul>
 <li>Open a browser (Chrome or Safari are supported) and go to: <code>http://192.168.123.1:8888</code> or the equivalent for your IP and Port.</li>
-<li>Click on the first link: Access points &gt; debug client user interface. (Something like <a href="http://192.168.123.1:8888/client/#anonymous" target="_blank" rel="external">http://192.168.123.1:8888/client/#anonymous</a>)</li>
+<li>Click on the first link: Access points &gt; debug client user interface. (Something like <a target="_blank" rel="noopener" href="http://192.168.123.1:8888/client/#anonymous">http://192.168.123.1:8888/client/#anonymous</a>)</li>
 <li>Your device should appear under Targets. Click on the corresponding link and you are ready to go.</li>
 </ul>
 <p>The debugging tools are quite similar to browser’s dev tools so I am sure you can take it from there :)</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Give it a try and see if it fits your needs. Weinre is an excellent tool, I have used it a lot, keep it in mind and you will soon find tons of real life situations where this is useful.</p>
-<p>Check out <a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Installing.html" target="_blank" rel="external">the docs</a> for more info.</p>
+<p>Check out <a target="_blank" rel="noopener" href="http://people.apache.org/~pmuellr/weinre/docs/latest/Installing.html">the docs</a> for more info.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -238,6 +245,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -251,10 +262,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -290,7 +297,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

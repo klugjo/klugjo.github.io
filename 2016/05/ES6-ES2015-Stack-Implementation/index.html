@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,6 +169,7 @@
                     <!-- Main Post Content -->
                     <p>JavaScript ES6/ES2015 Implementation of a Stack.</p>
 <a id="more"></a>
+
 <h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>A stack is a data structure in which items are retrieved in the reverse order that they were added. If you add an item, this item will also be the first one to be removed. This is sometimes abbreviated as LIFO – Last In First Out.</p>
 <p>This stack implementation will have 3 methods:</p>
 <ul>
@@ -174,16 +178,18 @@
 <li><strong>peek</strong>: Get the value of the item on top of the stack</li>
 </ul>
 <h2 id="Array-Implementation"><a href="#Array-Implementation" class="headerlink" title="Array Implementation"></a>Array Implementation</h2><p>Let’s start with using an Array as the underlying structure for our Stack. Since the Array in JavaScript already behaves like a stack, the implementation is trivial.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>() &#123;</div><div class="line">    <span class="keyword">this</span>.items = [];</div><div class="line">    <span class="keyword">this</span>.count = <span class="number">0</span>;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  getLength() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.count;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  push(item) &#123;</div><div class="line">    <span class="keyword">this</span>.items.push(item);</div><div class="line">    <span class="keyword">this</span>.count = <span class="keyword">this</span>.count + <span class="number">1</span>;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  pop() &#123;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.count &gt; <span class="number">0</span>) &#123;</div><div class="line">      <span class="keyword">this</span>.count = <span class="keyword">this</span>.count - <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.items.pop();</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  peek() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.items.slice(<span class="number">-1</span>)[<span class="number">0</span>];</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>See it in action <a href="https://jsbin.com/toyore/edit?js,console" target="_blank" rel="external">here</a>;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="built_in">this</span>.items = [];</span><br><span class="line">    <span class="built_in">this</span>.count = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  getLength() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.count;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  push(item) &#123;</span><br><span class="line">    <span class="built_in">this</span>.items.push(item);</span><br><span class="line">    <span class="built_in">this</span>.count = <span class="built_in">this</span>.count + <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  pop() &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">this</span>.count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="built_in">this</span>.count = <span class="built_in">this</span>.count - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.items.pop();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  peek() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.items.slice(<span class="number">-1</span>)[<span class="number">0</span>];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>See it in action <a target="_blank" rel="noopener" href="https://jsbin.com/toyore/edit?js,console">here</a>;</p>
 <h3 id="LinkedList-Implementation"><a href="#LinkedList-Implementation" class="headerlink" title="LinkedList Implementation"></a>LinkedList Implementation</h3><p>Another way of implementing the stack is by using a LinkedList. I am going to be using <a href="/2016/05/ES6-ES2015-LinkedList-Implementation/">my LinkedList implementation</a> for this.</p>
 <p>Although not as trivial as with using an Array, it is pretty straightforward with the LinkedList:</p>
 <ul>
 <li>Push adds the element at the beginning of the list</li>
 <li>Pop returns the first element of the list and removes it at the same time.</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>() &#123;</div><div class="line">    <span class="keyword">this</span>.list = <span class="keyword">new</span> LinkedList();</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  push(item) &#123;</div><div class="line">    <span class="keyword">this</span>.list.addFirst(item);</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  pop() &#123;</div><div class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.list.length) &#123;</div><div class="line">      <span class="keyword">return</span>;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">let</span> val = <span class="keyword">this</span>.list.head.data;</div><div class="line">    <span class="keyword">this</span>.list.removeFirst();</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> val;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  peek() &#123;</div><div class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.list.head) &#123; <span class="keyword">return</span>; &#125;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.list.head.data;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  get length() &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.list.length;</div><div class="line">  &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>See it in Action <a href="https://jsbin.com/gohuha/edit?js,console" target="_blank" rel="external">here</a>;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="built_in">this</span>.list = <span class="keyword">new</span> LinkedList();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  push(item) &#123;</span><br><span class="line">    <span class="built_in">this</span>.list.addFirst(item);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  pop() &#123;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">this</span>.list.length) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> val = <span class="built_in">this</span>.list.head.data;</span><br><span class="line">    <span class="built_in">this</span>.list.removeFirst();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> val;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  peek() &#123;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="built_in">this</span>.list.head) &#123; <span class="keyword">return</span>; &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.list.head.data;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">get</span> <span class="title">length</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.list.length;</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>See it in Action <a target="_blank" rel="noopener" href="https://jsbin.com/gohuha/edit?js,console">here</a>;</p>
 
                     
                     <!-- Tags Bottom -->
@@ -223,6 +229,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -236,10 +246,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -275,7 +281,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

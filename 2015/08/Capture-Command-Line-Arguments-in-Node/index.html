@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,12 +168,12 @@
 
                     <!-- Main Post Content -->
                     <h2 id="Retrieve-command-line-arguments"><a href="#Retrieve-command-line-arguments" class="headerlink" title="Retrieve command-line arguments"></a>Retrieve command-line arguments</h2><p>If you run <code>node index.js arg1 arg2</code>, you can retrieve these incoming command line arguments using</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arg1 = process.argv[<span class="number">2</span>],</div><div class="line">    arg2 = process.argv[<span class="number">3</span>];</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arg1 = process.argv[<span class="number">2</span>],</span><br><span class="line">    arg2 = process.argv[<span class="number">3</span>];</span><br></pre></td></tr></table></figure>
 <a id="more"></a> 
-<p>The list of commands executed is accessible from the <a href="https://nodejs.org/api/process.html#process_process" target="_blank" rel="external">process global object</a>.</p>
+<p>The list of commands executed is accessible from the <a target="_blank" rel="noopener" href="https://nodejs.org/api/process.html#process_process">process global object</a>.</p>
 <p><code>argv</code> stands for arguments vector and is an array. It contains <code>node</code> and <code>index.js</code> (or your entry file path equivalent) as its first two values.</p>
 <h2 id="Retrieve-node-specific-command-line-options"><a href="#Retrieve-node-specific-command-line-options" class="headerlink" title="Retrieve node-specific command line options"></a>Retrieve node-specific command line options</h2><p>If you run <code>node --harmony index.js arg1</code>, the <code>--harmony</code> flag will no be included in <code>process.argv</code></p>
-<p>If you wish to retrieve it, use <code>process.execArgv</code>. The <a href="https://nodejs.org/api/process.html#process_process_execargv" target="_blank" rel="external">execArgv</a> array will not include the values already included in <code>process.argv</code>.</p>
+<p>If you wish to retrieve it, use <code>process.execArgv</code>. The <a target="_blank" rel="noopener" href="https://nodejs.org/api/process.html#process_process_execargv">execArgv</a> array will not include the values already included in <code>process.argv</code>.</p>
 <p>So based on the above command:</p>
 <p><strong>process.execArgv</strong> will be equal to</p>
 <p><code>[&#39;--harmony&#39;]</code></p>
@@ -215,6 +218,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -228,10 +235,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -267,7 +270,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

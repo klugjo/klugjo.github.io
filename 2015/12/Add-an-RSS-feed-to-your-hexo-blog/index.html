@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,19 +167,20 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Adding an RSS feed to your hexo blog is child’s play. Thanks to the <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a> plugin.</p>
+                    <p>Adding an RSS feed to your hexo blog is child’s play. Thanks to the <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> plugin.</p>
 <h2 id="1-Installation"><a href="#1-Installation" class="headerlink" title="1) Installation"></a>1) Installation</h2><p><code>npm install hexo-generator-feed --save</code></p>
 <a id="more"></a> 
 <h2 id="2-Configuration"><a href="#2-Configuration" class="headerlink" title="2) Configuration"></a>2) Configuration</h2><p>Open your hexo configuration file: <code>_config.yml</code></p>
 <p>and in the plugin section (just below your theme setting), add the following configuration</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">  <span class="keyword">type</span>: atom</div><div class="line">  path: atom.<span class="keyword">xml</span></div><div class="line">  <span class="title">limit</span>: <span class="number">10</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><code>type</code>: You can choose between <a href="https://en.wikipedia.org/wiki/Atom_(standard" target="_blank" rel="external">Atom</a>) and <a href="https://en.wikipedia.org/wiki/RSS" target="_blank" rel="external">RSS2</a></li>
+<li><code>type</code>: You can choose between <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Atom_(standard)">Atom</a> and <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/RSS">RSS2</a></li>
 <li><code>path</code>: the path to the rss feed</li>
 <li><code>limit</code>: the maximum number of posts to show</li>
 </ul>
 <p>Pretty simple isn’t it ?</p>
-<p>If you want to learn more about RSS feeds, check this <a href="http://www.intertwingly.net/wiki/pie/Rss20AndAtom10Compared" target="_blank" rel="external">comparison between Atom and RSS2</a></p>
+<p>If you want to learn more about RSS feeds, check this <a target="_blank" rel="noopener" href="http://www.intertwingly.net/wiki/pie/Rss20AndAtom10Compared">comparison between Atom and RSS2</a></p>
 
                     
                     <!-- Tags Bottom -->
@@ -216,6 +220,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -229,10 +237,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -268,7 +272,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

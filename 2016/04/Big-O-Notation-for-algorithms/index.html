@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,49 +169,48 @@
                     <!-- Main Post Content -->
                     <p>This article will give you a brief and simple explanation of what the Big-O Notation does.</p>
 <a id="more"></a>
+
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The Big-O notation is a way to describe how efficient a piece of code is. More precisely, it defines how the execution time is affected by a growth of the input.</p>
 <p><strong>For Example:</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Code</th>
-<th style="text-align:center">Input Size</th>
-<th style="text-align:center">Execution time</th>
+<th align="center">Code</th>
+<th align="center">Input Size</th>
+<th align="center">Execution time</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">A</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1 sec</td>
+<tbody><tr>
+<td align="center">A</td>
+<td align="center">1</td>
+<td align="center">1 sec</td>
 </tr>
 <tr>
-<td style="text-align:center">A</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">3 sec</td>
+<td align="center">A</td>
+<td align="center">3</td>
+<td align="center">3 sec</td>
 </tr>
 <tr>
-<td style="text-align:center">A</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">6 sec</td>
+<td align="center">A</td>
+<td align="center">6</td>
+<td align="center">6 sec</td>
 </tr>
 <tr>
-<td style="text-align:center">B</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">1 sec</td>
+<td align="center">B</td>
+<td align="center">1</td>
+<td align="center">1 sec</td>
 </tr>
 <tr>
-<td style="text-align:center">B</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">9 sec</td>
+<td align="center">B</td>
+<td align="center">3</td>
+<td align="center">9 sec</td>
 </tr>
 <tr>
-<td style="text-align:center">B</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">36 sec</td>
+<td align="center">B</td>
+<td align="center">6</td>
+<td align="center">36 sec</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>In this example, code A is more efficient. When the input size increases, the time increases in a linear fashion. For code B, the time increases in a quadratic fashion.</p>
 <p>In that example, we can say that if <code>N</code> is the size of the input: </p>
 <ul>
@@ -218,15 +220,18 @@
 <h2 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h2><p>In JavaScript.</p>
 <h3 id="Constant-complexity"><a href="#Constant-complexity" class="headerlink" title="Constant complexity"></a>Constant complexity</h3><p>If the time complexity for an algorithm is <code>O(1)</code>, it is said to be constant. No matter how big the input, the execution time will always be the same.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFirstElement</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> array[<span class="number">0</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFirstElement</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> array[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>No matter how big the array, the execution time remains the same as we are simply return the first element.</p>
 <h3 id="Linear-complexity"><a href="#Linear-complexity" class="headerlink" title="Linear complexity"></a>Linear complexity</h3><p>If the time complexity for an algorithm is <code>O(N)</code>, it is said to be linear. The execution times increases linearly with the input size.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">findMax</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> length = array.length;</div><div class="line">    <span class="keyword">var</span> index = <span class="number">-1</span>;</div><div class="line">    </div><div class="line">    <span class="keyword">while</span> (++index &lt; length) &#123;</div><div class="line">        <span class="keyword">var</span> currentValue = array[index];</div><div class="line">        </div><div class="line">        <span class="keyword">if</span>(currentValue != <span class="literal">null</span> &amp;&amp; (currentMax === <span class="literal">undefined</span> || currentValue &gt; currentMax)) &#123;</div><div class="line">            <span class="keyword">var</span> currentMax = currentValue;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> currentMax;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findMax</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> length = array.length;</span><br><span class="line">    <span class="keyword">var</span> index = <span class="number">-1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span> (++index &lt; length) &#123;</span><br><span class="line">        <span class="keyword">var</span> currentValue = array[index];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(currentValue != <span class="literal">null</span> &amp;&amp; (currentMax === <span class="literal">undefined</span> || currentValue &gt; currentMax)) &#123;</span><br><span class="line">            <span class="keyword">var</span> currentMax = currentValue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> currentMax;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>In this code, we iterate through the array only once, so the time needed to complete the operation is directly proportional to the array length.</p>
 <h3 id="Quadratic-complexity"><a href="#Quadratic-complexity" class="headerlink" title="Quadratic complexity"></a>Quadratic complexity</h3><p>If the time complexity for an algorithm is <code>O(N^2)</code>, it is said to be of quadratic growth. The execution time increases linearly with the square of the input size.</p>
 <p><strong>Example:</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> array1 = [<span class="string">'M'</span>, <span class="string">'a'</span>, <span class="string">'r'</span>, <span class="string">'y'</span>];</div><div class="line"><span class="keyword">var</span> array2 = [<span class="string">'J'</span>, <span class="string">'a'</span>, <span class="string">'c'</span>, <span class="string">'k'</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array1.length; i = i + <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; array2.length; j = j + <span class="number">1</span>) &#123;</div><div class="line">        <span class="built_in">console</span>.log(array1[i] + array2[j]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> array1 = [<span class="string">&#x27;M&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;y&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> array2 = [<span class="string">&#x27;J&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;k&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array1.length; i = i + <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; array2.length; j = j + <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(array1[i] + array2[j]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>In this, for each element in array1, we go through all the elements of array2. The time needed to complete the operation is proportional to the square of the arrays’s length.</p>
 <p>Note:</p>
 <ul>
@@ -274,6 +279,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -287,10 +296,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -326,7 +331,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

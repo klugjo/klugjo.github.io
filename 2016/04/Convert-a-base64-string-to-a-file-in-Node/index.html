@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,17 +169,20 @@
                     <!-- Main Post Content -->
                     <p>There might be scenarios where you need to convert an base64 string back to a file. This article will show you how.</p>
 <h2 id="The-high-level-view"><a href="#The-high-level-view" class="headerlink" title="The high level view"></a>The high level view</h2><p>As an example, a base64 string representation of a png image looks like:</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">data</span>:image/png;base64,iVBORw0KGgoAAAANSUhEUgA...</span></div></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">data</span>:image/png;base<span class="number">64</span>,iVBORw<span class="number">0</span>KGgoAAAANSUhEUgA...</span><br></pre></td></tr></table></figure>
+
 <p>To convert it back to an image, we need to:</p>
 <ul>
 <li>Strip off the <code>data:image/png;base64,</code> part</li>
 <li>Write the remaining string to a file using a base64 encoding.</li>
 </ul>
 <h2 id="The-code"><a href="#The-code" class="headerlink" title="The code"></a>The code</h2><h3 id="To-strip-off-the-header"><a href="#To-strip-off-the-header" class="headerlink" title="To strip off the header"></a>To strip off the header</h3><p>I am using:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> base64String = <span class="string">'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA'</span>; <span class="comment">// Not a real image</span></div><div class="line"></div><div class="line"><span class="comment">// Remove header</span></div><div class="line"><span class="keyword">let</span> base64Image = base64String.split(<span class="string">';base64,'</span>).pop();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> base64String = <span class="string">&#x27;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA&#x27;</span>; <span class="comment">// Not a real image</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Remove header</span></span><br><span class="line"><span class="keyword">let</span> base64Image = base64String.split(<span class="string">&#x27;;base64,&#x27;</span>).pop();</span><br></pre></td></tr></table></figure>
+
 <h3 id="To-write-to-a-file"><a href="#To-write-to-a-file" class="headerlink" title="To write to a file"></a>To write to a file</h3><p>I am using:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> fs <span class="keyword">from</span> <span class="string">'fs'</span>;</div><div class="line"></div><div class="line">fs.writeFile(<span class="string">'image.png'</span>, base64Image, &#123;<span class="attr">encoding</span>: <span class="string">'base64'</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'File created'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>Don’t forget the <code>{encoding: &#39;base64&#39;}</code> here and you will be good to go.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> fs <span class="keyword">from</span> <span class="string">&#x27;fs&#x27;</span>;</span><br><span class="line"></span><br><span class="line">fs.writeFile(<span class="string">&#x27;image.png&#x27;</span>, base64Image, &#123;<span class="attr">encoding</span>: <span class="string">&#x27;base64&#x27;</span>&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;File created&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Don’t forget the <code>&#123;encoding: &#39;base64&#39;&#125;</code> here and you will be good to go.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -216,6 +222,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -229,10 +239,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -268,7 +274,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

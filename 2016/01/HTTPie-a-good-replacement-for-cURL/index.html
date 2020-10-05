@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,16 +167,22 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>If you find <a href="http://curl.haxx.se/docs/manpage.html" target="_blank" rel="external">cURL’s syntax</a> a bit too dry for your liking, you could give <a href="https://github.com/jkbrzt/httpie" target="_blank" rel="external">HTTPie</a> a try. In this article I will go through the basics of making HTTP requests to a REST API using HTTPie.<br><a id="more"></a> </p>
+                    <p>If you find <a target="_blank" rel="noopener" href="http://curl.haxx.se/docs/manpage.html">cURL’s syntax</a> a bit too dry for your liking, you could give <a target="_blank" rel="noopener" href="https://github.com/jkbrzt/httpie">HTTPie</a> a try. In this article I will go through the basics of making HTTP requests to a REST API using HTTPie.</p>
+<a id="more"></a> 
 <h2 id="Install-HTTPie"><a href="#Install-HTTPie" class="headerlink" title="Install HTTPie"></a>Install HTTPie</h2><p>I am on OSX and with brew, installation is a breeze.</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>httpie</div></pre></td></tr></table></figure>
-<p>If you are on a different system, check out the <a href="https://github.com/jkbrzt/httpie#installation" target="_blank" rel="external">installation options</a></p>
-<h2 id="Talk-to-a-REST-API"><a href="#Talk-to-a-REST-API" class="headerlink" title="Talk to a REST API"></a>Talk to a REST API</h2><p>For these examples, I will use the test API @ <a href="http://jsonplaceholder.typicode.com/" target="_blank" rel="external">http://jsonplaceholder.typicode.com/</a></p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>httpie</span><br></pre></td></tr></table></figure>
+
+<p>If you are on a different system, check out the <a target="_blank" rel="noopener" href="https://github.com/jkbrzt/httpie#installation">installation options</a></p>
+<h2 id="Talk-to-a-REST-API"><a href="#Talk-to-a-REST-API" class="headerlink" title="Talk to a REST API"></a>Talk to a REST API</h2><p>For these examples, I will use the test API @ <a target="_blank" rel="noopener" href="http://jsonplaceholder.typicode.com/">http://jsonplaceholder.typicode.com/</a></p>
 <h3 id="GET-Request"><a href="#GET-Request" class="headerlink" title="GET Request"></a>GET Request</h3><p>Use <code>http [url]</code> for a basic GET request </p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http jsonplaceholder<span class="selector-class">.typicode</span><span class="selector-class">.com</span>/posts/<span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http jsonplaceholder.typicode.com<span class="regexp">/posts/</span><span class="number">1</span></span><br></pre></td></tr></table></figure>
+
 <p>A nice feature of HTTPie is the possibility to use a <code>name==value</code> syntax for your <strong>querystring parameters</strong>.</p>
-<p>Instead of the less readable:<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>http jsonplaceholder.typicode.com/comments?postId=<span class="number">1</span></div></pre></td></tr></table></figure></p>
-<p>Use the cleaner:<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http jsonplaceholder<span class="selector-class">.typicode</span><span class="selector-class">.com</span>/comments postId==<span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>Instead of the less readable:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http jsonplaceholder.typicode.com/comments?<span class="attribute">postId</span>=1</span><br></pre></td></tr></table></figure>
+<p>Use the cleaner:</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http jsonplaceholder.typicode.com/comments <span class="attribute">postId</span>==1</span><br></pre></td></tr></table></figure>
+
 <h3 id="POST-Request"><a href="#POST-Request" class="headerlink" title="POST Request"></a>POST Request</h3><p>For other verbs than the default GET, use <code>http [verb] [url] [data]</code>.</p>
 <p>The <code>[data]</code> part of the command uses a white space separated list of key value pairs as defined below:</p>
 <ul>
@@ -183,20 +192,25 @@
 <li><code>name:=@data.json</code> to include a JSON file used as raw JSON.</li>
 </ul>
 <p><strong>Note on raw JSON:</strong></p>
-<p>You need to use the raw JSON <code>name:=value</code> notation for booleans and numbers for example. Otherwise <code>bool=false</code> will be interpreted as <code>{bool: &#39;false&#39;}</code> instead of <code>{bool: false}</code>. Similarly, <code>id=10</code> would be interpreted as <code>{id: &#39;10&#39;}</code> instead of <code>{id: 10}</code>.</p>
+<p>You need to use the raw JSON <code>name:=value</code> notation for booleans and numbers for example. Otherwise <code>bool=false</code> will be interpreted as <code>&#123;bool: &#39;false&#39;&#125;</code> instead of <code>&#123;bool: false&#125;</code>. Similarly, <code>id=10</code> would be interpreted as <code>&#123;id: &#39;10&#39;&#125;</code> instead of <code>&#123;id: 10&#125;</code>.</p>
 <p><strong>Example</strong></p>
-<p>With our test API, to create a new post, we need to send a POST request to <a href="http://jsonplaceholder.typicode.com/posts" target="_blank" rel="external">http://jsonplaceholder.typicode.com/posts</a>, with the following JSON data:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">title</span>: <span class="string">'foo'</span>,</div><div class="line">    <span class="attr">body</span>: <span class="string">'bar'</span>,</div><div class="line">    <span class="attr">userId</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>The HTTPie request will be<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http POST jsonplaceholder<span class="selector-class">.typicode</span><span class="selector-class">.com</span>/posts title=foo body=bar userId:=<span class="number">1</span></div></pre></td></tr></table></figure></p>
+<p>With our test API, to create a new post, we need to send a POST request to <a target="_blank" rel="noopener" href="http://jsonplaceholder.typicode.com/posts">http://jsonplaceholder.typicode.com/posts</a>, with the following JSON data:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    title: <span class="string">&#x27;foo&#x27;</span>,</span><br><span class="line">    body: <span class="string">&#x27;bar&#x27;</span>,</span><br><span class="line">    userId: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The HTTPie request will be</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http POST jsonplaceholder.typicode.com/posts <span class="attribute">title</span>=foo <span class="attribute">body</span>=bar userId:=1</span><br></pre></td></tr></table></figure>
+
 <h3 id="PUT-Request"><a href="#PUT-Request" class="headerlink" title="PUT Request"></a>PUT Request</h3><p>PUT Requests work the same way as POST Request:</p>
-<p>A PUT Request to <a href="http://jsonplaceholder.typicode.com/posts/1" target="_blank" rel="external">http://jsonplaceholder.typicode.com/posts/1</a></p>
+<p>A PUT Request to <a target="_blank" rel="noopener" href="http://jsonplaceholder.typicode.com/posts/1">http://jsonplaceholder.typicode.com/posts/1</a></p>
 <p>With the data</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attribute">id</span>: <span class="number">1</span>,</div><div class="line">    title: <span class="string">'foo'</span>,</div><div class="line">    body: <span class="string">'bar'</span>,</div><div class="line">    userId: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attribute">id</span>: <span class="number">1</span>,</span><br><span class="line">    title: <span class="string">&#x27;foo&#x27;</span>,</span><br><span class="line">    body: <span class="string">&#x27;bar&#x27;</span>,</span><br><span class="line">    userId: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>becomes</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http PUT jsonplaceholder.typicode.com<span class="regexp">/posts/</span><span class="number">1</span> <span class="string">id:</span>=<span class="number">1</span> title=foo body=bar <span class="string">userId:</span>=<span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http PUT jsonplaceholder.typicode.com/posts/1 id:=1 <span class="attribute">title</span>=foo <span class="attribute">body</span>=bar userId:=1</span><br></pre></td></tr></table></figure>
+
 <h3 id="DELETE-Request"><a href="#DELETE-Request" class="headerlink" title="DELETE Request"></a>DELETE Request</h3><p>Our DELETE Request does not have any data sent:</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ http DELETE jsonplaceholder<span class="selector-class">.typicode</span><span class="selector-class">.com</span>/posts/<span class="number">1</span></div></pre></td></tr></table></figure>
-<p>Check out the <a href="https://github.com/jkbrzt/httpie#examples" target="_blank" rel="external">excellent documentation for more HTTPie examples</a>.</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ http <span class="keyword">DELETE</span> jsonplaceholder.typicode.com<span class="regexp">/posts/</span><span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>Check out the <a target="_blank" rel="noopener" href="https://github.com/jkbrzt/httpie#examples">excellent documentation for more HTTPie examples</a>.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -236,6 +250,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -249,10 +267,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -288,7 +302,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

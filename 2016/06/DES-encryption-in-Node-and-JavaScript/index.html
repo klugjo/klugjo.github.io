@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,12 +167,16 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Reusable pieces of code and docs pointers to get started with DES encryption in node.<br><a id="more"></a></p>
-<h3 id="DES-ECB"><a href="#DES-ECB" class="headerlink" title="DES-ECB"></a>DES-ECB</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">encodeDesECB</span><span class="params">(textToEncode, keyString)</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> key = <span class="keyword">new</span> Buffer(keyString.substring(<span class="number">0</span>, <span class="number">8</span>), <span class="string">'utf8'</span>);</div><div class="line"></div><div class="line">  <span class="keyword">var</span> cipher = crypto.createCipheriv(<span class="string">'des-ecb'</span>, key, <span class="string">''</span>);</div><div class="line"></div><div class="line">  <span class="keyword">var</span> c = cipher.update(textToEncode, <span class="string">'utf8'</span>, <span class="string">'base64'</span>);</div><div class="line">  c += cipher.<span class="keyword">final</span>(<span class="string">'base64'</span>);</div><div class="line"></div><div class="line">  <span class="keyword">return</span> c;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>The key needs to be 8-bit, you can change the code to use <code>&#39;ascii&#39;</code>, <code>&#39;utf8&#39;</code>, <code>&#39;utf16le&#39;</code>, <code>&#39;ucs2&#39;</code>, <code>&#39;base64&#39;</code>, <code>&#39;binary&#39;</code> or <code>&#39;hex&#39;</code>. More info <a href="https://nodejs.org/api/buffer.html#buffer_buffers_and_character_encodings" target="_blank" rel="external">here</a></p>
-<p>For the input and output encodings in <code>cipher.update(data[, input_encoding][, output_encoding])</code>, check the documentation <a href="https://nodejs.org/api/crypto.html#crypto_cipher_update_data_input_encoding_output_encoding" target="_blank" rel="external">here</a></p>
-<p>For the final encoding in <code>cipher.final([output_encoding])</code>, check the documentation <a href="https://nodejs.org/api/crypto.html#crypto_cipher_final_output_encoding" target="_blank" rel="external">here</a></p>
-<h3 id="DES-CBC"><a href="#DES-CBC" class="headerlink" title="DES-CBC"></a>DES-CBC</h3><figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">encodeDesCBC</span></span>(textToEncode, keyString, ivString) &#123;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> key = <span class="keyword">new</span> <span class="type">Buffer</span>(keyString.substring(<span class="number">0</span>, <span class="number">8</span>), <span class="string">'utf8'</span>);</div><div class="line"></div><div class="line">  <span class="keyword">var</span> iv = <span class="keyword">new</span> <span class="type">Buffer</span>(ivString.substring(<span class="number">0</span>, <span class="number">8</span>), <span class="string">'utf8'</span>);</div><div class="line"></div><div class="line">  <span class="keyword">var</span> cipher = crypto.createCipheriv(<span class="string">'des-cbc'</span>, key, iv);</div><div class="line"></div><div class="line">  <span class="keyword">var</span> c = cipher.update(textToEncode, <span class="string">'utf8'</span>, <span class="string">'base64'</span>);</div><div class="line">  c += cipher.final(<span class="string">'base64'</span>);</div><div class="line"></div><div class="line">  <span class="keyword">return</span> c;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+                    <p>Reusable pieces of code and docs pointers to get started with DES encryption in node.</p>
+<a id="more"></a>
+
+<h3 id="DES-ECB"><a href="#DES-ECB" class="headerlink" title="DES-ECB"></a>DES-ECB</h3><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encodeDesECB</span>(<span class="params">textToEncode, keyString</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> key = <span class="keyword">new</span> <span class="built_in">Buffer</span>(keyString.substring(<span class="number">0</span>, <span class="number">8</span>), <span class="string">&#x27;utf8&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> cipher = crypto.createCipheriv(<span class="string">&#x27;des-ecb&#x27;</span>, key, <span class="string">&#x27;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> c = cipher.update(textToEncode, <span class="string">&#x27;utf8&#x27;</span>, <span class="string">&#x27;base64&#x27;</span>);</span><br><span class="line">  c += cipher.final(<span class="string">&#x27;base64&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The key needs to be 8-bit, you can change the code to use <code>&#39;ascii&#39;</code>, <code>&#39;utf8&#39;</code>, <code>&#39;utf16le&#39;</code>, <code>&#39;ucs2&#39;</code>, <code>&#39;base64&#39;</code>, <code>&#39;binary&#39;</code> or <code>&#39;hex&#39;</code>. More info <a target="_blank" rel="noopener" href="https://nodejs.org/api/buffer.html#buffer_buffers_and_character_encodings">here</a></p>
+<p>For the input and output encodings in <code>cipher.update(data[, input_encoding][, output_encoding])</code>, check the documentation <a target="_blank" rel="noopener" href="https://nodejs.org/api/crypto.html#crypto_cipher_update_data_input_encoding_output_encoding">here</a></p>
+<p>For the final encoding in <code>cipher.final([output_encoding])</code>, check the documentation <a target="_blank" rel="noopener" href="https://nodejs.org/api/crypto.html#crypto_cipher_final_output_encoding">here</a></p>
+<h3 id="DES-CBC"><a href="#DES-CBC" class="headerlink" title="DES-CBC"></a>DES-CBC</h3><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">encodeDesCBC</span>(<span class="params">textToEncode, keyString, ivString</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> key = <span class="keyword">new</span> <span class="built_in">Buffer</span>(keyString.substring(<span class="number">0</span>, <span class="number">8</span>), <span class="string">&#x27;utf8&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> iv = <span class="keyword">new</span> <span class="built_in">Buffer</span>(ivString.substring(<span class="number">0</span>, <span class="number">8</span>), <span class="string">&#x27;utf8&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> cipher = crypto.createCipheriv(<span class="string">&#x27;des-cbc&#x27;</span>, key, iv);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> c = cipher.update(textToEncode, <span class="string">&#x27;utf8&#x27;</span>, <span class="string">&#x27;base64&#x27;</span>);</span><br><span class="line">  c += cipher.final(<span class="string">&#x27;base64&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> c;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>The iv (Initialization Vector) needs to be 8-bit, same as the key.</p>
 
                     
@@ -210,6 +217,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -223,10 +234,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -262,7 +269,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

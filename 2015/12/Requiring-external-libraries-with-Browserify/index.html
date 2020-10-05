@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -167,7 +170,8 @@
                     <p>This post will show you how to easily download and include 3rd party libraries in your Browserify bundle.</p>
 <a id="more"></a> 
 <h2 id="1-Project-Structure"><a href="#1-Project-Structure" class="headerlink" title="1) Project Structure"></a>1) Project Structure</h2><p>Let’s start by assuming the following project structure</p>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">|<span class="type">-- dist</span> // Build will <span class="keyword">end</span> up here</div><div class="line">|<span class="type">-- src</span> </div><div class="line">    |<span class="type">-- js</span></div><div class="line">        |<span class="type">-- main</span>.js // Our main JavaScript file</div><div class="line">        |<span class="type">-- module</span>.js // <span class="keyword">Local</span> module</div><div class="line">|<span class="type">-- package</span>.json</div></pre></td></tr></table></figure>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">|<span class="type">-- dist</span> // Build will <span class="keyword">end</span> up here</span><br><span class="line">|<span class="type">-- src</span> </span><br><span class="line">    |<span class="type">-- js</span></span><br><span class="line">        |<span class="type">-- main</span>.js // Our main JavaScript file</span><br><span class="line">        |<span class="type">-- module</span>.js // <span class="keyword">Local</span> module</span><br><span class="line">|<span class="type">-- package</span>.json</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p>We have our <code>main.js</code> file where we will require our local module (<code>module.js</code>) and our jQuery library</p>
 <h2 id="2-Requiring-the-jQuery-library"><a href="#2-Requiring-the-jQuery-library" class="headerlink" title="2) Requiring the jQuery library"></a>2) Requiring the jQuery library</h2><h3 id="Installing-jQuery"><a href="#Installing-jQuery" class="headerlink" title="Installing jQuery"></a>Installing jQuery</h3><p>One of the advantages of using Browserify is that you don’t have to use bower or download your dependencies manually. You can just install everything with npm.</p>
 <p>To install jquery:</p>
@@ -223,6 +227,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -236,10 +244,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -275,7 +279,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

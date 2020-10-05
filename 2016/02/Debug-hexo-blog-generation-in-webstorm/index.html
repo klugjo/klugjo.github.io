@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,8 +167,9 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>In this article I will detail how I setup a debug configuration in webstorm in order to debug hexo. The information contained here can easily be applied to debugging any node app that is executed with a command lined command (<code>hexo generate</code>) instead of the more standard <code>node index.js</code>.<br><a id="more"></a> </p>
-<h2 id="The-problem"><a href="#The-problem" class="headerlink" title="The problem"></a>The problem</h2><p>When setting up a <a href="https://www.jetbrains.com/webstorm/help/run-debug-configuration-node-js.html" target="_blank" rel="external">node debug configuration in Webstorm</a> you have to specify a file path. Since we are trying to debug <code>hexo generate</code>, we don’t have any JavaScript file to specify.</p>
+                    <p>In this article I will detail how I setup a debug configuration in webstorm in order to debug hexo. The information contained here can easily be applied to debugging any node app that is executed with a command lined command (<code>hexo generate</code>) instead of the more standard <code>node index.js</code>.</p>
+<a id="more"></a> 
+<h2 id="The-problem"><a href="#The-problem" class="headerlink" title="The problem"></a>The problem</h2><p>When setting up a <a target="_blank" rel="noopener" href="https://www.jetbrains.com/webstorm/help/run-debug-configuration-node-js.html">node debug configuration in Webstorm</a> you have to specify a file path. Since we are trying to debug <code>hexo generate</code>, we don’t have any JavaScript file to specify.</p>
 <h2 id="The-trick"><a href="#The-trick" class="headerlink" title="The trick"></a>The trick</h2><p>The trick here is to specify the path to the hexo executable located in <code>node_modules/.bin/hexo</code>.</p>
 <p>When adding your configuration, use the following:</p>
 <table>
@@ -173,11 +177,10 @@
 <tr>
 <th>Field</th>
 <th>Value</th>
-<th>Example </th>
+<th>Example</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Node Interpreter</td>
 <td>Path to Node</td>
 <td>/usr/local/bin/node (on OSX)</td>
@@ -207,10 +210,9 @@
 <td>process.env.ENV_VARIABLE</td>
 <td><em>empty</em></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Once you are done, set up a breakpoint somewhere and hit the debug button.</p>
-<p>Thanks to this <a href="http://stackoverflow.com/questions/30942953/how-can-i-debug-a-node-app-that-is-started-via-the-command-line-cli-like-forev" target="_blank" rel="external">Stack Overflow Post</a> for pointing me in the right direction.<br>You can refer to it if you wish to use <code>node-inspector</code> instead of Webstorm to do your debugging.</p>
+<p>Thanks to this <a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/30942953/how-can-i-debug-a-node-app-that-is-started-via-the-command-line-cli-like-forev">Stack Overflow Post</a> for pointing me in the right direction.<br>You can refer to it if you wish to use <code>node-inspector</code> instead of Webstorm to do your debugging.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -250,6 +252,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -263,10 +269,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -302,7 +304,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

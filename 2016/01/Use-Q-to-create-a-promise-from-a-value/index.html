@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,13 +169,16 @@
                     <!-- Main Post Content -->
                     <p>Promises are usually used as an elegant way to handle asynchronous operations. In this article, we will look at how to create promises from fixed values and non asynchronous operations. For example you have a function that returns a value and you need to <em>promisify</em> it.</p>
 <a id="more"></a>
-<p>I will be using node and the <a href="https://github.com/kriskowal/q" target="_blank" rel="external">Q library</a> for these examples.</p>
-<h2 id="Using-Q-fcall"><a href="#Using-Q-fcall" class="headerlink" title="Using Q.fcall"></a>Using Q.fcall</h2><p>The simplest and most straight forward way to go is to use <a href="https://github.com/kriskowal/q#using-qfcall" target="_blank" rel="external">Q.fcall</a> to generate a promise from a function that returns a fixed value.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Q = <span class="built_in">require</span>(<span class="string">'q'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> promise = Q.fcall(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Fixed value"</span>;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">promise.then(<span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(val);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="Using-a-deferred-object"><a href="#Using-a-deferred-object" class="headerlink" title="Using a deferred object"></a>Using a deferred object</h2><p>You can also use the traditional <a href="https://github.com/kriskowal/q#using-deferreds" target="_blank" rel="external">deferred object</a> and resolve it immediately.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> promise = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> deferred = Q.defer(); <span class="comment">// Create a deferred object</span></div><div class="line"></div><div class="line">    deferred.resolve(<span class="string">"Fixed Value"</span>); <span class="comment">// Resolve it</span></div><div class="line"></div><div class="line">    <span class="keyword">return</span> deferred.promise; <span class="comment">// Return a promise</span></div><div class="line">&#125;(); <span class="comment">// function is self invoking</span></div><div class="line"></div><div class="line">promise.then(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(value);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h2 id="Using-Q-Promise"><a href="#Using-Q-Promise" class="headerlink" title="Using Q.Promise"></a>Using Q.Promise</h2><p>Finally you can also use <a href="https://github.com/kriskowal/q#using-qpromise" target="_blank" rel="external">Q.Promise</a> which is a different take on the deferred: different syntax but same level of control.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> promise = Q.promise(<span class="function"><span class="keyword">function</span>(<span class="params">resolve</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> resolve(<span class="string">"Fixed Value"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">promise.then(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(value);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>I will be using node and the <a target="_blank" rel="noopener" href="https://github.com/kriskowal/q">Q library</a> for these examples.</p>
+<h2 id="Using-Q-fcall"><a href="#Using-Q-fcall" class="headerlink" title="Using Q.fcall"></a>Using Q.fcall</h2><p>The simplest and most straight forward way to go is to use <a target="_blank" rel="noopener" href="https://github.com/kriskowal/q#using-qfcall">Q.fcall</a> to generate a promise from a function that returns a fixed value.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Q = <span class="built_in">require</span>(<span class="string">&#x27;q&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> promise = Q.fcall(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;Fixed value&quot;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">promise.then(<span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(val);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Using-a-deferred-object"><a href="#Using-a-deferred-object" class="headerlink" title="Using a deferred object"></a>Using a deferred object</h2><p>You can also use the traditional <a target="_blank" rel="noopener" href="https://github.com/kriskowal/q#using-deferreds">deferred object</a> and resolve it immediately.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> promise = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> deferred = Q.defer(); <span class="comment">// Create a deferred object</span></span><br><span class="line"></span><br><span class="line">    deferred.resolve(<span class="string">&quot;Fixed Value&quot;</span>); <span class="comment">// Resolve it</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> deferred.promise; <span class="comment">// Return a promise</span></span><br><span class="line">&#125;(); <span class="comment">// function is self invoking</span></span><br><span class="line"></span><br><span class="line">promise.then(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Using-Q-Promise"><a href="#Using-Q-Promise" class="headerlink" title="Using Q.Promise"></a>Using Q.Promise</h2><p>Finally you can also use <a target="_blank" rel="noopener" href="https://github.com/kriskowal/q#using-qpromise">Q.Promise</a> which is a different take on the deferred: different syntax but same level of control.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> promise = Q.promise(<span class="function"><span class="keyword">function</span>(<span class="params">resolve</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> resolve(<span class="string">&quot;Fixed Value&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">promise.then(<span class="function"><span class="keyword">function</span> (<span class="params">value</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 
                     
                     <!-- Tags Bottom -->
@@ -212,6 +218,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -225,10 +235,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -264,7 +270,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

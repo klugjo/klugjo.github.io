@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,15 +168,17 @@
 
                     <!-- Main Post Content -->
                     <p>Your avatar is not showing on the list of commits in github. Here is how to fix it:</p>
-<p><img src="/img/github-avatar-missing.png" alt=""></p>
+<p><img src="/img/github-avatar-missing.png"></p>
 <h2 id="Check-your-account"><a href="#Check-your-account" class="headerlink" title="Check your account"></a>Check your account</h2><p>This should be obvious but let’s start by checking that your profile picture is properly set up. This can be done within the github settings page.</p>
 <h2 id="Check-your-git-user-email-config"><a href="#Check-your-git-user-email-config" class="headerlink" title="Check your git user.email config"></a>Check your git user.email config</h2><p>If everything is in order with your account’s settings, there is probably a mismatch between your local computer git config email and the email setup in github.</p>
 <p>This can happen for 2 reasons:</p>
-<h3 id="You-have-not-set-your-email-in-git"><a href="#You-have-not-set-your-email-in-git" class="headerlink" title="You have not set your email in git"></a>You have not set your email in git</h3><p>If that is the case, you need to <a href="https://help.github.com/articles/setting-your-email-in-git/" target="_blank" rel="external">set your email in your local git config</a>. </p>
+<h3 id="You-have-not-set-your-email-in-git"><a href="#You-have-not-set-your-email-in-git" class="headerlink" title="You have not set your email in git"></a>You have not set your email in git</h3><p>If that is the case, you need to <a target="_blank" rel="noopener" href="https://help.github.com/articles/setting-your-email-in-git/">set your email in your local git config</a>. </p>
 <p>Check what is your current email with</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">config</span> user.email</div></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>user.email</span><br></pre></td></tr></table></figure>
+
 <p>And set your email with </p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git config user.email “your.email<span class="variable">@example</span>.com<span class="string">"</span></div></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>user.email “your.email@example.com<span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>Note that this will only affect new commits. Past commits will remain the same.</p>
 <h3 id="You-are-using-a-different-email-that-what-has-been-configured-in-github"><a href="#You-are-using-a-different-email-that-what-has-been-configured-in-github" class="headerlink" title="You are using a different email that what has been configured in github"></a>You are using a different email that what has been configured in github</h3><p>This happens when you are contributing to a private repository on a work computer for example and you have configured git to use your work email instead of your usual github email.</p>
 <p>There are 2 ways to fix this:</p>
@@ -223,6 +228,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -236,10 +245,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -275,7 +280,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

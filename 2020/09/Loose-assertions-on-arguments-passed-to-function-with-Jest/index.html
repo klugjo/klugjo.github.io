@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,29 +168,41 @@
 
                     <!-- Main Post Content -->
                     <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Consider the following function and passing test</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">bar, arg</span>) </span>&#123;</div><div class="line">  bar(<span class="built_in">Math</span>.random(), arg);</div><div class="line">&#125;</div><div class="line"></div><div class="line">test(<span class="string">"bar is called"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalled();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">bar, arg</span>) </span>&#123;</span><br><span class="line">  bar(<span class="built_in">Math</span>.random(), arg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">test(<span class="string">&quot;bar is called&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> barSpy = jest.fn();</span><br><span class="line">  foo(barSpy, <span class="string">&quot;fake-argument&quot;</span>);</span><br><span class="line"></span><br><span class="line">  expect(barSpy).toHaveBeenCalled();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p><code>foo</code> is a function that calls <code>bar</code> with a random first argument and <code>arg</code> which is just passed through.</p>
 <p>The test passes as expected, but what if we wanted to check that the second argument is equal to <code>arg</code>.</p>
 <p><code>expect(...).toHaveBeenCalledWith(...args)</code> requires the test to provide the exact list of arguments passed to our <code>jest.fn</code> spy during the call.</p>
-<p><br></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Use the <strong>asymetric matcher</strong> <a href="https://jestjs.io/docs/en/expect.html#expectanything" target="_blank" rel="external">expect.anything()</a> to ignore the first argument passed to <code>foo</code>.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">test(<span class="string">"Match any argument"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalledWith(expect.anything(), <span class="string">"fake-argument"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="Better-Solution"><a href="#Better-Solution" class="headerlink" title="Better Solution"></a>Better Solution</h3><p>Use <a href="https://jestjs.io/docs/en/expect.html#expectanyconstructor" target="_blank" rel="external">expect.any(constructor)</a> to check that the first argument is a number</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">test(<span class="string">"Match any number"</span>, () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> barSpy = jest.fn();</div><div class="line">  foo(barSpy, <span class="string">"fake-argument"</span>);</div><div class="line"></div><div class="line">  expect(barSpy).toHaveBeenCalledWith(expect.any(<span class="built_in">Number</span>), <span class="string">"fake-argument"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="Other-asymetric-matchers"><a href="#Other-asymetric-matchers" class="headerlink" title="Other asymetric matchers"></a>Other asymetric matchers</h3><p>Jest also provides the following useful asymetric matchers:</p>
-<p><a href="https://jestjs.io/docs/en/expect.html#expectobjectcontainingobject" target="_blank" rel="external">expect.objectContaining(object)</a> to check only certain properties of an object</p>
-<p><a href="https://jestjs.io/docs/en/expect.html#expectarraycontainingarray" target="_blank" rel="external">expect.arrayContaining(array)</a> to check only certain elements of an array</p>
-<p><a href="https://jestjs.io/docs/en/expect.html#expectstringcontainingstring" target="_blank" rel="external">expect.stringContaining(string)</a> to check part of a string</p>
-<p><br></p>
-<h3 id="Going-further-with-jest-extended"><a href="#Going-further-with-jest-extended" class="headerlink" title="Going further with jest-extended"></a>Going further with jest-extended</h3><p>If you need to be even more specific in your assertions, it might be worth checking out <a href="https://github.com/jest-community/jest-extended" target="_blank" rel="external">jest-extended</a></p>
+<br />
+### Solution
+
+<p>Use the <strong>asymetric matcher</strong> <a target="_blank" rel="noopener" href="https://jestjs.io/docs/en/expect.html#expectanything">expect.anything()</a> to ignore the first argument passed to <code>foo</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;Match any argument&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> barSpy = jest.fn();</span><br><span class="line">  foo(barSpy, <span class="string">&quot;fake-argument&quot;</span>);</span><br><span class="line"></span><br><span class="line">  expect(barSpy).toHaveBeenCalledWith(expect.anything(), <span class="string">&quot;fake-argument&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<br />
+### Better Solution
+
+<p>Use <a target="_blank" rel="noopener" href="https://jestjs.io/docs/en/expect.html#expectanyconstructor">expect.any(constructor)</a> to check that the first argument is a number</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test(<span class="string">&quot;Match any number&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> barSpy = jest.fn();</span><br><span class="line">  foo(barSpy, <span class="string">&quot;fake-argument&quot;</span>);</span><br><span class="line"></span><br><span class="line">  expect(barSpy).toHaveBeenCalledWith(expect.any(<span class="built_in">Number</span>), <span class="string">&quot;fake-argument&quot;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<br />
+### Other asymetric matchers
+
+<p>Jest also provides the following useful asymetric matchers:</p>
+<p><a target="_blank" rel="noopener" href="https://jestjs.io/docs/en/expect.html#expectobjectcontainingobject">expect.objectContaining(object)</a> to check only certain properties of an object</p>
+<p><a target="_blank" rel="noopener" href="https://jestjs.io/docs/en/expect.html#expectarraycontainingarray">expect.arrayContaining(array)</a> to check only certain elements of an array</p>
+<p><a target="_blank" rel="noopener" href="https://jestjs.io/docs/en/expect.html#expectstringcontainingstring">expect.stringContaining(string)</a> to check part of a string</p>
+<br />
+### Going further with jest-extended
+
+<p>If you need to be even more specific in your assertions, it might be worth checking out <a target="_blank" rel="noopener" href="https://github.com/jest-community/jest-extended">jest-extended</a></p>
 <p>You will find useful additions to the base jest assertion API like:</p>
-<p><a href="https://github.com/jest-community/jest-extended#tobewithinstart-end" target="_blank" rel="external">myNumber.toBeWithin(0, 10)</a></p>
-<p><a href="https://github.com/jest-community/jest-extended#tocontainkeyskeys" target="_blank" rel="external">myObject.toContainKeys([keys])</a></p>
-<p><a href="https://github.com/jest-community/jest-extended#tostartwithprefix" target="_blank" rel="external">myText.toStartWith(prefix)</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/jest-community/jest-extended#tobewithinstart-end">myNumber.toBeWithin(0, 10)</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/jest-community/jest-extended#tocontainkeyskeys">myObject.toContainKeys([keys])</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/jest-community/jest-extended#tostartwithprefix">myText.toStartWith(prefix)</a></p>
 <p>and many more ..</p>
-<p><br><br>Happy testing :)</p>
+<br />
+Happy testing :)
 
                     
                     <!-- Tags Bottom -->
@@ -227,6 +242,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -240,10 +259,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -279,7 +294,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

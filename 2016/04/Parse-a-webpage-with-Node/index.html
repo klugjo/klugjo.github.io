@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,14 +168,26 @@
 
                     <!-- Main Post Content -->
                     <a id="more"></a>
+
 <p>If you want to use jQuery selectors on the server to parse a bunch of HTML, I would recommend you to check out <a href="">cheerio</a>.</p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install</span> cheerio</div></pre></td></tr></table></figure>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> cheerio</span><br></pre></td></tr></table></figure>
+
 <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Given the following HTML:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;ol <span class="class"><span class="keyword">class</span></span>=<span class="string">"breadcrumb"</span>&gt;</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/home"</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">  &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/library"</span>&gt;</span>Library<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">  &lt;li&gt;<span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/data"</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span>Data<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">&lt;<span class="regexp">/ol&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Get-the-active-link"><a href="#Get-the-active-link" class="headerlink" title="Get the active link"></a>Get the active link</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var cheerio = <span class="keyword">require</span>(<span class="string">'cheerio'</span>);</div><div class="line">var $ = cheerio.load(htmlString);</div><div class="line"></div><div class="line">$(<span class="string">'ol .active'</span>).text(); <span class="regexp">//</span> <span class="string">'Data'</span></div></pre></td></tr></table></figure>
-<h3 id="Get-the-list-of-links"><a href="#Get-the-list-of-links" class="headerlink" title="Get the list of links"></a>Get the list of links</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'[href]'</span>).each(<span class="function"><span class="keyword">function</span> <span class="title">getLink</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> attr = $(<span class="keyword">this</span>).attr(<span class="string">'href'</span>);</div><div class="line">    <span class="comment">// Do something with the link</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="Get-the-ol-class"><a href="#Get-the-ol-class" class="headerlink" title="Get the ol class"></a>Get the ol class</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$(</span><span class="string">'ol'</span>).attr(<span class="string">'class'</span>); <span class="regexp">//</span> <span class="string">'breadcrumb'</span></div></pre></td></tr></table></figure>
-<p><br><br>Check our more examples in <a href="https://github.com/cheeriojs/cheerio" target="_blank" rel="external">the documentation</a><br><br></p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol <span class="keyword">class</span>=&quot;<span class="symbol">breadcrumb</span>&quot;&gt;</span><br><span class="line">  &lt;<span class="symbol">li</span>&gt;&lt;<span class="symbol">a</span> <span class="symbol">href</span>=&quot;/<span class="symbol">home</span>&quot;&gt;<span class="symbol">Home</span>&lt;/<span class="symbol">a</span>&gt;&lt;/<span class="symbol">li</span>&gt;</span><br><span class="line">  &lt;<span class="symbol">li</span>&gt;&lt;<span class="symbol">a</span> <span class="symbol">href</span>=&quot;/<span class="symbol">library</span>&quot;&gt;<span class="symbol">Library</span>&lt;/<span class="symbol">a</span>&gt;&lt;/<span class="symbol">li</span>&gt;</span><br><span class="line">  &lt;<span class="symbol">li</span>&gt;&lt;<span class="symbol">a</span> <span class="symbol">href</span>=&quot;/<span class="symbol">data</span>&quot; <span class="symbol">class</span>=&quot;<span class="symbol">active</span>&quot;&gt;<span class="symbol">Data</span>&lt;/<span class="symbol">a</span>&gt;&lt;/<span class="symbol">li</span>&gt;</span><br><span class="line">&lt;/<span class="symbol">ol</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-the-active-link"><a href="#Get-the-active-link" class="headerlink" title="Get the active link"></a>Get the active link</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var cheerio = <span class="keyword">require</span>(<span class="string">&#x27;cheerio&#x27;</span>);</span><br><span class="line">var <span class="variable">$ </span>= cheerio.load(htmlString);</span><br><span class="line"></span><br><span class="line"><span class="variable">$(</span><span class="string">&#x27;ol .active&#x27;</span>).text(); <span class="regexp">//</span> <span class="string">&#x27;Data&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-the-list-of-links"><a href="#Get-the-list-of-links" class="headerlink" title="Get the list of links"></a>Get the list of links</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;[href]&#x27;</span>).each(<span class="function"><span class="keyword">function</span> <span class="title">getLink</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> attr = $(<span class="built_in">this</span>).attr(<span class="string">&#x27;href&#x27;</span>);</span><br><span class="line">    <span class="comment">// Do something with the link</span></span><br><span class="line">&#125;);    </span><br></pre></td></tr></table></figure>
+
+<h3 id="Get-the-ol-class"><a href="#Get-the-ol-class" class="headerlink" title="Get the ol class"></a>Get the ol class</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;ol&#x27;</span>).attr(<span class="string">&#x27;class&#x27;</span>); <span class="regexp">//</span> <span class="string">&#x27;breadcrumb&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<br />
+Check our more examples in [the documentation](https://github.com/cheeriojs/cheerio)
+<br />
+
+
+
+
 
                     
                     <!-- Tags Bottom -->
@@ -212,6 +227,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -225,10 +244,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -264,7 +279,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

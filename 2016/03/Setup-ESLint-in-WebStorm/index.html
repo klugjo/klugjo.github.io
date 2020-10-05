@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -167,13 +170,15 @@
                     <p>Setting up ESLint in WebStorm turned out to be a bit more complicated (hear time consuming) that I initially thought it would be.</p>
 <p>Here are the steps:</p>
 <a id="more"></a>
+
 <h2 id="Install-ESLint"><a href="#Install-ESLint" class="headerlink" title="Install ESLint"></a>Install ESLint</h2><p>Use npm to add ESLint to your project</p>
-<figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --<span class="built_in">save</span>-<span class="built_in">dev</span> eslint</div></pre></td></tr></table></figure>
-<h2 id="Choose-the-right-plugin"><a href="#Choose-the-right-plugin" class="headerlink" title="Choose the right plugin"></a>Choose the right plugin</h2><p>WebStorm ships with an <a href="https://www.jetbrains.com/help/webstorm/2016.1/using-javascript-code-quality-tools.html?origin=old_help#installESLint" target="_blank" rel="external">ESLint plugin built in</a>. I suggest you use it. I have tried to use a 3rd party plugin and ran into several issues I have not been to resolve.</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --<span class="built_in">save</span>-<span class="built_in">dev</span> eslint</span><br></pre></td></tr></table></figure>
+
+<h2 id="Choose-the-right-plugin"><a href="#Choose-the-right-plugin" class="headerlink" title="Choose the right plugin"></a>Choose the right plugin</h2><p>WebStorm ships with an <a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/webstorm/2016.1/using-javascript-code-quality-tools.html?origin=old_help#installESLint">ESLint plugin built in</a>. I suggest you use it. I have tried to use a 3rd party plugin and ran into several issues I have not been to resolve.</p>
 <p>In OS X, the plugin is located in:</p>
 <p><strong>WebStorm &gt; Preferences &gt; Languages and Frameworks &gt; JavaScript &gt; Code Quality Tools &gt; ESLint</strong></p>
 <h2 id="ESLint-plugin-Configuration"><a href="#ESLint-plugin-Configuration" class="headerlink" title="ESLint plugin Configuration"></a>ESLint plugin Configuration</h2><p>Go ahead and enable the plugin by clicking the checkbox</p>
-<h3 id="Path-to-Node-Interpreter"><a href="#Path-to-Node-Interpreter" class="headerlink" title="Path to Node Interpreter"></a>Path to Node Interpreter</h3><p>Fill in the node path. On OS X, the standard path is <code>/usr/local/bin/node</code>, if you are using <a href="https://github.com/creationix/nvm" target="_blank" rel="external">NVM</a>, it will be something like <code>~/.nvm/versions/node/v5.6.0/bin/node</code>.</p>
+<h3 id="Path-to-Node-Interpreter"><a href="#Path-to-Node-Interpreter" class="headerlink" title="Path to Node Interpreter"></a>Path to Node Interpreter</h3><p>Fill in the node path. On OS X, the standard path is <code>/usr/local/bin/node</code>, if you are using <a target="_blank" rel="noopener" href="https://github.com/creationix/nvm">NVM</a>, it will be something like <code>~/.nvm/versions/node/v5.6.0/bin/node</code>.</p>
 <h3 id="Path-to-ESlint"><a href="#Path-to-ESlint" class="headerlink" title="Path to ESlint"></a>Path to ESlint</h3><p>Fill in the path to ESlint by setting the path to <u>the eslint node package folder installed locally</u>. Do not set the path to the <code>/bin</code> subdirectory like we did with node. I also suggest you <strong>don’t use</strong> a globally installed ESLint package if you have one.</p>
 <p>The correct path should look something like <code>&lt;path to project&gt;/node_modules/eslint</code>.</p>
 <h3 id="eslintrc"><a href="#eslintrc" class="headerlink" title=".eslintrc"></a>.eslintrc</h3><p>Use the defaults for the remaining options:</p>
@@ -183,13 +188,16 @@
 <li>Extra eslint options remains empty as well</li>
 </ul>
 <h2 id="ESLint-configuration"><a href="#ESLint-configuration" class="headerlink" title="ESLint configuration"></a>ESLint configuration</h2><p>As it is, ESLint does not do much since we have not specified any rules.</p>
-<h3 id="Pick-a-Style-Guide"><a href="#Pick-a-Style-Guide" class="headerlink" title="Pick a Style Guide"></a>Pick a Style Guide</h3><p>For this example I will be using <a href="https://google.github.io/styleguide/javascriptguide.xml" target="_blank" rel="external">Google’s JavaScript Style Guide</a> and the corresponding <a href="https://github.com/google/eslint-config-google" target="_blank" rel="external">ESLint plugin</a>. <a href="https://github.com/airbnb/javascript" target="_blank" rel="external">Airbnb’s Javascript Style Guide</a> is just as popular so check it out and choose one you like.</p>
-<h3 id="Install-the-ESLint-package-locally"><a href="#Install-the-ESLint-package-locally" class="headerlink" title="Install the ESLint package locally:"></a>Install the ESLint package locally:</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install </span>--save-dev eslint-<span class="built_in">config</span>-google</div></pre></td></tr></table></figure>
+<h3 id="Pick-a-Style-Guide"><a href="#Pick-a-Style-Guide" class="headerlink" title="Pick a Style Guide"></a>Pick a Style Guide</h3><p>For this example I will be using <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/javascriptguide.xml">Google’s JavaScript Style Guide</a> and the corresponding <a target="_blank" rel="noopener" href="https://github.com/google/eslint-config-google">ESLint plugin</a>. <a target="_blank" rel="noopener" href="https://github.com/airbnb/javascript">Airbnb’s Javascript Style Guide</a> is just as popular so check it out and choose one you like.</p>
+<h3 id="Install-the-ESLint-package-locally"><a href="#Install-the-ESLint-package-locally" class="headerlink" title="Install the ESLint package locally:"></a>Install the ESLint package locally:</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install </span>--save-dev eslint-<span class="built_in">config</span>-google</span><br></pre></td></tr></table></figure>
+
 <h3 id="Setup-the-eslintrc"><a href="#Setup-the-eslintrc" class="headerlink" title="Setup the .eslintrc"></a>Setup the .eslintrc</h3><p>The ESLint configuration resides in a <code>.eslintrc</code> placed at the root of the project (alongside your <code>package.json</code>).</p>
 <p>In the config file, the only thing we need to do is to tell ESLint to use the Google’s style guide:</p>
-<figure class="highlight javascript"><figcaption><span>.eslintrc</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"extends"</span>: <span class="string">"eslint-config-google"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><a href="http://eslint.org/docs/developer-guide/shareable-configs.html#using-a-shareable-config" target="_blank" rel="external">ESLint allows you to remove</a> the <code>eslint-config-</code> prefix so we can simply use:</p>
-<figure class="highlight javascript"><figcaption><span>.eslintrc</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"extends"</span>: <span class="string">"google"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>.eslintrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;extends&quot;</span>: <span class="string">&quot;eslint-config-google&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="http://eslint.org/docs/developer-guide/shareable-configs.html#using-a-shareable-config">ESLint allows you to remove</a> the <code>eslint-config-</code> prefix so we can simply use:</p>
+<figure class="highlight javascript"><figcaption><span>.eslintrc</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;extends&quot;</span>: <span class="string">&quot;google&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="Start-coding"><a href="#Start-coding" class="headerlink" title="Start coding :)"></a>Start coding :)</h2><p>That’s it, you are set. You might have to restart WebStorm if it does not pick up the new configuration immediately but after that you are good to go.</p>
 <p>Any problem ? Let me know in the comments. Thanks for reading !</p>
 
@@ -231,6 +239,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -244,10 +256,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -283,7 +291,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

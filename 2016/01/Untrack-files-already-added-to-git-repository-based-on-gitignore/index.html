@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,18 +169,22 @@
                     <!-- Main Post Content -->
                     <p>Let’s say you have already added/committed some files to your git repository and you then add them to your .gitignore; these files will still be present in your repository index. This article we will see how to get rid of them.</p>
 <a id="more"></a> 
+
 <h2 id="Step-1-Commit-all-your-changes"><a href="#Step-1-Commit-all-your-changes" class="headerlink" title="Step 1: Commit all your changes"></a>Step 1: Commit all your changes</h2><p>Before proceeding, make sure all your changes are committed, including your .gitignore file.</p>
 <h2 id="Step-2-Remove-everything-from-the-repository"><a href="#Step-2-Remove-everything-from-the-repository" class="headerlink" title="Step 2: Remove everything from the repository"></a>Step 2: Remove everything from the repository</h2><p>To clear your repo, use:</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git rm -r <span class="comment">--cached .</span></div></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm -r <span class="comment">--cached .</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><a href="https://git-scm.com/docs/git-rm" target="_blank" rel="external">rm</a> is the remove command</li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-rm">rm</a> is the remove command</li>
 <li><strong>-r</strong> will allow recursive removal</li>
 <li><strong>–cached</strong> will only remove files from the index. Your files will still be there.</li>
-<li>The <code>.</code> indicates that all files will be untracked. You can untrack a specific file with <code>git rm --cached foo.txt</code> (thanks <a href="https://github.com/amadeann" target="_blank" rel="external">@amadeann</a>).</li>
+<li>The <code>.</code> indicates that all files will be untracked. You can untrack a specific file with <code>git rm --cached foo.txt</code> (thanks <a target="_blank" rel="noopener" href="https://github.com/amadeann">@amadeann</a>).</li>
 </ul>
 <p>The <code>rm</code> command can be unforgiving. If you wish to try what it does beforehand, add the <code>-n</code> or <code>--dry-run</code> flag to test things out.</p>
-<h2 id="Step-3-Re-add-everything"><a href="#Step-3-Re-add-everything" class="headerlink" title="Step 3: Re add everything"></a>Step 3: Re add everything</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">add</span><span class="bash"> .</span></div></pre></td></tr></table></figure>
-<h2 id="Step-4-Commit"><a href="#Step-4-Commit" class="headerlink" title="Step 4: Commit"></a>Step 4: Commit</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git</span> commit -m <span class="string">".gitignore fix"</span></div></pre></td></tr></table></figure>
+<h2 id="Step-3-Re-add-everything"><a href="#Step-3-Re-add-everything" class="headerlink" title="Step 3: Re add everything"></a>Step 3: Re add everything</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-4-Commit"><a href="#Step-4-Commit" class="headerlink" title="Step 4: Commit"></a>Step 4: Commit</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">&quot;.gitignore fix&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>Your repository is clean :)</p>
 <p>Push the changes to your remote to see the changes effective there as well.</p>
 
@@ -219,6 +226,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -232,10 +243,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -271,7 +278,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

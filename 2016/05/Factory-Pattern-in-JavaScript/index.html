@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,16 +167,20 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Details on how to implement a simple Factory  Pattern in JavaScript.<br><a id="more"></a></p>
+                    <p>Details on how to implement a simple Factory  Pattern in JavaScript.</p>
+<a id="more"></a>
 <h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Here is an example of code that could use some refactoring.</p>
 <p>Let’s say we have 4 plugins (plugin1, plugin2, ..) which all have different methods (exec1, exec2, ..).</p>
-<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> plugin1 = <span class="built_in">require</span>(<span class="string">'./plugin1'</span>);</div><div class="line"><span class="keyword">var</span> plugin2 = <span class="built_in">require</span>(<span class="string">'./plugin2'</span>);</div><div class="line"><span class="keyword">var</span> plugin3 = <span class="built_in">require</span>(<span class="string">'./plugin3'</span>);</div><div class="line"><span class="keyword">var</span> plugin4 = <span class="built_in">require</span>(<span class="string">'./plugin4'</span>);</div><div class="line"></div><div class="line">plugin1.exec1();</div><div class="line">plugin1.exec2();</div><div class="line">plugin1.exec3();</div><div class="line">plugin1.exec4();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> plugin1 = <span class="built_in">require</span>(<span class="string">&#x27;./plugin1&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> plugin2 = <span class="built_in">require</span>(<span class="string">&#x27;./plugin2&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> plugin3 = <span class="built_in">require</span>(<span class="string">&#x27;./plugin3&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> plugin4 = <span class="built_in">require</span>(<span class="string">&#x27;./plugin4&#x27;</span>);</span><br><span class="line"></span><br><span class="line">plugin1.exec1();</span><br><span class="line">plugin1.exec2();</span><br><span class="line">plugin1.exec3();</span><br><span class="line">plugin1.exec4();</span><br></pre></td></tr></table></figure>
+
 <p>We are loading 4 plugins and call methods on these plugins. The problem comes from all the duplicated require statements at the beginning.</p>
 <h2 id="Factory-Pattern"><a href="#Factory-Pattern" class="headerlink" title="Factory Pattern"></a>Factory Pattern</h2><p>Our Factory pattern can help us encapsulate the creation of all these objects.</p>
 <p>Meet the <code>pluginFactory</code>:</p>
-<figure class="highlight javascript"><figcaption><span>pluginFactory.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Plugin Factory Object</span></div><div class="line"><span class="keyword">var</span> PluginFactory = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// Plugin List</span></div><div class="line">    <span class="keyword">var</span> plugins = [</div><div class="line">        &#123;<span class="attr">propertyName</span>: <span class="string">'plugin1'</span>, <span class="attr">path</span>: <span class="string">'./plugin1'</span>&#125;,</div><div class="line">        &#123;<span class="attr">propertyName</span>: <span class="string">'plugin2'</span>, <span class="attr">path</span>: <span class="string">'./plugin2'</span>&#125;,</div><div class="line">        &#123;<span class="attr">propertyName</span>: <span class="string">'plugin3'</span>, <span class="attr">path</span>: <span class="string">'./plugin3'</span>&#125;,</div><div class="line">        &#123;<span class="attr">propertyName</span>: <span class="string">'plugin4'</span>, <span class="attr">path</span>: <span class="string">'./plugin4'</span>&#125;</div><div class="line">    ];</div><div class="line"></div><div class="line">    <span class="comment">// Enumerate through plugins and assign them to Object Properties</span></div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; plugins.length; i = i + <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">this</span>[plugins[i].propertyName] = <span class="built_in">require</span>(plugins[i].path);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// Export an instance of the Factory</span></div><div class="line"><span class="built_in">module</span>.exports = <span class="keyword">new</span> PluginFactory();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>pluginFactory.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Plugin Factory Object</span></span><br><span class="line"><span class="keyword">var</span> PluginFactory = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Plugin List</span></span><br><span class="line">    <span class="keyword">var</span> plugins = [</span><br><span class="line">        &#123;<span class="attr">propertyName</span>: <span class="string">&#x27;plugin1&#x27;</span>, <span class="attr">path</span>: <span class="string">&#x27;./plugin1&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">propertyName</span>: <span class="string">&#x27;plugin2&#x27;</span>, <span class="attr">path</span>: <span class="string">&#x27;./plugin2&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">propertyName</span>: <span class="string">&#x27;plugin3&#x27;</span>, <span class="attr">path</span>: <span class="string">&#x27;./plugin3&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">propertyName</span>: <span class="string">&#x27;plugin4&#x27;</span>, <span class="attr">path</span>: <span class="string">&#x27;./plugin4&#x27;</span>&#125;</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Enumerate through plugins and assign them to Object Properties</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; plugins.length; i = i + <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">this</span>[plugins[i].propertyName] = <span class="built_in">require</span>(plugins[i].path);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Export an instance of the Factory</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="keyword">new</span> PluginFactory();</span><br></pre></td></tr></table></figure>
+
 <p>In our client code (<code>index.js</code>), we can write:</p>
-<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pluginFactory = <span class="built_in">require</span>(<span class="string">'./pluginFactory'</span>);</div><div class="line"></div><div class="line">pluginFactory.plugin1.exec1();</div><div class="line">pluginFactory.plugin2.exec2();</div><div class="line">pluginFactory.plugin3.exec3();</div><div class="line">pluginFactory.plugin4.exec4();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> pluginFactory = <span class="built_in">require</span>(<span class="string">&#x27;./pluginFactory&#x27;</span>);</span><br><span class="line"></span><br><span class="line">pluginFactory.plugin1.exec1();</span><br><span class="line">pluginFactory.plugin2.exec2();</span><br><span class="line">pluginFactory.plugin3.exec3();</span><br><span class="line">pluginFactory.plugin4.exec4();</span><br></pre></td></tr></table></figure>
+
 <p>We have direct access to the plugins and their methods. This is great because we have replaced all the require statements with one and we don’t need our client code (<code>index.js</code>) to know about the plugins path anymore.</p>
 
                     
@@ -214,6 +221,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -227,10 +238,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -266,7 +273,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

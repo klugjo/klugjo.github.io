@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,33 +168,48 @@
 
                     <!-- Main Post Content -->
                     <p>This article looks at the best log aliases I use. Some I have found, some I have created and after reading you should be able to create your own easily.</p>
-<p>Please feel free to submit your own in the comments below.<br><a id="more"></a></p>
+<p>Please feel free to submit your own in the comments below.</p>
+<a id="more"></a>
+
 <h2 id="Add-an-alias"><a href="#Add-an-alias" class="headerlink" title="Add an alias"></a>Add an alias</h2><p>To add aliases, open your <code>.gitconfig</code> file and you will see an alias section:</p>
-<figure class="highlight llvm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[<span class="keyword">alias</span>]</div><div class="line">	ac = <span class="title">!git</span> <span class="keyword">add</span> . &amp;&amp; git commit -am</div></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[alias]</span></span><br><span class="line">	<span class="attr">ac</span> = !git add . &amp;&amp; git commit -am</span><br></pre></td></tr></table></figure>
+
 <p>If you are on OSX, open a new command prompt and type:</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">open</span> .gitconfig</div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">open</span> .gitconfig</span><br></pre></td></tr></table></figure>
+
 <p>To use the alias, simply type:</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">git aliasname</span></div></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git aliasname</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Log-aliases"><a href="#Log-aliases" class="headerlink" title="Log aliases"></a>Log aliases</h2><p>In no particular order:</p>
 <h3 id="1-One-liner-with-colors"><a href="#1-One-liner-with-colors" class="headerlink" title="1 - One liner with colors"></a>1 - One liner with colors</h3><p>Will log a list of commits, all on one line with customisable colours. Useful to know who has changed what on the repo recently.</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">l1 = <span class="keyword">log</span> --pretty=<span class="keyword">format</span>:<span class="string">"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]"</span> --decorate --date=short</div></pre></td></tr></table></figure>
-<p><a href="https://gist.github.com/mwhite/6887990" target="_blank" rel="external">Source</a></p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">l1 = <span class="keyword">log</span> --pretty=<span class="keyword">format</span>:<span class="string">&quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&quot;</span> --decorate --date=short</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://gist.github.com/mwhite/6887990">Source</a></p>
 <h3 id="2-Graph-one-liner"><a href="#2-Graph-one-liner" class="headerlink" title="2 - Graph one liner"></a>2 - Graph one liner</h3><p>Will log a list of commits with only the commit name and SHA. Useful to have a quick overview of the branches on the repo. I usually use the web UI for this, but this can be quicker if all you need is to refresh your memory.</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">l2</span> <span class="comment">=</span> <span class="comment">log</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">graph</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">oneline</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">decorate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">all</span></div></pre></td></tr></table></figure>
-<p><a href="http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/" target="_blank" rel="external">Source</a> (first comment)</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">l2</span> <span class="comment">=</span> <span class="comment">log</span> --<span class="comment">graph</span> --<span class="comment">oneline</span> --<span class="comment">decorate</span> --<span class="comment">all</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/">Source</a> (first comment)</p>
 <h3 id="3-Search-commit-name-history"><a href="#3-Search-commit-name-history" class="headerlink" title="3 - Search commit name history"></a>3 - Search commit name history</h3><p>Will search previous commits for a specific term. Useful if you want to find a specific comment based on the comment.</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">l3</span> = !git log --<span class="literal">on</span>eline | grep</div></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">l3</span> = !git log --<span class="literal">on</span>eline | grep </span><br></pre></td></tr></table></figure>
+
 <p>Use it like this</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> l3 JIRA <span class="comment"># Will display all commits with 'JIRA' in the description</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> l3 JIRA <span class="comment"># Will display all commits with &#x27;JIRA&#x27; in the description  </span></span><br></pre></td></tr></table></figure>
+
 <h3 id="4-Details-about-the-last-commit"><a href="#4-Details-about-the-last-commit" class="headerlink" title="4 - Details about the last commit"></a>4 - Details about the last commit</h3><p>Will show all the differences introduced in the last commit.</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">l4</span> = log -p -<span class="number">1</span></div></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">l4</span> = log -p -<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="5-Get-commits-for-n-days-before-today"><a href="#5-Get-commits-for-n-days-before-today" class="headerlink" title="5 - Get commits for n days before today"></a>5 - Get commits for n days before today</h3><p>Another one by myself. It makes use of functions and displays the list of commits made before X days ago.</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">l5 = <span class="string">"!f() &#123; \</span></div><div class="line">        git log --after=\"$(date -j -v-$1d +<span class="meta">%Y</span>-<span class="meta">%m</span>-<span class="meta">%d</span>)\<span class="string">" --oneline; \</span></div><div class="line">    &#125;; f"</div></pre></td></tr></table></figure>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">l5 = <span class="string">&quot;!f() &#123; \</span></span><br><span class="line"><span class="string">        git log --after=\&quot;</span>$(date -j -v-<span class="variable">$1d</span> +<span class="meta">%Y-</span><span class="meta">%m-</span><span class="meta">%d</span>)\<span class="string">&quot; --oneline; \</span></span><br><span class="line"><span class="string">    &#125;; f&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>Use it like this</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git l5 15 <span class="comment"># Get the commits made in the last 15 days</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git l5 15 <span class="comment"># Get the commits made in the last 15 days</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>I hope you found these useful, I will add more as I go.</p>
 <p>Here is the list so far:</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">l1 = <span class="keyword">log</span> --pretty=<span class="keyword">format</span>:<span class="string">"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]"</span> --decorate --date=short</div><div class="line">l2 = <span class="keyword">log</span> --graph --oneline --decorate --all</div><div class="line">l3 = !git <span class="keyword">log</span> --oneline | <span class="keyword">grep</span></div><div class="line">l4 = <span class="keyword">log</span> -p -<span class="number">1</span></div><div class="line">l5 = <span class="string">"!f() &#123; \</span></div><div class="line">        git log --after=\"$(date -j -v-$1d +%Y-%m-%d)\" --oneline; \</div><div class="line">    &#125;; f"</div></pre></td></tr></table></figure>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">l1 = <span class="keyword">log</span> --pretty=<span class="keyword">format</span>:<span class="string">&quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&quot;</span> --decorate --date=short</span><br><span class="line">l2 = <span class="keyword">log</span> --graph --oneline --decorate --all</span><br><span class="line">l3 = !git <span class="keyword">log</span> --oneline | <span class="keyword">grep</span></span><br><span class="line">l4 = <span class="keyword">log</span> -p -<span class="number">1</span></span><br><span class="line">l5 = <span class="string">&quot;!f() &#123; \</span></span><br><span class="line"><span class="string">        git log --after=\&quot;$(date -j -v-$1d +%Y-%m-%d)\&quot; --oneline; \</span></span><br><span class="line"><span class="string">    &#125;; f&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>Thanks for reading !</p>
 
                     
@@ -232,6 +250,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -245,10 +267,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -284,7 +302,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

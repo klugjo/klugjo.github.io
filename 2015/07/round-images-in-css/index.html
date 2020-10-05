@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,17 +168,23 @@
 
                     <!-- Main Post Content -->
                     <h2 id="Using-an-lt-img-gt-tag"><a href="#Using-an-lt-img-gt-tag" class="headerlink" title="Using an &lt;img&gt; tag:"></a>Using an <code>&lt;img&gt;</code> tag:</h2><p>Use border-radius: 50%. The size of the source image will determine the size of the circle.</p>
-<p>HTML:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">"circular-img"</span> <span class="attr">src</span>=<span class="string">"http://placehold.it/150x150"</span> /&gt;</span></div></pre></td></tr></table></figure></p>
-<p>CSS:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.circular-img</span> &#123;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>HTML:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;circular-img&quot;</span> <span class="attr">src</span>=<span class="string">&quot;http://placehold.it/150x150&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.circular-img</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a> 
 <p>Result:</p>
-<p><img style="border-radius: 50%;" src="http://placehold.it/150x150"></p>
-<h2 id="Using-a-lt-div-gt-with-a-background-image"><a href="#Using-a-lt-div-gt-with-a-background-image" class="headerlink" title="Using a &lt;div&gt; with a background image:"></a>Using a <code>&lt;div&gt;</code> with a background image:</h2><p>The idea is the same, but you will need to specify the size of the image in the CSS and add a few background CSS directives.</p>
-<p>HTML:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"circular-div default-image-background"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>CSS:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.circular-img</span> &#123;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.circular-div</span> &#123;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</div><div class="line">    <span class="comment">/* No repeat for the background image */</span></div><div class="line">    <span class="attribute">background-repeat</span>: no-repeat; </div><div class="line">    <span class="comment">/* Center the image in the circle */</span></div><div class="line">    <span class="attribute">background-position</span>: center center;</div><div class="line">    <span class="comment">/* Scale the image correctly */</span></div><div class="line">    <span class="attribute">background-size</span>: cover;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.default-image-background</span> &#123;</div><div class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">'http://placehold.it/150x150'</span>);</div><div class="line">    <span class="comment">/* Specify the circle dimension */</span></div><div class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Result:</p>
-<p><div style="border-radius: 50%;border-radius: 50%;background-repeat: no-repeat; background-position: center center;background-size: cover;background-image: url('http://placehold.it/150x150');height: 150px;width: 150px;"></div><br><br></p>
+<img style="border-radius: 50%;" src="http://placehold.it/150x150" />
 
+<h2 id="Using-a-lt-div-gt-with-a-background-image"><a href="#Using-a-lt-div-gt-with-a-background-image" class="headerlink" title="Using a &lt;div&gt; with a background image:"></a>Using a <code>&lt;div&gt;</code> with a background image:</h2><p>The idea is the same, but you will need to specify the size of the image in the CSS and add a few background CSS directives.</p>
+<p>HTML:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;circular-div default-image-background&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<p>CSS:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.circular-img</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.circular-div</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="comment">/* No repeat for the background image */</span></span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat; </span><br><span class="line">    <span class="comment">/* Center the image in the circle */</span></span><br><span class="line">    <span class="attribute">background-position</span>: center center;</span><br><span class="line">    <span class="comment">/* Scale the image correctly */</span></span><br><span class="line">    <span class="attribute">background-size</span>: cover;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.default-image-background</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&#x27;http://placehold.it/150x150&#x27;</span>);</span><br><span class="line">    <span class="comment">/* Specify the circle dimension */</span></span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<div style="border-radius: 50%;border-radius: 50%;background-repeat: no-repeat; background-position: center center;background-size: cover;background-image: url('http://placehold.it/150x150');height: 150px;width: 150px;"></div>
+<br />
                     
                     <!-- Tags Bottom -->
                     
@@ -214,6 +223,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -227,10 +240,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -266,7 +275,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

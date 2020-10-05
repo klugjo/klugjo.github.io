@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,25 +167,31 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This shows you how to display the number of Disqus comments for you static blog posts on the home page or any other article extracts/list page.<br><a id="more"></a></p>
+                    <p>This shows you how to display the number of Disqus comments for you static blog posts on the home page or any other article extracts/list page.</p>
+<!--- more -->
+
 <h3 id="Get-the-count-js-script"><a href="#Get-the-count-js-script" class="headerlink" title="Get the count.js script"></a>Get the count.js script</h3><p>Insert the following script at the bottom of your page:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">"dsq-count-scr"</span> <span class="attr">src</span>=<span class="string">"//SHORTNAME.disqus.com/count.js"</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">script</span> <span class="built_in">id</span>=<span class="string">&quot;dsq-count-scr&quot;</span> src=<span class="string">&quot;//SHORTNAME.disqus.com/count.js&quot;</span> async&gt;&lt;/<span class="keyword">script</span>&gt;</span><br></pre></td></tr></table></figure>
+
 <p>Where <code>SHORTNAME</code> is your disqus Shortname/ID. It is different from the usual <code>embed.js</code> file.</p>
 <h3 id="Set-up-your-links"><a href="#Set-up-your-links" class="headerlink" title="Set up your links"></a>Set up your links</h3><p>Simply add <code>#disqus_thread</code> at the end of each URL in each <code>&lt;a&gt;</code> tag that needs to display the list of comments. It is important that the URL before the anchor corresponds to a URL with comments ON.</p>
 <p>Example:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://codeblocq.com/post1.html#disqus_thread"</span>&gt;</span># COMMENTS<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://codeblocq.com/post1.html#disqus_thread&quot;</span>&gt;</span># COMMENTS<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>In the markup above, the <code># COMMENTS</code> text will be replaced by the number of comments (0 comments, 1 comment, n comments..)</p>
-<p>You can specify the strings to be used in your <a href="http://disqus.com/admin/settings/" target="_blank" rel="external">admin page</a>.</p>
+<p>You can specify the strings to be used in your <a target="_blank" rel="noopener" href="http://disqus.com/admin/settings/">admin page</a>.</p>
 <h3 id="Hexo-example"><a href="#Hexo-example" class="headerlink" title="Hexo example"></a>Hexo example</h3><p>Here is how I do it with Hexo (ejs template) but it can easily be adapted to anything else.</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- Disqus Comments --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">config.disqus_shortname</span>)&#123; %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> disqus_shortname = <span class="string">'&lt;%= config.disqus_shortname %&gt;'</span>;</div><div class="line"></div><div class="line">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="keyword">var</span> dsq = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</div><div class="line">        dsq.type = <span class="string">'text/javascript'</span>;</div><div class="line">        dsq.async = <span class="literal">true</span>;</div><div class="line">        dsq.src = <span class="string">'//'</span> + disqus_shortname + <span class="string">'.disqus.com/&lt;% if (page.comments)&#123; %&gt;embed.js&lt;% &#125; else &#123; %&gt;count.js&lt;% &#125; %&gt;'</span>;</div><div class="line">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">'body'</span>)[<span class="number">0</span>]).appendChild(dsq);</div><div class="line">    &#125;());</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Disqus Comments --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">config.disqus_shortname</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> disqus_shortname = <span class="string">&#x27;&lt;%= config.disqus_shortname %&gt;&#x27;</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> dsq = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span></span><br><span class="line"><span class="javascript">        dsq.type = <span class="string">&#x27;text/javascript&#x27;</span>;</span></span><br><span class="line"><span class="javascript">        dsq.async = <span class="literal">true</span>;</span></span><br><span class="line"><span class="handlebars"><span class="xml">        dsq.src = &#x27;//&#x27; + disqus_shortname + &#x27;.disqus.com/<span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">page.comments</span>)&#123; %&gt;</span>embed.js<span class="tag">&lt;<span class="name">%</span> &#125; <span class="attr">else</span> &#123; %&gt;</span>count.js<span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span>&#x27;;</span></span></span><br><span class="line"><span class="javascript">        (<span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>] || <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;body&#x27;</span>)[<span class="number">0</span>]).appendChild(dsq);</span></span><br><span class="line">    &#125;());</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>This will generate the correct script tag at the end of the <code>&lt;body&gt;</code>:</p>
 <ul>
 <li><code>embed.js</code> if it’s a ‘details’ page</li>
 <li><code>count.js</code> if it’s the home page</li>
 </ul>
 <p>Then use the following code to declare the link</p>
-<figure class="highlight erb"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%-</span></span></span><span class="ruby"> item.permalink </span><span class="xml"><span class="tag"><span class="string">%&gt;#disqus_thread"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<p>You can check out <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank" rel="external">Hexo’s default theme</a> (at the time of writing) for more information.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%- item.permalink %&gt;#disqus_thread&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>You can check out <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">Hexo’s default theme</a> (at the time of writing) for more information.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -222,6 +231,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -235,10 +248,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -274,7 +283,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

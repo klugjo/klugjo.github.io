@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,30 +167,36 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This article looks at two basic ways to create a basic animation loop.<br><a id="more"></a></p>
+                    <p>This article looks at two basic ways to create a basic animation loop.</p>
+<a id="more"></a>
 <h2 id="Example-Details"><a href="#Example-Details" class="headerlink" title="Example Details"></a>Example Details</h2><p>The example will look at moving a rectangle on a webpage from left to right.</p>
 <ul>
 <li>60 fps frame rate</li>
 <li>Move 1 pixel per frame</li>
 <li>Go from 0 to 400px</li>
 </ul>
-<p>Here is a <a href="http://codepen.io/klugjo/pen/zBYLOX" target="_blank" rel="external">Code Pen</a> with the code.</p>
-<p></p><p data-height="265" data-theme-id="light" data-slug-hash="zBYLOX" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/zBYLOX/" target="_blank" rel="external">setTimeout vs requestAnimationFrame </a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<p>Here is a <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/zBYLOX">Code Pen</a> with the code.</p>
+<p data-height="265" data-theme-id="light" data-slug-hash="zBYLOX" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/zBYLOX/">setTimeout vs requestAnimationFrame </a> by Jonathan klughertz (<a target="_blank" rel="noopener" href="http://codepen.io/klugjo">@klugjo</a>) on <a target="_blank" rel="noopener" href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 
 <h2 id="Using-set-Timeout"><a href="#Using-set-Timeout" class="headerlink" title="Using set Timeout"></a>Using set Timeout</h2><p>The first way of creating the loop that comes to mind is to use <code>window.setTimeout</code> and call a function every 1/60th of a second to achieve 60fps.</p>
 <p>Here is the gist:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="comment">// updateUI();</span></div><div class="line">&#125;, <span class="number">1000</span> / <span class="number">60</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.setInterval(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// updateUI();</span></span><br><span class="line">&#125;, <span class="number">1000</span> / <span class="number">60</span>);</span><br></pre></td></tr></table></figure>
+
 <p>The updateUI function will be responsible for updating the CSS.</p>
 <p>Here is the full code to move a DOM element around.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> refreshRate = <span class="number">1000</span> / <span class="number">60</span>;</div><div class="line"><span class="keyword">const</span> maxXPosition = <span class="number">400</span>;</div><div class="line"><span class="keyword">let</span> rect = <span class="built_in">document</span>.getElementById(<span class="string">'rect0'</span>);</div><div class="line"><span class="keyword">let</span> speedX = <span class="number">1</span>;</div><div class="line"><span class="keyword">let</span> positionX = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  positionX = positionX + speedX;</div><div class="line">  <span class="keyword">if</span> (positionX &gt; maxXPosition || positionX &lt; <span class="number">0</span>) &#123;</div><div class="line">    speedX = speedX * (<span class="number">-1</span>);</div><div class="line">  &#125;</div><div class="line">  rect.style.left = positionX + <span class="string">'px'</span>;</div><div class="line">&#125;, refreshRate);</div></pre></td></tr></table></figure>
-<h2 id="Using-request-Animation-Frame"><a href="#Using-request-Animation-Frame" class="headerlink" title="Using request Animation Frame"></a>Using request Animation Frame</h2><p>Another and cleaner way of creating a game loop is to use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame" target="_blank" rel="external">requestAnimationFrame</a> built in function.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> refreshRate = <span class="number">1000</span> / <span class="number">60</span>;</span><br><span class="line"><span class="keyword">const</span> maxXPosition = <span class="number">400</span>;</span><br><span class="line"><span class="keyword">let</span> rect = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;rect0&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> speedX = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> positionX = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.setInterval(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  positionX = positionX + speedX;</span><br><span class="line">  <span class="keyword">if</span> (positionX &gt; maxXPosition || positionX &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    speedX = speedX * (<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  rect.style.left = positionX + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">&#125;, refreshRate);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Using-request-Animation-Frame"><a href="#Using-request-Animation-Frame" class="headerlink" title="Using request Animation Frame"></a>Using request Animation Frame</h2><p>Another and cleaner way of creating a game loop is to use the <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a> built in function.</p>
 <p><code>requestAnimationFrame</code> will call the next frame and will need to be called recursively once the UI has been updated.</p>
 <p>Here is the gist:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">step</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// UpdateUI();</span></div><div class="line">    <span class="built_in">window</span>.requestAnimationFrame(step);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="built_in">window</span>.requestAnimationFrame(step);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">step</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// UpdateUI();</span></span><br><span class="line">    <span class="built_in">window</span>.requestAnimationFrame(step);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">window</span>.requestAnimationFrame(step);</span><br></pre></td></tr></table></figure>
+
 <p>And here is the full code to move a DOM element around:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> refreshRate = <span class="number">1000</span> / <span class="number">60</span>;</div><div class="line"><span class="keyword">const</span> maxXPosition = <span class="number">400</span>;</div><div class="line"><span class="keyword">let</span> rect = <span class="built_in">document</span>.getElementById(<span class="string">'rect1'</span>);</div><div class="line"><span class="keyword">let</span> speedX = <span class="number">1</span>;</div><div class="line"><span class="keyword">let</span> positionX = <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">step</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  positionX = positionX + speedX;</div><div class="line">  <span class="keyword">if</span> (positionX &gt; maxXPosition || positionX &lt; <span class="number">0</span>) &#123;</div><div class="line">    speedX = speedX * (<span class="number">-1</span>);</div><div class="line">  &#125;</div><div class="line">  rect.style.left = positionX + <span class="string">'px'</span>;</div><div class="line">  <span class="built_in">window</span>.requestAnimationFrame(step);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">window</span>.requestAnimationFrame(step);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> refreshRate = <span class="number">1000</span> / <span class="number">60</span>;</span><br><span class="line"><span class="keyword">const</span> maxXPosition = <span class="number">400</span>;</span><br><span class="line"><span class="keyword">let</span> rect = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;rect1&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> speedX = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> positionX = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">step</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  positionX = positionX + speedX;</span><br><span class="line">  <span class="keyword">if</span> (positionX &gt; maxXPosition || positionX &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    speedX = speedX * (<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  rect.style.left = positionX + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">  <span class="built_in">window</span>.requestAnimationFrame(step);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.requestAnimationFrame(step);</span><br></pre></td></tr></table></figure>
+
+
 
                     
                     <!-- Tags Bottom -->
@@ -227,6 +236,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -240,10 +253,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -279,7 +288,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

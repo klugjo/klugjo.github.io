@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,10 +167,12 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This article is a full explanation on how and when to use the SVG <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox" target="_blank" rel="external">viewBox</a>.<br><a id="more"></a></p>
+                    <p>This article is a full explanation on how and when to use the SVG <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">viewBox</a>.</p>
+<a id="more"></a>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p><strong>The viewBox property is like a camera in a 2D scene</strong>, it allows you to zoom in and out and focus only on certain part of the svg.</p>
 <h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>A viewBox value consists of 4 integers separated by whitespaces:</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"xPosition yPosition width height"</span></div></pre></td></tr></table></figure>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;xPosition yPosition width height&quot;</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><code>xPosition</code>: The X (horizontal axis) position of the top left corner of the viewBox</li>
 <li><code>yPosition</code>: The Y (vertical axis) position of the top left corner of the viewBox</li>
@@ -175,153 +180,139 @@
 <li><code>height</code>: The height of the portion of the entire SVG we want to capture</li>
 </ul>
 <p>Let’s look at examples.</p>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Base-example"><a href="#Base-example" class="headerlink" title="Base example"></a>Base example</h3><p>This is the base SVG we are going to use throughout this course.<br><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
-
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Base-example"><a href="#Base-example" class="headerlink" title="Base example"></a>Base example</h3><p>This is the base SVG we are going to use throughout this course.<br><br /><br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg></p>
 <p>And here is the corresponding SVG code:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">xmlns:xlink</span>=<span class="string">"http://www.w3.org/1999/xlink"</span> </span></div><div class="line">    <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">style</span>=<span class="string">"border: solid 1px grey"</span>&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">defs</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">radialGradient</span> <span class="attr">id</span>=<span class="string">"grad"</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">stop</span> <span class="attr">offset</span>=<span class="string">"10%"</span> <span class="attr">stop-color</span>=<span class="string">"gold"</span>/&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">stop</span> <span class="attr">offset</span>=<span class="string">"95%"</span> <span class="attr">stop-color</span>=<span class="string">"green"</span>/&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">radialGradient</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">defs</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">circle</span> <span class="attr">fill</span>=<span class="string">"url(#grad)"</span> <span class="attr">cx</span>=<span class="string">"50"</span> <span class="attr">cy</span>=<span class="string">"50"</span> <span class="attr">r</span>=<span class="string">"50"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">xmlns:xlink</span>=<span class="string">&quot;http://www.w3.org/1999/xlink&quot;</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">width</span>=<span class="string">&quot;100&quot;</span> <span class="attr">height</span>=<span class="string">&quot;100&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border: solid 1px grey&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">defs</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">radialGradient</span> <span class="attr">id</span>=<span class="string">&quot;grad&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">stop</span> <span class="attr">offset</span>=<span class="string">&quot;10%&quot;</span> <span class="attr">stop-color</span>=<span class="string">&quot;gold&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">stop</span> <span class="attr">offset</span>=<span class="string">&quot;95%&quot;</span> <span class="attr">stop-color</span>=<span class="string">&quot;green&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">radialGradient</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">defs</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">circle</span> <span class="attr">fill</span>=<span class="string">&quot;url(#grad)&quot;</span> <span class="attr">cx</span>=<span class="string">&quot;50&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;50&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>We have a 100px by 100px svg canvas which contains a 100px diameter disc centered in (50, 50).</p>
-<h3 id="Identity"><a href="#Identity" class="headerlink" title="Identity"></a>Identity</h3><p>In our first example, let’s create a viewBox that is placed at (0, 0) (top left corner) and looks at a 100px by 100px portion of our SVG. In other words, it does not do anything since it is the same as the SVG Element size… (for now)<br><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 100" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<h3 id="Identity"><a href="#Identity" class="headerlink" title="Identity"></a>Identity</h3><p>In our first example, let’s create a viewBox that is placed at (0, 0) (top left corner) and looks at a 100px by 100px portion of our SVG. In other words, it does not do anything since it is the same as the SVG Element size… (for now)<br><br /><br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="attr">xmlns:xlink</span>=<span class="string">&quot;http://www.w3.org/1999/xlink&quot;</span> </span></span><br><span class="line"><span class="tag">    <span class="attr">width</span>=<span class="string">&quot;100&quot;</span> <span class="attr">height</span>=<span class="string">&quot;100&quot;</span> <span class="attr">viewBox</span>=<span class="string">&quot;0 0 100 100&quot;</span> <span class="attr">style</span>=<span class="string">&quot;border: solid 1px grey&quot;</span>&gt;</span></span><br><span class="line">    [...]</span><br><span class="line">    <span class="tag">&lt;<span class="name">circle</span> <span class="attr">fill</span>=<span class="string">&quot;url(#grad)&quot;</span> <span class="attr">cx</span>=<span class="string">&quot;50&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;50&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span> <span class="attr">xmlns:xlink</span>=<span class="string">"http://www.w3.org/1999/xlink"</span> </span></div><div class="line">    <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">viewBox</span>=<span class="string">"0 0 100 100"</span> <span class="attr">style</span>=<span class="string">"border: solid 1px grey"</span>&gt;</div><div class="line">    [...]</div><div class="line">    <span class="tag">&lt;<span class="name">circle</span> <span class="attr">fill</span>=<span class="string">"url(#grad)"</span> <span class="attr">cx</span>=<span class="string">"50"</span> <span class="attr">cy</span>=<span class="string">"50"</span> <span class="attr">r</span>=<span class="string">"50"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Zoom-In"><a href="#Zoom-In" class="headerlink" title="Zoom In"></a>Zoom In</h3><p>We leave the viewBox at (0, 0) but only look at the first 50px by 50px part of the SVG.<br><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 50 50" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<h3 id="Zoom-In"><a href="#Zoom-In" class="headerlink" title="Zoom In"></a>Zoom In</h3><p>We leave the viewBox at (0, 0) but only look at the first 50px by 50px part of the SVG.<br><br /><br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 50 50" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 50 50&quot;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 50 50"</span></div></pre></td></tr></table></figure>
 <p>Imagine the camera zooming at the first quarter and displaying that in a 100x100 SVG Element.</p>
-<h3 id="Zoom-Out"><a href="#Zoom-Out" class="headerlink" title="Zoom Out"></a>Zoom Out</h3><p>We leave the viewBox at (0, 0) but look at a bigger area of the SVG (200px by 200px).<br><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 200 200" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<h3 id="Zoom-Out"><a href="#Zoom-Out" class="headerlink" title="Zoom Out"></a>Zoom Out</h3><p>We leave the viewBox at (0, 0) but look at a bigger area of the SVG (200px by 200px).<br><br /><br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 200 200" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 200 200&quot;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 200 200"</span></div></pre></td></tr></table></figure>
-<h3 id="Translation"><a href="#Translation" class="headerlink" title="Translation"></a>Translation</h3><p>This time around, we won’t modify the size of the area we want to look at (100px by 100px) but we will move the top left corner of the viewBox to the middle of the disc which is located at (50, 50).<br><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="50 50 100 100" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<h3 id="Translation"><a href="#Translation" class="headerlink" title="Translation"></a>Translation</h3><p>This time around, we won’t modify the size of the area we want to look at (100px by 100px) but we will move the top left corner of the viewBox to the middle of the disc which is located at (50, 50).<br><br /><br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="50 50 100 100" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;50 50 100 100&quot;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"50 50 100 100"</span></div></pre></td></tr></table></figure>
 <p>It is possible to use negative values for the the X and Y position of the viewBox (it is not possible to use negative values for the width and height though).</p>
-<h3 id="Aspect-Ratio"><a href="#Aspect-Ratio" class="headerlink" title="Aspect Ratio"></a>Aspect Ratio</h3><p>In all the examples so far, we have kept the aspect ratio. Let’s see what happens if we zoom out more on one dimension.<br><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 200 100" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<h3 id="Aspect-Ratio"><a href="#Aspect-Ratio" class="headerlink" title="Aspect Ratio"></a>Aspect Ratio</h3><p>In all the examples so far, we have kept the aspect ratio. Let’s see what happens if we zoom out more on one dimension.<br><br /><br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 200 100" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 200 100&quot;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 200 100"</span></div></pre></td></tr></table></figure>
-<p>So what happened here, is we took a 200px by 100px viewBox (in <span style="color: red;">red</span> below) out of our initial SVG and resized it to fit in our 100px by 100px SVG HTML element:<br><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/><rect width="200" height="100" fill="transparent" stroke="red"/><polyline points="240 25 260 50 240 75" stroke="black" stroke-width="5" stroke-linecap="butt" fill="none" stroke-linejoin="miter"/><rect x="300" y="0" width="100" height="100" fill="transparent" stroke="grey"/><circle fill="url(#grad)" cx="325" cy="50" r="25"/><rect x="300" y="25" width="100" height="50" fill="transparent" stroke="red"/></svg>
-
+<p>So what happened here, is we took a 200px by 100px viewBox (in <span style="color: red;">red</span> below) out of our initial SVG and resized it to fit in our 100px by 100px SVG HTML element:<br><br /><br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/><rect width="200" height="100" fill="transparent" stroke="red" /><polyline points="240 25 260 50 240 75" stroke="black" stroke-width="5" stroke-linecap="butt" fill="none" stroke-linejoin="miter"/><rect x="300" y="0" width="100" height="100" fill="transparent" stroke="grey" /><circle fill="url(#grad)" cx="325" cy="50" r="25"/><rect x="300" y="25" width="100" height="50" fill="transparent" stroke="red" /></svg></p>
 <p><strong>By default, the aspect ration is preserved</strong>, which is why the disc and viewBox height is also divided by half. You should also note that when auto resizing to preserve the aspect ratio, the browser centers the figure. </p>
 <h3 id="Stretch"><a href="#Stretch" class="headerlink" title="Stretch"></a>Stretch</h3><p>The next logical question would be: why if do not want to preserve the aspect ratio but stretch the disc into an ellipse instead.</p>
-<p>Reusing the example above, this is done by adding an extra element to the <code>&lt;svg&gt;</code> HTML element: <code>preserveAspectRatio=&quot;none&quot;</code><br><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 200 100" preserveaspectratio="none" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
-
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 200 100"</span> preserveAspectRatio=<span class="string">"none"</span></div></pre></td></tr></table></figure>
-<p>The Aspect Ration is not preserved here, as a result, the circle is compressed at the width is reduced by half but the height remains the same.</p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/><rect width="200" height="100" fill="transparent" stroke="red"/><polyline points="240 25 260 50 240 75" stroke="black" stroke-width="5" stroke-linecap="butt" fill="none" stroke-linejoin="miter"/><rect x="300" y="0" width="100" height="100" fill="transparent" stroke="red"/><ellipse fill="url(#grad)" cx="325" cy="50" rx="25" ry="50"/></svg>
-
+<p>Reusing the example above, this is done by adding an extra element to the <code>&lt;svg&gt;</code> HTML element: <code>preserveAspectRatio=&quot;none&quot;</code><br><br /><br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 200 100" preserveAspectRatio="none" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 200 100&quot;</span> preserveAspectRatio=<span class="string">&quot;none&quot;</span></span><br></pre></td></tr></table></figure>
+<p>The Aspect Ration is not preserved here, as a result, the circle is compressed at the width is reduced by half but the height remains the same.<br><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/><rect width="200" height="100" fill="transparent" stroke="red" /><polyline points="240 25 260 50 240 75" stroke="black" stroke-width="5" stroke-linecap="butt" fill="none" stroke-linejoin="miter"/><rect x="300" y="0" width="100" height="100" fill="transparent" stroke="red" /><ellipse fill="url(#grad)" cx="325" cy="50" rx="25" ry="50"/></svg></p>
 <h3 id="“Meet”-Property"><a href="#“Meet”-Property" class="headerlink" title="“Meet” Property"></a>“Meet” Property</h3><p>The <code>meet</code> property is another possible value for <code>preserveAspectRatio</code>. It indicates that the aspect ration should be preserved and that all edges should remain contained within the viewBox.</p>
 <p>In the situation where you want to keep the aspect ratio, you might also want to control the position where the final vector is placed (centred by default). This is why the <code>meet</code> property should be paired with another list of keywords to specify the final placement of the vector.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Property</th>
-<th style="text-align:left">Place </th>
+<th align="left">Property</th>
+<th align="left">Place</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>xMinYMin</code></td>
-<td style="text-align:left">Top Left</td>
+<tbody><tr>
+<td align="left"><code>xMinYMin</code></td>
+<td align="left">Top Left</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>xMidYMin</code></td>
-<td style="text-align:left">Center Left</td>
+<td align="left"><code>xMidYMin</code></td>
+<td align="left">Center Left</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>xMaxYMin</code></td>
-<td style="text-align:left">Bottom Left</td>
+<td align="left"><code>xMaxYMin</code></td>
+<td align="left">Bottom Left</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>xMinYMid</code></td>
-<td style="text-align:left">Top Center</td>
+<td align="left"><code>xMinYMid</code></td>
+<td align="left">Top Center</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>xMidYMid</code></td>
-<td style="text-align:left">Middle</td>
+<td align="left"><code>xMidYMid</code></td>
+<td align="left">Middle</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>xMaxYMid</code></td>
-<td style="text-align:left">Bottom Center</td>
+<td align="left"><code>xMaxYMid</code></td>
+<td align="left">Bottom Center</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>xMinYMax</code></td>
-<td style="text-align:left">Top Right</td>
+<td align="left"><code>xMinYMax</code></td>
+<td align="left">Top Right</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>xMidYMax</code></td>
-<td style="text-align:left">Center Right</td>
+<td align="left"><code>xMidYMax</code></td>
+<td align="left">Center Right</td>
 </tr>
 <tr>
-<td style="text-align:left"><code>xMaxYMax</code></td>
-<td style="text-align:left">Bottom Right</td>
+<td align="left"><code>xMaxYMax</code></td>
+<td align="left">Bottom Right</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>Examples</strong></p>
 <p>With an horizontal viewBox: (xMin, xMid and xMax are equivalent)</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 200 100"</span> preserveAspectRatio=<span class="string">"xMidYMin meet"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 200 100" preserveaspectratio="xMidYMin meet" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 200 100&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMin meet&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 200 100" preserveAspectRatio="xMidYMin meet" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 200 100"</span> preserveAspectRatio=<span class="string">"xMidYMid meet"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 200 100" preserveaspectratio="xMidYMid meet" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 200 100&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMid meet&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 200 100"</span> preserveAspectRatio=<span class="string">"xMidYMax meet"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 200 100" preserveaspectratio="xMidYMax meet" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 200 100&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMax meet&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 200 100" preserveAspectRatio="xMidYMax meet" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
 <p>With a vertical viewBox: (yMin, yMid and yMax are equivalent)</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 100 200"</span> preserveAspectRatio=<span class="string">"xMinYMid meet"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 200" preserveaspectratio="xMinYMid meet" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 100 200&quot;</span> preserveAspectRatio=<span class="string">&quot;xMinYMid meet&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 200" preserveAspectRatio="xMinYMid meet" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 100 200"</span> preserveAspectRatio=<span class="string">"xMidYMid meet"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 200" preserveaspectratio="xMidYMid meet" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 100 200&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMid meet&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 200" preserveAspectRatio="xMidYMid meet" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 100 200"</span> preserveAspectRatio=<span class="string">"xMidYMid meet"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 200" preserveaspectratio="xMaxYMid meet" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 100 200&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMid meet&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 200" preserveAspectRatio="xMaxYMid meet" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
 <h3 id="“Slice”-Property"><a href="#“Slice”-Property" class="headerlink" title="“Slice” Property"></a>“Slice” Property</h3><p>The <code>meet</code> value can be replace with <code>slice</code>. Instead of resizing and containing the edges of the viewBox within the SVG element, the vector is sliced.</p>
 <p>I believe that at this point, the examples should speak for themselves.</p>
 <p><strong>Examples:</strong></p>
 <p>With an horizontal viewBox: (yMin, yMid and yMax are equivalent)</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 166 100"</span> preserveAspectRatio=<span class="string">"xMinYMid slice"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 166 100" preserveaspectratio="xMinYMid slice" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 166 100&quot;</span> preserveAspectRatio=<span class="string">&quot;xMinYMid slice&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 166 100" preserveAspectRatio="xMinYMid slice" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 166 100"</span> preserveAspectRatio=<span class="string">"xMidYMid slice"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 166 100" preserveaspectratio="xMidYMid slice" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 166 100&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMid slice&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 166 100" preserveAspectRatio="xMidYMid slice" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 166 100"</span> preserveAspectRatio=<span class="string">"xMaxYMid slice"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 166 100" preserveaspectratio="xMaxYMid slice" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 166 100&quot;</span> preserveAspectRatio=<span class="string">&quot;xMaxYMid slice&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 166 100" preserveAspectRatio="xMaxYMid slice" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
 <p>With a vertical viewBox: (xMin, xMid and xMax are equivalent)</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 100 166"</span> preserveAspectRatio=<span class="string">"xMidYMin slice"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 166" preserveaspectratio="xMidYMin slice" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 100 166&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMin slice&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 166" preserveAspectRatio="xMidYMin slice" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 100 166"</span> preserveAspectRatio=<span class="string">"xMidYMid slice"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 166" preserveaspectratio="xMidYMid slice" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 100 166&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMid slice&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 166" preserveAspectRatio="xMidYMid slice" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">viewBox</span>=<span class="string">"0 0 100 166"</span> preserveAspectRatio=<span class="string">"xMidYMax slice"</span></div></pre></td></tr></table></figure>
-<p><br></p>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewbox="0 0 100 166" preserveaspectratio="xMidYMax slice" style="border: solid 1px grey"><defs><radialgradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialgradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">viewBox</span>=<span class="string">&quot;0 0 100 166&quot;</span> preserveAspectRatio=<span class="string">&quot;xMidYMax slice&quot;</span></span><br></pre></td></tr></table></figure>
+<br />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 166" preserveAspectRatio="xMidYMax slice" style="border: solid 1px grey"><defs><radialGradient id="grad"><stop offset="10%" stop-color="gold"/><stop offset="95%" stop-color="green"/></radialGradient></defs><circle fill="url(#grad)" cx="50" cy="50" r="50"/></svg>
 
 <h2 id="The-End"><a href="#The-End" class="headerlink" title="The End"></a>The End</h2><p>That’s it for my explanations on the SVG viewBox, please let me know if you have any questions, corrections or if I have missed anything.</p>
-<p>The code for all the examples above is available on <a href="http://codepen.io/klugjo/pen/gMONQv" target="_blank" rel="external">CodePen</a></p>
-<p></p><p data-height="265" data-theme-id="light" data-slug-hash="gMONQv" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/gMONQv/" target="_blank" rel="external">SVG viewBox examples</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<p>The code for all the examples above is available on <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/gMONQv">CodePen</a></p>
+<p data-height="265" data-theme-id="light" data-slug-hash="gMONQv" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/gMONQv/">SVG viewBox examples</a> by Jonathan klughertz (<a target="_blank" rel="noopener" href="http://codepen.io/klugjo">@klugjo</a>) on <a target="_blank" rel="noopener" href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
                     
                     <!-- Tags Bottom -->
@@ -361,6 +352,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -374,10 +369,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -413,7 +404,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

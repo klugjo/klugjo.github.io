@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Have Mobx and React work with TypeScript"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Have Mobx and React work with TypeScript - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Have Mobx and React work with TypeScript</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">05 October 2020</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-typescript-plain"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/React/">#React</a> <a class="fw3 ph1 dib" href="/tags/Mobx/">#Mobx</a> <a class="fw3 ph1 dib" href="/tags/TypeScript/">#TypeScript</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h2 id="The-problem-with-Mobx-and-TypeScript"><a href="#The-problem-with-Mobx-and-TypeScript" class="headerlink" title="The problem with Mobx and TypeScript"></a>The problem with Mobx and TypeScript</h2><p>The <a target="_blank" rel="noopener" href="https://github.com/mobxjs/mobx-react#strongly-typing-inject">official solution to support TypeScript</a> sucks. They are basically asking you to make stores optional in your Prop types:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;</span>&#123; userStore?: IUserStore; otherProp: number &#125;, &#123;&#125;&gt; &#123;</span><br><span class="line">    <span class="comment">/* etc */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>then use a bang to tell the compiler your stores are present:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">render</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">const</span> &#123;a, b&#125; = <span class="keyword">this</span>.store!</span><br><span class="line">   <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This is truly inelegant. Below you will find a much better setup to have <a target="_blank" rel="noopener" href="https://mobx.js.org/README.html">Mobx</a> and React play nice with TypeScript.<br><br /></p>
+<h2 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR;"></a>TLDR;</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; inject, IWrappedComponent, observer &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx-react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; MyStoreClass &#125; <span class="keyword">from</span> <span class="string">&#x27;./myStore&#x27;</span>;</span><br><span class="line"></span><br><span class="line">type StoreProps = &#123;</span><br><span class="line">  myStore: MyStoreClass;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">interface Props <span class="keyword">extends</span> StoreProps &#123;</span><br><span class="line">  realProp: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@inject(<span class="string">&#x27;myStore&#x27;</span>)</span><br><span class="line">@observer</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">Props</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;&#125; <span class="keyword">as</span> StoreProps;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; myStore, realProp &#125; = <span class="built_in">this</span>.props;</span><br><span class="line">    [...]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App <span class="keyword">as</span> <span class="keyword">typeof</span> App &amp; IWrappedComponent&lt;Props&gt;;</span><br></pre></td></tr></table></figure>
+<br />
+
+<h2 id="Working-Example"><a href="#Working-Example" class="headerlink" title="Working Example"></a>Working Example</h2><iframe
+  src='https://codesandbox.io/embed/frosty-mountain-bpmpq?fontsize=14&hidenavigation=1&theme=dark'
+  style='width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;'
+  title='frosty-mountain-bpmpq'
+  allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
+  sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
+></iframe>
+
+<br />
+<br />
+<br />
+
+<h2 id="Explanations-and-Steps-to-convert-your-code"><a href="#Explanations-and-Steps-to-convert-your-code" class="headerlink" title="Explanations and Steps to convert your code"></a>Explanations and Steps to convert your code</h2><p>Consider the following example, a simple counter app with a <a target="_blank" rel="noopener" href="https://github.com/mobxjs/mobx-react#provider-and-inject">store injected through the context</a>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; render &#125; <span class="keyword">from</span> <span class="string">&#x27;react-dom&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx-react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> counterStore <span class="keyword">from</span> <span class="string">&#x27;./counterStore&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> rootElement = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line">render(</span><br><span class="line">  &lt;Provider counterStore=&#123;counterStore&#125;&gt;</span><br><span class="line">    &lt;App title=<span class="string">&#x27;normal prop title&#x27;</span> /&gt;</span><br><span class="line">  &lt;/Provider&gt;,</span><br><span class="line">  rootElement</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// counterStore.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; observable &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">CounterStore</span> </span>&#123;</span><br><span class="line">  @observable counter = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  increment() &#123;</span><br><span class="line">    <span class="built_in">this</span>.counter++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  decrement() &#123;</span><br><span class="line">    <span class="built_in">this</span>.counter--;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> CounterStore();</span><br><span class="line"></span><br><span class="line"><span class="comment">// App.js</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; inject, observer &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx-react&#x27;</span>;</span><br><span class="line"></span><br><span class="line">@inject(<span class="string">&#x27;counterStore&#x27;</span>)</span><br><span class="line">@observer</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; counterStore, title &#125; = <span class="built_in">this</span>.props;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;div&gt;&#123;title&#125;&lt;/div&gt;</span><br><span class="line">        &lt;button onClick=&#123;<span class="function">() =&gt;</span> counterStore.increment()&#125;&gt;+<span class="number">1</span>&lt;/button&gt;</span><br><span class="line">        &lt;span&gt;&#123;counterStore.counter&#125;&lt;/span&gt;</span><br><span class="line">        &lt;button onClick=&#123;<span class="function">() =&gt;</span> counterStore.decrement()&#125;&gt;<span class="number">-1</span>&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Converting-to-TypeScript"><a href="#Converting-to-TypeScript" class="headerlink" title="Converting to TypeScript"></a>Converting to TypeScript</h2><h3 id="Important"><a href="#Important" class="headerlink" title="Important:"></a>Important:</h3><ul>
+<li>This will only work with Mobx 5 as v6 dropped decorators support. <a target="_blank" rel="noopener" href="https://github.com/mobxjs/mobx/issues/2325">Discussion</a></li>
+<li>You will also need to stay on <code>mobx-react</code> v6 <a target="_blank" rel="noopener" href="https://github.com/mobxjs/mobx-react#choosing-your-version">to be compatible with mobx 5</a>.</li>
+<li>If you are starting from scratch and you can get away with only injecting your stores through hooks, you don’t need all this.</li>
+</ul>
+<h3 id="1-Filenames"><a href="#1-Filenames" class="headerlink" title="1. Filenames"></a>1. Filenames</h3><p>Convert all the files to <code>.ts</code> and <code>.tsx</code></p>
+<h3 id="2-Convert-the-store-to-TS"><a href="#2-Convert-the-store-to-TS" class="headerlink" title="2. Convert the store to TS"></a>2. Convert the store to TS</h3><p>Pretty straightforward, add the type for <code>counter</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[...]</span><br><span class="line">@observable counter: number = <span class="number">0</span>;</span><br><span class="line">[...]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Typed-Props-for-the-App-Component"><a href="#3-Typed-Props-for-the-App-Component" class="headerlink" title="3. Typed Props for the App Component"></a>3. Typed Props for the App Component</h3><p>Let’s split the injected stores props and the actual props (you will see why later).</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; CounterStore &#125; <span class="keyword">from</span> <span class="string">&#x27;./counterStore&#x27;</span>;</span><br><span class="line"></span><br><span class="line">type StoreProps = &#123;</span><br><span class="line">  counterStore: CounterStore;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">interface Props <span class="keyword">extends</span> StoreProps &#123;</span><br><span class="line">  title: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@inject(<span class="string">&#x27;counterStore&#x27;</span>)</span><br><span class="line">@observer</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">Props</span>&gt; </span>&#123;</span><br><span class="line">  [...]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+
+<p>The warnings in our <code>App</code> component are now gone but the <code>index.ts</code> file is complaining about the missing <code>counterStore</code>.</p>
+<h3 id="4-Fixing-the-App-Component-exported-type"><a href="#4-Fixing-the-App-Component-exported-type" class="headerlink" title="4. Fixing the App Component exported type"></a>4. Fixing the App Component exported type</h3><p>First of all we need to specify <code>defaultProps</code> so that the compiler does not expect us to pass the store down</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@inject(<span class="string">&#x27;counterStore&#x27;</span>)</span><br><span class="line">@observer</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">Props</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;&#125; <span class="keyword">as</span> StoreProps;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    [...]</span><br></pre></td></tr></table></figure>
+
+<p>then we need to adjust the type of the default export (our Component). This will help TypeScript recognize the fact that <code>App</code> has a static <code>wrappedComponent</code> property.</p>
+<p>This is especially useful in unit tests as you will probably want to test <code>App.wrappedComponent</code> instead of <code>App</code>.</p>
+<p>Here is how to export the correct type:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App <span class="keyword">as</span> (<span class="keyword">typeof</span> App &amp; IWrappedComponent&lt;Props&gt;);</span><br></pre></td></tr></table></figure>
+
+<p>Your app is now ready to go ! </p>
+<h3 id="5-Full-code"><a href="#5-Full-code" class="headerlink" title="5. Full code"></a>5. Full code</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; render &#125; <span class="keyword">from</span> <span class="string">&#x27;react-dom&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx-react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">&#x27;./counterStore&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> rootElement = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;root&#x27;</span>);</span><br><span class="line">render(</span><br><span class="line">  &lt;Provider counterStore=&#123;store&#125;&gt;</span><br><span class="line">    &lt;App title=<span class="string">&#x27;normal prop title&#x27;</span> /&gt;</span><br><span class="line">  &lt;/Provider&gt;,</span><br><span class="line">  rootElement</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// counterStore.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; observable &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">CounterStore</span> </span>&#123;</span><br><span class="line">  @observable counter: number = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  increment() &#123;</span><br><span class="line">    <span class="built_in">this</span>.counter++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  decrement() &#123;</span><br><span class="line">    <span class="built_in">this</span>.counter--;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> CounterStore();</span><br><span class="line"></span><br><span class="line"><span class="comment">// App.tsx</span></span><br><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; inject, IWrappedComponent, observer &#125; <span class="keyword">from</span> <span class="string">&#x27;mobx-react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; CounterStore &#125; <span class="keyword">from</span> <span class="string">&#x27;./counterStore&#x27;</span>;</span><br><span class="line"></span><br><span class="line">type StoreProps = &#123;</span><br><span class="line">  counterStore: CounterStore;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">interface Props <span class="keyword">extends</span> StoreProps &#123;</span><br><span class="line">  title: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@inject(<span class="string">&#x27;counterStore&#x27;</span>)</span><br><span class="line">@observer</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">Props</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">static</span> defaultProps = &#123;&#125; <span class="keyword">as</span> StoreProps;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; counterStore, title &#125; = <span class="built_in">this</span>.props;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;div&gt;&#123;title&#125;&lt;/div&gt;</span><br><span class="line">        &lt;button onClick=&#123;<span class="function">() =&gt;</span> counterStore.increment()&#125;&gt;+<span class="number">1</span>&lt;/button&gt;</span><br><span class="line">        &lt;span&gt;&#123;counterStore.counter&#125;&lt;/span&gt;</span><br><span class="line">        &lt;button onClick=&#123;<span class="function">() =&gt;</span> counterStore.decrement()&#125;&gt;<span class="number">-1</span>&lt;/button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App <span class="keyword">as</span> <span class="keyword">typeof</span> App &amp; IWrappedComponent&lt;Props&gt;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/React/">#React</a> <a class="fw3 ph1 dib" href="/tags/Mobx/">#Mobx</a> <a class="fw3 ph1 dib" href="/tags/TypeScript/">#TypeScript</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
+            <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
+        </p>
+    
+        <p>
+            <a href="/2020/01/A-Star-Pathfinding-React-Demo/">A-Star Pathfinding React Demo</a>
+        </p>
+    
+        <p>
+            <a href="/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/">My Free and Open Source Expense Tracker App is on the App Store</a>
+        </p>
+    
+        <p>
+            <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>

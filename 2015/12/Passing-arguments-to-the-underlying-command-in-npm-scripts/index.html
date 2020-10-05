@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -167,18 +170,23 @@
                     <p>In this tutorial we will see how to pass arguments to a command when combining <a href="/2015/12/Run-scripts-with-npm/" target="_blank">npm scripts</a>.</p>
 <a id="more"></a> 
 <h2 id="Project-setup"><a href="#Project-setup" class="headerlink" title="Project setup"></a>Project setup</h2><p>Let’s assume we have the current script defined in our npm scripts:</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"stylus"</span>: <span class="string">"stylus src/stylus/site.styl --out dist/"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;stylus&quot;</span>: <span class="string">&quot;stylus src/stylus/site.styl --out dist/&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
 <h2 id="Watching-for-changes"><a href="#Watching-for-changes" class="headerlink" title="Watching for changes"></a>Watching for changes</h2><p>Now let’s say we want to create a new task that will not only compile our stylus files to css but also watch for changes and recompile when necessary.</p>
 <p>Using the command line this can be done with the <code>-w</code> flag:</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">stylus src/stylus/site<span class="selector-class">.styl</span> -w</div></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stylus src<span class="regexp">/stylus/</span>site.styl -w</span><br></pre></td></tr></table></figure>
+
 <p>We now want to create a new script that watches for stylus changes. We can do:</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"stylus"</span>: <span class="string">"stylus src/stylus/site.styl --out dist/"</span>,</div><div class="line">    <span class="string">"watch:stylus"</span>: <span class="string">"stylus src/stylus/site.styl --out dist/ -w"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;stylus&quot;</span>: <span class="string">&quot;stylus src/stylus/site.styl --out dist/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;watch:stylus&quot;</span>: <span class="string">&quot;stylus src/stylus/site.styl --out dist/ -w&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p>See anything ugly ?</p>
 <h2 id="Reusing-existing-code"><a href="#Reusing-existing-code" class="headerlink" title="Reusing existing code"></a>Reusing existing code</h2><p>In order to avoid duplicated code, we want to reuse our first command and add the <code>-w</code> flag.</p>
 <p>The general syntax is</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">run</span><span class="bash"> [<span class="built_in">command</span>] [-- &lt;args&gt;]</span></div></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">run</span><span class="bash"> [<span class="built_in">command</span>] [-- &lt;args&gt;]</span></span><br></pre></td></tr></table></figure>
+
 <p>With our example it would be:</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"stylus"</span>: <span class="string">"stylus src/stylus/site.styl --out dist/"</span>,</div><div class="line">    <span class="string">"watch:stylus"</span>: <span class="string">"npm run stylus -- -w"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;stylus&quot;</span>: <span class="string">&quot;stylus src/stylus/site.styl --out dist/&quot;</span>,</span><br><span class="line">    <span class="string">&quot;watch:stylus&quot;</span>: <span class="string">&quot;npm run stylus -- -w&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
 <p>Note the <code>--</code> in between the initial command and the additional arguments.</p>
 
                     
@@ -219,6 +227,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -232,10 +244,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -271,7 +279,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,9 +167,10 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>I just finished developing an Hexo Theme: <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="external">Clean Blog</a>. Check out the <a href="http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/">live demo</a>.</p>
+                    <p>I just finished developing an Hexo Theme: <a target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog</a>. Check out the <a href="http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/">live demo</a>.</p>
 <a id="more"></a>
-<p>This theme is an Hexo implementation of <a href="http://blackrockdigital.github.io/startbootstrap-clean-blog/index.html" target="_blank" rel="external">Clean Blog</a></p>
+
+<p>This theme is an Hexo implementation of <a target="_blank" rel="noopener" href="http://blackrockdigital.github.io/startbootstrap-clean-blog/index.html">Clean Blog</a></p>
 <h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
 <li>Disqus and Facebook comments</li>
 <li>Google Analytics</li>
@@ -176,29 +180,40 @@
 <li>Image Gallery</li>
 <li>Code syntax highlighting</li>
 </ul>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/klugjo/hexo-theme-clean-blog.git themes/clean-blog</div></pre></td></tr></table></figure>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/klugjo/</span>hexo-theme-clean-blog.git themes/clean-blog</span><br></pre></td></tr></table></figure>
+
 <p>Then update your blog’s main <code>_config.yml</code> to set the theme to <code>clean-blog</code>:</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: http:<span class="comment">//hexo.io/plugins/</span></div><div class="line">## Themes: http:<span class="comment">//hexo.io/themes/</span></div><div class="line">theme: clean-blog</div></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: http:<span class="comment">//hexo.io/plugins/</span></span><br><span class="line">## Themes: http:<span class="comment">//hexo.io/themes/</span></span><br><span class="line">theme: clean-blog</span><br></pre></td></tr></table></figure>
+
 <h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><h3 id="Menu"><a href="#Menu" class="headerlink" title="Menu"></a>Menu</h3><p>The menu is configured in the theme’s <code>_config.yml</code>.</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># Header</span></div><div class="line"><span class="symbol">menu:</span></div><div class="line"><span class="symbol">  Home:</span> /</div><div class="line"><span class="symbol">  Archives:</span> /archives</div></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Header</span></span><br><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  Home:</span> /</span><br><span class="line"><span class="symbol">  Archives:</span> /archives</span><br></pre></td></tr></table></figure>
+
 <p>The object key is the label and the value is the path.</p>
 <h3 id="Top-Left-Label"><a href="#Top-Left-Label" class="headerlink" title="Top Left Label"></a>Top Left Label</h3><p>The top left label is configured in the theme’s <code>_config.yml</code>. When clicked it will lead to the Home Page.</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Title <span class="keyword">on</span> top <span class="keyword">left</span> of <span class="keyword">menu</span>. Leave <span class="built_in">empty</span> <span class="keyword">to</span> use main blog title</div><div class="line">menu_title: Configurable Title</div></pre></td></tr></table></figure>
+<figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># <span class="meta">Title</span> <span class="meta">on</span> top left of menu. <span class="meta">Leave</span> empty to use main blog <span class="meta">title</span></span><br><span class="line">menu_title: Configurable <span class="meta">Title</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Home-Page-cover-image"><a href="#Home-Page-cover-image" class="headerlink" title="Home Page cover image"></a>Home Page cover image</h3><p>The Home Page cover is configured in the theme’s <code>_config.yml</code>. It will be the same for all index type pages.</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># URL of the Home page image</span></div><div class="line">index_cover: <span class="regexp">/img/</span>home-bg.jpg</div></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL of the Home page image</span></span><br><span class="line">index_cover: <span class="regexp">/img/</span>home-bg.jpg</span><br></pre></td></tr></table></figure>
+
 <h3 id="Default-post-title"><a href="#Default-post-title" class="headerlink" title="Default post title"></a>Default post title</h3><p>The default post title (used when no title is specified) is configured in the theme’s <code>_config.yml</code>.</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># Default post title</span></div><div class="line"><span class="symbol">default_post_title:</span> Untitled</div></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Default post title</span></span><br><span class="line"><span class="symbol">default_post_title:</span> Untitled</span><br></pre></td></tr></table></figure>
+
 <h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><p>The comments provider is specified in the theme’s <code>_config.yml</code>. If you specify both a <code>disqus_shortname</code> and a <code>facebook.appid</code> there will be 2 sets of comment per post. So choose one.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Comments. Choose one by filling up the information</span></div><div class="line"><span class="attr">comments:</span></div><div class="line">  <span class="comment"># Disqus comments</span></div><div class="line"><span class="attr">  disqus_shortname:</span> klugjotest</div><div class="line">  <span class="comment"># Facebook comments</span></div><div class="line"><span class="attr">  facebook:</span></div><div class="line"><span class="attr">    appid:</span> <span class="number">123456789012345</span></div><div class="line"><span class="attr">    comment_count:</span> <span class="number">5</span></div><div class="line"><span class="attr">    comment_colorscheme:</span> light</div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Comments. Choose one by filling up the information</span></span><br><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="comment"># Disqus comments</span></span><br><span class="line">  <span class="attr">disqus_shortname:</span> <span class="string">klugjotest</span></span><br><span class="line">  <span class="comment"># Facebook comments</span></span><br><span class="line">  <span class="attr">facebook:</span></span><br><span class="line">    <span class="attr">appid:</span> <span class="number">123456789012345</span></span><br><span class="line">    <span class="attr">comment_count:</span> <span class="number">5</span></span><br><span class="line">    <span class="attr">comment_colorscheme:</span> <span class="string">light</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Google-Analytics"><a href="#Google-Analytics" class="headerlink" title="Google Analytics"></a>Google Analytics</h3><p>The Google Analytics Tracking ID is configured in the theme’s <code>_config.yml</code>.</p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># Google Analytics Tracking ID</span></div><div class="line"><span class="symbol">google_analytics:</span></div></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Google Analytics Tracking ID</span></span><br><span class="line"><span class="symbol">google_analytics:</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Social-Account"><a href="#Social-Account" class="headerlink" title="Social Account"></a>Social Account</h3><p>Setup the links to your social pages in the theme’s <code>_config.yml</code>. Links are in the footer.</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># Social Accounts</span></div><div class="line"><span class="symbol">twitter_url:</span></div><div class="line"><span class="symbol">facebook_url:</span></div><div class="line"><span class="symbol">github_url:</span> https:<span class="comment">//github.com/klugjo/hexo-theme-clean-blog</span></div></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Social Accounts</span></span><br><span class="line">twitter_url:</span><br><span class="line">facebook_url:</span><br><span class="line">github_url: https:<span class="regexp">//gi</span>thub.com<span class="regexp">/klugjo/</span>hexo-theme-clean-blog</span><br></pre></td></tr></table></figure>
+
 <h3 id="Author"><a href="#Author" class="headerlink" title="Author"></a>Author</h3><p>The post’s author is specified in the posts front-matter:</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">author:</span> Klug Jo</div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">author:</span> <span class="string">Klug</span> <span class="string">Jo</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="Post’s-Cover-Image"><a href="#Post’s-Cover-Image" class="headerlink" title="Post’s Cover Image"></a>Post’s Cover Image</h3><p>By default, posts will use the home page cover image. You can specify a custom cover in the front-matter:</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">cover:</span> <span class="meta-keyword">/assets/</span>contact-bg.jpg</div></pre></td></tr></table></figure>
-<h2 id="Creator"><a href="#Creator" class="headerlink" title="Creator"></a>Creator</h2><p>This theme was created by <a href="https://github.com/BlackrockDigital" target="_blank" rel="external">Blackrock Digital</a> and adapted for Hexo by <a href="http://www.codeblocq.com/">myself</a>.</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cover: <span class="regexp">/assets/</span>contact-bg.jpg</span><br></pre></td></tr></table></figure>
+
+<h2 id="Creator"><a href="#Creator" class="headerlink" title="Creator"></a>Creator</h2><p>This theme was created by <a target="_blank" rel="noopener" href="https://github.com/BlackrockDigital">Blackrock Digital</a> and adapted for Hexo by <a href="http://www.codeblocq.com/">myself</a>.</p>
 <p>Hope you enjoy it, the theme should be easy enough to customize and modify to fit your needs. Checkout <a href="/2016/03/Create-an-Hexo-Theme-Part-1-Index/">my tutorial on building Hexo themes</a> if you need information on how themes are built.</p>
 
                     
@@ -239,6 +254,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -252,10 +271,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -291,7 +306,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

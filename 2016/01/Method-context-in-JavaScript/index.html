@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -168,17 +171,20 @@
 <p>Method context refers to the way the <code>this</code> keyword behaves inside a function. It is different in JavaScript than in other languages. As we are going to demonstrate here, <strong>the value of <code>this</code> is determined by how and where a function is called.</strong></p>
 <a id="more"></a> 
 <h2 id="Function-defined-and-called-as-an-object-method"><a href="#Function-defined-and-called-as-an-object-method" class="headerlink" title="Function defined and called as an object method"></a>Function defined and called as an object method</h2><p>The simplest scenario is a <strong>function defined and called as an object method</strong>. In that case, <code>this</code> is set to the object the method is called on.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> defaultLogger = &#123;</div><div class="line">  <span class="attr">loggerName</span>: <span class="string">"Default"</span>,</div><div class="line">  <span class="attr">log</span>: <span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">message</span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"["</span> + <span class="keyword">this</span>.loggerName + <span class="string">"] "</span> + message);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">defaultLogger.log(<span class="string">"example 1"</span>); <span class="comment">// logs "[Default] example 1"</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> defaultLogger = &#123;</span><br><span class="line">  loggerName: <span class="string">&quot;Default&quot;</span>,</span><br><span class="line">  log: <span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;[&quot;</span> + <span class="built_in">this</span>.loggerName + <span class="string">&quot;] &quot;</span> + message);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">defaultLogger.log(<span class="string">&quot;example 1&quot;</span>); <span class="comment">// logs &quot;[Default] example 1&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>In the <code>log</code> function here, <code>this</code> corresponds to <code>defaultLogger</code>.</p>
 <h2 id="Function-defined-in-the-global-scope"><a href="#Function-defined-in-the-global-scope" class="headerlink" title="Function defined in the global scope"></a>Function defined in the global scope</h2><p>By extension, if a function is defined in the global scope. <code>this</code> will be set to <code>window</code> (global object) when the code is executed in the browser.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Log function defined in the global scope</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">message</span>) </span>&#123;</div><div class="line">  </div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"this "</span> + <span class="keyword">this</span>);</div><div class="line">  <span class="keyword">var</span> loggerName = <span class="keyword">this</span>.loggerName || <span class="string">"Default"</span>;</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"["</span> + loggerName + <span class="string">"] "</span> + message);</div><div class="line">&#125;</div><div class="line"></div><div class="line">log(<span class="string">"example 2"</span>); <span class="comment">// Logs "this: [object Window]" then "[Default] example 2"</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Log function defined in the global scope</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;this &quot;</span> + <span class="built_in">this</span>);</span><br><span class="line">  <span class="keyword">var</span> loggerName = <span class="built_in">this</span>.loggerName || <span class="string">&quot;Default&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;[&quot;</span> + loggerName + <span class="string">&quot;] &quot;</span> + message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">log(<span class="string">&quot;example 2&quot;</span>); <span class="comment">// Logs &quot;this: [object Window]&quot; then &quot;[Default] example 2&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>Because the function is defined and executed in the global scope, in the <code>log</code> function here, <code>this</code> points to the global <code>window</code> object.</p>
 <p><code>this.loggerName</code> is then undefined and the <code>&quot;Default&quot;</code> logger name is used instead.</p>
 <h2 id="Function-defined-in-the-global-scope-and-used-as-an-object-method"><a href="#Function-defined-in-the-global-scope-and-used-as-an-object-method" class="headerlink" title="Function defined in the global scope and used as an object method"></a>Function defined in the global scope and used as an object method</h2><p>We can reuse the function defined above and use it in the context of an object. In that case, <code>this</code> will point to that object.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Log function defined externally</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">message</span>) </span>&#123;</div><div class="line">  </div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"this: "</span> + <span class="keyword">this</span>);</div><div class="line">  <span class="keyword">var</span> loggerName = <span class="keyword">this</span>.loggerName || <span class="string">"Default"</span>;</div><div class="line"></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"["</span> + loggerName + <span class="string">"] "</span> + message);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Using the log function in the context of an object</span></div><div class="line"><span class="keyword">var</span> databaseLogger = &#123;</div><div class="line">  <span class="attr">loggerName</span>: <span class="string">"Database"</span>,</div><div class="line">  <span class="attr">log</span>: log</div><div class="line">&#125;;</div><div class="line"></div><div class="line">databaseLogger.log(<span class="string">"example 3"</span>); <span class="comment">// Logs "this: [object Object]" then "[Database] example 3"</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Log function defined externally</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;this: &quot;</span> + <span class="built_in">this</span>);</span><br><span class="line">  <span class="keyword">var</span> loggerName = <span class="built_in">this</span>.loggerName || <span class="string">&quot;Default&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;[&quot;</span> + loggerName + <span class="string">&quot;] &quot;</span> + message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Using the log function in the context of an object</span></span><br><span class="line"><span class="keyword">var</span> databaseLogger = &#123;</span><br><span class="line">  loggerName: <span class="string">&quot;Database&quot;</span>,</span><br><span class="line">  log: log</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">databaseLogger.log(<span class="string">&quot;example 3&quot;</span>); <span class="comment">// Logs &quot;this: [object Object]&quot; then &quot;[Database] example 3&quot;</span></span><br></pre></td></tr></table></figure>
+
 <p>Because we are calling the <code>log</code> function with the dot notation (<code>databaseLogger.log()</code>), the context is set to the object.</p>
 <p>In conclusion, <strong>it does not matter where the function is defined; the context depends on which object the function is invoked from.</strong></p>
-<p>Check out the code here: <a href="https://jsbin.com/ciqolu/edit?js,console" target="_blank" rel="external">https://jsbin.com/ciqolu/edit?js,console</a></p>
+<p>Check out the code here: <a target="_blank" rel="noopener" href="https://jsbin.com/ciqolu/edit?js,console">https://jsbin.com/ciqolu/edit?js,console</a></p>
 
                     
                     <!-- Tags Bottom -->
@@ -218,6 +224,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -231,10 +241,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -270,7 +276,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

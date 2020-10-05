@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -167,7 +170,8 @@
                     <p>Quick article on how to search the OSX terminal history</p>
 <a id="more"></a> 
 <h2 id="Interactive-Search"><a href="#Interactive-Search" class="headerlink" title="Interactive Search"></a>Interactive Search</h2><h3 id="Start-search"><a href="#Start-search" class="headerlink" title="Start search"></a>Start search</h3><p>Use <code>ctrl</code>+<code>r</code> to start the history search and start typing your search term (in my example <code>git</code>)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(reverse-i-search)`git<span class="string">': git push origin develop</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(reverse-i-search)`git<span class="string">&#x27;: git push origin develop</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><code>(reverse-i-search)</code> indicates that the search mode is activated</li>
 <li><code>git</code> is the search term</li>
@@ -179,7 +183,8 @@
 <p>Press <code>right arrow</code> to insert the command in the current line</p>
 <h2 id="Display-search-history"><a href="#Display-search-history" class="headerlink" title="Display search history"></a>Display search history</h2><p>In some cases, you might want to display an history of commands containing your search term</p>
 <p>You can do this with the following command</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="keyword">history</span> | <span class="keyword">grep</span> <span class="string">'git'</span></div></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">history</span> | grep <span class="string">&#x27;git&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <p>Will display of all the previous commands that contain <code>git</code>.</p>
 <p><strong>Note:</strong></p>
 <p>The <code>history</code> command displays the full history of executed commands. In this example, we are piping the result into a grep command in order to filter the results we want.</p>
@@ -222,6 +227,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -235,10 +244,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -274,7 +279,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

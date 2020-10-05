@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,15 +167,20 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Bootstrap 4 media queries if you want to reuse them in your stylus stylesheet.<br><a id="more"></a></p>
-<h3 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h3><p>Here is a visual representation of <a href="http://v4-alpha.getbootstrap.com/layout/overview/" target="_blank" rel="external">Bootstrap 4 responsive breakpoints</a>.<br><br></p>
+                    <p>Bootstrap 4 media queries if you want to reuse them in your stylus stylesheet.</p>
+<a id="more"></a>
+
+<h3 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h3><p>Here is a visual representation of <a target="_blank" rel="noopener" href="http://v4-alpha.getbootstrap.com/layout/overview/">Bootstrap 4 responsive breakpoints</a>.<br><br /></p>
 <div style="width: 100%;"> <div style="display: inline-block; font-size: 25px; font-family: monospace; color: 08090A; width: 18%; text-align: right;height: 40px">34em</div> <div style="display: inline-block; font-size: 25px; font-family: monospace; color: 08090A; width: 16%; text-align: right;height: 40px">48em</div> <div style="display: inline-block; font-size: 25px; font-family: monospace; color: 08090A; width: 16%; text-align: right;height: 40px">62em</div> <div style="display: inline-block; font-size: 25px; font-family: monospace; color: 08090A; width: 16%; text-align: right;height: 40px">75em</div> </div> <div style="width: 100%;"> <div style="width: 15.5%; background: #A65C3F; height: 40px; text-align: center; font-size: 25px; line-height: 35px; color: #EDE3CD; font-family: monospace; border-radius: 5px; margin: 0 0.5% 0 0; display: inline-block;">xs</div> <div style="width: 15.5%; background: #89A58E; height: 40px; text-align: center; font-size: 25px; line-height: 35px; color: #EDE3CD; font-family: monospace; border-radius: 5px; margin: 0 0.5% 0 0; display: inline-block;">sm</div> <div style="width: 15.5%; background: #CE8C4E; height: 40px; text-align: center; font-size: 25px; line-height: 35px; color: #EDE3CD; font-family: monospace; border-radius: 5px; margin: 0 0.5% 0 0; display: inline-block;">md</div> <div style="width: 15.5%; background: #93C2BD; height: 40px; text-align: center; font-size: 25px; line-height: 35px; color: #EDE3CD; font-family: monospace; border-radius: 5px; margin: 0 0.5% 0 0; display: inline-block;">lg</div> <div style="width: 15.5%; background: #3F3E1E; height: 40px; text-align: center; font-size: 25px; line-height: 35px; color: #EDE3CD; font-family: monospace; border-radius: 5px; margin: 0 0.5% 0 0; display: inline-block;">xl</div> </div>
 
-<h3 id="Declaration"><a href="#Declaration" class="headerlink" title="Declaration"></a>Declaration</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$xs-and-smaller = '(max-width: 33.9em)'</div><div class="line">$sm-and-smaller = '(max-width: 47.9em)'</div><div class="line">$md-and-smaller = '(max-width: 61.9em)'</div><div class="line">$lg-and-smaller = '(max-width: 74.9em)'</div><div class="line"></div><div class="line">$sm-and-larger = '(max-width: 34em)'</div><div class="line">$md-and-larger = '(max-width: 48em)'</div><div class="line">$lg-and-larger = '(max-width: 62em)'</div><div class="line">$xl-and-larger = '(max-width: 75em)'</div></pre></td></tr></table></figure>
+<h3 id="Declaration"><a href="#Declaration" class="headerlink" title="Declaration"></a>Declaration</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$xs-and-smaller = &#x27;(max-width: 33.9em)&#x27;</span><br><span class="line">$sm-and-smaller = &#x27;(max-width: 47.9em)&#x27;</span><br><span class="line">$md-and-smaller = &#x27;(max-width: 61.9em)&#x27;</span><br><span class="line">$lg-and-smaller = &#x27;(max-width: 74.9em)&#x27;</span><br><span class="line"></span><br><span class="line">$sm-and-larger = &#x27;(max-width: 34em)&#x27;</span><br><span class="line">$md-and-larger = &#x27;(max-width: 48em)&#x27;</span><br><span class="line">$lg-and-larger = &#x27;(max-width: 62em)&#x27;</span><br><span class="line">$xl-and-larger = &#x27;(max-width: 75em)&#x27;</span><br></pre></td></tr></table></figure>
+
 <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>You can then use these variables like so:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.yourClass</span></div><div class="line">    <span class="selector-tag">width</span> 50%</div><div class="line">    @<span class="keyword">media</span> $xs-and-smaller</div><div class="line">        width <span class="number">100%</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.yourClass</span></span><br><span class="line">    <span class="selector-tag">width</span> 50%</span><br><span class="line">    <span class="keyword">@media</span> $xs-<span class="keyword">and</span>-smaller</span><br><span class="line">        width <span class="number">100%</span></span><br></pre></td></tr></table></figure>
+
 <p>Or</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.yourClass</span></div><div class="line">    <span class="selector-tag">width</span> 100%</div><div class="line">    @<span class="keyword">media</span> $sm-and-larger</div><div class="line">        width <span class="number">50%</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.yourClass</span></span><br><span class="line">    <span class="selector-tag">width</span> 100%</span><br><span class="line">    <span class="keyword">@media</span> $sm-<span class="keyword">and</span>-larger</span><br><span class="line">        width <span class="number">50%</span></span><br></pre></td></tr></table></figure>
+
 <p>There are many other ways to do this, but that’s the one that feels the most comfortable and readable to me. Would be happy to read yours.</p>
 
                     
@@ -213,6 +221,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -226,10 +238,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -265,7 +273,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

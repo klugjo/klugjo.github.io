@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,18 +167,29 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Useful piece of code to produce a 256-bit hash value with SHA-256:<br><a id="more"></a></p>
-<p>There a few JavaScript implementation of the SHA-256 hash function out there. But the easiest is usually to use Node’s built in <a href="https://nodejs.org/api/crypto.html#crypto_class_hash" target="_blank" rel="external">cryptography</a> module.</p>
+                    <p>Useful piece of code to produce a 256-bit hash value with SHA-256:</p>
+<a id="more"></a>
+
+<p>There a few JavaScript implementation of the SHA-256 hash function out there. But the easiest is usually to use Node’s built in <a target="_blank" rel="noopener" href="https://nodejs.org/api/crypto.html#crypto_class_hash">cryptography</a> module.</p>
 <h2 id="The-Code"><a href="#The-Code" class="headerlink" title="The Code"></a>The Code</h2><p>If you just need the code, here it is:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> crypto = <span class="built_in">require</span>(<span class="string">'crypto'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> hash = crypto.createHash(<span class="string">'sha256'</span>)</div><div class="line">   .update(inputString)</div><div class="line">   .digest(<span class="string">'hex'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> crypto = <span class="built_in">require</span>(<span class="string">&#x27;crypto&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> hash = crypto.createHash(<span class="string">&#x27;sha256&#x27;</span>)</span><br><span class="line">   .update(inputString)</span><br><span class="line">   .digest(<span class="string">&#x27;hex&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
 <h2 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h2><h3 id="Generate-the-hash"><a href="#Generate-the-hash" class="headerlink" title="Generate the hash"></a>Generate the hash</h3><p>Import the <code>crypto</code> module and use the <code>createHash</code> function to generate the hash.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> crypto = <span class="built_in">require</span>(<span class="string">'crypto'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> hash = crypto.createHash(<span class="string">'sha256'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> crypto = <span class="built_in">require</span>(<span class="string">&#x27;crypto&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> hash = crypto.createHash(<span class="string">&#x27;sha256&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
 <h3 id="Hash-your-value"><a href="#Hash-your-value" class="headerlink" title="Hash your value"></a>Hash your value</h3><p>Use the <code>update</code> function on the <code>hash</code> object instance to process your input.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hash.update(<span class="string">'CodeBlocQ'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hash.update(<span class="string">&#x27;CodeBlocQ&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
 <h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>Use the <code>digest</code> function on the <code>hash</code> to ouput the value. You can pass ‘hex’, ‘binary’ or ‘base64’ to get the result in the desired encoding.</p>
-<p><strong>Hex</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hex = hash.digest(<span class="string">'hex'</span>);</div><div class="line"><span class="built_in">console</span>.log(hex); <span class="comment">// c5d44424ef47ab9e1806d9c1a3045942cfd06e0ec5e798449c02e44e9ae38292</span></div></pre></td></tr></table></figure></p>
-<p><strong>Binary</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bin = hash.digest(<span class="string">'binary'</span>);</div><div class="line"><span class="built_in">console</span>.log(bin); <span class="comment">// ÅÔD$ïG«ÙÁ£YBÏÐnÅçDäNã</span></div></pre></td></tr></table></figure></p>
-<p><strong>Base64</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> base64 = hash.digest(<span class="string">'base64'</span>);</div><div class="line"><span class="built_in">console</span>.log(base64); <span class="comment">// xdREJO9Hq54YBtnBowRZQs/Qbg7F55hEnALkTprjgpI=</span></div></pre></td></tr></table></figure></p>
+<p><strong>Hex</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hex = hash.digest(<span class="string">&#x27;hex&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(hex); <span class="comment">// c5d44424ef47ab9e1806d9c1a3045942cfd06e0ec5e798449c02e44e9ae38292</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Binary</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bin = hash.digest(<span class="string">&#x27;binary&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(bin); <span class="comment">// ÅÔD$ïG«ÙÁ£YBÏÐnÅçDäNã</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Base64</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> base64 = hash.digest(<span class="string">&#x27;base64&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(base64); <span class="comment">// xdREJO9Hq54YBtnBowRZQs/Qbg7F55hEnALkTprjgpI=</span></span><br></pre></td></tr></table></figure>
+
 
                     
                     <!-- Tags Bottom -->
@@ -215,6 +229,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -228,10 +246,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -267,7 +281,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

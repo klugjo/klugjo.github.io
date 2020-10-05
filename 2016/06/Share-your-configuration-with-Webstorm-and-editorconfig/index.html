@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,12 +167,15 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Here is a nice little trick to share your IDE’s configuration. Use an <a href="http://editorconfig.org/" target="_blank" rel="external">.editorconfig</a> file.<br><a id="more"></a><br>It is supported by default by Webstorm which is my IDE of choice, but there are plugins for almost any other editor.</p>
+                    <p>Here is a nice little trick to share your IDE’s configuration. Use an <a target="_blank" rel="noopener" href="http://editorconfig.org/">.editorconfig</a> file.</p>
+<a id="more"></a>
+<p>It is supported by default by Webstorm which is my IDE of choice, but there are plugins for almost any other editor.</p>
 <p>With this file, you will be able to tell you editor, if it should use tabs or spaces, what is the indent size and the charset to be used. It should be placed at the root of your project.</p>
 <p>Here is an example with comments:</p>
-<figure class="highlight yaml"><figcaption><span>.editorconfig</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Set to true to </span></div><div class="line">root = <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment"># Indicates that the following rules will apply to all files</span></div><div class="line">[*]</div><div class="line"><span class="comment"># Choose in between tab or space</span></div><div class="line">indent_style = space</div><div class="line"><span class="comment"># number of columns used per indentation level</span></div><div class="line">indent_size = <span class="number">4</span></div><div class="line"><span class="comment"># line break representation</span></div><div class="line">end_of_line = lf</div><div class="line"><span class="comment"># character set</span></div><div class="line">charset = utf<span class="bullet">-8</span></div><div class="line"><span class="comment"># Remove whitespace at the end of lines</span></div><div class="line">trim_trailing_whitespace = <span class="literal">true</span></div><div class="line"><span class="comment"># Insert a line at the end of a file</span></div><div class="line">insert_final_newline = <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment"># applies to files with the .md extension</span></div><div class="line">[*.md]</div><div class="line">trim_trailing_whitespace = <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="comment"># applies to js files inside the src folder</span></div><div class="line">[src/**.js]</div><div class="line">trim_trailing_whitespace = <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment"># applied to package.json and .travis.yml</span></div><div class="line">[&#123;package.json,.travis.yml&#125;]</div><div class="line">indent_size = <span class="number">2</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>.editorconfig</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Set to true to </span></span><br><span class="line"><span class="string">root</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Indicates that the following rules will apply to all files</span></span><br><span class="line">[<span class="string">*</span>]</span><br><span class="line"><span class="comment"># Choose in between tab or space</span></span><br><span class="line"><span class="string">indent_style</span> <span class="string">=</span> <span class="string">space</span></span><br><span class="line"><span class="comment"># number of columns used per indentation level</span></span><br><span class="line"><span class="string">indent_size</span> <span class="string">=</span> <span class="number">4</span></span><br><span class="line"><span class="comment"># line break representation</span></span><br><span class="line"><span class="string">end_of_line</span> <span class="string">=</span> <span class="string">lf</span></span><br><span class="line"><span class="comment"># character set</span></span><br><span class="line"><span class="string">charset</span> <span class="string">=</span> <span class="string">utf-8</span></span><br><span class="line"><span class="comment"># Remove whitespace at the end of lines</span></span><br><span class="line"><span class="string">trim_trailing_whitespace</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line"><span class="comment"># Insert a line at the end of a file</span></span><br><span class="line"><span class="string">insert_final_newline</span> <span class="string">=</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># applies to files with the .md extension</span></span><br><span class="line">[<span class="string">*.md</span>]</span><br><span class="line"><span class="string">trim_trailing_whitespace</span> <span class="string">=</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># applies to js files inside the src folder</span></span><br><span class="line">[<span class="string">src/**.js</span>]</span><br><span class="line"><span class="string">trim_trailing_whitespace</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># applied to package.json and .travis.yml</span></span><br><span class="line">[&#123;<span class="string">package.json</span>,<span class="string">.travis.yml</span>&#125;]</span><br><span class="line"><span class="string">indent_size</span> <span class="string">=</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
 <p>That is basically all the properties and syntax supported, easy enough. You don’t have to restart Webstorm as it will pick up the config automatically.</p>
-<p>Check out <a href="https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties" target="_blank" rel="external">this page</a> for more information on each property.</p>
+<p>Check out <a target="_blank" rel="noopener" href="https://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties">this page</a> for more information on each property.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -209,6 +215,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -222,10 +232,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -261,7 +267,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

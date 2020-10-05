@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -167,40 +170,44 @@
                     <p>This tutorial will show you how to automatically refresh your webpage whenever a modification is made to your source code.</p>
 <p>We will learn how to install and configure the following tools:</p>
 <ul>
-<li><a href="https://github.com/avevlad/gulp-connect" target="_blank" rel="external">gulp-connect</a>: to start a webserver from our Gulp build script</li>
-<li><a href="https://www.npmjs.com/package/gulp-open" target="_blank" rel="external">gulp-open</a>: to open an URL in our web browser</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/avevlad/gulp-connect">gulp-connect</a>: to start a webserver from our Gulp build script</li>
+<li><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-open">gulp-open</a>: to open an URL in our web browser</li>
 </ul>
-<p>To get started we will need a basic website project with a <code>gulpfile.js</code> that can generate our website. Check out my <a href="/2015/11/Getting-started-with-Gulp-and-static-websites/">Getting started with Gulp</a> and or <a href="https://gist.github.com/klugjo/f4f2ee250d32103e9e22" target="_blank" rel="external">this gulpfile example</a></p>
+<p>To get started we will need a basic website project with a <code>gulpfile.js</code> that can generate our website. Check out my <a href="/2015/11/Getting-started-with-Gulp-and-static-websites/">Getting started with Gulp</a> and or <a target="_blank" rel="noopener" href="https://gist.github.com/klugjo/f4f2ee250d32103e9e22">this gulpfile example</a></p>
 <a id="more"></a> 
-<h2 id="1-Starting-a-webserver-with-gulp-connect"><a href="#1-Starting-a-webserver-with-gulp-connect" class="headerlink" title="1) Starting a webserver with gulp-connect"></a>1) Starting a webserver with gulp-connect</h2><p>First install <a href="https://www.npmjs.com/package/gulp-connect" target="_blank" rel="external">gulp-connect</a> locally with <code>npm install --save-dev gulp-connect</code>,</p>
+<h2 id="1-Starting-a-webserver-with-gulp-connect"><a href="#1-Starting-a-webserver-with-gulp-connect" class="headerlink" title="1) Starting a webserver with gulp-connect"></a>1) Starting a webserver with gulp-connect</h2><p>First install <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/gulp-connect">gulp-connect</a> locally with <code>npm install --save-dev gulp-connect</code>,</p>
 <p>and add the dependency to the gulpfile.js with <code>var connect = require(&#39;gulp-connect&#39;);</code></p>
 <p>We are now ready to declare our connect task. (Check out <a href="/2015/11/Getting-started-with-Gulp-and-static-websites/">this tutorial</a> if you don’t know what a gulp task is)</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gulp</span><span class="selector-class">.task</span>(<span class="string">'connect'</span>, function () &#123;</div><div class="line">    <span class="selector-tag">connect</span><span class="selector-class">.server</span>(&#123;</div><div class="line">        <span class="attribute">root</span>: <span class="string">'dist'</span>,</div><div class="line">        <span class="attribute">port</span>: <span class="number">8001</span>,</div><div class="line">        <span class="attribute">livereload</span>: true</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>This will create a webserver running on <a href="http://localhost:8001" target="_blank" rel="external">http://localhost:8001</a> which uses our dist directory as the website root. For more configuration options, check out the <a href="https://github.com/avevlad/gulp-connect#api" target="_blank" rel="external">documentation</a>.</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">gulp</span><span class="selector-class">.task</span>(<span class="string">&#x27;connect&#x27;</span>, function () &#123;</span><br><span class="line">    <span class="selector-tag">connect</span><span class="selector-class">.server</span>(&#123;</span><br><span class="line">        <span class="attribute">root</span>: <span class="string">&#x27;dist&#x27;</span>,</span><br><span class="line">        <span class="attribute">port</span>: <span class="number">8001</span>,</span><br><span class="line">        <span class="attribute">livereload</span>: true</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>This will create a webserver running on <a target="_blank" rel="noopener" href="http://localhost:8001/">http://localhost:8001</a> which uses our dist directory as the website root. For more configuration options, check out the <a target="_blank" rel="noopener" href="https://github.com/avevlad/gulp-connect#api">documentation</a>.</p>
 <p>Add the connect task to the default task: </p>
 <p><code>gulp.task(&#39;default&#39;, [&#39;html&#39;, &#39;css&#39;, &#39;connect&#39;]);</code></p>
 <p> and run your gulp build to test it out.</p>
-<h2 id="2-Opening-a-web-browser-with-gulp-open"><a href="#2-Opening-a-web-browser-with-gulp-open" class="headerlink" title="2) Opening a web browser with gulp-open"></a>2) Opening a web browser with gulp-open</h2><p>Install <a href="https://github.com/stevelacy/gulp-open" target="_blank" rel="external">gulp-open</a> locally with <code>npm install --save-dev gulp-open</code> </p>
+<h2 id="2-Opening-a-web-browser-with-gulp-open"><a href="#2-Opening-a-web-browser-with-gulp-open" class="headerlink" title="2) Opening a web browser with gulp-open"></a>2) Opening a web browser with gulp-open</h2><p>Install <a target="_blank" rel="noopener" href="https://github.com/stevelacy/gulp-open">gulp-open</a> locally with <code>npm install --save-dev gulp-open</code> </p>
 <p>and add the dependency to the gulpfile.js with <code>var open = require(&#39;gulp-open&#39;);</code></p>
 <p>Declare the ‘open’ task:</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'open'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">    gulp.src(<span class="string">'dist/index.html'</span>)</div><div class="line">        .pipe(open(&#123;uri: <span class="string">'http://localhost:8001/'</span>&#125;));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">&#x27;open&#x27;</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    gulp.src(<span class="string">&#x27;dist/index.html&#x27;</span>)</span><br><span class="line">        .pipe(<span class="built_in">open</span>(&#123;uri: <span class="string">&#x27;http://localhost:8001/&#x27;</span>&#125;));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>and add it to the default task</p>
 <p><code>gulp.task(&#39;default&#39;, [&#39;html&#39;, &#39;css&#39;, &#39;connect&#39;, &#39;open&#39;]);</code></p>
 <p>run your gulp and your browser will open automatically, pointing to your local webserver URL.</p>
 <h2 id="3-Refreshing-the-page-automatically-when-a-code-change-is-detected"><a href="#3-Refreshing-the-page-automatically-when-a-code-change-is-detected" class="headerlink" title="3) Refreshing the page automatically when a code change is detected"></a>3) Refreshing the page automatically when a code change is detected</h2><p>Wrapping up, we are going to configure gulp to automatically refresh the website every time a change is made to the code. That way, we won’t have to start our gulp build and hit the refresh button manually each time.</p>
 <h3 id="a-Watch-task"><a href="#a-Watch-task" class="headerlink" title="a) Watch task"></a>a) Watch task</h3><p>First of all, we need a watch task that will watch the filesystem and rebuild the project when a change is detected.</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'watch'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">    gulp.watch(<span class="string">'./src/*.html'</span>, [<span class="string">'html'</span>]);</div><div class="line">    gulp.watch(<span class="string">'./src/**/*.css'</span>, [<span class="string">'css'</span>]);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>This task will start two <a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob--opts-tasks-or-gulpwatchglob--opts-cb" target="_blank" rel="external">gulp file watchers</a> which will execute the ‘html’ and ‘css’ tasks whenever a change is detected.</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">&#x27;watch&#x27;</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">    gulp.watch(<span class="string">&#x27;./src/*.html&#x27;</span>, [<span class="string">&#x27;html&#x27;</span>]);</span><br><span class="line">    gulp.watch(<span class="string">&#x27;./src/**/*.css&#x27;</span>, [<span class="string">&#x27;css&#x27;</span>]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>This task will start two <a target="_blank" rel="noopener" href="https://github.com/gulpjs/gulp/blob/master/docs/API.md#gulpwatchglob--opts-tasks-or-gulpwatchglob--opts-cb">gulp file watchers</a> which will execute the ‘html’ and ‘css’ tasks whenever a change is detected.</p>
 <h3 id="b-Build-task-modification"><a href="#b-Build-task-modification" class="headerlink" title="b) Build task modification"></a>b) Build task modification</h3><p>Since we want our webpage to be refreshed automatically, we need to ask gulp-connect to reload the site whenever a new build is ready. This means adding a new piped instruction to both our ‘html’ and ‘css’ tasks that will reload the site.</p>
 <p>Our ‘html’ task:</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'html'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</div><div class="line">    gulp.src(<span class="string">'./src/*.html'</span>)</div><div class="line">        .pipe(gulp.dest(<span class="string">'./dist'</span>));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">&#x27;html&#x27;</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gulp.src(<span class="string">&#x27;./src/*.html&#x27;</span>)</span><br><span class="line">        .pipe(gulp.dest(<span class="string">&#x27;./dist&#x27;</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>becomes:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gulp.task(<span class="string">'html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.src(<span class="string">'./src/*.html'</span>)</div><div class="line">        .pipe(gulp.dest(<span class="string">'./dist'</span>))</div><div class="line">        .pipe(connect.reload());</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">&#x27;html&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    gulp.src(<span class="string">&#x27;./src/*.html&#x27;</span>)</span><br><span class="line">        .pipe(gulp.dest(<span class="string">&#x27;./dist&#x27;</span>))</span><br><span class="line">        .pipe(connect.reload());</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>A piped <code>connect.reload()</code> should also be added to the ‘css’ task and any other build task that is present in your project.</p>
 <h3 id="c-Default-task-modification"><a href="#c-Default-task-modification" class="headerlink" title="c) Default task modification"></a>c) Default task modification</h3><p>Don’t forget to modify the default gulp task to start the file watchers:</p>
 <p><code>gulp.task(&#39;default&#39;, [&#39;html&#39;, &#39;css&#39;, &#39;connect&#39;, &#39;open&#39;, &#39;watch&#39;]);</code></p>
 <p>Now start your gulp and that’s it, if you modify (and save) one of your html or css file, the website will be automatically updated. Happy coding!</p>
-<p>You can check an example of a refactored gulpfile.js for this project <a href="https://gist.github.com/klugjo/739ba11d15191f3162b9" target="_blank" rel="external">here</a>.</p>
+<p>You can check an example of a refactored gulpfile.js for this project <a target="_blank" rel="noopener" href="https://gist.github.com/klugjo/739ba11d15191f3162b9">here</a>.</p>
 
                     
                     <!-- Tags Bottom -->
@@ -240,6 +247,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -253,10 +264,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -292,7 +299,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

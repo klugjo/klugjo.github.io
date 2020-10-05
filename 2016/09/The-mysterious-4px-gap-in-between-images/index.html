@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,10 +167,13 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>You may have noticed a strange 4px gap in between images or other elements. You may have also tried to “<code>margin: 0; padding: 0;</code>“ it out; without success. Here is all you need to know about this phenomenon.<br><a id="more"></a></p>
+                    <p>You may have noticed a strange 4px gap in between images or other elements. You may have also tried to “<code>margin: 0; padding: 0;</code>“ it out; without success. Here is all you need to know about this phenomenon.</p>
+<a id="more"></a>
+
 <h2 id="The-Explanation"><a href="#The-Explanation" class="headerlink" title="The Explanation"></a>The Explanation</h2><h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>Let’s set the stage and observe the problem:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p></p><p data-height="265" data-theme-id="0" data-slug-hash="PGwRxg" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/PGwRxg/" target="_blank" rel="external">PGwRxg</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p data-height="265" data-theme-id="0" data-slug-hash="PGwRxg" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/PGwRxg/">PGwRxg</a> by Jonathan klughertz (<a target="_blank" rel="noopener" href="http://codepen.io/klugjo">@klugjo</a>) on <a target="_blank" rel="noopener" href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <p>As you can see in the code pen, the dreaded 4px gap is there.</p>
@@ -178,31 +184,38 @@
 </ul>
 <p>There are no <em>margins</em> or <em>paddings</em>, <strong>the gaps are simple whitespaces</strong>, just like in between the words of this sentence.</p>
 <p>It is the same as in :</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Snoop<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span>&gt;</span>Dog<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>Snoop<span class="tag">&lt;/<span class="name">span</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span>&gt;</span>Dog<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>You would expect your browser to separate the words <em>Snoop</em> and <em>Dog</em> with a space. The same thing happens with images, they are separated with a whitespace. </p>
 <p>Note that this will happen with all <code>display: inline-block</code> elements.</p>
 <h2 id="Fixes"><a href="#Fixes" class="headerlink" title="Fixes"></a>Fixes</h2><p>There are a few fixes you can apply if you want to get rid of that whitespace.</p>
 <h3 id="Put-the-HTML-in-one-line"><a href="#Put-the-HTML-in-one-line" class="headerlink" title="Put the HTML in one line"></a>Put the HTML in one line</h3><p>If you can, put all your HTML elements in one line, so as to remove the line breaks (interpreted as white spaces)</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p></p><p data-height="265" data-theme-id="0" data-slug-hash="gwbZEy" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/gwbZEy/" target="_blank" rel="external">gwbZEy</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p data-height="265" data-theme-id="0" data-slug-hash="gwbZEy" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/gwbZEy/">gwbZEy</a> by Jonathan klughertz (<a target="_blank" rel="noopener" href="http://codepen.io/klugjo">@klugjo</a>) on <a target="_blank" rel="noopener" href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <h3 id="Set-the-parent’s-font-size-to-0"><a href="#Set-the-parent’s-font-size-to-0" class="headerlink" title="Set the parent’s font-size to 0"></a>Set the parent’s font-size to 0</h3><p>You can set the parent container to <code>font-size: 0</code>. The white space in between the images will then be 0.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"https://unsplash.it/200"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://unsplash.it/200&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>And in your CSS:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p></p><p data-height="265" data-theme-id="0" data-slug-hash="GjgxLL" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/GjgxLL/" target="_blank" rel="external">GjgxLL</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p data-height="265" data-theme-id="0" data-slug-hash="GjgxLL" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/GjgxLL/">GjgxLL</a> by Jonathan klughertz (<a target="_blank" rel="noopener" href="http://codepen.io/klugjo">@klugjo</a>) on <a target="_blank" rel="noopener" href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <h3 id="Fight-the-gap-with-a-negative-margin"><a href="#Fight-the-gap-with-a-negative-margin" class="headerlink" title="Fight the gap with a negative margin"></a>Fight the gap with a negative margin</h3><p>This is another solution that does not force you to modify your HTML markup.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> <span class="selector-tag">img</span> &#123;</div><div class="line">    <span class="attribute">margin-right</span>: -<span class="number">4px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p></p><p data-height="265" data-theme-id="0" data-slug-hash="Kgwojr" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/Kgwojr/" target="_blank" rel="external">Kgwojr</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin-right</span>: -<span class="number">4px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p data-height="265" data-theme-id="0" data-slug-hash="Kgwojr" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/Kgwojr/">Kgwojr</a> by Jonathan klughertz (<a target="_blank" rel="noopener" href="http://codepen.io/klugjo">@klugjo</a>) on <a target="_blank" rel="noopener" href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <h3 id="Use-float-left"><a href="#Use-float-left" class="headerlink" title="Use float: left;"></a>Use float: left;</h3><p>One last solution would be to set the images to <code>display: block</code>, then place them horizontally using <code>float: left;</code>.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> <span class="selector-tag">img</span> &#123;</div><div class="line">  <span class="attribute">display</span>: block;</div><div class="line">  <span class="attribute">float</span>: left;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p></p><p data-height="265" data-theme-id="0" data-slug-hash="VKYXJE" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/klugjo/pen/VKYXJE/" target="_blank" rel="external">VKYXJE</a> by Jonathan klughertz (<a href="http://codepen.io/klugjo" target="_blank" rel="external">@klugjo</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
-<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script><br>There you go. I hope I was able to shine some light on this matter. Filling in that gap should now be a walk in the park.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p data-height="265" data-theme-id="0" data-slug-hash="VKYXJE" data-default-tab="result" data-user="klugjo" data-embed-version="2" class="codepen">See the Pen <a target="_blank" rel="noopener" href="http://codepen.io/klugjo/pen/VKYXJE/">VKYXJE</a> by Jonathan klughertz (<a target="_blank" rel="noopener" href="http://codepen.io/klugjo">@klugjo</a>) on <a target="_blank" rel="noopener" href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+There you go. I hope I was able to shine some light on this matter. Filling in that gap should now be a walk in the park.
+
 
                     
                     <!-- Tags Bottom -->
@@ -242,6 +255,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -255,10 +272,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -294,7 +307,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

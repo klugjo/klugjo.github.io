@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,16 +168,23 @@
 
                     <!-- Main Post Content -->
                     <p>Quick run through on what pure and impure functions are. </p>
-<p>I am looking at adapting one of my current old school MVC project to use Redux for state management. Since Redux makes use of the concept of pure functions, I thought I would lay it down here.<br><a id="more"></a></p>
+<p>I am looking at adapting one of my current old school MVC project to use Redux for state management. Since Redux makes use of the concept of pure functions, I thought I would lay it down here.</p>
+<a id="more"></a>
+
 <h2 id="Pure-Function"><a href="#Pure-Function" class="headerlink" title="Pure Function"></a>Pure Function</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><p>A function is <strong>considered pure</strong> if:</p>
 <p>a) It always returns the same value when given the same arguments<br>b) It does not modify anything (arguments, state, database, I/O, ..)</p>
-<h3 id="Examples-of-Pure-Functions-in-JavaScript"><a href="#Examples-of-Pure-Functions-in-JavaScript" class="headerlink" title="Examples of Pure Functions (in JavaScript)"></a>Examples of Pure Functions (in JavaScript)</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="title">add</span>(x, y) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="type">x</span> + y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="title">getLength</span>(array) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="type">array.length</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Examples-of-Pure-Functions-in-JavaScript"><a href="#Examples-of-Pure-Functions-in-JavaScript" class="headerlink" title="Examples of Pure Functions (in JavaScript)"></a>Examples of Pure Functions (in JavaScript)</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title">add</span>(x, y) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">x</span> + y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLength</span>(<span class="params"><span class="keyword">array</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">array</span>.length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="Impure-Function"><a href="#Impure-Function" class="headerlink" title="Impure Function"></a>Impure Function</h2><h3 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h3><p>A function is <strong>considered impure</strong> if it is not pure (!), typically because:</p>
 <p>a) it makes use of an external or random value. (It stops being entirely contained and predictable)<br>b) It performs an external operation, in other words it causes side effects</p>
-<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">5</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addToX</span><span class="params">(a)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> a + x; <span class="comment">// Use of an external variable</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getTime</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(); <span class="comment">// Use of a random/non consistent value</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span><span class="params">(x,y)</span> </span>&#123;</div><div class="line">    updateDatabase(); <span class="comment">// Side Effect</span></div><div class="line">    <span class="keyword">return</span> x + y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addToX</span><span class="params">(a)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + x; <span class="comment">// Use of an external variable</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getTime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(); <span class="comment">// Use of a random/non consistent value</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function add(<span class="symbol">x</span>,<span class="symbol">y</span>) &#123;</span><br><span class="line">    updateDatabase(); <span class="comment">// Side Effect</span></span><br><span class="line">    <span class="keyword">return</span> <span class="symbol">x</span> + <span class="symbol">y</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="The-Big-Deal"><a href="#The-Big-Deal" class="headerlink" title="The Big Deal"></a>The Big Deal</h2><p>The reason why Pure Function are great:</p>
 <h3 id="Predictable"><a href="#Predictable" class="headerlink" title="Predictable"></a>Predictable</h3><p>Yep, I know, it’s part of the definition, but using a function and knowing exactly what it does feels so good.</p>
 <h3 id="Portable"><a href="#Portable" class="headerlink" title="Portable"></a>Portable</h3><p>Pure functions can be reused easily as they do not hold any form of state.</p>
@@ -219,6 +229,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -232,10 +246,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -271,7 +281,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

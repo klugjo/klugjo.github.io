@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -165,13 +168,14 @@
 
                     <!-- Main Post Content -->
                     <p>Quick article to help look at the right place when configuring your tests in Jest.</p>
-<h2 id="Default-test-files-location"><a href="#Default-test-files-location" class="headerlink" title="Default test files location"></a>Default test files location</h2><p>The first time I read through the configuration I thought that the paths to my tests were configured using <a href="https://facebook.github.io/jest/docs/configuration.html#testpathdirs-array-string" target="_blank" rel="external">testPathDirs
+<h2 id="Default-test-files-location"><a href="#Default-test-files-location" class="headerlink" title="Default test files location"></a>Default test files location</h2><p>The first time I read through the configuration I thought that the paths to my tests were configured using <a target="_blank" rel="noopener" href="https://facebook.github.io/jest/docs/configuration.html#testpathdirs-array-string">testPathDirs
 </a>. It turns out that this property is only used to restraint the places Jest will look for tests to sub modules.</p>
 <p>The important thing to note is that by default:</p>
 <p><strong>Jest will look for <code>’js</code> and <code>.jsx</code> files inside of <code>__tests__</code> folders.</strong></p>
-<h2 id="Use-a-custom-location"><a href="#Use-a-custom-location" class="headerlink" title="Use a custom location"></a>Use a custom location</h2><p>This is the <em>default</em> that needs to change. To do so, use <a href="https://facebook.github.io/jest/docs/configuration.html#testregex-string" target="_blank" rel="external">testRegex</a>.</p>
+<h2 id="Use-a-custom-location"><a href="#Use-a-custom-location" class="headerlink" title="Use a custom location"></a>Use a custom location</h2><p>This is the <em>default</em> that needs to change. To do so, use <a target="_blank" rel="noopener" href="https://facebook.github.io/jest/docs/configuration.html#testregex-string">testRegex</a>.</p>
 <p>For example, if you want to store all your test files inside a <code>./tests</code> folder, the only jest configuration option you are going to need is:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">“jest”: &#123;</div><div class="line">  <span class="string">"testRegex"</span>: <span class="string">"tests/.*\\.(js|jsx)$"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">“jest”: &#123;</span><br><span class="line">  <span class="string">&quot;testRegex&quot;</span>: <span class="string">&quot;tests/.*\\.(js|jsx)$&quot;</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
 
                     
                     <!-- Tags Bottom -->
@@ -211,6 +215,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -224,10 +232,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -263,7 +267,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

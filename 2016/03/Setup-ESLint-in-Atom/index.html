@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,22 +167,25 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This article will show you how to setup <a href="http://eslint.org/" target="_blank" rel="external">ESLint</a> syntax highlighting (or in that case error highlighting) directly in <a href="https://atom.io/" target="_blank" rel="external">Atom</a>.</p>
+                    <p>This article will show you how to setup <a target="_blank" rel="noopener" href="http://eslint.org/">ESLint</a> syntax highlighting (or in that case error highlighting) directly in <a target="_blank" rel="noopener" href="https://atom.io/">Atom</a>.</p>
 <a id="more"></a>
+
 <h2 id="Install-the-packages"><a href="#Install-the-packages" class="headerlink" title="Install the packages"></a>Install the packages</h2><p>Start by going to Atom’s preferences and select the <strong>+ Install</strong> tab.</p>
-<p><img src="/img/atom-prefs-install-tab.png" alt=""></p>
+<p><img src="/img/atom-prefs-install-tab.png"></p>
 <p>Then install the <strong>linter</strong> package</p>
-<p><img src="/img/atom-linter-package.png" alt=""></p>
+<p><img src="/img/atom-linter-package.png"></p>
 <p>Then the <strong>linter-eslint</strong> package</p>
-<p><img src="/img/atom-linter-eslint-package.png" alt=""></p>
+<p><img src="/img/atom-linter-eslint-package.png"></p>
 <h2 id="Setup-ESLint"><a href="#Setup-ESLint" class="headerlink" title="Setup ESLint"></a>Setup ESLint</h2><p>All you need to setup ESLint is an <code>.eslintrc</code> file at the root of your project with your ESlint rules.</p>
 <p>If you want to get started quickly you can use Google’s JavaScript guide rules:</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm <span class="keyword">install </span>--save-dev eslint eslint-<span class="built_in">config</span>-google</div></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install </span>--save-dev eslint eslint-<span class="built_in">config</span>-google</span><br></pre></td></tr></table></figure>
+
 <p>and in your <code>.eslintrc</code>, put:</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"extends"</span>: <span class="string">"eslint-config-google"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;extends&quot;</span>: <span class="string">&quot;eslint-config-google&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="Test-it-out"><a href="#Test-it-out" class="headerlink" title="Test it out"></a>Test it out</h2><p>If Atom does not automatically pick up the errors, restart the application.</p>
 <p>This is what you should get once everything is setup properly:</p>
-<p><img src="/img/atom-eslint-error-highlighting.png" alt=""></p>
+<p><img src="/img/atom-eslint-error-highlighting.png"></p>
 
                     
                     <!-- Tags Bottom -->
@@ -219,6 +225,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -232,10 +242,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -271,7 +277,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

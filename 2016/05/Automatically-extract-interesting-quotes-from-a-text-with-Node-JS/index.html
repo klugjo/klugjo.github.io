@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,10 +167,14 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>Getting start with pull-quoter and quote extraction in Node.<br><a id="more"></a><br>The pull-quoter library allows you to extract interesting quotes from a text.</p>
-<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>Easy with npm:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> <span class="comment">--save pull-quoter</span></div></pre></td></tr></table></figure></p>
+                    <p>Getting start with pull-quoter and quote extraction in Node.</p>
+<a id="more"></a>
+<p>The pull-quoter library allows you to extract interesting quotes from a text.</p>
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><p>Easy with npm:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save pull-quoter</span></span><br></pre></td></tr></table></figure>
 <h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>Load the module and simply use it as a function.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> pullquoter = <span class="built_in">require</span>(<span class="string">'pullquoter'</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> text = <span class="string">"Something I notice every time I get really [...] higher quality sleep every night."</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(pullquoter(text)); <span class="comment">// [ 'It’s not just our thinking that’s affected by being tired.' ]</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pullquoter = <span class="built_in">require</span>(<span class="string">&#x27;pullquoter&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> text = <span class="string">&quot;Something I notice every time I get really [...] higher quality sleep every night.&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(pullquoter(text)); <span class="comment">// [ &#x27;It’s not just our thinking that’s affected by being tired.&#x27; ]</span></span><br></pre></td></tr></table></figure>
+
 <p><code>pull-quoter</code> will return an Array of Strings.</p>
 
                     
@@ -208,6 +215,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -221,10 +232,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -260,7 +267,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

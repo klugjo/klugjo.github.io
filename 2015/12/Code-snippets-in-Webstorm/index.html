@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -164,7 +167,7 @@
                     
 
                     <!-- Main Post Content -->
-                    <p>This article will show you how to create code snippets, also known as <a href="https://www.jetbrains.com/webstorm/help/live-templates-2.html" target="_blank" rel="external">live templates</a>, in WebStorm. We will create a JavaScript <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript" target="_blank" rel="external">Revealing Module Pattern</a> live template.</p>
+                    <p>This article will show you how to create code snippets, also known as <a target="_blank" rel="noopener" href="https://www.jetbrains.com/webstorm/help/live-templates-2.html">live templates</a>, in WebStorm. We will create a JavaScript <a target="_blank" rel="noopener" href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript">Revealing Module Pattern</a> live template.</p>
 <a id="more"></a> 
 <h2 id="Creating-a-new-live-template"><a href="#Creating-a-new-live-template" class="headerlink" title="Creating a new live template"></a>Creating a new live template</h2><p>In Webstorm, access the live templates editor:</p>
 <ul>
@@ -179,17 +182,20 @@
 <li>Applicable context: Click the define button and choose JavaScript. This means the template will be usable</li>
 </ul>
 <h2 id="Editing-the-live-template-code"><a href="#Editing-the-live-template-code" class="headerlink" title="Editing the live template code"></a>Editing the live template code</h2><p>Let’s start with a basic template code for our revealing module pattern:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myModule = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myMethod</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">myMethod</span> : myMethod</div><div class="line">  &#125;;</div><div class="line">  </div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myModule = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myMethod</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    myMethod : myMethod</span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
 <p>Save it then go to any .js file and type <code>revmod</code>. Intellisense will show the live template, select it and press TAB or ENTER.</p>
 <p>The code for our template will appear in your file. Let’s make it more interactive.</p>
 <h2 id="Improving-the-template"><a href="#Improving-the-template" class="headerlink" title="Improving the template"></a>Improving the template</h2><h3 id="Template-variables"><a href="#Template-variables" class="headerlink" title="Template variables"></a>Template variables</h3><p>Webstorm give you the option of declaring template variables. Use these variables to <strong>customize certain part of your template</strong>. In our example, we want to make the name of the module and the name of the function editable when using the template.</p>
 <p>Declare template variables by starting and ending your variable name with a dollar sign: <code>$&lt;variable name&gt;$</code>.</p>
 <p><u>Here is our improved template:</u></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $MODULE$ = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$METHOD$</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">$METHOD$</span> : $METHOD$</div><div class="line">  &#125;;</div><div class="line">  </div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $MODULE$ = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$METHOD$</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    $METHOD$ : $METHOD$</span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
 <p>If you try your live template again, you will get a wizard like prompt to enter the name of the module and method.</p>
 <h3 id="Cursor-position"><a href="#Cursor-position" class="headerlink" title="Cursor position"></a>Cursor position</h3><p>After template insertion, the cursor position will be at the end of the code snippet. We would like it to be in our method, so we can start editing it.</p>
 <p>You can do this by adding a special <code>$END$</code> variable in our template:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $MODULE$ = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$METHOD$</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">    $END$</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  <span class="keyword">return</span> &#123;</div><div class="line">    <span class="attr">$METHOD$</span> : $METHOD$</div><div class="line">  &#125;;</div><div class="line">  </div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> $MODULE$ = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">$METHOD$</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">    $END$</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    $METHOD$ : $METHOD$</span><br><span class="line">  &#125;;</span><br><span class="line">  </span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
 <p>Try it again and notice the cursor position at the end.</p>
 
                     
@@ -230,6 +236,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -243,10 +253,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -282,7 +288,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>

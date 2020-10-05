@@ -66,7 +66,9 @@
     
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
 
     <!-- Google Analytics -->
     
@@ -109,6 +111,7 @@
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
 </head>
 
 
@@ -166,22 +169,26 @@
                     <!-- Main Post Content -->
                     <p>Let’s look at how we can make a JavaScript object property read-only using little-known built in functions.</p>
 <p>JavaScript Object Literals are by dynamic by default. Given the following object:</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var movieTicket = &#123;</div><div class="line"><span class="symbol">  movie:</span> <span class="string">"Mad Max"</span>,</div><div class="line"><span class="symbol">  hall:</span> <span class="number">1</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var movieTicket = &#123;</span><br><span class="line"><span class="symbol">  movie:</span> <span class="string">&quot;Mad Max&quot;</span>,</span><br><span class="line"><span class="symbol">  hall:</span> <span class="number">1</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <a id="more"></a> 
 <p>It is possible to add, delete and modify properties after object creation:</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">movieTicket.price = <span class="string">'$10.00'</span>;</div><div class="line"><span class="keyword">delete</span> movieTicket.hall;</div><div class="line">movieTicket.movie = <span class="string">'The Rise And Rise Of Bitcoin'</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">movieTicket.price = <span class="string">&#x27;$10.00&#x27;</span>;</span><br><span class="line"><span class="keyword">delete</span> movieTicket.hall;</span><br><span class="line">movieTicket.movie = <span class="string">&#x27;The Rise And Rise Of Bitcoin&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
 <p>The <code>movieTicket</code> will then look like:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attribute">movie</span>: <span class="string">'The Rise And Rise Of Bitcoin'</span>,</div><div class="line">  price: <span class="string">'$10.00'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attribute">movie</span>: <span class="string">&#x27;The Rise And Rise Of Bitcoin&#x27;</span>,</span><br><span class="line">  price: <span class="string">&#x27;$10.00&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="Make-a-property-read-only"><a href="#Make-a-property-read-only" class="headerlink" title="Make a property read-only"></a>Make a property read-only</h2><p>You can make a property read-only by using the <code>Object.defineProperty(obj, prop, descriptor)</code> static function. </p>
 <p>Example:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> movieTicket = &#123;</div><div class="line">  <span class="attr">movie</span>: <span class="string">'Mad Max'</span>,</div><div class="line">  <span class="attr">hall</span>: <span class="number">1</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">Object</span>.defineProperty(movieTicket, <span class="string">'movie'</span>, &#123;</div><div class="line">  <span class="attr">value</span>: <span class="string">'Mad Max'</span>,</div><div class="line">  <span class="attr">writable</span>: <span class="literal">false</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">movieTicket.movie = <span class="string">'Star Wars'</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(movieTicket);</div></pre></td></tr></table></figure>
-<p>will log <code>Object {movie: &quot;Mad Max&quot;, hall: 1}</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> movieTicket = &#123;</span><br><span class="line">  movie: <span class="string">&#x27;Mad Max&#x27;</span>,</span><br><span class="line">  hall: <span class="number">1</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(movieTicket, <span class="string">&#x27;movie&#x27;</span>, &#123;</span><br><span class="line">  value: <span class="string">&#x27;Mad Max&#x27;</span>,</span><br><span class="line">  writable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">movieTicket.movie = <span class="string">&#x27;Star Wars&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(movieTicket);</span><br></pre></td></tr></table></figure>
+
+<p>will log <code>Object &#123;movie: &quot;Mad Max&quot;, hall: 1&#125;</code></p>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h2><h3 id="No-error-thrown-when-accessing-a-read-only-property"><a href="#No-error-thrown-when-accessing-a-read-only-property" class="headerlink" title="No error thrown when accessing a read-only property"></a>No error thrown when accessing a read-only property</h3><p>After using the Object.defineProperty method on the movie property, the movie property can not be changed. But <u>the system will not throw any error if you try to change its value</u>. This can be an issue as, in a larger system, if you forget that a property is read-only, this might create nearly impossible to find bugs.</p>
 <p>One workaround for this issue is to use <code>&#39;use strict&#39;;</code>. If you do and try to modify a read-only property, the code will thrown an error:</p>
 <p><code>Uncaught TypeError: Cannot assign to read only property &#39;movie&#39; of #&lt;Object&gt;</code></p>
 <h3 id="The-property-can-still-be-deleted"><a href="#The-property-can-still-be-deleted" class="headerlink" title="The property can still be deleted"></a>The property can still be deleted</h3><p>If you make a property read-only using that method, you can still delete it using <code>delete movieTicket.movie</code>. If you re-add that property after that, the newly added property will <strong>not</strong> be read-only.</p>
 <h3 id="Sub-properties-are-still-modifiable"><a href="#Sub-properties-are-still-modifiable" class="headerlink" title="Sub properties are still modifiable"></a>Sub properties are still modifiable</h3><p>If your property points to an object, properties of that object are <strong>not</strong> read-only</p>
-<figure class="highlight xl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var movieTicket = &#123;</div><div class="line">  movie: &#123;</div><div class="line">    <span class="built_in">title</span>: <span class="string">'Mad Max'</span>,</div><div class="line">    year: <span class="number">2015</span></div><div class="line">  &#125;,</div><div class="line">  hall: <span class="number">1</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line">Object.defineProperty(movieTicket, <span class="string">'movie'</span>, &#123;</div><div class="line">  value: &#123;</div><div class="line">    <span class="built_in">title</span>: <span class="string">'Mad Max'</span>,</div><div class="line">    year: <span class="number">2015</span></div><div class="line">  &#125;,</div><div class="line">  writable: <span class="literal">false</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line">movieTicket.movie.<span class="built_in">title</span> = <span class="string">'Sicario'</span>;</div><div class="line"></div><div class="line">console.<span class="built_in">log</span>(movieTicket.movie.<span class="built_in">title</span>); <span class="comment">// Returns: 'Sicario'</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">var</span> <span class="string">movieTicket</span> <span class="string">=</span> &#123;</span><br><span class="line">  <span class="attr">movie:</span> &#123;</span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#x27;Mad Max&#x27;</span>,</span><br><span class="line">    <span class="attr">year:</span> <span class="number">2015</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">hall:</span> <span class="number">1</span></span><br><span class="line">&#125;<span class="string">;</span></span><br><span class="line"></span><br><span class="line"><span class="string">Object.defineProperty(movieTicket,</span> <span class="string">&#x27;movie&#x27;</span><span class="string">,</span> &#123;</span><br><span class="line">  <span class="attr">value:</span> &#123;</span><br><span class="line">    <span class="attr">title:</span> <span class="string">&#x27;Mad Max&#x27;</span>,</span><br><span class="line">    <span class="attr">year:</span> <span class="number">2015</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">writable:</span> <span class="literal">false</span></span><br><span class="line">&#125;<span class="string">);</span></span><br><span class="line"></span><br><span class="line"><span class="string">movieTicket.movie.title</span> <span class="string">=</span> <span class="string">&#x27;Sicario&#x27;</span><span class="string">;</span></span><br><span class="line"></span><br><span class="line"><span class="string">console.log(movieTicket.movie.title);</span> <span class="string">//</span> <span class="attr">Returns:</span> <span class="string">&#x27;Sicario&#x27;</span></span><br></pre></td></tr></table></figure>
 <p>In that example, only the pointer to the movie child object is made read-only.</p>
 
                     
@@ -222,6 +229,10 @@
     <h3>Recent Posts</h3>
     
         <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
             <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
         </p>
     
@@ -235,10 +246,6 @@
     
         <p>
             <a href="/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/">Pass artifacts around in between stages in gitlab CI</a>
-        </p>
-    
-        <p>
-            <a href="/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/">How to start a tech company as a non technical individual</a>
         </p>
     
 </div>
@@ -274,7 +281,7 @@
                 
             </div>
             <div class="f6 f5-ns center tc white pt5 fw3">
-                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" href="https://hexo.io">Hexo</a>
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
             </div>
         </div>
     </div>
