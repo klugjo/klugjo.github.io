@@ -170,7 +170,7 @@
                     <p>Quick article on how to search the OSX terminal history</p>
 <a id="more"></a> 
 <h2 id="Interactive-Search"><a href="#Interactive-Search" class="headerlink" title="Interactive Search"></a>Interactive Search</h2><h3 id="Start-search"><a href="#Start-search" class="headerlink" title="Start search"></a>Start search</h3><p>Use <code>ctrl</code>+<code>r</code> to start the history search and start typing your search term (in my example <code>git</code>)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(reverse-i-search)`git<span class="string">&#x27;: git push origin develop</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(reverse-i-search)`git<span class="string">&#x27;: git push origin develop</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><code>(reverse-i-search)</code> indicates that the search mode is activated</li>
@@ -183,7 +183,7 @@
 <p>Press <code>right arrow</code> to insert the command in the current line</p>
 <h2 id="Display-search-history"><a href="#Display-search-history" class="headerlink" title="Display search history"></a>Display search history</h2><p>In some cases, you might want to display an history of commands containing your search term</p>
 <p>You can do this with the following command</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">history</span> | grep <span class="string">&#x27;git&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">history</span> | grep <span class="string">&#x27;git&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>Will display of all the previous commands that contain <code>git</code>.</p>
 <p><strong>Note:</strong></p>

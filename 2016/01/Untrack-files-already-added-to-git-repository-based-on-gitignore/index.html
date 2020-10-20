@@ -172,7 +172,7 @@
 
 <h2 id="Step-1-Commit-all-your-changes"><a href="#Step-1-Commit-all-your-changes" class="headerlink" title="Step 1: Commit all your changes"></a>Step 1: Commit all your changes</h2><p>Before proceeding, make sure all your changes are committed, including your .gitignore file.</p>
 <h2 id="Step-2-Remove-everything-from-the-repository"><a href="#Step-2-Remove-everything-from-the-repository" class="headerlink" title="Step 2: Remove everything from the repository"></a>Step 2: Remove everything from the repository</h2><p>To clear your repo, use:</p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm -r <span class="comment">--cached .</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="code"><pre><span class="line">git rm -r <span class="comment">--cached .</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-rm">rm</a> is the remove command</li>
@@ -181,9 +181,9 @@
 <li>The <code>.</code> indicates that all files will be untracked. You can untrack a specific file with <code>git rm --cached foo.txt</code> (thanks <a target="_blank" rel="noopener" href="https://github.com/amadeann">@amadeann</a>).</li>
 </ul>
 <p>The <code>rm</code> command can be unforgiving. If you wish to try what it does beforehand, add the <code>-n</code> or <code>--dry-run</code> flag to test things out.</p>
-<h2 id="Step-3-Re-add-everything"><a href="#Step-3-Re-add-everything" class="headerlink" title="Step 3: Re add everything"></a>Step 3: Re add everything</h2><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br></pre></td></tr></table></figure>
+<h2 id="Step-3-Re-add-everything"><a href="#Step-3-Re-add-everything" class="headerlink" title="Step 3: Re add everything"></a>Step 3: Re add everything</h2><figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Step-4-Commit"><a href="#Step-4-Commit" class="headerlink" title="Step 4: Commit"></a>Step 4: Commit</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">&quot;.gitignore fix&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Step-4-Commit"><a href="#Step-4-Commit" class="headerlink" title="Step 4: Commit"></a>Step 4: Commit</h2><figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">&quot;.gitignore fix&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>Your repository is clean :)</p>
 <p>Push the changes to your remote to see the changes effective there as well.</p>

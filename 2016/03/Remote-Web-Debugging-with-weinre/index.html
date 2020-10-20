@@ -183,18 +183,18 @@
 </ul>
 <h2 id="How-to-get-started"><a href="#How-to-get-started" class="headerlink" title="How to get started"></a>How to get started</h2><p>Here is a straight to the point guide on how to get started.</p>
 <h3 id="Step-1-Install-weinre"><a href="#Step-1-Install-weinre" class="headerlink" title="Step 1: Install weinre"></a>Step 1: Install weinre</h3><p>Easy with npm</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -g <span class="keyword">install</span> weinre</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">$ npm -g <span class="keyword">install</span> weinre</span><br></pre></td></tr></table></figure>
 
 <h3 id="Step-2-Start-the-weinre-server"><a href="#Step-2-Start-the-weinre-server" class="headerlink" title="Step 2: Start the weinre server"></a>Step 2: Start the weinre server</h3><p>The weinre server will inject some JavaScript in your app through a script to allow the debugging to happen.</p>
 <p>Technically, using <code>weinre</code> is enough to start the server but here are 2 useful options that you might as well pick up straight away:</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ weinre --boundHost <span class="number">192.168</span><span class="number">.123</span><span class="number">.1</span> --httpPort <span class="number">8888</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line">$ weinre --boundHost <span class="number">192.168</span><span class="number">.123</span><span class="number">.1</span> --httpPort <span class="number">8888</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><code>--boundHost</code> defaults to localhost -&gt; <strong>use your own IP instead</strong>. Localhost won’t mean [your machine] anymore when you are on your remote device.</li>
 <li><code>--httpPort</code> defaults to 8080 which is also commonly used so save yourself some issues down the line and change it to something else.</li>
 </ul>
 <h3 id="Step-3-Insert-the-script-in-your-app"><a href="#Step-3-Insert-the-script-in-your-app" class="headerlink" title="Step 3: Insert the script in your app"></a>Step 3: Insert the script in your app</h3><p>In the <code>&lt;head&gt;</code> of your code, add the weinre script tag:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://192.168.123.1:8888/target/target-script-min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://192.168.123.1:8888/target/target-script-min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>(Replace the IP with your machine’s IP and the port with whatever port you are using)</p>
 <p>Reload or launch your app on the device under test (or simply in your browser).</p>

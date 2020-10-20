@@ -170,7 +170,7 @@
                     <p>Part of the additions to ES6 is an array method called <code>copyWithin</code>:</p>
 <a id="more"></a>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.copyWithin(target, start[, end = <span class="built_in">this</span>.length])</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">arr.copyWithin(target, start[, end = <span class="built_in">this</span>.length])</span><br></pre></td></tr></table></figure>
 
 <p>The function takes a section of the array and copies it to another place within the array.</p>
 <ul>
@@ -179,7 +179,7 @@
 <li><code>end</code>: end of section to copy. Optional, if not specified the section will go to the end of the array</li>
 </ul>
 <h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p>m</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>].copyWithin(<span class="number">4</span>, <span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">// Result: [0, 1, 2, 3, 1, 2]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>].copyWithin(<span class="number">4</span>, <span class="number">1</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">// Result: [0, 1, 2, 3, 1, 2]</span></span><br></pre></td></tr></table></figure>
 
 <p>Here is a visual representation of what happens:</p>
 <p><img src="/img/array-copywithin-es6-explanation.png" alt="Array copyWithin visual explanation"></p>

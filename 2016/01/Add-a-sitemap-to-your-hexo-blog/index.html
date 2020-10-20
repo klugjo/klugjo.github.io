@@ -170,11 +170,11 @@
                     <p>Quick article to see how you can (and you should) add a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Sitemaps">google sitemap</a> to your hexo blog.</p>
 <a id="more"></a> 
 <h3 id="There-is-a-plugin-for-it-that-will-do-all-the-hard-work-for-you"><a href="#There-is-a-plugin-for-it-that-will-do-all-the-hard-work-for-you" class="headerlink" title="There is a plugin for it that will do all the hard work for you."></a>There is a plugin for it that will do all the hard work for you.</h3><p>Go ahead and install <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-sitemap">hexo-generator-sitemap</a> with:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-sitemap <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-generator-sitemap <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 <br />
 Then add the path to your `sitemap.xml` in the `_config.yml`:
 
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Sitemap</span></span><br><span class="line"><span class="symbol">sitemap:</span></span><br><span class="line"><span class="symbol">  path:</span> sitemap.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="meta"># Sitemap</span></span><br><span class="line"><span class="symbol">sitemap:</span></span><br><span class="line"><span class="symbol">  path:</span> sitemap.xml</span><br></pre></td></tr></table></figure>
 
 <p>Regenerate your blog and check that a sitemap.xml file has been created at the root of your blog.</p>
 

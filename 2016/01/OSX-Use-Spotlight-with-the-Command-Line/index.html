@@ -170,7 +170,7 @@
                     <p>In OS X, you can use search for files in the command line using <code>mdfind</code>.</p>
 <a id="more"></a> 
 <h2 id="Basic-usage"><a href="#Basic-usage" class="headerlink" title="Basic usage"></a>Basic usage</h2><p>Use <code>mdfind</code> to search for anything like you would in spotlight:</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mdfind searchTerm</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mdfind searchTerm</span></span><br></pre></td></tr></table></figure>
 
 <p>For example <code>mdfind robocop</code> will search for any file which contains the term <em>robocop</em> and return a list of paths. Just like spotlight, it will also search inside text documents, pdf documents, emails and so on.</p>
 <h3 id="Additional-parameters"><a href="#Additional-parameters" class="headerlink" title="Additional parameters"></a>Additional parameters</h3><ul>
@@ -181,21 +181,21 @@
 </ul>
 <h2 id="Advanced-search-queries-using-OS-X-Files-Metadata"><a href="#Advanced-search-queries-using-OS-X-Files-Metadata" class="headerlink" title="Advanced search queries using OS X Files Metadata"></a>Advanced search queries using OS X Files Metadata</h2><h3 id="Check-files-metadata"><a href="#Check-files-metadata" class="headerlink" title="Check files metadata"></a>Check files metadata</h3><p>You can read a file’s metadata using the <code>mdls</code> command.</p>
 <p>For example: </p>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mdls  ~<span class="regexp">/Pictures/</span>Birthday.jpg</span><br></pre></td></tr></table></figure>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">mdls  ~<span class="regexp">/Pictures/</span>Birthday.jpg</span><br></pre></td></tr></table></figure>
 
 <p>Will print out a list of attributes and their values, something like:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">_kMDItemOwnerUserID</span>            = <span class="number">501</span></span><br><span class="line"><span class="attribute">kMDItemContentCreationDate</span>     = <span class="number">2015</span>-<span class="number">12</span>-<span class="number">17</span> <span class="number">05</span>:<span class="number">32</span>:<span class="number">42</span> +<span class="number">0000</span></span><br><span class="line"><span class="attribute">kMDItemContentModificationDate</span> = <span class="number">2015</span>-<span class="number">12</span>-<span class="number">17</span> <span class="number">05</span>:<span class="number">32</span>:<span class="number">42</span> +<span class="number">0000</span></span><br><span class="line"><span class="attribute">kMDItemContentType</span>             = <span class="string">&quot;dyn.ah62d4rv4ge80w6dp&quot;</span></span><br><span class="line">[...]</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="attribute">_kMDItemOwnerUserID</span>            = <span class="number">501</span></span><br><span class="line"><span class="attribute">kMDItemContentCreationDate</span>     = <span class="number">2015</span>-<span class="number">12</span>-<span class="number">17</span> <span class="number">05</span>:<span class="number">32</span>:<span class="number">42</span> +<span class="number">0000</span></span><br><span class="line"><span class="attribute">kMDItemContentModificationDate</span> = <span class="number">2015</span>-<span class="number">12</span>-<span class="number">17</span> <span class="number">05</span>:<span class="number">32</span>:<span class="number">42</span> +<span class="number">0000</span></span><br><span class="line"><span class="attribute">kMDItemContentType</span>             = <span class="string">&quot;dyn.ah62d4rv4ge80w6dp&quot;</span></span><br><span class="line">[...]</span><br></pre></td></tr></table></figure>
 
 <h3 id="Search-files-by-metadata-attributes"><a href="#Search-files-by-metadata-attributes" class="headerlink" title="Search files by metadata attributes"></a>Search files by metadata attributes</h3><p>You can build more advanced queries and perform complex searches by using these metadata attributes using</p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mdfind query</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mdfind query</span></span><br></pre></td></tr></table></figure>
 
 <p>For example:</p>
 <p><strong>Search for files whose type contains</strong> <code>MPEG</code>:</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mdfind</span> <span class="string">&quot;kMDItemKind == &#x27;*MPEG*&#x27;&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mdfind</span> <span class="string">&quot;kMDItemKind == &#x27;*MPEG*&#x27;&quot;</span></span><br></pre></td></tr></table></figure>
 <p>** Search for image files with a width &gt; 3000 pixels**:</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mdfind</span> <span class="string">&quot;kMDItemPixelWidth &gt; 3000&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mdfind</span> <span class="string">&quot;kMDItemPixelWidth &gt; 3000&quot;</span></span><br></pre></td></tr></table></figure>
 <p>** Search for audio and movie files with a duration &lt; 2 minutes**:</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">mdfind</span> <span class="string">&quot;kMDItemDurationSeconds &lt; 120&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">mdfind</span> <span class="string">&quot;kMDItemDurationSeconds &lt; 120&quot;</span></span><br></pre></td></tr></table></figure>
 
 
 

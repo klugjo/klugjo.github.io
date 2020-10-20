@@ -172,20 +172,20 @@
 
 <h3 id="1-Fork-it"><a href="#1-Fork-it" class="headerlink" title="1. Fork it"></a>1. Fork it</h3><p>Fork the repo by clicking the fork button on the github website</p>
 <h3 id="2-Clone-it"><a href="#2-Clone-it" class="headerlink" title="2. Clone it"></a>2. Clone it</h3><p>Clone the repository to your machine</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/yourusername/</span>project</span><br><span class="line">cd project</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com<span class="regexp">/yourusername/</span>project</span><br><span class="line">cd project</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-Add-the-upstream-remote"><a href="#3-Add-the-upstream-remote" class="headerlink" title="3. Add the upstream remote"></a>3. Add the upstream remote</h3><p>Add the original git repository as an upstream remote. </p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add upstream https:<span class="regexp">//gi</span>thub.com<span class="regexp">/originaluser/</span>project</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">git remote add upstream https:<span class="regexp">//gi</span>thub.com<span class="regexp">/originaluser/</span>project</span><br></pre></td></tr></table></figure>
 
 <p>Now if you want to get the latest changes from the original repository, you can use:</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull upstream <span class="literal">master</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="code"><pre><span class="line">git pull upstream <span class="literal">master</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="4-Create-a-new-branch"><a href="#4-Create-a-new-branch" class="headerlink" title="4. Create a new branch"></a>4. Create a new branch</h3><p>Create a feature branch to do your changes</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> newbranch</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="code"><pre><span class="line"><span class="symbol">git</span> checkout -<span class="keyword">b</span> newbranch</span><br></pre></td></tr></table></figure>
 
 <h3 id="5-Code-away"><a href="#5-Code-away" class="headerlink" title="5. Code away"></a>5. Code away</h3><p>Modify the code and commit to the feature branch. Try to keep your commits clear and concise.</p>
 <h3 id="6-Push-to-your-github"><a href="#6-Push-to-your-github" class="headerlink" title="6. Push to your github"></a>6. Push to your github</h3><p>Push your modifications to your remote</p>
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> newbranch</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">push</span> <span class="built_in">origin</span> newbranch</span><br></pre></td></tr></table></figure>
 
 <h3 id="7-Issue-a-Pull-Request"><a href="#7-Issue-a-Pull-Request" class="headerlink" title="7. Issue a Pull Request"></a>7. Issue a Pull Request</h3><p>Back on github, click the Pull Request button</p>
 <p><img src="/img/github-pull-request-button.png"></p>

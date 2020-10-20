@@ -170,10 +170,10 @@
                     <p>Follow this simple steps to setup zsh and prezto on Mac OS X (El Capitan) and your command line will look like:<br><br /><br><img src="/img/prezto-powerline-mac-os-x.png"></p>
 <a id="more"></a>
 
-<h2 id="Install-Zsh"><a href="#Install-Zsh" class="headerlink" title="Install Zsh"></a>Install Zsh</h2><h3 id="Install-Zsh-and-Zsh-Completions"><a href="#Install-Zsh-and-Zsh-Completions" class="headerlink" title="Install Zsh and Zsh Completions"></a>Install <a href="">Zsh</a> and <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-completions">Zsh Completions</a></h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>zsh zsh-completions</span><br></pre></td></tr></table></figure>
+<h2 id="Install-Zsh"><a href="#Install-Zsh" class="headerlink" title="Install Zsh"></a>Install Zsh</h2><h3 id="Install-Zsh-and-Zsh-Completions"><a href="#Install-Zsh-and-Zsh-Completions" class="headerlink" title="Install Zsh and Zsh Completions"></a>Install <a href="">Zsh</a> and <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-completions">Zsh Completions</a></h3><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>zsh zsh-completions</span><br></pre></td></tr></table></figure>
 
 <p>Then try to run <code>zsh</code>:</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>zsh</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>zsh</span><br></pre></td></tr></table></figure>
 
 <p>When zsh opens for the first time, choose option <code>0</code>.</p>
 <h3 id="OPTIONAL"><a href="#OPTIONAL" class="headerlink" title="OPTIONAL:"></a><em>OPTIONAL:</em></h3><p>At this stage I ran into some errors similar to <code>dyld: Library not loaded: /usr/local/lib/libgdbm.4.dylib</code>.</p>
@@ -181,30 +181,30 @@
 <ul>
 <li>First change the ownership of <code>/usr/local</code></li>
 </ul>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd /usr/local</span><br><span class="line"><span class="variable">$ </span>sudo chown -R &lt;uid&gt;<span class="symbol">:&lt;gid&gt;</span> *</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>cd /usr/local</span><br><span class="line"><span class="variable">$ </span>sudo chown -R &lt;uid&gt;<span class="symbol">:&lt;gid&gt;</span> *</span><br></pre></td></tr></table></figure>
 
 <p>Retrieve the values of <code>&lt;uid&gt;</code> and <code>&lt;gid&gt;</code> by running <code>id</code> in your terminal.</p>
 <ul>
 <li>Reinstall gdbm and pcre</li>
 </ul>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>gdbm</span><br><span class="line">$ <span class="keyword">brew </span>reinstall pcre</span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>gdbm</span><br><span class="line">$ <span class="keyword">brew </span>reinstall pcre</span><br></pre></td></tr></table></figure>
 
 <p>And you should be ready to go</p>
 <h2 id="Install-Prezto"><a href="#Install-Prezto" class="headerlink" title="Install Prezto"></a>Install <a target="_blank" rel="noopener" href="https://github.com/sorin-ionescu/prezto">Prezto</a></h2><h3 id="Before-install"><a href="#Before-install" class="headerlink" title="Before install"></a>Before install</h3><p>Check that you don’t already have a <code>.zshrc</code> file. If you do, delete it (if empty) or rename it, as this would fail the installation.</p>
-<h3 id="Install-with"><a href="#Install-with" class="headerlink" title="Install with"></a>Install with</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> --recursive https://github.com/sorin-ionescu/prezto.git <span class="string">&quot;<span class="variable">$&#123;ZDOTDIR:-<span class="variable">$HOME</span>&#125;</span>/.zprezto&quot;</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="Install-with"><a href="#Install-with" class="headerlink" title="Install with"></a>Install with</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> --recursive https://github.com/sorin-ionescu/prezto.git <span class="string">&quot;<span class="variable">$&#123;ZDOTDIR:-<span class="variable">$HOME</span>&#125;</span>/.zprezto&quot;</span></span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Create-a-zsh-config-with-the-files-from-prezto"><a href="#Create-a-zsh-config-with-the-files-from-prezto" class="headerlink" title="Create a zsh config with the files from prezto"></a>Create a zsh config with the files from prezto</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setopt</span> EXTENDED_GLOB</span><br><span class="line"><span class="keyword">for</span> rcfile <span class="keyword">in</span> <span class="string">&quot;<span class="variable">$&#123;ZDOTDIR:-<span class="variable">$HOME</span>&#125;</span>&quot;</span>/.zprezto/runcoms/^README.md(.N); <span class="keyword">do</span></span><br><span class="line">  ln -s <span class="string">&quot;<span class="variable">$rcfile</span>&quot;</span> <span class="string">&quot;<span class="variable">$&#123;ZDOTDIR:-<span class="variable">$HOME</span>&#125;</span>/.<span class="variable">$&#123;rcfile:t&#125;</span>&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="Create-a-zsh-config-with-the-files-from-prezto"><a href="#Create-a-zsh-config-with-the-files-from-prezto" class="headerlink" title="Create a zsh config with the files from prezto"></a>Create a zsh config with the files from prezto</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">setopt</span> EXTENDED_GLOB</span><br><span class="line"><span class="keyword">for</span> rcfile <span class="keyword">in</span> <span class="string">&quot;<span class="variable">$&#123;ZDOTDIR:-<span class="variable">$HOME</span>&#125;</span>&quot;</span>/.zprezto/runcoms/^README.md(.N); <span class="keyword">do</span></span><br><span class="line">  ln -s <span class="string">&quot;<span class="variable">$rcfile</span>&quot;</span> <span class="string">&quot;<span class="variable">$&#123;ZDOTDIR:-<span class="variable">$HOME</span>&#125;</span>/.<span class="variable">$&#123;rcfile:t&#125;</span>&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="Make-Zsh-the-default-shell"><a href="#Make-Zsh-the-default-shell" class="headerlink" title="Make Zsh the default shell"></a>Make Zsh the default shell</h3><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chsh -s <span class="constructor">$(<span class="params">which</span> <span class="params">zsh</span>)</span></span><br></pre></td></tr></table></figure>
+<h3 id="Make-Zsh-the-default-shell"><a href="#Make-Zsh-the-default-shell" class="headerlink" title="Make Zsh the default shell"></a>Make Zsh the default shell</h3><figure class="highlight reasonml"><table><tr><td class="code"><pre><span class="line">$ chsh -s <span class="constructor">$(<span class="params">which</span> <span class="params">zsh</span>)</span></span><br></pre></td></tr></table></figure>
 
 <p>If you are using iTerm, go to</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Preferences &gt; Profiles &gt; General &gt; <span class="keyword">Command</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">Preferences &gt; Profiles &gt; General &gt; <span class="keyword">Command</span></span><br></pre></td></tr></table></figure>
 
 <p>and put <code>/bin/zsh --login</code> as the <code>Command</code> (instead of <code>Login Shell</code>)</p>
 <h2 id="Improve-the-default-theme"><a href="#Improve-the-default-theme" class="headerlink" title="Improve the default theme"></a>Improve the default theme</h2><h3 id="Install-the-Menlo-Font"><a href="#Install-the-Menlo-Font" class="headerlink" title="Install the Menlo Font"></a>Install the Menlo Font</h3><p>Download the <a target="_blank" rel="noopener" href="https://gist.github.com/qrush/1595572/raw/6c453ddc959b93895ffbf4fd904e2ba60256c904/Menlo-Powerline.otf">Menlo font</a></p>
 <p>Double click the font file to install it.</p>
 <p>Set it as the default font in iTerm by going to </p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Preferences &gt; Profiles &gt; <span class="keyword">Text</span> &gt; Change <span class="keyword">Font</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="code"><pre><span class="line">Preferences &gt; Profiles &gt; <span class="keyword">Text</span> &gt; Change <span class="keyword">Font</span></span><br></pre></td></tr></table></figure>
 
 <p>Use 14pt for the font size.</p>
 <h3 id="Set-the-theme-to-Solarized-Dark"><a href="#Set-the-theme-to-Solarized-Dark" class="headerlink" title="Set the theme to Solarized Dark"></a>Set the theme to Solarized Dark</h3><p>In iTerm, go to <code>Preferences &gt; Profiles &gt; Color</code> and in the Color Presets Dropdown, choose <code>Solarized Dark</code>.</p>
@@ -212,18 +212,18 @@
 <p>Then set the powerline theme as default in <code>.zpreztorc</code>:</p>
 <p>Look for the line that looks like <code>zstyle &#39;:prezto:module:prompt&#39; theme</code> and replace the current theme with <code>powerline</code></p>
 <p>You should end up with:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">zstyle</span> <span class="string">&#x27;:prezto:module:prompt&#x27;</span> theme <span class="string">&#x27;powerline&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">zstyle</span> <span class="string">&#x27;:prezto:module:prompt&#x27;</span> theme <span class="string">&#x27;powerline&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>Now, try restarting iTerm and doublecheck that powerline is the default theme</p>
 <h3 id="Word-jump"><a href="#Word-jump" class="headerlink" title="Word jump"></a>Word jump</h3><p>Let’s finish with one more tweak, word jump with <code>alt + →</code> and <code>alt + ←</code> like in a normal editor.</p>
 <p>In iTerm, go to <code>Preferences &gt; Profiles &gt; Keys</code> and Add the following</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">⌥ →</span><br><span class="line">Send Escape Sequence</span><br><span class="line">f</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">⌥ →</span><br><span class="line">Send Escape Sequence</span><br><span class="line">f</span><br></pre></td></tr></table></figure>
 
 <p>and </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">⌥ ←</span><br><span class="line">Send Escape Sequence</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">⌥ ←</span><br><span class="line">Send Escape Sequence</span><br><span class="line">b</span><br></pre></td></tr></table></figure>
 
 <h3 id="Word-Delete"><a href="#Word-Delete" class="headerlink" title="Word Delete"></a>Word Delete</h3><p>Do the same thing to allow the deletion of a word on <code>alt + backspace</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">⌥⌫</span><br><span class="line">Send Hex Code</span><br><span class="line">0x17</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">⌥⌫</span><br><span class="line">Send Hex Code</span><br><span class="line">0x17</span><br></pre></td></tr></table></figure>
 
 <p>That’s it, you are good to go. Let me know if you enjoy it and if you have awesome tweaks I should add to this list.</p>
 

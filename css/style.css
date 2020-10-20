@@ -104,7 +104,7 @@ body {
 .content h4,
 .content h5,
 .content h6 {
-  margin-top: 24px 0 16px 0;
+  margin: 32px 0 24px 0;
   font-weight: 600;
   line-height: 1.25;
 }
@@ -113,6 +113,9 @@ body {
   font-size: 2em;
   border-bottom: 1px solid #eee;
 }
+.content h1:first-child {
+  margin-top: 0;
+}
 .content h2 {
   padding-bottom: 0.3em;
   font-size: 1.5em;
@@ -120,9 +123,11 @@ body {
 }
 .content h3 {
   font-size: 1.25em;
+  margin: 24px 0 26px 0;
 }
 .content h4 {
   font-size: 1em;
+  margin: 24px 0 16px 0;
 }
 .content h5 {
   font-size: 0.875em;
@@ -130,6 +135,13 @@ body {
 .content h6 {
   font-size: 0.85em;
   color: #777;
+}
+.content code {
+  background: #dcdcdc;
+  color: #000;
+  padding: 1px 5px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 .content hr {
   border: 0;
@@ -242,128 +254,72 @@ body {
     display: none;
   }
 }
-.content figure.highlight {
-  margin-left: 0;
-  margin-right: 0;
+figure.highlight {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+  background: #002b36;
+  color: #839496;
+  margin: 0;
+  font-size: 15px;
 }
-.content figure.highlight figcaption {
-  padding-top: 10px;
-  font-size: 85%;
-  opacity: 0.75;
+figure.highlight pre {
+  margin: 0;
 }
-.content figure.highlight figcaption:before {
-  content: "\f016";
-  font-family: devicons;
-  margin: 0 10px 0 20px;
+figure.highlight .comment,
+figure.highlight .quote {
+  color: #586e75;
 }
-.content figure.highlight figcaption a {
-  margin-left: 10px;
+figure.highlight .keyword,
+figure.highlight .selector-tag,
+figure.highlight .addition {
+  color: #859900;
 }
-.content figure.highlight .gutter {
-  display: none;
+figure.highlight .number,
+figure.highlight .string,
+figure.highlight .meta figure.highlight .meta-string,
+figure.highlight .literal,
+figure.highlight .doctag,
+figure.highlight .regexp {
+  color: #2aa198;
 }
-.content figure.highlight .code {
-  padding-left: 15px;
+figure.highlight .title,
+figure.highlight .section,
+figure.highlight .name,
+figure.highlight .selector-id,
+figure.highlight .selector-class {
+  color: #268bd2;
 }
-.content code,
-.content pre,
-.content figure.highlight {
-  background-color: #f7f7f7;
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 85%;
-  line-height: 1.45;
-  overflow: auto;
+figure.highlight .attribute,
+figure.highlight .attr,
+figure.highlight .variable,
+figure.highlight .template-variable,
+figure.highlight .class figure.highlight .title,
+figure.highlight .type {
+  color: #b58900;
 }
-pre .comment,
-pre .template_comment,
-pre .diff .header,
-pre .doctype,
-pre .pi,
-pre .lisp .string,
-pre .javadoc,
-pre .meta {
-  color: #8e908c;
+figure.highlight .symbol,
+figure.highlight .bullet,
+figure.highlight .subst,
+figure.highlight .meta,
+figure.highlight .meta figure.highlight .keyword,
+figure.highlight .selector-attr,
+figure.highlight .selector-pseudo,
+figure.highlight .link {
+  color: #cb4b16;
 }
-pre .variable,
-pre .attribute,
-pre .tag,
-pre .regexp,
-pre .ruby .constant,
-pre .xml .tag .title,
-pre .xml .pi,
-pre .xml .doctype,
-pre .html .doctype,
-pre .css .id,
-pre .css .class,
-pre .css .pseudo,
-pre .lisp .body,
-pre .smalltalk .number,
-pre .constant,
-pre .class .title,
-pre .parent,
-pre .haskell .type {
-  color: #c82829;
+figure.highlight .built_in,
+figure.highlight .deletion {
+  color: #dc322f;
 }
-pre .number,
-pre .preprocessor,
-pre .built_in,
-pre .literal,
-pre .params,
-pre .constant,
-pre .preprocessor .keyword,
-pre .shebang,
-pre .symbol,
-pre .symbol .string,
-pre .diff .change,
-pre .special,
-pre .attr_selector,
-pre .important,
-pre .subst,
-pre .cdata,
-pre .clojure .title,
-pre .command,
-pre .tag .value,
-pre .phpdoc,
-pre .tex .formula,
-pre .regexp {
-  color: #fb6d19;
+figure.highlight .formula {
+  background: #073642;
 }
-pre .class,
-pre .ruby .class .title,
-pre .css .rules .attribute {
-  color: #718c00;
+figure.highlight .emphasis {
+  font-style: italic;
 }
-pre .string,
-pre .value,
-pre .inheritance,
-pre .header,
-pre .ruby .symbol,
-pre .xml .cdata {
-  color: #718c00;
-}
-pre .hexcolor {
-  color: #3e999f;
-}
-pre .function,
-pre .python .decorator,
-pre .python .title,
-pre .ruby .function .title,
-pre .ruby .title .keyword,
-pre .perl .sub,
-pre .javascript .title,
-pre .coffeescript .title {
-  color: #4271ae;
-}
-pre .keyword,
-pre .javascript .function,
-pre .winutils,
-pre .method,
-pre .addition,
-pre .css .tag,
-pre .request,
-pre .status,
-pre .nginx .title {
-  color: #8959a8;
+figure.highlight .strong {
+  font-weight: bold;
 }
 .search-popup.overlay {
   position: fixed;

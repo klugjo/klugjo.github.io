@@ -174,10 +174,10 @@
 <p>This can happen for 2 reasons:</p>
 <h3 id="You-have-not-set-your-email-in-git"><a href="#You-have-not-set-your-email-in-git" class="headerlink" title="You have not set your email in git"></a>You have not set your email in git</h3><p>If that is the case, you need to <a target="_blank" rel="noopener" href="https://help.github.com/articles/setting-your-email-in-git/">set your email in your local git config</a>. </p>
 <p>Check what is your current email with</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>user.email</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>user.email</span><br></pre></td></tr></table></figure>
 
 <p>And set your email with </p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>user.email “your.email@example.com<span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>user.email “your.email@example.com<span class="string">&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>Note that this will only affect new commits. Past commits will remain the same.</p>
 <h3 id="You-are-using-a-different-email-that-what-has-been-configured-in-github"><a href="#You-are-using-a-different-email-that-what-has-been-configured-in-github" class="headerlink" title="You are using a different email that what has been configured in github"></a>You are using a different email that what has been configured in github</h3><p>This happens when you are contributing to a private repository on a work computer for example and you have configured git to use your work email instead of your usual github email.</p>

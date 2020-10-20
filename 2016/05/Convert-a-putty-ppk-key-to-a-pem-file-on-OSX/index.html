@@ -171,10 +171,10 @@
 <a id="more"></a>
 
 <h3 id="1-Install-putty-on-your-mac"><a href="#1-Install-putty-on-your-mac" class="headerlink" title="1. Install putty on your mac"></a>1. Install putty on your mac</h3><p>Done easily with <a target="_blank" rel="noopener" href="http://brew.sh/">homebrew</a>.</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>putty</span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line">$ <span class="keyword">brew </span><span class="keyword">install </span>putty</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-Generate-the-key"><a href="#2-Generate-the-key" class="headerlink" title="2. Generate the key"></a>2. Generate the key</h3><p>We will use <a target="_blank" rel="noopener" href="http://linux.die.net/man/1/puttygen">puttygen</a> to generate the key.</p>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ puttygen <span class="built_in">key</span>.ppk -O <span class="keyword">private</span>-openssh -o <span class="built_in">key</span>.pem</span><br></pre></td></tr></table></figure>
+<figure class="highlight processing"><table><tr><td class="code"><pre><span class="line">$ puttygen <span class="built_in">key</span>.ppk -O <span class="keyword">private</span>-openssh -o <span class="built_in">key</span>.pem</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><code>key.ppk</code>: the original file name/path.</li>

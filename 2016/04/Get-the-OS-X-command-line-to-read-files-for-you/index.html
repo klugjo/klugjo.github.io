@@ -171,24 +171,24 @@
 <a id="more"></a>
 
 <h3 id="Speak"><a href="#Speak" class="headerlink" title="Speak"></a>Speak</h3><p>You can have your system say a sentence by using:</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">say</span> Hello World. My Name <span class="keyword">is</span> Jonathan.</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">say</span> Hello World. My Name <span class="keyword">is</span> Jonathan.</span><br></pre></td></tr></table></figure>
 
 <h3 id="Specify-a-voice"><a href="#Specify-a-voice" class="headerlink" title="Specify a voice"></a>Specify a voice</h3><p>Your mac ships with a few voices, use <code>-v</code> to specify a voice.</p>
 <p>Example:</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">say</span> -v Karen Hello World</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">say</span> -v Karen Hello World</span><br></pre></td></tr></table></figure>
 
 <p><strong>List of voices:</strong> Alex, Bruce, Fred, Kathy, Vicky, Victoria, Daniel, Tessa, Fiona, Moira, Veena, Karen.</p>
 <h3 id="Specify-a-file"><a href="#Specify-a-file" class="headerlink" title="Specify a file"></a>Specify a file</h3><p>You can use <code>-f</code> to specify the path to a file to read.</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> say <span class="operator">-f</span> ~/testvoice.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> say <span class="operator">-f</span> ~/testvoice.txt</span><br></pre></td></tr></table></figure>
 
 <p>You can also pipe the content of the file into the <code>say</code> command:</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cat</span> ~/testvoice.txt | say </span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> <span class="built_in">cat</span> ~/testvoice.txt | say </span><br></pre></td></tr></table></figure>
 
 <p>If are looking for text to fill in your text file, checkout <a target="_blank" rel="noopener" href="http://fucklorem.com/">http://fucklorem.com/</a>.</p>
 <h3 id="Output-the-speech-to-a-file"><a href="#Output-the-speech-to-a-file" class="headerlink" title="Output the speech to a file"></a>Output the speech to a file</h3><p>Use the <code>-o</code> flag to output the </p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">say -o <span class="regexp">/Users/</span>klugjo/outputvoice.m4a Hello World</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">say -o <span class="regexp">/Users/</span>klugjo/outputvoice.m4a Hello World</span><br></pre></td></tr></table></figure>
 
-<h3 id="Combine-it-all-together"><a href="#Combine-it-all-together" class="headerlink" title="Combine it all together"></a>Combine it all together</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$</span> say <span class="literal">-v</span> Fiona <span class="operator">-f</span> ~/testvoice.txt <span class="literal">-o</span> outputvoice.m4a</span><br></pre></td></tr></table></figure>
+<h3 id="Combine-it-all-together"><a href="#Combine-it-all-together" class="headerlink" title="Combine it all together"></a>Combine it all together</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> say <span class="literal">-v</span> Fiona <span class="operator">-f</span> ~/testvoice.txt <span class="literal">-o</span> outputvoice.m4a</span><br></pre></td></tr></table></figure>
 
 <p>Hope you had fun, not the most useful command but I had quite a bit of fun with it.</p>
 <p>Check out more OS X commands <a target="_blank" rel="noopener" href="https://github.com/herrbischoff/awesome-osx-command-line">here</a>.</p>

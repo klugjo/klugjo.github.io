@@ -172,30 +172,30 @@
 
 <p>To open the configuration file use <code>Cmd + ,</code> on mac and <code>File -&gt; Preferences -&gt; User Settings</code> on Windows and Linux</p>
 <h2 id="Font-Family"><a href="#Font-Family" class="headerlink" title="Font Family"></a>Font Family</h2><p>Change the editor font to your favourite <a target="_blank" rel="noopener" href="https://hail2u.github.io/mn/">monospace font</a> with <code>editor.fontFamily</code></p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;editor.fontFamily&quot;</span>: <span class="string">&quot;Inconsolata, &#x27;Courier New&#x27;, monospace&quot;</span>,</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;editor.fontFamily&quot;</span>: <span class="string">&quot;Inconsolata, &#x27;Courier New&#x27;, monospace&quot;</span>,</span><br></pre></td></tr></table></figure>
 
 <h2 id="Font-Size"><a href="#Font-Size" class="headerlink" title="Font Size"></a>Font Size</h2><p>I am finding the default font size to be way to small for my liking (and tired programmer’s eyes). Use <code>editor.fontSize</code> to remedy this.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;editor.fontSize&quot;:</span> <span class="number">16</span><span class="string">,</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;editor.fontSize&quot;:</span> <span class="number">16</span><span class="string">,</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Line-Wrapping"><a href="#Line-Wrapping" class="headerlink" title="Line Wrapping"></a>Line Wrapping</h2><p>By default lines do not wrap. If you are tired of doing so much horizontal scrolling, use <code>editor.wordWrap</code>.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;editor.wordWrap&quot;:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;editor.wordWrap&quot;:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Line-wrap-indentation"><a href="#Line-wrap-indentation" class="headerlink" title="Line wrap indentation"></a>Line wrap indentation</h2><p>Related to the previous item. When doing line wraps, I like to have a small indent to make it more obvious. This can be achieved with <code>editor.wrappingIndent</code></p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;editor.wrappingIndent&quot;</span>: <span class="string">&quot;indent&quot;</span>,</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;editor.wrappingIndent&quot;</span>: <span class="string">&quot;indent&quot;</span>,</span><br></pre></td></tr></table></figure>
 
 <h2 id="Cursor-blinking"><a href="#Cursor-blinking" class="headerlink" title="Cursor blinking"></a>Cursor blinking</h2><p>In the pimp my editor category, improve the way your cursor blinks. Totally useless, totally worth it !</p>
 <p>Possible values include <code>&#39;blink’</code>, <code>’smooth’</code>, <code>’phase’</code>, <code>’expand’</code> and <code>’solid’</code>. I am rolling with <code>’phase’</code></p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;editor.cursorBlinking&quot;</span>: <span class="string">&quot;phase&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;editor.cursorBlinking&quot;</span>: <span class="string">&quot;phase&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Automatic-formatting"><a href="#Automatic-formatting" class="headerlink" title="Automatic formatting"></a>Automatic formatting</h2><p>This one is a lot more useful. It formats your code automatically as you type. Use <code>editor.formatOnType</code> to enable (off by default).</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;editor.formatOnType&quot;:</span> <span class="literal">true</span><span class="string">,</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;editor.formatOnType&quot;:</span> <span class="literal">true</span><span class="string">,</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Terminal-Font"><a href="#Terminal-Font" class="headerlink" title="Terminal Font"></a>Terminal Font</h2><p>You know VSCode ships with an integrated Terminal you can open with <code>Ctrl + \</code>. </p>
 <p>If you are on a Mac and using a custom shell like <code>zsh</code> you will probably also have to update the Terminal font to a <a target="_blank" rel="noopener" href="https://github.com/powerline/fonts">Powerline font</a>. Use <code>terminal.integrated.fontFamily</code> to do so.</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;terminal.integrated.fontFamily&quot;</span>: <span class="string">&quot;Meslo LG M DZ for Powerline&quot;</span>,</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;terminal.integrated.fontFamily&quot;</span>: <span class="string">&quot;Meslo LG M DZ for Powerline&quot;</span>,</span><br></pre></td></tr></table></figure>
 
 <h2 id="Automated-Extensions-Update"><a href="#Automated-Extensions-Update" class="headerlink" title="Automated Extensions Update"></a>Automated Extensions Update</h2><p>I am sure you have quite a few extensions installed by now. Get them to update automatically with <code>extensions.autoUpdate</code> to avoid these pesky notifications.</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;extensions.autoUpdate&quot;:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;extensions.autoUpdate&quot;:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <p>Happy Coding !</p>
 
