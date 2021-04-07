@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://www.codeblocq.com</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2021/01/Jest-Mock-Local-Storage/</loc>
+        <lastmod>2021-04-07T18:10:37.498Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2020/07/TypeScript-Abstract-Class/</loc>
+        <lastmod>2020-10-19T08:46:41.709Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2020/04/Check-if-a-Docker-image-exists-locally/</loc>
+        <lastmod>2020-10-09T16:59:52.375Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2020/10/Have-Mobx-and-React-work-with-Typescript/</loc>
+        <lastmod>2020-10-05T10:15:09.514Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2019/03/Pass-artifacts-around-in-between-stages-in-gitlab-CI/</loc>
+        <lastmod>2020-09-27T06:50:03.018Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/</loc>
+        <lastmod>2020-09-22T16:22:16.713Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2020/01/A-Star-Pathfinding-React-Demo/</loc>
+        <lastmod>2020-01-12T12:39:37.497Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2019/11/KlugSaver-My-Free-and-Open-Source-Expense-Tracker-App/</loc>
+        <lastmod>2019-11-10T02:45:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Untrack-files-already-added-to-git-repository-based-on-gitignore/</loc>
+        <lastmod>2018-08-22T00:39:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2018/06/How-to-start-a-tech-compnay-as-a-non-technical-individual/</loc>
+        <lastmod>2018-06-23T02:57:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2018/05/Setup-gitment-on-your-Hexo-blog/</loc>
+        <lastmod>2018-05-28T12:36:20.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Notes-on-Zero-to-One-by-Peter-Thiel/</loc>
+        <lastmod>2018-05-20T10:19:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2017/02/Notes-on-Turning-Pro-by-Steven-Pressfield/</loc>
+        <lastmod>2018-05-16T23:52:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Add-a-build-passing-badge-to-your-github-repository/</loc>
+        <lastmod>2018-05-13T01:37:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/10/Github-Avatar-not-showing-on-list-of-commits/</loc>
+        <lastmod>2018-05-13T01:37:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Hexo-deploy-your-blog-to-github-pages-in-one-command/</loc>
+        <lastmod>2018-05-13T01:37:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/How-to-use-a-custom-domain-with-your-github-pages-site/</loc>
+        <lastmod>2018-05-13T01:37:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Pull-requests-on-github-101/</loc>
+        <lastmod>2018-05-13T01:37:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Setup-Travis-CI-with-your-node-project/</loc>
+        <lastmod>2018-05-13T01:37:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Speed-up-Web-Development-with-Live-Edit-in-Webstorm/</loc>
+        <lastmod>2018-05-13T01:33:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Notes-on-Never-Eat-Alone-by-Keith-Ferrazzi/</loc>
+        <lastmod>2018-05-09T12:26:00.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/10/Notes-on-Ego-is-the-enemy-by-Ryan-Holiday/</loc>
+        <lastmod>2018-05-07T11:14:29.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2017/11/Notes-on-Anything-You-Want-by-Derek-Sivers/</loc>
+        <lastmod>2018-05-06T08:49:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2017/10/Quicksort-JavaScript-Implementation/</loc>
+        <lastmod>2017-10-24T14:18:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2017/08/How-to-receive-messages-from-web-sockets-using-redux-saga/</loc>
+        <lastmod>2017-08-08T13:21:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Easy-dynamic-classes-with-React/</loc>
+        <lastmod>2017-05-12T00:49:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/09/Setup-the-latest-React-in-JSBin/</loc>
+        <lastmod>2017-05-11T12:41:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Unit-Test-React-Components/</loc>
+        <lastmod>2017-05-01T12:52:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Loops-and-callbacks-in-React/</loc>
+        <lastmod>2017-04-30T00:56:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2017/03/Save-All-by-Default-in-VSCode/</loc>
+        <lastmod>2017-03-27T14:14:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2017/02/Configure-Jest-Test-Location/</loc>
+        <lastmod>2017-03-02T13:20:03.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/09/Pimp-up-iTerm-with-Zsh-and-prezto-on-Mac-OS-X/</loc>
+        <lastmod>2017-02-28T13:32:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/10/Setup-Jest-to-use-an-external-configuration-file/</loc>
+        <lastmod>2016-10-26T12:34:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/10/8-VSCode-Configuration-Options-you-need-to-know-about/</loc>
+        <lastmod>2016-10-16T09:46:51.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/09/The-mysterious-4px-gap-in-between-images/</loc>
+        <lastmod>2016-10-04T12:04:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/09/Set-Menu-Items-in-Electron/</loc>
+        <lastmod>2016-09-19T10:27:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/09/Create-patch-from-commit-with-git/</loc>
+        <lastmod>2016-09-11T03:21:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/07/Add-Disqus-Comment-Count-to-your-Static-Blog-Index-Page/</loc>
+        <lastmod>2016-09-06T00:44:08.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/09/Undo-last-commit-in-git/</loc>
+        <lastmod>2016-09-04T13:22:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/08/Turn-an-image-to-Black-and-White-on-hover-with-CSS/</loc>
+        <lastmod>2016-08-16T12:38:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/08/Change-the-code-font-size-in-Webstorm/</loc>
+        <lastmod>2016-08-11T13:57:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/08/ES6-Object-Destructuring-Examples/</loc>
+        <lastmod>2016-08-11T13:33:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/08/Bring-colors-and-life-to-your-console-outputs-in-Node/</loc>
+        <lastmod>2016-08-09T14:33:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/07/New-Hexo-Theme-Alpha-Dust/</loc>
+        <lastmod>2016-07-07T10:19:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Default-Function-Parameters-in-JavaScript-ES6/</loc>
+        <lastmod>2016-06-23T05:24:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Share-your-configuration-with-Webstorm-and-editorconfig/</loc>
+        <lastmod>2016-06-20T07:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Duplicate-Function-Parameters-in-JavaScript/</loc>
+        <lastmod>2016-06-20T02:54:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Boostrap-4-Stylus-Media-Queries/</loc>
+        <lastmod>2016-06-17T08:09:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/DES-encryption-in-Node-and-JavaScript/</loc>
+        <lastmod>2016-06-15T04:21:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Differentiate-background-and-foreground-div-clicks/</loc>
+        <lastmod>2016-06-13T08:31:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Same-height-columns-with-flexbox/</loc>
+        <lastmod>2016-06-11T03:19:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Build-your-First-Electron-App/</loc>
+        <lastmod>2016-06-09T06:47:49.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/06/Create-a-loading-animation-with-SVG-and-CSS3/</loc>
+        <lastmod>2016-06-06T02:04:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Two-Ways-of-Creating-an-Animation-Loop-in-JavaScript/</loc>
+        <lastmod>2016-05-31T07:58:33.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Understand-the-SVG-viewBox/</loc>
+        <lastmod>2016-05-31T07:54:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Performance-Comparison-ES6-Template-Literals-vs-HandleBars-in-Node/</loc>
+        <lastmod>2016-05-27T06:47:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Blur-Image-on-Hover-with-CSS/</loc>
+        <lastmod>2016-05-25T08:18:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Expose-your-local-website-to-the-world-with-ngrok/</loc>
+        <lastmod>2016-05-24T08:52:40.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Automatically-extract-interesting-quotes-from-a-text-with-Node-JS/</loc>
+        <lastmod>2016-05-24T08:11:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Get-the-Current-Wifi-Password-with-Node/</loc>
+        <lastmod>2016-05-18T03:14:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/PDF-Generation-with-Node-JS/</loc>
+        <lastmod>2016-05-17T09:35:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/SHA-256-in-Node/</loc>
+        <lastmod>2016-05-14T08:03:09.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Factory-Pattern-in-JavaScript/</loc>
+        <lastmod>2016-05-12T09:10:39.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Craft-meaningful-git-commits/</loc>
+        <lastmod>2016-05-09T05:35:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Convert-a-putty-ppk-key-to-a-pem-file-on-OSX/</loc>
+        <lastmod>2016-05-09T04:35:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/ES6-ES2015-LinkedList-Implementation/</loc>
+        <lastmod>2016-05-09T03:01:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/ES6-ES2015-Stack-Implementation/</loc>
+        <lastmod>2016-05-09T03:00:38.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/05/Get-the-last-element-of-an-Array-in-JavaScript/</loc>
+        <lastmod>2016-05-07T03:42:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/New-Hexo-Theme-Clean-Blog/</loc>
+        <lastmod>2016-05-05T05:38:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Create-a-Pie-Chart-with-HTML5-canvas/</loc>
+        <lastmod>2016-04-27T01:23:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Big-O-Notation-for-algorithms/</loc>
+        <lastmod>2016-04-26T07:03:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Create-links-automatically-in-your-hexo-posts/</loc>
+        <lastmod>2016-04-23T02:20:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Zelda-s-theme-in-JavaScript/</loc>
+        <lastmod>2016-04-14T08:11:11.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Convert-a-base64-string-to-a-file-in-Node/</loc>
+        <lastmod>2016-04-11T04:36:25.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Parse-a-webpage-with-Node/</loc>
+        <lastmod>2016-04-10T03:36:45.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Get-the-OS-X-command-line-to-read-files-for-you/</loc>
+        <lastmod>2016-04-05T07:52:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/Set-Timezone-in-hexo/</loc>
+        <lastmod>2016-04-05T07:49:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/New-Hexo-Theme-Magnetic/</loc>
+        <lastmod>2016-04-01T01:32:29.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/04/New-Hexo-Theme-Phantom/</loc>
+        <lastmod>2016-04-01T01:27:21.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Node-auto-completion-in-WebStorm-on-OSX/</loc>
+        <lastmod>2016-03-30T05:29:29.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/08/Debug-Mocha-Unit-Tests-in-Webstorm/</loc>
+        <lastmod>2016-03-30T05:26:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Create-an-Hexo-Theme-Part-3-Comments-Analytics-and-Widgets/</loc>
+        <lastmod>2016-03-30T05:25:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Copy-an-Array-into-itself-in-JavaScript-ES6-2015/</loc>
+        <lastmod>2016-03-30T05:25:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Add-Disqus-comments-in-Hexo/</loc>
+        <lastmod>2016-03-30T05:24:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Setup-ESLint-in-Atom/</loc>
+        <lastmod>2016-03-30T05:21:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Remote-Web-debugging-with-Vorlon-js/</loc>
+        <lastmod>2016-03-29T06:36:13.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Remote-Web-Debugging-with-weinre/</loc>
+        <lastmod>2016-03-23T08:56:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Remote-JavaScript-debugging-with-jsconsole/</loc>
+        <lastmod>2016-03-22T09:28:34.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Pure-and-Impure-Functions/</loc>
+        <lastmod>2016-03-20T04:51:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Setup-ESLint-in-WebStorm/</loc>
+        <lastmod>2016-03-20T04:46:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Create-an-Hexo-Theme-Part-1-Index/</loc>
+        <lastmod>2016-03-17T07:50:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Further-minify-your-CSS-with-CSSO/</loc>
+        <lastmod>2016-03-14T15:26:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Create-an-Hexo-Theme-Part-2-Other-Pages/</loc>
+        <lastmod>2016-03-13T09:45:25.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/03/Setup-Gulp-to-compile-ES6-ES2015-code/</loc>
+        <lastmod>2016-03-07T09:45:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Babel-and-Node-Module-Loader/</loc>
+        <lastmod>2016-03-03T07:36:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Best-git-log-aliases/</loc>
+        <lastmod>2016-02-29T09:57:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/The-let-keyword-in-ES6-JavaScript/</loc>
+        <lastmod>2016-02-24T09:42:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Basic-git-log-commands/</loc>
+        <lastmod>2016-02-23T13:58:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/How-to-setup-Babel6-for-NodeJs/</loc>
+        <lastmod>2016-02-20T03:06:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/08/Capture-Command-Line-Arguments-in-Node/</loc>
+        <lastmod>2016-02-16T12:51:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/11/Your-first-10-minutes-with-Browserify/</loc>
+        <lastmod>2016-02-16T12:51:47.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Requiring-external-libraries-with-Browserify/</loc>
+        <lastmod>2016-02-16T12:51:22.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Bundle-jade-templates-with-browserify-transform/</loc>
+        <lastmod>2016-02-16T12:51:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Debug-hexo-blog-generation-in-webstorm/</loc>
+        <lastmod>2016-02-11T12:50:28.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Display-an-animated-counter-on-your-webpage/</loc>
+        <lastmod>2016-02-11T12:37:43.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/Stash-your-changes-before-switching-branch/</loc>
+        <lastmod>2016-02-11T12:36:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/02/git-add/</loc>
+        <lastmod>2016-02-11T12:36:48.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Add-Google-Analytics-to-your-hexo-blog/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Add-an-RSS-feed-to-your-hexo-blog/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Add-a-sitemap-to-your-hexo-blog/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Build-and-package-your-client-side-code-using-npm/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Build-your-first-React-application/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Code-Bloat-Commandos-Do-not-let-your-functions-do-more-than-one-thing/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Code-snippets-in-Webstorm/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Create-a-Bash-Shell-script-to-download-a-site-s-favicon-with-HTTPie/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/11/Getting-started-with-Gulp-and-static-websites/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/HTTPie-a-good-replacement-for-cURL/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Method-context-in-JavaScript/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/OSX-Use-Spotlight-with-the-Command-Line/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Passing-arguments-to-the-underlying-command-in-npm-scripts/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Read-only-properties-in-JavaScript/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/11/Refresh-webpages-automatically-during-development-using-Gulp/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/12/Run-scripts-with-npm/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Search-through-history-in-OSX-terminal/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Sorting-files-using-the-ls-command/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Use-Q-to-create-a-promise-from-a-value/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/Wildcards-in-bash/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2016/01/open-the-current-terminal-directory-in-Finder-OS-X/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.codeblocq.com/2015/07/round-images-in-css/</loc>
+        <lastmod>2016-02-11T12:04:32.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->
