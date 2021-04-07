@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Software Engineering Blog by Jonathan Klughertz">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jonathan Klughertz">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Jest - Mock Local Storage"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Software Engineering Blog by Jonathan Klughertz" />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="CodeBlocQ"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content="http://www.codeblocq.com/img/cover.jpg"/>
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>Jest - Mock Local Storage - CodeBlocQ</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/css/devicons.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gitment Comments -->
+    
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-71082014-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+    
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/favicons/manifest.json">
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="CodeBlocQ" type="application/atom+xml">
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="CodeBlocQ">
+            <img src="/img/logo.svg" class="dib h3" alt="CodeBlocQ">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+            <!-- <a class="link dim f4-l dib mr3 mr4-l white cursor-pointer"
+                id="search-icon"
+                title=""
+            >
+                <span class="devicons-search"></span>
+            </a> -->
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Jest - Mock Local Storage</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">07 January 2021</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <span class="header-icon devicons-javascript_badge"></span>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Jest/">#Jest</a> <a class="fw3 ph1 dib" href="/tags/Testing/">#Testing</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <p><a target="_blank" rel="noopener" href="https://github.com/jsdom/jsdom">jsdom</a> does not include a fake local storage API, so you need to roll out your own.</p>
+<h3 id="Local-storage-fake"><a href="#Local-storage-fake" class="headerlink" title="Local storage fake"></a>Local storage fake</h3><p>Here is a simple local storage fake</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fakeLocalStorage = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> store = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    getItem: <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> store[key] || <span class="literal">null</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    setItem: <span class="function"><span class="keyword">function</span>(<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">      store[key] = value.toString();</span><br><span class="line">    &#125;,</span><br><span class="line">    removeItem: <span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">delete</span> store[key];</span><br><span class="line">    &#125;,</span><br><span class="line">    clear: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      store = &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<h3 id="Wiring"><a href="#Wiring" class="headerlink" title="Wiring"></a>Wiring</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a> is a read-only property of the window interface, so it is not possible to just reassign it like <code>window.localStorage = fakeLocalStorage</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Object</span>.defineProperty(<span class="built_in">window</span>, <span class="string">&#x27;localStorage&#x27;</span>, &#123;</span><br><span class="line">  value: fakeLocalStorage</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Full-working-example"><a href="#Full-working-example" class="headerlink" title="Full working example"></a>Full working example</h3><p>Simple function that uses the <code>localStorage</code> API</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// storage.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">saveToStorage</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">window</span>.localStorage.setItem(<span class="string">&#x27;the-key&#x27;</span>, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Corresponding jest test</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// storage.test.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; saveToStorage &#125; <span class="keyword">from</span> <span class="string">&#x27;./storage&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fakeLocalStorage = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> store = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    getItem: <span class="function"><span class="keyword">function</span> (<span class="params">key</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> store[key] || <span class="literal">null</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    setItem: <span class="function"><span class="keyword">function</span> (<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">      store[key] = value.toString();</span><br><span class="line">    &#125;,</span><br><span class="line">    removeItem: <span class="function"><span class="keyword">function</span> (<span class="params">key</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">delete</span> store[key];</span><br><span class="line">    &#125;,</span><br><span class="line">    clear: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      store = &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line">describe(<span class="string">&#x27;storage&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  beforeAll(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">Object</span>.defineProperty(<span class="built_in">window</span>, <span class="string">&#x27;localStorage&#x27;</span>, &#123;</span><br><span class="line">      value: fakeLocalStorage,</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  it(<span class="string">&#x27;saves the key to the storage&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    saveToStorage(<span class="string">&#x27;fake-value&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    expect(<span class="built_in">window</span>.localStorage.getItem(<span class="string">&#x27;the-key&#x27;</span>)).toEqual(<span class="string">&#x27;fake-value&#x27;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom mt5">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/JavaScript/">#JavaScript</a> <a class="fw3 ph1 dib" href="/tags/Jest/">#Jest</a> <a class="fw3 ph1 dib" href="/tags/Testing/">#Testing</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/jonathan-klughertz.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Jonathan Klughertz">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2021/01/Jest-Mock-Local-Storage/">Jest - Mock Local Storage</a>
+        </p>
+    
+        <p>
+            <a href="/2020/10/Have-Mobx-and-React-work-with-Typescript/">Have Mobx and React work with TypeScript</a>
+        </p>
+    
+        <p>
+            <a href="/2020/09/Loose-assertions-on-arguments-passed-to-function-with-Jest/">Loose assertions on arguments passed to function with Jest</a>
+        </p>
+    
+        <p>
+            <a href="/2020/07/TypeScript-Abstract-Class/">TypeScript Abstract Class</a>
+        </p>
+    
+        <p>
+            <a href="/2020/04/Check-if-a-Docker-image-exists-locally/">Check if a Docker image exists locally</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5 footer">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="http://www.linkedin.com/in/jonathanklughertz" target="_blank">
+                            <span class="devicons-linkedin-square"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://github.com/klugjo" target="_blank">
+                            <span class="devicons-github_badge"></span>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f2 f2-ns white dim no-underline" href="https://stackoverflow.com/users/1595699/klugjo" target="_blank">
+                            <span class="devicons-stack-overflow"></span>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                Copyright &copy 2020 &nbsp;|&nbsp; Theme by <a class="link-footer" target="_blank" rel="noopener" href="https://github.com/klugjo/hexo-theme-anodyne">Jonathan Klughertz</a> &nbsp;|&nbsp; Powered by <a class="link-footer" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<div id="popup-background" class="search-popup overlay">
+    <div id="search-popup" class="popup">
+        <input type="text" id="search-input" class="f3 fw3 lh-copy w100" />
+        <div id="search-results" class="w100 results">
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+            <div class="f4 fw1 lh-copy">Lorem Ipsum tadadad</div>
+        </div>
+    </div>
+</div>
+<script src="/js/search.js"></script>
+
+</body>
+
+</html>
