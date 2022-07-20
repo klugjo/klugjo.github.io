@@ -1,315 +1,663 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Head tag -->
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Head tag -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!--Description-->
-    
-        <meta name="description" content="This post is used for testing tag plugins (Block Quotes and Code Blocks). See docs for more info.">
-    
+
+    <meta
+      name="description"
+      content="This post is used for testing tag plugins (Block Quotes and Code Blocks). See docs for more info."
+    />
 
     <!--Author-->
-    
-        <meta name="author" content="John Doe">
-    
+
+    <meta name="author" content="John Doe" />
 
     <!--Open Graph Title-->
-    
-        <meta property="og:title" content="Tag Plugins"/>
-    
+
+    <meta property="og:title" content="Tag Plugins" />
 
     <!--Open Graph Description-->
-    
 
     <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Anodyne"/>
+    <meta property="og:site_name" content="Anodyne" />
 
     <!--Type page-->
-    
-        <meta property="og:type" content="article" />
-    
+
+    <meta property="og:type" content="article" />
 
     <!--Page Cover-->
-    
 
     <meta name="twitter:card" content="summary" />
-    
 
     <!-- Title -->
-    
+
     <title>Tag Plugins - Anodyne</title>
 
     <!-- Tachyons Core CSS -->
-    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.11.1/tachyons.min.css"
+    />
 
     <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/projects/hexo-theme-anodyne/css/style.css">
+    <link
+      rel="stylesheet"
+      href="/assets/projects/hexo-theme-anodyne/css/style.css"
+    />
 
     <!-- Google Analytics -->
-    
+  </head>
 
-
-</head>
-
-
-<body>
-
-<!-- Main Content -->
-<!-- Banner -->
-<!-- Banner -->
-<div class="w-100 bg-1 ph5-ns ph3 text-light">
-    
-    <nav class="db dt-l w-100 mw8 center border-box pv3">
-        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/assets/projects/hexo-theme-anodyne/" title="Anodyne">
-            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Anodyne">
+  <body>
+    <!-- Main Content -->
+    <!-- Banner -->
+    <!-- Banner -->
+    <div class="w-100 bg-1 ph5-ns ph3 text-light">
+      <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a
+          class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white"
+          href="/assets/projects/hexo-theme-anodyne/"
+          title="Anodyne"
+        >
+          <img
+            src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg"
+            class="dib h3"
+            alt="Anodyne"
+          />
         </a>
         <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/assets/projects/hexo-theme-anodyne/" 
-                    title="Home">
-                    Home
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/assets/projects/hexo-theme-anodyne/archives" 
-                    title="Archives">
-                    Archives
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/assets/projects/hexo-theme-anodyne/tags" 
-                    title="Tags">
-                    Tags
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/assets/projects/hexo-theme-anodyne/categories" 
-                    title="Categories">
-                    Categories
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/assets/projects/hexo-theme-anodyne/about.html" 
-                    title="About">
-                    About
-                </a>
-            
-                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
-                    href="/assets/projects/hexo-theme-anodyne/contact.html" 
-                    title="Contact">
-                    Contact
-                </a>
-            
-        </div>
-    </nav>
+          <a
+            class="link dim f6 f5-l dib mr3 mr4-l white"
+            href="/assets/projects/hexo-theme-anodyne/"
+            title="Home"
+          >
+            Home
+          </a>
 
-    <!-- Title -->
-    <div class="w-100 mw8 center vh-40 dt">
+          <a
+            class="link dim f6 f5-l dib mr3 mr4-l white"
+            href="/assets/projects/hexo-theme-anodyne/archives"
+            title="Archives"
+          >
+            Archives
+          </a>
+
+          <a
+            class="link dim f6 f5-l dib mr3 mr4-l white"
+            href="/assets/projects/hexo-theme-anodyne/tags"
+            title="Tags"
+          >
+            Tags
+          </a>
+
+          <a
+            class="link dim f6 f5-l dib mr3 mr4-l white"
+            href="/assets/projects/hexo-theme-anodyne/categories"
+            title="Categories"
+          >
+            Categories
+          </a>
+
+          <a
+            class="link dim f6 f5-l dib mr3 mr4-l white"
+            href="/assets/projects/hexo-theme-anodyne/about.html"
+            title="About"
+          >
+            About
+          </a>
+
+          <a
+            class="link dim f6 f5-l dib mr3 mr4-l white"
+            href="/assets/projects/hexo-theme-anodyne/contact.html"
+            title="Contact"
+          >
+            Contact
+          </a>
+        </div>
+      </nav>
+
+      <!-- Title -->
+      <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Tag Plugins</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">December 25, 2013</p>
+          <h1 class="f1-l f2-m tc tc-m tl-ns">Tag Plugins</h1>
+          <p class="f4 fw3 pab-100px tc tc-m tl-ns">December 25, 2013</p>
         </div>
-    </div>
+      </div>
 
-    <!-- Icon -->
-    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+      <!-- Icon -->
+      <div class="relative w-100 mw8 center white dn dn-m db-ns">
         <i class="header-icon fa fa-code"></i>
+      </div>
     </div>
-</div>
 
-<!-- Content -->
-<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-    <div class="content">
+    <!-- Content -->
+    <div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+      <div class="content">
         <div class="mw8 center">
-            <div class="cf">
-                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
-                    <!-- Tags Vertical -->
-                    
-                        <div class="tags-container-vertical">
-                            <div class="tags-sub-container">
-                                <a class="fw3 ph1 dib" href="/assets/projects/hexo-theme-anodyne/tags/Anodyne/">#Anodyne</a> <a class="fw3 ph1 dib" href="/assets/projects/hexo-theme-anodyne/tags/Tag/">#Tag</a> <a class="fw3 ph1 dib" href="/assets/projects/hexo-theme-anodyne/tags/Block/">#Block</a>
-                            </div>
-                        </div>
-                    
+          <div class="cf">
+            <div
+              class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content"
+            >
+              <!-- Tags Vertical -->
 
-                    <!-- Main Post Content -->
-                    <p>This post is used for testing tag plugins (Block Quotes and Code Blocks). See <a href="https://hexo.io/docs/tag-plugins.html" target="_blank" rel="external">docs</a> for more info.<br><a id="more"></a></p>
-<h2 id="Block-Quote"><a href="#Block-Quote" class="headerlink" title="Block Quote"></a>Block Quote</h2><h3 id="Normal-blockquote"><a href="#Normal-blockquote" class="headerlink" title="Normal blockquote"></a>Normal blockquote</h3><blockquote>
-<p>Praesent diam elit, interdum ut pulvinar placerat, imperdiet at magna.</p>
-</blockquote>
-<h3 id="Quote-from-a-book"><a href="#Quote-from-a-book" class="headerlink" title="Quote from a book"></a>Quote from a book</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
-<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
-<h3 id="Quote-from-Twitter"><a href="#Quote-from-Twitter" class="headerlink" title="Quote from Twitter"></a>Quote from Twitter</h3><blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="external">http://devdocs.io</a></p>
-<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="external">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
-<h3 id="Quote-from-an-article-on-the-web"><a href="#Quote-from-an-article-on-the-web" class="headerlink" title="Quote from an article on the web"></a>Quote from an article on the web</h3><blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
-<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="external">Welcome to Island Marketing</a></cite></footer></blockquote>
-<h2 id="Code-Block"><a href="#Code-Block" class="headerlink" title="Code Block"></a>Code Block</h2><h3 id="Normal-code-block"><a href="#Normal-code-block" class="headerlink" title="Normal code block"></a>Normal code block</h3><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert('Hello World!')<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-<h3 id="With-caption"><a href="#With-caption" class="headerlink" title="With caption"></a>With caption</h3><figure class="highlight cpp"><figcaption><span>Array.map</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">array</span>.<span class="built_in">map</span>(callback[, thisArg])</span><br></pre></td></tr></table></figure>
-<h3 id="With-caption-and-URL"><a href="#With-caption-and-URL" class="headerlink" title="With caption and URL"></a>With caption and URL</h3><figure class="highlight ruby"><figcaption><span>.compact</span><a href="http://underscorejs.org/#compact" target="_blank" rel="external">Underscore.js</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.compact([<span class="number">0</span>, <span class="number">1</span>, <span class="literal">false</span>, <span class="number">2</span>, ‘’, <span class="number">3</span>]);</span><br><span class="line">=&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
-<h3 id="Highlighting"><a href="#Highlighting" class="headerlink" title="Highlighting"></a>Highlighting</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span>;</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">1337</span>;</span><br><span class="line"></span><br><span class="line">http.createServer((req, res) =&gt; &#123;</span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123; <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> &#125;);</span><br><span class="line">  res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&#125;).listen(port, hostname, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/ This is a very long line. This is a very long line. This is a very long line. This is a very long line.`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h3><script src="//gist.github.com/996818.js"></script>
-<h3 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h3><iframe scrolling="no" width="100%" height="300" src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe>
-<h2 id="Pullquote"><a href="#Pullquote" class="headerlink" title="Pullquote"></a>Pullquote</h2><h3 id="Left"><a href="#Left" class="headerlink" title="Left"></a>Left</h3><blockquote class="pullquote left"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</blockquote>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempus molestie arcu, et fringilla mauris placerat ac. Nullam luctus bibendum risus. Ut cursus sed ipsum feugiat egestas. Suspendisse elementum, velit eu consequat consequat, augue lorem dapibus libero, eget pulvinar dolor est sit amet nulla. Suspendisse a porta tortor, et posuere mi. Pellentesque ultricies, mi quis volutpat malesuada, erat felis vulputate nisl, ac congue ante tortor ut ante. Proin aliquam sem vel mauris tincidunt, eget scelerisque tortor euismod. Nulla tincidunt enim nec commodo dictum. Mauris id sapien et orci gravida luctus id ut dui. In vel vulputate odio. Duis vel turpis molestie, scelerisque enim eu, lobortis eros. Cras at ipsum gravida, sagittis ante vel, viverra tellus. Nunc mauris turpis, elementum ullamcorper nisl pretium, ultrices cursus justo. Mauris porttitor commodo eros, ac ornare orci interdum in. Cras fermentum cursus leo sed mattis. In dignissim lorem sem, sit amet elementum mauris venenatis ac.</p>
-<h3 id="Right"><a href="#Right" class="headerlink" title="Right"></a>Right</h3><blockquote class="pullquote right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</blockquote>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula justo, lobortis sit amet semper vel, dignissim sit amet libero. Praesent ac tempus ligula. Maecenas at gravida odio. Etiam tristique volutpat lacus eu faucibus. Donec non tempus arcu. Phasellus adipiscing, mauris nec mollis egestas, ipsum nunc auctor velit, et rhoncus lorem ipsum at ante. Praesent et sem in velit volutpat auctor. Duis vel mauris nulla. Maecenas mattis interdum ante, quis sagittis nibh cursus et. Nulla facilisi. Morbi convallis gravida tortor, ut fermentum enim gravida et. Nunc vel dictum nisl, non ultrices libero. Proin vestibulum felis eget orci consectetur lobortis. Vestibulum augue nulla, iaculis vitae augue vehicula, dignissim ultrices libero. Sed imperdiet urna et quam ultrices tincidunt nec ac magna. Etiam vel pharetra elit.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xs = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// pure</span></span><br><span class="line">xs.slice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">// =&gt; [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">xs.slice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">xs.slice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// impure</span></span><br><span class="line">xs.splice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">xs.splice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; [4, 5]</span></span><br><span class="line"></span><br><span class="line">xs.splice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; []</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/** </span><br><span class="line"> * ignorant</span><br><span class="line"> * unnecessarily wraps a function</span><br><span class="line"> * forces a one argument signature</span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure>
-                    
-                    <!-- Tags Bottom -->
-                    
-                        <div class="tags-container-bottom">
-                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/assets/projects/hexo-theme-anodyne/tags/Anodyne/">#Anodyne</a> <a class="fw3 ph1 dib" href="/assets/projects/hexo-theme-anodyne/tags/Tag/">#Tag</a> <a class="fw3 ph1 dib" href="/assets/projects/hexo-theme-anodyne/tags/Block/">#Block</a>
-                        </div>
-                    
-
-                    <!-- Comments -->
-                    
-
-
-
+              <div class="tags-container-vertical">
+                <div class="tags-sub-container">
+                  <a
+                    class="fw3 ph1 dib"
+                    href="/assets/projects/hexo-theme-anodyne/tags/Anodyne/"
+                    >#Anodyne</a
+                  >
+                  <a
+                    class="fw3 ph1 dib"
+                    href="/assets/projects/hexo-theme-anodyne/tags/Tag/"
+                    >#Tag</a
+                  >
+                  <a
+                    class="fw3 ph1 dib"
+                    href="/assets/projects/hexo-theme-anodyne/tags/Block/"
+                    >#Block</a
+                  >
                 </div>
-                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
-                    
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 1: About -->
-                    <div class="mt5 mt0-l">
-    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
-        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
-            <img src="http://tachyons.io/img/avatar_1.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="John Doe">
-        </div>
-        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
-            My name is Jonathan Klughertz and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.<br> I currently live and work in Singapore, hit me up if you are in the region.
-        </div>
-    </article>
-</div>
+              </div>
 
-                    <hr class="dn-l mw4 black-50 mt5" />
-                    
-                    <!-- Widget 2: Categories -->
-                    
+              <!-- Main Post Content -->
+              <p>
+                This post is used for testing tag plugins (Block Quotes and Code
+                Blocks). See
+                <a
+                  href="https://hexo.io/docs/tag-plugins.html"
+                  target="_blank"
+                  rel="external"
+                  >docs</a
+                >
+                for more info.<br /><a id="more"></a>
+              </p>
+              <h2 id="Block-Quote">
+                <a
+                  href="#Block-Quote"
+                  class="headerlink"
+                  title="Block Quote"
+                ></a
+                >Block Quote
+              </h2>
+              <h3 id="Normal-blockquote">
+                <a
+                  href="#Normal-blockquote"
+                  class="headerlink"
+                  title="Normal blockquote"
+                ></a
+                >Normal blockquote
+              </h3>
+              <blockquote>
+                <p>
+                  Praesent diam elit, interdum ut pulvinar placerat, imperdiet
+                  at magna.
+                </p>
+              </blockquote>
+              <h3 id="Quote-from-a-book">
+                <a
+                  href="#Quote-from-a-book"
+                  class="headerlink"
+                  title="Quote from a book"
+                ></a
+                >Quote from a book
+              </h3>
+              <blockquote>
+                <p>
+                  Do not just seek happiness for yourself. Seek happiness for
+                  all. Through kindness. Through mercy.
+                </p>
+                <footer>
+                  <strong>David Levithan</strong><cite>Wide Awake</cite>
+                </footer>
+              </blockquote>
+              <h3 id="Quote-from-Twitter">
+                <a
+                  href="#Quote-from-Twitter"
+                  class="headerlink"
+                  title="Quote from Twitter"
+                ></a
+                >Quote from Twitter
+              </h3>
+              <blockquote>
+                <p>
+                  NEW: DevDocs now comes with syntax highlighting.
+                  <a href="http://devdocs.io" target="_blank" rel="external"
+                    >http://devdocs.io</a
+                  >
+                </p>
+                <footer>
+                  <strong>@DevDocs</strong
+                  ><cite
+                    ><a
+                      href="https://twitter.com/devdocs/status/356095192085962752"
+                      target="_blank"
+                      rel="external"
+                      >twitter.com/devdocs/status/356095192085962752</a
+                    ></cite
+                  >
+                </footer>
+              </blockquote>
+              <h3 id="Quote-from-an-article-on-the-web">
+                <a
+                  href="#Quote-from-an-article-on-the-web"
+                  class="headerlink"
+                  title="Quote from an article on the web"
+                ></a
+                >Quote from an article on the web
+              </h3>
+              <blockquote>
+                <p>
+                  Every interaction is both precious and an opportunity to
+                  delight.
+                </p>
+                <footer>
+                  <strong>Seth Godin</strong
+                  ><cite
+                    ><a
+                      href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html"
+                      target="_blank"
+                      rel="external"
+                      >Welcome to Island Marketing</a
+                    ></cite
+                  >
+                </footer>
+              </blockquote>
+              <h2 id="Code-Block">
+                <a href="#Code-Block" class="headerlink" title="Code Block"></a
+                >Code Block
+              </h2>
+              <h3 id="Normal-code-block">
+                <a
+                  href="#Normal-code-block"
+                  class="headerlink"
+                  title="Normal code block"
+                ></a
+                >Normal code block
+              </h3>
+              <figure class="highlight lisp">
+                <table>
+                  <tr>
+                    <td class="gutter">
+                      <pre><span class="line">1</span><br></pre>
+                    </td>
+                    <td class="code">
+                      <pre><span class="line">alert('Hello World!')<span class="comment">;</span></span><br></pre>
+                    </td>
+                  </tr>
+                </table>
+              </figure>
+              <h3 id="With-caption">
+                <a
+                  href="#With-caption"
+                  class="headerlink"
+                  title="With caption"
+                ></a
+                >With caption
+              </h3>
+              <figure class="highlight cpp">
+                <figcaption><span>Array.map</span></figcaption>
+                <table>
+                  <tr>
+                    <td class="gutter">
+                      <pre><span class="line">1</span><br></pre>
+                    </td>
+                    <td class="code">
+                      <pre><span class="line"><span class="built_in">array</span>.<span class="built_in">map</span>(callback[, thisArg])</span><br></pre>
+                    </td>
+                  </tr>
+                </table>
+              </figure>
+              <h3 id="With-caption-and-URL">
+                <a
+                  href="#With-caption-and-URL"
+                  class="headerlink"
+                  title="With caption and URL"
+                ></a
+                >With caption and URL
+              </h3>
+              <figure class="highlight ruby">
+                <figcaption>
+                  <span>.compact</span
+                  ><a
+                    href="http://underscorejs.org/#compact"
+                    target="_blank"
+                    rel="external"
+                    >Underscore.js</a
+                  >
+                </figcaption>
+                <table>
+                  <tr>
+                    <td class="gutter">
+                      <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
+                    </td>
+                    <td class="code">
+                      <pre><span class="line">.compact([<span class="number">0</span>, <span class="number">1</span>, <span class="literal">false</span>, <span class="number">2</span>, ‘’, <span class="number">3</span>]);</span><br><span class="line">=&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre>
+                    </td>
+                  </tr>
+                </table>
+              </figure>
+              <h3 id="Highlighting">
+                <a
+                  href="#Highlighting"
+                  class="headerlink"
+                  title="Highlighting"
+                ></a
+                >Highlighting
+              </h3>
+              <figure class="highlight js">
+                <table>
+                  <tr>
+                    <td class="gutter">
+                      <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre>
+                    </td>
+                    <td class="code">
+                      <pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span>;</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">1337</span>;</span><br><span class="line"></span><br><span class="line">http.createServer((req, res) =&gt; &#123;</span><br><span class="line">  res.writeHead(<span class="number">200</span>, &#123; <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> &#125;);</span><br><span class="line">  res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">&#125;).listen(port, hostname, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/ This is a very long line. This is a very long line. This is a very long line. This is a very long line.`</span>);</span><br><span class="line">&#125;);</span><br></pre>
+                    </td>
+                  </tr>
+                </table>
+              </figure>
+              <h3 id="Gist">
+                <a href="#Gist" class="headerlink" title="Gist"></a>Gist
+              </h3>
+              <script src="//gist.github.com/996818.js"></script>
+              <h3 id="jsFiddle">
+                <a href="#jsFiddle" class="headerlink" title="jsFiddle"></a
+                >jsFiddle
+              </h3>
+              <iframe
+                scrolling="no"
+                width="100%"
+                height="300"
+                src="http://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <h2 id="Pullquote">
+                <a href="#Pullquote" class="headerlink" title="Pullquote"></a
+                >Pullquote
+              </h2>
+              <h3 id="Left">
+                <a href="#Left" class="headerlink" title="Left"></a>Left
+              </h3>
+              <blockquote class="pullquote left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </blockquote>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas tempus molestie arcu, et fringilla mauris placerat ac.
+                Nullam luctus bibendum risus. Ut cursus sed ipsum feugiat
+                egestas. Suspendisse elementum, velit eu consequat consequat,
+                augue lorem dapibus libero, eget pulvinar dolor est sit amet
+                nulla. Suspendisse a porta tortor, et posuere mi. Pellentesque
+                ultricies, mi quis volutpat malesuada, erat felis vulputate
+                nisl, ac congue ante tortor ut ante. Proin aliquam sem vel
+                mauris tincidunt, eget scelerisque tortor euismod. Nulla
+                tincidunt enim nec commodo dictum. Mauris id sapien et orci
+                gravida luctus id ut dui. In vel vulputate odio. Duis vel turpis
+                molestie, scelerisque enim eu, lobortis eros. Cras at ipsum
+                gravida, sagittis ante vel, viverra tellus. Nunc mauris turpis,
+                elementum ullamcorper nisl pretium, ultrices cursus justo.
+                Mauris porttitor commodo eros, ac ornare orci interdum in. Cras
+                fermentum cursus leo sed mattis. In dignissim lorem sem, sit
+                amet elementum mauris venenatis ac.
+              </p>
+              <h3 id="Right">
+                <a href="#Right" class="headerlink" title="Right"></a>Right
+              </h3>
+              <blockquote class="pullquote right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </blockquote>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                ligula justo, lobortis sit amet semper vel, dignissim sit amet
+                libero. Praesent ac tempus ligula. Maecenas at gravida odio.
+                Etiam tristique volutpat lacus eu faucibus. Donec non tempus
+                arcu. Phasellus adipiscing, mauris nec mollis egestas, ipsum
+                nunc auctor velit, et rhoncus lorem ipsum at ante. Praesent et
+                sem in velit volutpat auctor. Duis vel mauris nulla. Maecenas
+                mattis interdum ante, quis sagittis nibh cursus et. Nulla
+                facilisi. Morbi convallis gravida tortor, ut fermentum enim
+                gravida et. Nunc vel dictum nisl, non ultrices libero. Proin
+                vestibulum felis eget orci consectetur lobortis. Vestibulum
+                augue nulla, iaculis vitae augue vehicula, dignissim ultrices
+                libero. Sed imperdiet urna et quam ultrices tincidunt nec ac
+                magna. Etiam vel pharetra elit.
+              </p>
+              <figure class="highlight js">
+                <table>
+                  <tr>
+                    <td class="gutter">
+                      <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre>
+                    </td>
+                    <td class="code">
+                      <pre><span class="line"><span class="keyword">var</span> xs = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">// pure</span></span><br><span class="line">xs.slice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">// =&gt; [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">xs.slice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">xs.slice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// impure</span></span><br><span class="line">xs.splice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line">xs.splice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; [4, 5]</span></span><br><span class="line"></span><br><span class="line">xs.splice(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment">//=&gt; []</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/** </span><br><span class="line"> * ignorant</span><br><span class="line"> * unnecessarily wraps a function</span><br><span class="line"> * forces a one argument signature</span><br><span class="line"> */</span></span><br></pre>
+                    </td>
+                  </tr>
+                </table>
+              </figure>
 
-                    <!-- Widget 3: Recent Posts -->
-                    <div class="mt5 tc tl-l">
-    <h3>Recent Posts</h3>
-    
-        <p>
-            <a href="/assets/projects/hexo-theme-anodyne/2016/10/03/Welcome-to-Alpha-Dust/">Welcome to Anodyne</a>
-        </p>
-    
-        <p>
-            <a href="/assets/projects/hexo-theme-anodyne/2013/12/25/excerpts/">Excerpts</a>
-        </p>
-    
-        <p>
-            <a href="/assets/projects/hexo-theme-anodyne/2013/12/25/gallery-post/">Gallery Post</a>
-        </p>
-    
-        <p>
-            <a href="/assets/projects/hexo-theme-anodyne/2013/12/25/tag-plugins/">Tag Plugins</a>
-        </p>
-    
-        <p>
-            <a href="/assets/projects/hexo-theme-anodyne/2013/12/24/long-title/">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
-        </p>
-    
-</div>
-                </div>
+              <!-- Tags Bottom -->
+
+              <div class="tags-container-bottom">
+                <i class="fa fa-tag pr3 text-main-color"></i
+                ><a
+                  class="fw3 ph1 dib"
+                  href="/assets/projects/hexo-theme-anodyne/tags/Anodyne/"
+                  >#Anodyne</a
+                >
+                <a
+                  class="fw3 ph1 dib"
+                  href="/assets/projects/hexo-theme-anodyne/tags/Tag/"
+                  >#Tag</a
+                >
+                <a
+                  class="fw3 ph1 dib"
+                  href="/assets/projects/hexo-theme-anodyne/tags/Block/"
+                  >#Block</a
+                >
+              </div>
+
+              <!-- Comments -->
             </div>
+            <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+              <hr class="dn-l mw4 black-50 mt5" />
+
+              <!-- Widget 1: About -->
+              <div class="mt5 mt0-l">
+                <article
+                  class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3"
+                >
+                  <div
+                    class="dn dtc-m db-l v-mid tc pr4 pr0-l"
+                    style="min-width: 6rem"
+                  >
+                    <img
+                      src="http://tachyons.io/img/avatar_1.jpg"
+                      class="mb4-l br-100 h3 w3 h4-l w4-l dib"
+                      title="John Doe"
+                    />
+                  </div>
+                  <div
+                    class="dtc db-l v-mid lh-copy measure center f6 black-50 tj"
+                  >
+                    My name is Jonathan Klughertz and this is my blog.<br />I am
+                    a full stack software engineer with a strong front-end
+                    focus.<br />
+                    I currently live and work in Singapore, hit me up if you are
+                    in the region.
+                  </div>
+                </article>
+              </div>
+
+              <hr class="dn-l mw4 black-50 mt5" />
+
+              <!-- Widget 2: Categories -->
+
+              <!-- Widget 3: Recent Posts -->
+              <div class="mt5 tc tl-l">
+                <h3>Recent Posts</h3>
+
+                <p>
+                  <a
+                    href="/assets/projects/hexo-theme-anodyne/2016/10/03/Welcome-to-Alpha-Dust/"
+                    >Welcome to Anodyne</a
+                  >
+                </p>
+
+                <p>
+                  <a
+                    href="/assets/projects/hexo-theme-anodyne/2013/12/25/excerpts/"
+                    >Excerpts</a
+                  >
+                </p>
+
+                <p>
+                  <a
+                    href="/assets/projects/hexo-theme-anodyne/2013/12/25/gallery-post/"
+                    >Gallery Post</a
+                  >
+                </p>
+
+                <p>
+                  <a
+                    href="/assets/projects/hexo-theme-anodyne/2013/12/25/tag-plugins/"
+                    >Tag Plugins</a
+                  >
+                </p>
+
+                <p>
+                  <a
+                    href="/assets/projects/hexo-theme-anodyne/2013/12/24/long-title/"
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
+    <!-- Footer -->
+    <div class="bg-1 ph2 ph5-ns pv5">
+      <div class="mv8">
+        <div class="center tc">
+          <div class="dib mh3">
+            <a
+              class="f3 f2-ns white dim"
+              href="https://twitter.com/?lang=en"
+              target="_blank"
+            >
+              <i class="fa fa-twitter"></i>
+            </a>
+          </div>
 
-<!-- Footer -->
-<div class="bg-1 ph2 ph5-ns pv5">
-        <div class="mv8">
-            <div class="center tc">
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
-                            <i class="fa fa-dribbble"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://github.com/klugjo/hexo-theme-anodyne" target="_blank">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
-                            <i class="fa fa-google-plus"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
-                            <i class="fa fa-behance"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
-                            <i class="fa fa-500px"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="mailto:test@example.com" target="_blank">
-                            <i class="fa fa-envelope"></i>
-                        </a>
-                    </div>
-                
-                    <div class="dib mh3">
-                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
-                            <i class="fa fa-rss"></i>
-                        </a>
-                    </div>
-                
-            </div>
-            <div class="f6 f5-ns center tc white pt5 fw3">
-                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Jonathan Klughertz</a>
-            </div>
+          <div class="dib mh3">
+            <a
+              class="f3 f2-ns white dim"
+              href="https://www.facebook.com/"
+              target="_blank"
+            >
+              <i class="fa fa-facebook"></i>
+            </a>
+          </div>
+
+          <div class="dib mh3">
+            <a
+              class="f3 f2-ns white dim"
+              href="https://dribbble.com/"
+              target="_blank"
+            >
+              <i class="fa fa-dribbble"></i>
+            </a>
+          </div>
+
+          <div class="dib mh3">
+            <a
+              class="f3 f2-ns white dim"
+              href="https://github.com/klugjo/hexo-theme-anodyne"
+              target="_blank"
+            >
+              <i class="fa fa-github"></i>
+            </a>
+          </div>
+
+          <div class="dib mh3">
+            <a
+              class="f3 f2-ns white dim"
+              href="https://plus.google.com/"
+              target="_blank"
+            >
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </div>
+
+          <div class="dib mh3">
+            <a
+              class="f3 f2-ns white dim"
+              href="https://www.behance.net/"
+              target="_blank"
+            >
+              <i class="fa fa-behance"></i>
+            </a>
+          </div>
+
+          <div class="dib mh3">
+            <a
+              class="f3 f2-ns white dim"
+              href="https://500px.com/"
+              target="_blank"
+            >
+              <i class="fa fa-500px"></i>
+            </a>
+          </div>
+
+          <div class="dib mh3">
+            <a
+              class="f3 f2-ns white dim"
+              href="mailto:test@example.com"
+              target="_blank"
+            >
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+
+          <div class="dib mh3">
+            <a class="f3 f2-ns white dim" href="/#" target="_blank">
+              <i class="fa fa-rss"></i>
+            </a>
+          </div>
         </div>
+        <div class="f6 f5-ns center tc white pt5 fw3">
+          @Untitled. All right reserved | Design & Hexo
+          <a class="link dim white" href="http://www.codeblocq.com/"
+            >Jonathan Klughertz</a
+          >
+        </div>
+      </div>
     </div>
 
-<!-- After Footer -->
-<!-- Disqus Comments -->
-
-
-
-</body>
-
+    <!-- After Footer -->
+    <!-- Disqus Comments -->
+  </body>
 </html>
